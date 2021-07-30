@@ -88,10 +88,9 @@ Example commands can be found in "run_cmake+make.sh"
 
  # 3. How to use
 
-To succesfull run MADCAT you need a dedicated interface. An example configuration can be found in
-./etc/madcat/config.lua, which must be customized for your needs and your environment.
+To succesfull run MADCAT you need a dedicated interface. An example configuration can be found in ./etc/madcat/config.lua, which must be customized for your needs and your environment.
 
-For the TCP Module to work with all destination ports yout need to set a DNAT-Rule, given your local hostaddress is 192.168.1.100,
+For the TCP Module to work with all destination ports yout need to set a DNAT-Rule.Given your local hostaddress is 192.168.1.100 and
 the configured port MADCAT is running on is 65535 on interface enp0s8, this would be something like:
 
 ```
@@ -114,7 +113,7 @@ Monitoring is configured by /etc/madcat/monitoring_config.py, which is directly 
 
  # 4. FAQ's
 
-If you encounter e.g. libc releated errors in your cross compiling evironment, see ./documentation/in_case_of_linking_problems.md
+If you encounter e.g. libc-releated errors in your cross compiling evironment, see ./documentation/in_case_of_linking_problems.md
 
  # 5. Links, etc.
 
@@ -139,3 +138,4 @@ LICENSE: GPLv2
  https://www.elastic.co/
 
  https://www.elastic.co/de/beats/filebeat
+
