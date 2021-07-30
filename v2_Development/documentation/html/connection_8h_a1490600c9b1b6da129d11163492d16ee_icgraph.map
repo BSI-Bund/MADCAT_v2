@@ -1,0 +1,8 @@
+<map id="create_connection" name="create_connection">
+<area shape="rect" id="node1" title="RSP Proxy function." alt="" coords="852,13,993,39"/>
+<area shape="rect" id="node2" href="$server__socket_8c.html#ad848ac79ac429ca69cdd7e1acdfe927b" title=" " alt="" coords="617,13,804,39"/>
+<area shape="rect" id="node3" href="$server__socket_8c.html#af99353db289e9e02638064766931600b" title=" " alt="" coords="407,5,569,47"/>
+<area shape="rect" id="node4" href="$server__socket_8c.html#add960c608a7bfaa7884d7ad973a47eb3" title=" " alt="" coords="199,5,359,47"/>
+<area shape="rect" id="node5" href="$rsp_8c.html#a622a6959199d37f9bb4a4b0dc455e006" title="Starts an instance of RSP&#45;Proxy." alt="" coords="108,13,151,39"/>
+<area shape="rect" id="node6" href="$tcp__ip__port__mon_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,13,60,39"/>
+</map>

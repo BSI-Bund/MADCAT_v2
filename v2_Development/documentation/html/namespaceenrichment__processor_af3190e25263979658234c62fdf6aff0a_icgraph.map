@@ -1,0 +1,9 @@
+<map id="eprint" name="eprint">
+<area shape="rect" id="node1" title="Print on STDERR ##########################." alt="" coords="325,132,385,159"/>
+<area shape="rect" id="node2" href="$namespaceenrichment__processor.html#ab2e0de78412a95cebc643c2a2079a8b3" title="Acquire data for enrichment #######################." alt="" coords="157,5,228,32"/>
+<area shape="rect" id="node3" href="$namespaceenrichment__processor.html#a24ba1fe8c000eb5b84d913d6d285f2eb" title="Drop root priviliges ##########################." alt="" coords="131,56,254,83"/>
+<area shape="rect" id="node4" href="$namespaceenrichment__processor.html#afaa082c33d1549e3c68a63eb981566ae" title="Main ##########################." alt="" coords="5,81,60,108"/>
+<area shape="rect" id="node5" href="$namespaceenrichment__processor.html#a7fbac282e8516fdb6bd39116cb339679" title="Read MADCAT Logs from FIFO and enrich ##################." alt="" coords="161,157,224,184"/>
+<area shape="rect" id="node6" href="$namespaceenrichment__processor.html#a08a73cba3c00e136417da50e1a3a58fe" title=" " alt="" coords="108,208,277,235"/>
+<area shape="rect" id="node7" href="$namespaceenrichment__processor.html#af75ac90679276a2d5671e39d7af7cd61" title="SIGINT Signal Hander ########################## ...for gracefull shutdown." alt="" coords="113,259,273,285"/>
+</map>

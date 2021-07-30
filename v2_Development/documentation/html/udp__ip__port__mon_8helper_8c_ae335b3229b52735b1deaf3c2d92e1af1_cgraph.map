@@ -1,0 +1,4 @@
+<map id="get_config_table" name="get_config_table">
+<area shape="rect" id="node1" title="Reads proxy configuration from parsed LUA&#45;File." alt="" coords="5,5,135,32"/>
+<area shape="rect" id="node2" href="$udp__ip__port__mon_8helper_8c.html#a1c8e25d97766011e8492c1d0e6da3d6e" title="Pushes new proxy config Item to linked List." alt="" coords="183,5,281,32"/>
+</map>

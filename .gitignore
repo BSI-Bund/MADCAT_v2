@@ -1,0 +1,6 @@
+.vscode
+build
+build-aarch64
+build-armhf
+uninstall.sh
+__pycache__

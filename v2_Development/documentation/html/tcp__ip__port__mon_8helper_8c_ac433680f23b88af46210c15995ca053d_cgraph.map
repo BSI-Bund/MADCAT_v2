@@ -1,0 +1,8 @@
+<map id="sig_handler_parent" name="sig_handler_parent">
+<area shape="rect" id="node1" title="Signal Handler for parent watchdog." alt="" coords="5,56,152,83"/>
+<area shape="rect" id="node2" href="$tcp__ip__port__mon_8helper_8c.html#a372ece5e34aa05e6865239df4b1f5a6e" title="Gets proxy config from linked List." alt="" coords="219,5,342,32"/>
+<area shape="rect" id="node3" href="$tcp__ip__port__mon_8helper_8c.html#a326cc0de985cdd63f70bc63d63878af8" title="Generic signal handler." alt="" coords="200,56,361,83"/>
+<area shape="rect" id="node6" href="$madcat_8helper_8h.html#a6beb2c039c319f4fb3541627bb6da8ee" title="Returns current time." alt="" coords="243,107,319,133"/>
+<area shape="rect" id="node4" href="$madcat_8helper_8h.html#ac0c229edf48308e883bc9a1ddcf2ed73" title="Reset or initialize new JSON output." alt="" coords="432,31,504,57"/>
+<area shape="rect" id="node5" href="$tcp__ip__port__mon_8helper_8c.html#a2b73f874293662fb6b8aac2dcc366deb" title="Frees an element of the proxy configuration list." alt="" coords="409,81,527,108"/>
+</map>

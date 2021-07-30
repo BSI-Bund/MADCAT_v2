@@ -1,0 +1,8 @@
+<map id="sig_handler_common" name="sig_handler_common">
+<area shape="rect" id="node1" title="Generic signal handler." alt="" coords="332,81,493,108"/>
+<area shape="rect" id="node2" href="$tcp__ip__port__mon_8helper_8c.html#aab6a9b7700246d6e437211fdcf7af8b5" title="Signal Handler for listner thread childs." alt="" coords="108,5,284,32"/>
+<area shape="rect" id="node4" href="$tcp__ip__port__mon_8helper_8c.html#ac433680f23b88af46210c15995ca053d" title="Signal Handler for parent watchdog." alt="" coords="123,56,269,83"/>
+<area shape="rect" id="node5" href="$tcp__ip__port__mon_8helper_8c.html#ae0381c3258f8e9f513f5155e410809b5" title="Signal Handler for PCAP childs." alt="" coords="113,107,279,133"/>
+<area shape="rect" id="node6" href="$tcp__ip__port__mon_8helper_8c.html#ac2c92ad6dfc1a2b8b0c9c2098657dc8b" title="Signal Handler for proxy childs." alt="" coords="110,157,282,184"/>
+<area shape="rect" id="node3" href="$tcp__ip__port__mon_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,81,60,108"/>
+</map>

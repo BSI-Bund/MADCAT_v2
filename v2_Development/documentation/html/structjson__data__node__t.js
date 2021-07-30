@@ -1,0 +1,26 @@
+var structjson__data__node__t =
+[
+    [ "backend_ip", "structjson__data__node__t.html#a4ab81d786a4ae60a398bfd06280dd455", null ],
+    [ "backend_port", "structjson__data__node__t.html#aa749e5667d7c6a4746adc15cf0a231fd", null ],
+    [ "bytes_toclient", "structjson__data__node__t.html#a49c1d57a081c9c105196af26f8bb15de", null ],
+    [ "bytes_toserver", "structjson__data__node__t.html#a898779bb149ffe5c3d78c58b4f832a8f", null ],
+    [ "dest_ip", "structjson__data__node__t.html#aae0a3e97dfd50eaf7499f53109b10559", null ],
+    [ "dest_port", "structjson__data__node__t.html#ac481d5fdeb66994b869ee6fa959f9274", null ],
+    [ "duration", "structjson__data__node__t.html#a54a0af95b2627634d0b5d753e8ebb230", null ],
+    [ "end", "structjson__data__node__t.html#ad7df3e66f0d081eb6a27998bd1e681e7", null ],
+    [ "firstpacket", "structjson__data__node__t.html#a4355603ea4a2d9a6cd95999d5eaac11c", null ],
+    [ "id", "structjson__data__node__t.html#aae52a23ac03bf8722638367988f8bccb", null ],
+    [ "last_recv", "structjson__data__node__t.html#a852571aa34c81f6e8d87a6aff89551b3", null ],
+    [ "min_rtt", "structjson__data__node__t.html#abcc515bd04c6332225a72e31ff74f454", null ],
+    [ "next", "structjson__data__node__t.html#a67fcc09c1e60bf3067b58524d77834c8", null ],
+    [ "prev", "structjson__data__node__t.html#a167153cead1d334f5ac434880ca8181c", null ],
+    [ "proto", "structjson__data__node__t.html#a4eb098e26965958ce878897994feb75a", null ],
+    [ "proxy_ip", "structjson__data__node__t.html#ab50c43aa444046f97b72660102361682", null ],
+    [ "proxy_port", "structjson__data__node__t.html#af4e78b6dcd6aabffec6c095d66dcbe46", null ],
+    [ "src_ip", "structjson__data__node__t.html#a15fa8c1166a5274a6d45114d81f533ab", null ],
+    [ "src_port", "structjson__data__node__t.html#a2d47efc2f2609185cf802853871de027", null ],
+    [ "start", "structjson__data__node__t.html#a65bee147398f9fcc9cadffe78981fd40", null ],
+    [ "timeasdouble", "structjson__data__node__t.html#a37e27c9944e52dfa765c9c9d7eaa0c9b", null ],
+    [ "timestamp", "structjson__data__node__t.html#aa8cafb9019f401498fd60f916ba08faf", null ],
+    [ "unixtime", "structjson__data__node__t.html#a07061fa6ca8df977640340910dc6c409", null ]
+];

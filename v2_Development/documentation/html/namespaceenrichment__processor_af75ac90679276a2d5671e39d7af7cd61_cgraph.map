@@ -1,0 +1,4 @@
+<map id="signal_handler_sigint" name="signal_handler_sigint">
+<area shape="rect" id="node1" title="SIGINT Signal Hander ########################## ...for gracefull shutdown." alt="" coords="5,5,165,32"/>
+<area shape="rect" id="node2" href="$namespaceenrichment__processor.html#af3190e25263979658234c62fdf6aff0a" title="Print on STDERR ##########################." alt="" coords="213,5,273,32"/>
+</map>

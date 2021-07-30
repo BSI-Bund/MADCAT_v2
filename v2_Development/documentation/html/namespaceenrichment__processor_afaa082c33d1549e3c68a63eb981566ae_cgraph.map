@@ -1,0 +1,5 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title="Main ##########################." alt="" coords="5,31,60,57"/>
+<area shape="rect" id="node2" href="$namespaceenrichment__processor.html#a24ba1fe8c000eb5b84d913d6d285f2eb" title="Drop root priviliges ##########################." alt="" coords="108,5,231,32"/>
+<area shape="rect" id="node3" href="$namespaceenrichment__processor.html#af3190e25263979658234c62fdf6aff0a" title="Print on STDERR ##########################." alt="" coords="279,31,339,57"/>
+</map>

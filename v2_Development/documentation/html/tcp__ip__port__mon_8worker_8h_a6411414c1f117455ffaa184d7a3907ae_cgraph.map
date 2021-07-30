@@ -1,0 +1,7 @@
+<map id="worker_tcp" name="worker_tcp">
+<area shape="rect" id="node1" title="Handels incoming TCP connections." alt="" coords="5,81,99,108"/>
+<area shape="rect" id="node2" href="$madcat_8helper_8h.html#ab3dab1728c4764a429ddd57578c2310c" title="Prints binary data as hexdump." alt="" coords="165,5,255,32"/>
+<area shape="rect" id="node3" href="$madcat_8helper_8h.html#ac0c229edf48308e883bc9a1ddcf2ed73" title="Reset or initialize new JSON output." alt="" coords="174,56,246,83"/>
+<area shape="rect" id="node4" href="$madcat_8helper_8h.html#a383f315188aceb39ffe699743ecd27b2" title="Prints binary data as hex string." alt="" coords="147,107,273,133"/>
+<area shape="rect" id="node5" href="$madcat_8helper_8h.html#a6beb2c039c319f4fb3541627bb6da8ee" title="Returns current time." alt="" coords="172,157,248,184"/>
+</map>

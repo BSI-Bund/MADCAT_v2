@@ -1,0 +1,4 @@
+<map id="uc_get" name="uc_get">
+<area shape="rect" id="node1" title="Gets an element from the UDP connection tracking list." alt="" coords="5,5,71,32"/>
+<area shape="rect" id="node2" href="$udp__ip__port__mon_8helper_8c.html#a053fc1725952e733ef6d5706dbe8221d" title="Checks, if two (long) connection IDs are equal." alt="" coords="119,5,195,32"/>
+</map>

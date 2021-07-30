@@ -1,0 +1,6 @@
+<map id="sig_handler_icmp" name="sig_handler_icmp">
+<area shape="rect" id="node1" title="Signal Handler." alt="" coords="5,56,141,83"/>
+<area shape="rect" id="node2" href="$madcat_8helper_8h.html#ac0c229edf48308e883bc9a1ddcf2ed73" title="Reset or initialize new JSON output." alt="" coords="207,5,279,32"/>
+<area shape="rect" id="node3" href="$udp__ip__port__mon_8icmp__mon_8helper_8h.html#a55a10ee3c69ff3e13197e78280a44d4a" title="Saves and returns address of main buffer." alt="" coords="189,56,296,83"/>
+<area shape="rect" id="node4" href="$madcat_8helper_8h.html#a6beb2c039c319f4fb3541627bb6da8ee" title="Returns current time." alt="" coords="205,107,281,133"/>
+</map>
