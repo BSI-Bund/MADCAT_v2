@@ -27,41 +27,41 @@ To compile and run MADCAT you need to have a Linux OS installed. It has been dev
 
 Build Essentials, Compiler, etc:
 ```
-sudo sudo apt-get gcc cmake build-essential
+sudo apt-get install gcc cmake build-essential
 ```
 #### PCAP: ####
 ```
-sudo sudo apt-get install libpcap0.8 libpcap-dev
+sudo apt-get install libpcap0.8 libpcap-dev
 ```
 #### LUA: ####
 ```
-sudo sudo apt-get install liblua5.1-0 liblua5.1-0-dev
+sudo apt-get install liblua5.1-0 liblua5.1-0-dev
 ```
 #### SSL: ####
 ```
-sudo sudo apt-get install libssl1.1 libssl-dev
+sudo apt-get install libssl1.1 libssl-dev
 ```
 
 ### Python Postprocessors ###
 
 #### Python 3: ####
 ```
-sudo sudo apt-get install python3-dev
+sudo apt-get install python3-dev
 ```
 #### Conntrack Tools: ####
 ```
-sudo sudo apt-get install conntrack
+sudo apt-get install conntrack
 ```
 
 ### Monitoring ###
 
 ##### Audit Deamon: ####
 ```
-sudo sudo apt-get install auditd audispd-plugins audit.d
+sudo apt-get install auditd audispd-plugins audit.d
 ```
 #### Net Tools ####
 ```
-sudo sudo apt-get install net-tools
+sudo apt-get install net-tools
 ```
 #### PIP: ####
 ```
