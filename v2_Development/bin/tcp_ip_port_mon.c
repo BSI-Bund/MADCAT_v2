@@ -72,6 +72,8 @@ int main(int argc, char *argv[])
     double timeout = 30;
     char data_path[PATH_LEN] = "";
     int max_file_size = -1;
+    char connect_fifo[PATH_LEN] = CONNECT_FIFO_DEF;
+    char header_fifo[PATH_LEN] = HEADER_FIFO_DEF;
 
     //Structure holding proxy configuration items
     pc = pctcp_init(pc);
@@ -131,6 +133,18 @@ int main(int argc, char *argv[])
         }
         fprintf(stderr, "\tloglevel: %d\n", loglevel);
 
+        if(get_config_opt(luaState, "connection_fifo") != EMPTY_STR) { //if optional parameter is given, set it.
+            strncpy(connect_fifo, get_config_opt(luaState, "connection_fifo"), sizeof(connect_fifo));
+            data_path[sizeof(data_path)-1] = 0;
+        }
+        fprintf(stderr, "\tconnection_fifo: %s\n", connect_fifo);
+
+        if(get_config_opt(luaState, "header_fifo") != EMPTY_STR) { //if optional parameter is given, set it.
+            strncpy(header_fifo, get_config_opt(luaState, "header_fifo"), sizeof(header_fifo));
+            data_path[sizeof(data_path)-1] = 0;
+        }
+        fprintf(stderr, "\theader_fifo: %s\n", header_fifo);
+
         //Read proxy configuration
         if(get_config_opt(luaState, "proxy_wait_restart") != EMPTY_STR) { //if optional parameter is given, set it.
             proxy_wait_restart = (double) atof(get_config_opt(luaState, "proxy_wait_restart")); //convert string ype to integer type (proxy_wait_restart)
@@ -187,10 +201,10 @@ int main(int argc, char *argv[])
     listner_pid = 0; //PID of the Child doing the TCP Connection handling. Globally defined, cause it's used in CHECK-Makro callback function.
 
     //Make FIFO for connection discribing JSON Output
-    unlink(CONNECT_FIFO);
-    CHECK(mkfifo(CONNECT_FIFO, 0660), == 0);
-    confifo = fopen(CONNECT_FIFO, "w+"); //FILE* confifo is globally defined to be reachabel for both proxy-childs and accept-childs
-    fprintf(stderr, "%s [PID %d] FIFO for connection json: %s\n", log_time, getpid(), CONNECT_FIFO);
+    unlink(connect_fifo);
+    CHECK(mkfifo(connect_fifo, 0660), == 0);
+    confifo = fopen(connect_fifo, "w+"); //FILE* confifo is globally defined to be reachabel for both proxy-childs and accept-childs
+    fprintf(stderr, "%s [PID %d] FIFO for connection json: %s\n", log_time, getpid(), connect_fifo);
 
     //Start proxys.
     for (int listenport = 1; listenport<65536; listenport++) { //More Clever solution thus this is brute force?
@@ -221,10 +235,10 @@ int main(int argc, char *argv[])
         CHECK(init_pcap(interface, hostaddr, &handle), == 0); //Init libpcap
 
         //Make FIFO for header discribing JSON Output
-        unlink(HEADER_FIFO);
-        CHECK(mkfifo(HEADER_FIFO, 0660), == 0);
-        hdrfifo = fopen(HEADER_FIFO, "r+");
-        fprintf(stderr, "%s [PID %d] FIFO for header JSON: %s\n", log_time, getpid(), HEADER_FIFO);
+        unlink(header_fifo);
+        CHECK(mkfifo(header_fifo, 0660), == 0);
+        hdrfifo = fopen(header_fifo, "r+");
+        fprintf(stderr, "%s [PID %d] FIFO for header JSON: %s\n", log_time, getpid(), header_fifo);
 
         fprintf(stderr, "%s [PID %d] ", log_time, getpid());
         drop_root_privs(user, "Sniffer:", false); //drop priviliges

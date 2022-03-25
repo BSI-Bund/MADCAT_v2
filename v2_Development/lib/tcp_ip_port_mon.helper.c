@@ -73,7 +73,7 @@ void print_help_tcp(char* progname) //print help message
         Listening Port is 65535 and hostaddress is 10.1.2.3 in this example.\n\n\
     Must be run as root, but the priviliges will be droped to \"user\".\n\n\
     Opens two named pipes (FiFo) containing live JSON output:\n\
-        \"%s\" for stream connection data, \"%s\" for header data.\n", CONNECT_FIFO, HEADER_FIFO);
+        \"%s\" for stream connection data, \"%s\" for header data.\n", CONNECT_FIFO_DEF, HEADER_FIFO_DEF);
     return;
 }
 
