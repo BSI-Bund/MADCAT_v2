@@ -1,0 +1,307 @@
+\hypertarget{connection_8c}{}\doxysection{/home/\+MADCAT/\+BSI-\/\+Bund@Git\+Hub.\+com/github\+\_\+release/lib/rsp/connection.c File Reference}
+\label{connection_8c}\index{/home/MADCAT/BSI-\/Bund"@GitHub.com/github\_release/lib/rsp/connection.c@{/home/MADCAT/BSI-\/Bund"@GitHub.com/github\_release/lib/rsp/connection.c}}
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include $<$sys/epoll.\+h$>$}\newline
+{\ttfamily \#include $<$netdb.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}epollinterface.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}connection.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}logging.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}netutils.\+h\char`\"{}}\newline
+Include dependency graph for connection.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{connection_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structdata__buffer__entry}{data\+\_\+buffer\+\_\+entry}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{connection_8c_a6b20d41d6252e9871430c242cb1a56e7}{BUFFER\+\_\+\+SIZE}}~4096
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{connection_8c_ae4c062026ba033ec514d4cc5624e9217}{connection\+\_\+really\+\_\+close}} (struct \mbox{\hyperlink{structepoll__event__handler}{epoll\+\_\+event\+\_\+handler}} $\ast$self)
+\item 
+void \mbox{\hyperlink{connection_8c_a00eafd99225c84005e4bdbe484c250f2}{connection\+\_\+on\+\_\+close\+\_\+event}} (struct \mbox{\hyperlink{structepoll__event__handler}{epoll\+\_\+event\+\_\+handler}} $\ast$self)
+\item 
+void \mbox{\hyperlink{connection_8c_ae055d4fc73b0d6c2cef01e913f9666c7}{connection\+\_\+on\+\_\+out\+\_\+event}} (struct \mbox{\hyperlink{structepoll__event__handler}{epoll\+\_\+event\+\_\+handler}} $\ast$self)
+\item 
+void \mbox{\hyperlink{connection_8c_a6335109d7e563d58cdd1f41c3a1389bd}{connection\+\_\+on\+\_\+in\+\_\+event}} (struct \mbox{\hyperlink{structepoll__event__handler}{epoll\+\_\+event\+\_\+handler}} $\ast$self)
+\item 
+void \mbox{\hyperlink{connection_8c_a30e6af9ea81683bea6ffd94a9d2c5d97}{connection\+\_\+handle\+\_\+event}} (struct \mbox{\hyperlink{structepoll__event__handler}{epoll\+\_\+event\+\_\+handler}} $\ast$self, uint32\+\_\+t events)
+\item 
+void \mbox{\hyperlink{connection_8c_ae06332c55ff5985e0aa51a7f87533546}{add\+\_\+write\+\_\+buffer\+\_\+entry}} (struct \mbox{\hyperlink{structconnection__closure}{connection\+\_\+closure}} $\ast$closure, struct \mbox{\hyperlink{structdata__buffer__entry}{data\+\_\+buffer\+\_\+entry}} $\ast$new\+\_\+entry)
+\item 
+void \mbox{\hyperlink{connection_8c_aa771e2d1d4a01a5b8bdbd16ee887626c}{connection\+\_\+write}} (struct \mbox{\hyperlink{structepoll__event__handler}{epoll\+\_\+event\+\_\+handler}} $\ast$self, char $\ast$data, int len)
+\begin{DoxyCompactList}\small\item\em RSP Proxy function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{connection_8c_a390765cd266bc17ecd68e2c42f1a9a0f}{connection\+\_\+close}} (struct \mbox{\hyperlink{structepoll__event__handler}{epoll\+\_\+event\+\_\+handler}} $\ast$self)
+\begin{DoxyCompactList}\small\item\em RSP Proxy function. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structepoll__event__handler}{epoll\+\_\+event\+\_\+handler}} $\ast$ \mbox{\hyperlink{connection_8c_ae959adf38f3f5dd27fa00b917a5ffa73}{create\+\_\+connection}} (int client\+\_\+socket\+\_\+fd)
+\begin{DoxyCompactList}\small\item\em RSP Proxy function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{connection_8c_a6b20d41d6252e9871430c242cb1a56e7}\label{connection_8c_a6b20d41d6252e9871430c242cb1a56e7}} 
+\index{connection.c@{connection.c}!BUFFER\_SIZE@{BUFFER\_SIZE}}
+\index{BUFFER\_SIZE@{BUFFER\_SIZE}!connection.c@{connection.c}}
+\doxysubsubsection{\texorpdfstring{BUFFER\_SIZE}{BUFFER\_SIZE}}
+{\footnotesize\ttfamily \#define BUFFER\+\_\+\+SIZE~4096}
+
+
+
+Definition at line 69 of file connection.\+c.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{connection_8c_ae06332c55ff5985e0aa51a7f87533546}\label{connection_8c_ae06332c55ff5985e0aa51a7f87533546}} 
+\index{connection.c@{connection.c}!add\_write\_buffer\_entry@{add\_write\_buffer\_entry}}
+\index{add\_write\_buffer\_entry@{add\_write\_buffer\_entry}!connection.c@{connection.c}}
+\doxysubsubsection{\texorpdfstring{add\_write\_buffer\_entry()}{add\_write\_buffer\_entry()}}
+{\footnotesize\ttfamily void add\+\_\+write\+\_\+buffer\+\_\+entry (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structconnection__closure}{connection\+\_\+closure}} $\ast$}]{closure,  }\item[{struct \mbox{\hyperlink{structdata__buffer__entry}{data\+\_\+buffer\+\_\+entry}} $\ast$}]{new\+\_\+entry }\end{DoxyParamCaption})}
+
+
+
+Definition at line 190 of file connection.\+c.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{connection_8c_ae06332c55ff5985e0aa51a7f87533546_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{connection_8c_a390765cd266bc17ecd68e2c42f1a9a0f}\label{connection_8c_a390765cd266bc17ecd68e2c42f1a9a0f}} 
+\index{connection.c@{connection.c}!connection\_close@{connection\_close}}
+\index{connection\_close@{connection\_close}!connection.c@{connection.c}}
+\doxysubsubsection{\texorpdfstring{connection\_close()}{connection\_close()}}
+{\footnotesize\ttfamily void connection\+\_\+close (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structepoll__event__handler}{epoll\+\_\+event\+\_\+handler}} $\ast$}]{self }\end{DoxyParamCaption})}
+
+
+
+RSP Proxy function. 
+
+Documentation\+: \href{http://www.gilesthomas.com/2013/08/writing-a-reverse-proxyloadbalancer-from-the-ground-up-in-c-part-0/}{\texttt{ http\+://www.\+gilesthomas.\+com/2013/08/writing-\/a-\/reverse-\/proxyloadbalancer-\/from-\/the-\/ground-\/up-\/in-\/c-\/part-\/0/}} 
+
+Definition at line 240 of file connection.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{connection_8c_a390765cd266bc17ecd68e2c42f1a9a0f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{connection_8c_a390765cd266bc17ecd68e2c42f1a9a0f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{connection_8c_a30e6af9ea81683bea6ffd94a9d2c5d97}\label{connection_8c_a30e6af9ea81683bea6ffd94a9d2c5d97}} 
+\index{connection.c@{connection.c}!connection\_handle\_event@{connection\_handle\_event}}
+\index{connection\_handle\_event@{connection\_handle\_event}!connection.c@{connection.c}}
+\doxysubsubsection{\texorpdfstring{connection\_handle\_event()}{connection\_handle\_event()}}
+{\footnotesize\ttfamily void connection\+\_\+handle\+\_\+event (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structepoll__event__handler}{epoll\+\_\+event\+\_\+handler}} $\ast$}]{self,  }\item[{uint32\+\_\+t}]{events }\end{DoxyParamCaption})}
+
+
+
+Definition at line 173 of file connection.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{connection_8c_a30e6af9ea81683bea6ffd94a9d2c5d97_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{connection_8c_a30e6af9ea81683bea6ffd94a9d2c5d97_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{connection_8c_a00eafd99225c84005e4bdbe484c250f2}\label{connection_8c_a00eafd99225c84005e4bdbe484c250f2}} 
+\index{connection.c@{connection.c}!connection\_on\_close\_event@{connection\_on\_close\_event}}
+\index{connection\_on\_close\_event@{connection\_on\_close\_event}!connection.c@{connection.c}}
+\doxysubsubsection{\texorpdfstring{connection\_on\_close\_event()}{connection\_on\_close\_event()}}
+{\footnotesize\ttfamily void connection\+\_\+on\+\_\+close\+\_\+event (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structepoll__event__handler}{epoll\+\_\+event\+\_\+handler}} $\ast$}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 101 of file connection.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{connection_8c_a00eafd99225c84005e4bdbe484c250f2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{connection_8c_a00eafd99225c84005e4bdbe484c250f2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{connection_8c_a6335109d7e563d58cdd1f41c3a1389bd}\label{connection_8c_a6335109d7e563d58cdd1f41c3a1389bd}} 
+\index{connection.c@{connection.c}!connection\_on\_in\_event@{connection\_on\_in\_event}}
+\index{connection\_on\_in\_event@{connection\_on\_in\_event}!connection.c@{connection.c}}
+\doxysubsubsection{\texorpdfstring{connection\_on\_in\_event()}{connection\_on\_in\_event()}}
+{\footnotesize\ttfamily void connection\+\_\+on\+\_\+in\+\_\+event (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structepoll__event__handler}{epoll\+\_\+event\+\_\+handler}} $\ast$}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 150 of file connection.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{connection_8c_a6335109d7e563d58cdd1f41c3a1389bd_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{connection_8c_a6335109d7e563d58cdd1f41c3a1389bd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{connection_8c_ae055d4fc73b0d6c2cef01e913f9666c7}\label{connection_8c_ae055d4fc73b0d6c2cef01e913f9666c7}} 
+\index{connection.c@{connection.c}!connection\_on\_out\_event@{connection\_on\_out\_event}}
+\index{connection\_on\_out\_event@{connection\_on\_out\_event}!connection.c@{connection.c}}
+\doxysubsubsection{\texorpdfstring{connection\_on\_out\_event()}{connection\_on\_out\_event()}}
+{\footnotesize\ttfamily void connection\+\_\+on\+\_\+out\+\_\+event (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structepoll__event__handler}{epoll\+\_\+event\+\_\+handler}} $\ast$}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 111 of file connection.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{connection_8c_ae055d4fc73b0d6c2cef01e913f9666c7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{connection_8c_ae055d4fc73b0d6c2cef01e913f9666c7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{connection_8c_ae4c062026ba033ec514d4cc5624e9217}\label{connection_8c_ae4c062026ba033ec514d4cc5624e9217}} 
+\index{connection.c@{connection.c}!connection\_really\_close@{connection\_really\_close}}
+\index{connection\_really\_close@{connection\_really\_close}!connection.c@{connection.c}}
+\doxysubsubsection{\texorpdfstring{connection\_really\_close()}{connection\_really\_close()}}
+{\footnotesize\ttfamily void connection\+\_\+really\+\_\+close (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structepoll__event__handler}{epoll\+\_\+event\+\_\+handler}} $\ast$}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 80 of file connection.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{connection_8c_ae4c062026ba033ec514d4cc5624e9217_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{connection_8c_ae4c062026ba033ec514d4cc5624e9217_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{connection_8c_aa771e2d1d4a01a5b8bdbd16ee887626c}\label{connection_8c_aa771e2d1d4a01a5b8bdbd16ee887626c}} 
+\index{connection.c@{connection.c}!connection\_write@{connection\_write}}
+\index{connection\_write@{connection\_write}!connection.c@{connection.c}}
+\doxysubsubsection{\texorpdfstring{connection\_write()}{connection\_write()}}
+{\footnotesize\ttfamily void connection\+\_\+write (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structepoll__event__handler}{epoll\+\_\+event\+\_\+handler}} $\ast$}]{self,  }\item[{char $\ast$}]{data,  }\item[{int}]{len }\end{DoxyParamCaption})}
+
+
+
+RSP Proxy function. 
+
+Documentation\+: \href{http://www.gilesthomas.com/2013/08/writing-a-reverse-proxyloadbalancer-from-the-ground-up-in-c-part-0/}{\texttt{ http\+://www.\+gilesthomas.\+com/2013/08/writing-\/a-\/reverse-\/proxyloadbalancer-\/from-\/the-\/ground-\/up-\/in-\/c-\/part-\/0/}} 
+
+Definition at line 203 of file connection.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{connection_8c_aa771e2d1d4a01a5b8bdbd16ee887626c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{connection_8c_aa771e2d1d4a01a5b8bdbd16ee887626c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{connection_8c_ae959adf38f3f5dd27fa00b917a5ffa73}\label{connection_8c_ae959adf38f3f5dd27fa00b917a5ffa73}} 
+\index{connection.c@{connection.c}!create\_connection@{create\_connection}}
+\index{create\_connection@{create\_connection}!connection.c@{connection.c}}
+\doxysubsubsection{\texorpdfstring{create\_connection()}{create\_connection()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structepoll__event__handler}{epoll\+\_\+event\+\_\+handler}}$\ast$ create\+\_\+connection (\begin{DoxyParamCaption}\item[{int}]{connection\+\_\+fd }\end{DoxyParamCaption})}
+
+
+
+RSP Proxy function. 
+
+Documentation\+: \href{http://www.gilesthomas.com/2013/08/writing-a-reverse-proxyloadbalancer-from-the-ground-up-in-c-part-0/}{\texttt{ http\+://www.\+gilesthomas.\+com/2013/08/writing-\/a-\/reverse-\/proxyloadbalancer-\/from-\/the-\/ground-\/up-\/in-\/c-\/part-\/0/}} 
+
+Definition at line 257 of file connection.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{connection_8c_ae959adf38f3f5dd27fa00b917a5ffa73_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{connection_8c_ae959adf38f3f5dd27fa00b917a5ffa73_icgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,650 @@
+\hypertarget{namespaceenrichment__processor}{}\doxysection{enrichment\+\_\+processor Namespace Reference}
+\label{namespaceenrichment__processor}\index{enrichment\_processor@{enrichment\_processor}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespaceenrichment__processor_af75ac90679276a2d5671e39d7af7cd61}{signal\+\_\+handler\+\_\+sigint}} (signum, frame)
+\begin{DoxyCompactList}\small\item\em SIGINT Signal Hander \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# ...for gracefull shutdown. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespaceenrichment__processor_a08a73cba3c00e136417da50e1a3a58fe}{signal\+\_\+handler\+\_\+sigabrt}} (signum, frame)
+\item 
+def \mbox{\hyperlink{namespaceenrichment__processor_a24ba1fe8c000eb5b84d913d6d285f2eb}{drop\+\_\+privileges}} (uid\+\_\+name, gid\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Drop root priviliges \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespaceenrichment__processor_af3190e25263979658234c62fdf6aff0a}{eprint}} ($\ast$args, $\ast$$\ast$kwargs)
+\begin{DoxyCompactList}\small\item\em Print on STDERR \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespaceenrichment__processor_ab2e0de78412a95cebc643c2a2079a8b3}{acquire}} ()
+\begin{DoxyCompactList}\small\item\em Acquire data for enrichment \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespaceenrichment__processor_a339b88461f4d98e3954040883ee46426}{sync\+\_\+with\+\_\+backend\+\_\+th}} ()
+\item 
+def \mbox{\hyperlink{namespaceenrichment__processor_a7fbac282e8516fdb6bd39116cb339679}{enrich}} ()
+\begin{DoxyCompactList}\small\item\em Read MADCAT Logs from FIFO and enrich \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespaceenrichment__processor_a5589e102f636c730bd39009c68f0c783}{enrich\+\_\+child}} (json\+\_\+dict\+\_\+list)
+\item 
+def \mbox{\hyperlink{namespaceenrichment__processor_a4c3e6c673b073f4f25f3e3c2815edc9f}{ext\+\_\+ip}} (json\+\_\+dict\+\_\+list)
+\item 
+def \mbox{\hyperlink{namespaceenrichment__processor_aa64f80bc640e6067da3a37de30c3262f}{backend\+\_\+id}} (json\+\_\+dict\+\_\+list)
+\item 
+def \mbox{\hyperlink{namespaceenrichment__processor_af5f47177f98a6049cb2dbd77476cf7cb}{payload\+\_\+split}} (json\+\_\+dict\+\_\+list)
+\item 
+def \mbox{\hyperlink{namespaceenrichment__processor_afaa082c33d1549e3c68a63eb981566ae}{main}} (argv)
+\begin{DoxyCompactList}\small\item\em Main \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespaceenrichment__processor_a525ae2c1d308ce3cb8a6968186abbd57}{GLOBAL\+\_\+\+IP\+\_\+\+SERVER\+\_\+\+CLIENT\+\_\+\+PRESENT}} = True
+\item 
+string \mbox{\hyperlink{namespaceenrichment__processor_ad81c3d635cd33d9d210436d3ba776b2c}{DEF\+\_\+\+MADCATLOG\+\_\+\+FIFO}} = \char`\"{}/tmp/logs.\+erm\char`\"{}
+\begin{DoxyCompactList}\small\item\em DEFAULT CONFIGURATION \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# Only in this section changes are allowed (global configuration variables beginning with \char`\"{}\+DEF\+\_\+\char`\"{}), thus for configuration purposes ;-\/) \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceenrichment__processor_a9d7626d362e7abef548bdd48e53c61d8}{DEF\+\_\+\+DNS\+\_\+\+SERVER}} = \char`\"{}resolver1.\+opendns.\+com\char`\"{}
+\item 
+string \mbox{\hyperlink{namespaceenrichment__processor_aafab4166869fd4d6127f6061cd2ef7cd}{DEF\+\_\+\+EXTIP\+\_\+\+DNSNAME}} = \char`\"{}myip.\+opendns.\+com\char`\"{}
+\item 
+int \mbox{\hyperlink{namespaceenrichment__processor_a8d105846343fc4c517e5738229589e01}{DEF\+\_\+\+ACQUIRE\+\_\+\+INTERVAL}} = 600
+\item 
+int \mbox{\hyperlink{namespaceenrichment__processor_a3fb890fbd57d534cc5b147014a9b07fc}{DEF\+\_\+\+ENR\+\_\+\+SPLIT}} = 0
+\item 
+int \mbox{\hyperlink{namespaceenrichment__processor_a60e328f4d75b84abfebe06398bc988ec}{DEF\+\_\+\+LINE\+\_\+\+LENGTH\+\_\+\+HD}} = 79
+\item 
+int \mbox{\hyperlink{namespaceenrichment__processor_a8e9e6c397db9aebc9497eee9fd9e78b6}{DEF\+\_\+\+LINE\+\_\+\+LENGTH\+\_\+\+STR}} = 32
+\item 
+float \mbox{\hyperlink{namespaceenrichment__processor_aa735aa56393b8d7b3a11e701231c9bc9}{DEF\+\_\+\+TIMEOUT}} = 0.\+1
+\item 
+string \mbox{\hyperlink{namespaceenrichment__processor_ab80c8e0ef0bce53ef5df5bd84bf5dc78}{DEF\+\_\+\+USER}} = \char`\"{}madcat\char`\"{}
+\item 
+string \mbox{\hyperlink{namespaceenrichment__processor_aeeb176e419f14793368ed15cb893f3dd}{DEF\+\_\+\+GROUP}} = \char`\"{}madcat\char`\"{}
+\item 
+\mbox{\hyperlink{namespaceenrichment__processor_a868eb36f427d808a4f240b7f7c805131}{DEF\+\_\+\+OUTPUT\+\_\+\+FILES}} = None
+\item 
+string \mbox{\hyperlink{namespaceenrichment__processor_a6d95f18dd10665b8a8af643ce4e5b6b9}{DEF\+\_\+\+IP\+\_\+\+SERVER\+\_\+\+HOST}} = \char`\"{}10.\+10.\+10.\+10\+:10000\char`\"{}
+\item 
+string \mbox{\hyperlink{namespaceenrichment__processor_a89675b48ab5dce09c518f727cf7d3f08}{GLOBAL\+\_\+\+VERSION}} = \char`\"{}MADCAT -\/ Mass Attack Detecion Connection Acceptance Tools\textbackslash{}n\+Enrichment processor v2.\+3.\+6\textbackslash{}n for TCP/IP Portmonitor v2.\+3.\+x\textbackslash{}n\+BSI 2018-\/2023\textbackslash{}n\char`\"{}
+\begin{DoxyCompactList}\small\item\em Version and Mascott strings \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceenrichment__processor_a43781bcf3c54b1ee70f7d3aeb3a852d8}{GLOBAL\+\_\+\+MASCOTT}} = \char`\"{} ▄▄▄ ▄▄▄▄▄▄\textbackslash{}n ▀▄▄ ▄▓▓█▓▓▓█▌ ██▓██▓▓██▄ ▄▀\textbackslash{}n ▀▄▄▄▓█▓██ █▓█▌ █▓ ▓████████▀\textbackslash{}n ▀███▓▓(o)██▓▌ ▐█▓█(o)█▓█████▀\textbackslash{}n ▀▀██▓█▓▓█ ████▓███▀▀\textbackslash{}n ▄ ▀▀▀▀ ▄\textbackslash{}n ▀▀█ ▐██▌\textbackslash{}n ██▄ \+\_\+\+\_\+\+\_\+\+\_\+-\/-\/-\/-\/-\/-\/▐██████▌-\/-\/-\/-\/-\/-\/\+\_\+\+\_\+\+\_\+ ▄▄██\textbackslash{}n \+\_\+\+\_\+█ █▄▄-\/-\/ \+\_\+\+\_\+\+\_\+-\/-\/-\/-\/-\/-\/▀▓▓▀-\/-\/-\/-\/-\/\+\_\+\+\_\+\+\_\+ -\/-\/▄▄█ █▀\+\_\+\+\_\+\textbackslash{}n \+\_\+\+\_\+-\/-\/ ▀█ ██▄▄▄▄ \+\_\+\+\_\+-\/-\/▄▓▓▄-\/-\/\+\_\+\+\_\+ ▄▄▄▄██ ██▀ -\/-\/\+\_\+\+\_\+\textbackslash{}n \+\_\+\+\_\+-\/-\/ \+\_\+\+\_\+-\/-\/▀█ ██ █▀▀█████▄▄▄▄▄▄███████ ██ █▀-\/-\/\+\_\+\+\_\+ -\/-\/\+\_\+\+\_\+\textbackslash{}n \+\_\+\+\_\+-\/-\/ \+\_\+\+\_\+-\/-\/ \+\_\+\+\_\+▀▀█ █ ██ ██▀▀██▀▀██ ██ █▀▀\+\_\+\+\_\+ -\/-\/\+\_\+\+\_\+ -\/-\/\+\_\+\+\_\+\textbackslash{}n \+\_\+\+\_\+-\/-\/ \+\_\+\+\_\+-\/-\/ ▀███ ██ ██ ██ ██ ████▀ -\/-\/\+\_\+\+\_\+ -\/-\/\+\_\+\+\_\+\textbackslash{}n bsi -\/-\/ \+\_\+\+\_\+-\/-\/ ▀▀▀▀▀██▄▄██▄▄██▀▀▀▀ -\/-\/\+\_\+\+\_\+ -\/-\/\textbackslash{}n \+\_\+\+\_\+ -\/-\/ -\/-\/\+\_\+\+\_\+\char`\"{}
+\item 
+bool \mbox{\hyperlink{namespaceenrichment__processor_adbabbab74946b81c093f6491cb4e7d26}{GLOBAL\+\_\+\+SHUTDOWN}} = False
+\begin{DoxyCompactList}\small\item\em Semaphore \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceenrichment__processor_ab210c73b5657ef793847fa55f96ae417}{GLOBAL\+\_\+\+ENRICHMENT}} = \mbox{\hyperlink{structdict}{dict}}()
+\begin{DoxyCompactList}\small\item\em Other globals \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespaceenrichment__processor_a6ae05bcd3f2ce1bd22eb60a198fb196c}{GLOBAL\+\_\+\+OUTPUT\+\_\+\+STDOUT}} = True
+\item 
+bool \mbox{\hyperlink{namespaceenrichment__processor_aab23ea304de90f84e6caad905420e74d}{GLOBAL\+\_\+\+OUTPUT\+\_\+\+FILES}} = False
+\item 
+\mbox{\hyperlink{namespaceenrichment__processor_a07f36e37a8091019d6f3c0720e948661}{GLOBAL\+\_\+\+OUTPUT\+\_\+\+FILE\+\_\+\+HANDLES}} = list()
+\item 
+\mbox{\hyperlink{namespaceenrichment__processor_a95dd64ce73b3e17a5cbe7d4afe8a0fcd}{GLOBAL\+\_\+\+STDERR\+\_\+\+LOCK}} = threading.\+Lock()
+\begin{DoxyCompactList}\small\item\em Globals and Locks for output and enrichment data \#\#\#\#\#\#\#\#\#\#\#\#. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceenrichment__processor_a74a88a26d877884d42294871e7ec6047}{GLOBAL\+\_\+\+OUTPUT\+\_\+\+LOCK}} = threading.\+Lock()
+\item 
+\mbox{\hyperlink{namespaceenrichment__processor_a18b086caa9e6bbb17928a51a7ec29647}{GLOBAL\+\_\+\+DATA\+\_\+\+AQUISITON\+\_\+\+LOCK}} = threading.\+Lock()
+\item 
+int \mbox{\hyperlink{namespaceenrichment__processor_a2c0f17cd252db76bbffa3ea1d322eeea}{GLOBAL\+\_\+\+TOTAL\+\_\+\+COUNT}} = 0
+\item 
+int \mbox{\hyperlink{namespaceenrichment__processor_a671b8b9e689c8992ecd718f79b9a6fd2}{GLOBAL\+\_\+\+SPLIT\+\_\+\+COUNT}} = 0
+\item 
+\mbox{\hyperlink{namespaceenrichment__processor_a0408cab284434c40e79751e4ef5fd98f}{enrich\+\_\+th}} = threading.\+Thread(target=\mbox{\hyperlink{namespaceenrichment__processor_a7fbac282e8516fdb6bd39116cb339679}{enrich}}, daemon=True)
+\begin{DoxyCompactList}\small\item\em Configure main Threads \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# All threads are deamonized to make them exit with the parent process Thread for gattering enrichment data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceenrichment__processor_a328dead0e3628f8439722137eb26d60e}{aquisition\+\_\+th}} = threading.\+Thread(target=\mbox{\hyperlink{namespaceenrichment__processor_ab2e0de78412a95cebc643c2a2079a8b3}{acquire}}, daemon=True)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespaceenrichment__processor_ab2e0de78412a95cebc643c2a2079a8b3}\label{namespaceenrichment__processor_ab2e0de78412a95cebc643c2a2079a8b3}} 
+\index{enrichment\_processor@{enrichment\_processor}!acquire@{acquire}}
+\index{acquire@{acquire}!enrichment\_processor@{enrichment\_processor}}
+\doxysubsubsection{\texorpdfstring{acquire()}{acquire()}}
+{\footnotesize\ttfamily def enrichment\+\_\+processor.\+acquire (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Acquire data for enrichment \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#. 
+
+
+
+Definition at line 222 of file enrichment\+\_\+processor.\+py.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{namespaceenrichment__processor_ab2e0de78412a95cebc643c2a2079a8b3_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceenrichment__processor_aa64f80bc640e6067da3a37de30c3262f}\label{namespaceenrichment__processor_aa64f80bc640e6067da3a37de30c3262f}} 
+\index{enrichment\_processor@{enrichment\_processor}!backend\_id@{backend\_id}}
+\index{backend\_id@{backend\_id}!enrichment\_processor@{enrichment\_processor}}
+\doxysubsubsection{\texorpdfstring{backend\_id()}{backend\_id()}}
+{\footnotesize\ttfamily def enrichment\+\_\+processor.\+backend\+\_\+id (\begin{DoxyParamCaption}\item[{}]{json\+\_\+dict\+\_\+list }\end{DoxyParamCaption})}
+
+
+
+Definition at line 466 of file enrichment\+\_\+processor.\+py.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{namespaceenrichment__processor_aa64f80bc640e6067da3a37de30c3262f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{namespaceenrichment__processor_aa64f80bc640e6067da3a37de30c3262f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceenrichment__processor_a24ba1fe8c000eb5b84d913d6d285f2eb}\label{namespaceenrichment__processor_a24ba1fe8c000eb5b84d913d6d285f2eb}} 
+\index{enrichment\_processor@{enrichment\_processor}!drop\_privileges@{drop\_privileges}}
+\index{drop\_privileges@{drop\_privileges}!enrichment\_processor@{enrichment\_processor}}
+\doxysubsubsection{\texorpdfstring{drop\_privileges()}{drop\_privileges()}}
+{\footnotesize\ttfamily def enrichment\+\_\+processor.\+drop\+\_\+privileges (\begin{DoxyParamCaption}\item[{}]{uid\+\_\+name,  }\item[{}]{gid\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Drop root priviliges \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#. 
+
+
+
+Definition at line 172 of file enrichment\+\_\+processor.\+py.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{namespaceenrichment__processor_a24ba1fe8c000eb5b84d913d6d285f2eb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{namespaceenrichment__processor_a24ba1fe8c000eb5b84d913d6d285f2eb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceenrichment__processor_a7fbac282e8516fdb6bd39116cb339679}\label{namespaceenrichment__processor_a7fbac282e8516fdb6bd39116cb339679}} 
+\index{enrichment\_processor@{enrichment\_processor}!enrich@{enrich}}
+\index{enrich@{enrich}!enrichment\_processor@{enrichment\_processor}}
+\doxysubsubsection{\texorpdfstring{enrich()}{enrich()}}
+{\footnotesize\ttfamily def enrichment\+\_\+processor.\+enrich (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Read MADCAT Logs from FIFO and enrich \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#. 
+
+
+
+Definition at line 341 of file enrichment\+\_\+processor.\+py.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{namespaceenrichment__processor_a7fbac282e8516fdb6bd39116cb339679_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceenrichment__processor_a5589e102f636c730bd39009c68f0c783}\label{namespaceenrichment__processor_a5589e102f636c730bd39009c68f0c783}} 
+\index{enrichment\_processor@{enrichment\_processor}!enrich\_child@{enrich\_child}}
+\index{enrich\_child@{enrich\_child}!enrichment\_processor@{enrichment\_processor}}
+\doxysubsubsection{\texorpdfstring{enrich\_child()}{enrich\_child()}}
+{\footnotesize\ttfamily def enrichment\+\_\+processor.\+enrich\+\_\+child (\begin{DoxyParamCaption}\item[{}]{json\+\_\+dict\+\_\+list }\end{DoxyParamCaption})}
+
+
+
+Definition at line 414 of file enrichment\+\_\+processor.\+py.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceenrichment__processor_a5589e102f636c730bd39009c68f0c783_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceenrichment__processor_af3190e25263979658234c62fdf6aff0a}\label{namespaceenrichment__processor_af3190e25263979658234c62fdf6aff0a}} 
+\index{enrichment\_processor@{enrichment\_processor}!eprint@{eprint}}
+\index{eprint@{eprint}!enrichment\_processor@{enrichment\_processor}}
+\doxysubsubsection{\texorpdfstring{eprint()}{eprint()}}
+{\footnotesize\ttfamily def enrichment\+\_\+processor.\+eprint (\begin{DoxyParamCaption}\item[{$\ast$}]{args,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+
+
+Print on STDERR \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#. 
+
+
+
+Definition at line 212 of file enrichment\+\_\+processor.\+py.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceenrichment__processor_af3190e25263979658234c62fdf6aff0a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceenrichment__processor_a4c3e6c673b073f4f25f3e3c2815edc9f}\label{namespaceenrichment__processor_a4c3e6c673b073f4f25f3e3c2815edc9f}} 
+\index{enrichment\_processor@{enrichment\_processor}!ext\_ip@{ext\_ip}}
+\index{ext\_ip@{ext\_ip}!enrichment\_processor@{enrichment\_processor}}
+\doxysubsubsection{\texorpdfstring{ext\_ip()}{ext\_ip()}}
+{\footnotesize\ttfamily def enrichment\+\_\+processor.\+ext\+\_\+ip (\begin{DoxyParamCaption}\item[{}]{json\+\_\+dict\+\_\+list }\end{DoxyParamCaption})}
+
+
+
+Definition at line 449 of file enrichment\+\_\+processor.\+py.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{namespaceenrichment__processor_a4c3e6c673b073f4f25f3e3c2815edc9f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceenrichment__processor_afaa082c33d1549e3c68a63eb981566ae}\label{namespaceenrichment__processor_afaa082c33d1549e3c68a63eb981566ae}} 
+\index{enrichment\_processor@{enrichment\_processor}!main@{main}}
+\index{main@{main}!enrichment\_processor@{enrichment\_processor}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily def enrichment\+\_\+processor.\+main (\begin{DoxyParamCaption}\item[{}]{argv }\end{DoxyParamCaption})}
+
+
+
+Main \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#. 
+
+
+
+Definition at line 629 of file enrichment\+\_\+processor.\+py.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{namespaceenrichment__processor_afaa082c33d1549e3c68a63eb981566ae_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceenrichment__processor_af5f47177f98a6049cb2dbd77476cf7cb}\label{namespaceenrichment__processor_af5f47177f98a6049cb2dbd77476cf7cb}} 
+\index{enrichment\_processor@{enrichment\_processor}!payload\_split@{payload\_split}}
+\index{payload\_split@{payload\_split}!enrichment\_processor@{enrichment\_processor}}
+\doxysubsubsection{\texorpdfstring{payload\_split()}{payload\_split()}}
+{\footnotesize\ttfamily def enrichment\+\_\+processor.\+payload\+\_\+split (\begin{DoxyParamCaption}\item[{}]{json\+\_\+dict\+\_\+list }\end{DoxyParamCaption})}
+
+
+
+Definition at line 514 of file enrichment\+\_\+processor.\+py.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{namespaceenrichment__processor_af5f47177f98a6049cb2dbd77476cf7cb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{namespaceenrichment__processor_af5f47177f98a6049cb2dbd77476cf7cb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceenrichment__processor_a08a73cba3c00e136417da50e1a3a58fe}\label{namespaceenrichment__processor_a08a73cba3c00e136417da50e1a3a58fe}} 
+\index{enrichment\_processor@{enrichment\_processor}!signal\_handler\_sigabrt@{signal\_handler\_sigabrt}}
+\index{signal\_handler\_sigabrt@{signal\_handler\_sigabrt}!enrichment\_processor@{enrichment\_processor}}
+\doxysubsubsection{\texorpdfstring{signal\_handler\_sigabrt()}{signal\_handler\_sigabrt()}}
+{\footnotesize\ttfamily def enrichment\+\_\+processor.\+signal\+\_\+handler\+\_\+sigabrt (\begin{DoxyParamCaption}\item[{}]{signum,  }\item[{}]{frame }\end{DoxyParamCaption})}
+
+
+
+Definition at line 143 of file enrichment\+\_\+processor.\+py.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{namespaceenrichment__processor_a08a73cba3c00e136417da50e1a3a58fe_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceenrichment__processor_af75ac90679276a2d5671e39d7af7cd61}\label{namespaceenrichment__processor_af75ac90679276a2d5671e39d7af7cd61}} 
+\index{enrichment\_processor@{enrichment\_processor}!signal\_handler\_sigint@{signal\_handler\_sigint}}
+\index{signal\_handler\_sigint@{signal\_handler\_sigint}!enrichment\_processor@{enrichment\_processor}}
+\doxysubsubsection{\texorpdfstring{signal\_handler\_sigint()}{signal\_handler\_sigint()}}
+{\footnotesize\ttfamily def enrichment\+\_\+processor.\+signal\+\_\+handler\+\_\+sigint (\begin{DoxyParamCaption}\item[{}]{signum,  }\item[{}]{frame }\end{DoxyParamCaption})}
+
+
+
+SIGINT Signal Hander \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# ...for gracefull shutdown. 
+
+
+
+Definition at line 112 of file enrichment\+\_\+processor.\+py.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=281pt]{namespaceenrichment__processor_af75ac90679276a2d5671e39d7af7cd61_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceenrichment__processor_a339b88461f4d98e3954040883ee46426}\label{namespaceenrichment__processor_a339b88461f4d98e3954040883ee46426}} 
+\index{enrichment\_processor@{enrichment\_processor}!sync\_with\_backend\_th@{sync\_with\_backend\_th}}
+\index{sync\_with\_backend\_th@{sync\_with\_backend\_th}!enrichment\_processor@{enrichment\_processor}}
+\doxysubsubsection{\texorpdfstring{sync\_with\_backend\_th()}{sync\_with\_backend\_th()}}
+{\footnotesize\ttfamily def enrichment\+\_\+processor.\+sync\+\_\+with\+\_\+backend\+\_\+th (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 308 of file enrichment\+\_\+processor.\+py.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=287pt]{namespaceenrichment__processor_a339b88461f4d98e3954040883ee46426_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespaceenrichment__processor_a328dead0e3628f8439722137eb26d60e}\label{namespaceenrichment__processor_a328dead0e3628f8439722137eb26d60e}} 
+\index{enrichment\_processor@{enrichment\_processor}!aquisition\_th@{aquisition\_th}}
+\index{aquisition\_th@{aquisition\_th}!enrichment\_processor@{enrichment\_processor}}
+\doxysubsubsection{\texorpdfstring{aquisition\_th}{aquisition\_th}}
+{\footnotesize\ttfamily aquisition\+\_\+th = threading.\+Thread(target=\mbox{\hyperlink{namespaceenrichment__processor_ab2e0de78412a95cebc643c2a2079a8b3}{acquire}}, daemon=True)}
+
+
+
+Definition at line 621 of file enrichment\+\_\+processor.\+py.
+
+\mbox{\Hypertarget{namespaceenrichment__processor_a8d105846343fc4c517e5738229589e01}\label{namespaceenrichment__processor_a8d105846343fc4c517e5738229589e01}} 
+\index{enrichment\_processor@{enrichment\_processor}!DEF\_ACQUIRE\_INTERVAL@{DEF\_ACQUIRE\_INTERVAL}}
+\index{DEF\_ACQUIRE\_INTERVAL@{DEF\_ACQUIRE\_INTERVAL}!enrichment\_processor@{enrichment\_processor}}
+\doxysubsubsection{\texorpdfstring{DEF\_ACQUIRE\_INTERVAL}{DEF\_ACQUIRE\_INTERVAL}}
+{\footnotesize\ttfamily int DEF\+\_\+\+ACQUIRE\+\_\+\+INTERVAL = 600}
+
+
+
+Definition at line 66 of file enrichment\+\_\+processor.\+py.
+
+\mbox{\Hypertarget{namespaceenrichment__processor_a9d7626d362e7abef548bdd48e53c61d8}\label{namespaceenrichment__processor_a9d7626d362e7abef548bdd48e53c61d8}} 
+\index{enrichment\_processor@{enrichment\_processor}!DEF\_DNS\_SERVER@{DEF\_DNS\_SERVER}}
+\index{DEF\_DNS\_SERVER@{DEF\_DNS\_SERVER}!enrichment\_processor@{enrichment\_processor}}
+\doxysubsubsection{\texorpdfstring{DEF\_DNS\_SERVER}{DEF\_DNS\_SERVER}}
+{\footnotesize\ttfamily string DEF\+\_\+\+DNS\+\_\+\+SERVER = \char`\"{}resolver1.\+opendns.\+com\char`\"{}}
+
+
+
+Definition at line 64 of file enrichment\+\_\+processor.\+py.
+
+\mbox{\Hypertarget{namespaceenrichment__processor_a3fb890fbd57d534cc5b147014a9b07fc}\label{namespaceenrichment__processor_a3fb890fbd57d534cc5b147014a9b07fc}} 
+\index{enrichment\_processor@{enrichment\_processor}!DEF\_ENR\_SPLIT@{DEF\_ENR\_SPLIT}}
+\index{DEF\_ENR\_SPLIT@{DEF\_ENR\_SPLIT}!enrichment\_processor@{enrichment\_processor}}
+\doxysubsubsection{\texorpdfstring{DEF\_ENR\_SPLIT}{DEF\_ENR\_SPLIT}}
+{\footnotesize\ttfamily int DEF\+\_\+\+ENR\+\_\+\+SPLIT = 0}
+
+
+
+Definition at line 69 of file enrichment\+\_\+processor.\+py.
+
+\mbox{\Hypertarget{namespaceenrichment__processor_aafab4166869fd4d6127f6061cd2ef7cd}\label{namespaceenrichment__processor_aafab4166869fd4d6127f6061cd2ef7cd}} 
+\index{enrichment\_processor@{enrichment\_processor}!DEF\_EXTIP\_DNSNAME@{DEF\_EXTIP\_DNSNAME}}
+\index{DEF\_EXTIP\_DNSNAME@{DEF\_EXTIP\_DNSNAME}!enrichment\_processor@{enrichment\_processor}}
+\doxysubsubsection{\texorpdfstring{DEF\_EXTIP\_DNSNAME}{DEF\_EXTIP\_DNSNAME}}
+{\footnotesize\ttfamily string DEF\+\_\+\+EXTIP\+\_\+\+DNSNAME = \char`\"{}myip.\+opendns.\+com\char`\"{}}
+
+
+
+Definition at line 65 of file enrichment\+\_\+processor.\+py.
+
+\mbox{\Hypertarget{namespaceenrichment__processor_aeeb176e419f14793368ed15cb893f3dd}\label{namespaceenrichment__processor_aeeb176e419f14793368ed15cb893f3dd}} 
+\index{enrichment\_processor@{enrichment\_processor}!DEF\_GROUP@{DEF\_GROUP}}
+\index{DEF\_GROUP@{DEF\_GROUP}!enrichment\_processor@{enrichment\_processor}}
+\doxysubsubsection{\texorpdfstring{DEF\_GROUP}{DEF\_GROUP}}
+{\footnotesize\ttfamily string DEF\+\_\+\+GROUP = \char`\"{}madcat\char`\"{}}
+
+
+
+Definition at line 80 of file enrichment\+\_\+processor.\+py.
+
+\mbox{\Hypertarget{namespaceenrichment__processor_a6d95f18dd10665b8a8af643ce4e5b6b9}\label{namespaceenrichment__processor_a6d95f18dd10665b8a8af643ce4e5b6b9}} 
+\index{enrichment\_processor@{enrichment\_processor}!DEF\_IP\_SERVER\_HOST@{DEF\_IP\_SERVER\_HOST}}
+\index{DEF\_IP\_SERVER\_HOST@{DEF\_IP\_SERVER\_HOST}!enrichment\_processor@{enrichment\_processor}}
+\doxysubsubsection{\texorpdfstring{DEF\_IP\_SERVER\_HOST}{DEF\_IP\_SERVER\_HOST}}
+{\footnotesize\ttfamily string DEF\+\_\+\+IP\+\_\+\+SERVER\+\_\+\+HOST = \char`\"{}10.\+10.\+10.\+10\+:10000\char`\"{}}
+
+
+
+Definition at line 86 of file enrichment\+\_\+processor.\+py.
+
+\mbox{\Hypertarget{namespaceenrichment__processor_a60e328f4d75b84abfebe06398bc988ec}\label{namespaceenrichment__processor_a60e328f4d75b84abfebe06398bc988ec}} 
+\index{enrichment\_processor@{enrichment\_processor}!DEF\_LINE\_LENGTH\_HD@{DEF\_LINE\_LENGTH\_HD}}
+\index{DEF\_LINE\_LENGTH\_HD@{DEF\_LINE\_LENGTH\_HD}!enrichment\_processor@{enrichment\_processor}}
+\doxysubsubsection{\texorpdfstring{DEF\_LINE\_LENGTH\_HD}{DEF\_LINE\_LENGTH\_HD}}
+{\footnotesize\ttfamily int DEF\+\_\+\+LINE\+\_\+\+LENGTH\+\_\+\+HD = 79}
+
+
+
+Definition at line 72 of file enrichment\+\_\+processor.\+py.
+
+\mbox{\Hypertarget{namespaceenrichment__processor_a8e9e6c397db9aebc9497eee9fd9e78b6}\label{namespaceenrichment__processor_a8e9e6c397db9aebc9497eee9fd9e78b6}} 
+\index{enrichment\_processor@{enrichment\_processor}!DEF\_LINE\_LENGTH\_STR@{DEF\_LINE\_LENGTH\_STR}}
+\index{DEF\_LINE\_LENGTH\_STR@{DEF\_LINE\_LENGTH\_STR}!enrichment\_processor@{enrichment\_processor}}
+\doxysubsubsection{\texorpdfstring{DEF\_LINE\_LENGTH\_STR}{DEF\_LINE\_LENGTH\_STR}}
+{\footnotesize\ttfamily int DEF\+\_\+\+LINE\+\_\+\+LENGTH\+\_\+\+STR = 32}
+
+
+
+Definition at line 74 of file enrichment\+\_\+processor.\+py.
+
+\mbox{\Hypertarget{namespaceenrichment__processor_ad81c3d635cd33d9d210436d3ba776b2c}\label{namespaceenrichment__processor_ad81c3d635cd33d9d210436d3ba776b2c}} 
+\index{enrichment\_processor@{enrichment\_processor}!DEF\_MADCATLOG\_FIFO@{DEF\_MADCATLOG\_FIFO}}
+\index{DEF\_MADCATLOG\_FIFO@{DEF\_MADCATLOG\_FIFO}!enrichment\_processor@{enrichment\_processor}}
+\doxysubsubsection{\texorpdfstring{DEF\_MADCATLOG\_FIFO}{DEF\_MADCATLOG\_FIFO}}
+{\footnotesize\ttfamily string DEF\+\_\+\+MADCATLOG\+\_\+\+FIFO = \char`\"{}/tmp/logs.\+erm\char`\"{}}
+
+
+
+DEFAULT CONFIGURATION \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# Only in this section changes are allowed (global configuration variables beginning with \char`\"{}\+DEF\+\_\+\char`\"{}), thus for configuration purposes ;-\/) 
+
+
+
+Definition at line 62 of file enrichment\+\_\+processor.\+py.
+
+\mbox{\Hypertarget{namespaceenrichment__processor_a868eb36f427d808a4f240b7f7c805131}\label{namespaceenrichment__processor_a868eb36f427d808a4f240b7f7c805131}} 
+\index{enrichment\_processor@{enrichment\_processor}!DEF\_OUTPUT\_FILES@{DEF\_OUTPUT\_FILES}}
+\index{DEF\_OUTPUT\_FILES@{DEF\_OUTPUT\_FILES}!enrichment\_processor@{enrichment\_processor}}
+\doxysubsubsection{\texorpdfstring{DEF\_OUTPUT\_FILES}{DEF\_OUTPUT\_FILES}}
+{\footnotesize\ttfamily DEF\+\_\+\+OUTPUT\+\_\+\+FILES = None}
+
+
+
+Definition at line 83 of file enrichment\+\_\+processor.\+py.
+
+\mbox{\Hypertarget{namespaceenrichment__processor_aa735aa56393b8d7b3a11e701231c9bc9}\label{namespaceenrichment__processor_aa735aa56393b8d7b3a11e701231c9bc9}} 
+\index{enrichment\_processor@{enrichment\_processor}!DEF\_TIMEOUT@{DEF\_TIMEOUT}}
+\index{DEF\_TIMEOUT@{DEF\_TIMEOUT}!enrichment\_processor@{enrichment\_processor}}
+\doxysubsubsection{\texorpdfstring{DEF\_TIMEOUT}{DEF\_TIMEOUT}}
+{\footnotesize\ttfamily float DEF\+\_\+\+TIMEOUT = 0.\+1}
+
+
+
+Definition at line 77 of file enrichment\+\_\+processor.\+py.
+
+\mbox{\Hypertarget{namespaceenrichment__processor_ab80c8e0ef0bce53ef5df5bd84bf5dc78}\label{namespaceenrichment__processor_ab80c8e0ef0bce53ef5df5bd84bf5dc78}} 
+\index{enrichment\_processor@{enrichment\_processor}!DEF\_USER@{DEF\_USER}}
+\index{DEF\_USER@{DEF\_USER}!enrichment\_processor@{enrichment\_processor}}
+\doxysubsubsection{\texorpdfstring{DEF\_USER}{DEF\_USER}}
+{\footnotesize\ttfamily string DEF\+\_\+\+USER = \char`\"{}madcat\char`\"{}}
+
+
+
+Definition at line 79 of file enrichment\+\_\+processor.\+py.
+
+\mbox{\Hypertarget{namespaceenrichment__processor_a0408cab284434c40e79751e4ef5fd98f}\label{namespaceenrichment__processor_a0408cab284434c40e79751e4ef5fd98f}} 
+\index{enrichment\_processor@{enrichment\_processor}!enrich\_th@{enrich\_th}}
+\index{enrich\_th@{enrich\_th}!enrichment\_processor@{enrichment\_processor}}
+\doxysubsubsection{\texorpdfstring{enrich\_th}{enrich\_th}}
+{\footnotesize\ttfamily enrich\+\_\+th = threading.\+Thread(target=\mbox{\hyperlink{namespaceenrichment__processor_a7fbac282e8516fdb6bd39116cb339679}{enrich}}, daemon=True)}
+
+
+
+Configure main Threads \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# All threads are deamonized to make them exit with the parent process Thread for gattering enrichment data. 
+
+
+
+Definition at line 617 of file enrichment\+\_\+processor.\+py.
+
+\mbox{\Hypertarget{namespaceenrichment__processor_a18b086caa9e6bbb17928a51a7ec29647}\label{namespaceenrichment__processor_a18b086caa9e6bbb17928a51a7ec29647}} 
+\index{enrichment\_processor@{enrichment\_processor}!GLOBAL\_DATA\_AQUISITON\_LOCK@{GLOBAL\_DATA\_AQUISITON\_LOCK}}
+\index{GLOBAL\_DATA\_AQUISITON\_LOCK@{GLOBAL\_DATA\_AQUISITON\_LOCK}!enrichment\_processor@{enrichment\_processor}}
+\doxysubsubsection{\texorpdfstring{GLOBAL\_DATA\_AQUISITON\_LOCK}{GLOBAL\_DATA\_AQUISITON\_LOCK}}
+{\footnotesize\ttfamily GLOBAL\+\_\+\+DATA\+\_\+\+AQUISITON\+\_\+\+LOCK = threading.\+Lock()}
+
+
+
+Definition at line 104 of file enrichment\+\_\+processor.\+py.
+
+\mbox{\Hypertarget{namespaceenrichment__processor_ab210c73b5657ef793847fa55f96ae417}\label{namespaceenrichment__processor_ab210c73b5657ef793847fa55f96ae417}} 
+\index{enrichment\_processor@{enrichment\_processor}!GLOBAL\_ENRICHMENT@{GLOBAL\_ENRICHMENT}}
+\index{GLOBAL\_ENRICHMENT@{GLOBAL\_ENRICHMENT}!enrichment\_processor@{enrichment\_processor}}
+\doxysubsubsection{\texorpdfstring{GLOBAL\_ENRICHMENT}{GLOBAL\_ENRICHMENT}}
+{\footnotesize\ttfamily GLOBAL\+\_\+\+ENRICHMENT = \mbox{\hyperlink{structdict}{dict}}()}
+
+
+
+Other globals \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#. 
+
+
+
+Definition at line 96 of file enrichment\+\_\+processor.\+py.
+
+\mbox{\Hypertarget{namespaceenrichment__processor_a525ae2c1d308ce3cb8a6968186abbd57}\label{namespaceenrichment__processor_a525ae2c1d308ce3cb8a6968186abbd57}} 
+\index{enrichment\_processor@{enrichment\_processor}!GLOBAL\_IP\_SERVER\_CLIENT\_PRESENT@{GLOBAL\_IP\_SERVER\_CLIENT\_PRESENT}}
+\index{GLOBAL\_IP\_SERVER\_CLIENT\_PRESENT@{GLOBAL\_IP\_SERVER\_CLIENT\_PRESENT}!enrichment\_processor@{enrichment\_processor}}
+\doxysubsubsection{\texorpdfstring{GLOBAL\_IP\_SERVER\_CLIENT\_PRESENT}{GLOBAL\_IP\_SERVER\_CLIENT\_PRESENT}}
+{\footnotesize\ttfamily bool GLOBAL\+\_\+\+IP\+\_\+\+SERVER\+\_\+\+CLIENT\+\_\+\+PRESENT = True}
+
+
+
+Definition at line 55 of file enrichment\+\_\+processor.\+py.
+
+\mbox{\Hypertarget{namespaceenrichment__processor_a43781bcf3c54b1ee70f7d3aeb3a852d8}\label{namespaceenrichment__processor_a43781bcf3c54b1ee70f7d3aeb3a852d8}} 
+\index{enrichment\_processor@{enrichment\_processor}!GLOBAL\_MASCOTT@{GLOBAL\_MASCOTT}}
+\index{GLOBAL\_MASCOTT@{GLOBAL\_MASCOTT}!enrichment\_processor@{enrichment\_processor}}
+\doxysubsubsection{\texorpdfstring{GLOBAL\_MASCOTT}{GLOBAL\_MASCOTT}}
+{\footnotesize\ttfamily string GLOBAL\+\_\+\+MASCOTT = \char`\"{} ▄▄▄ ▄▄▄▄▄▄\textbackslash{}n ▀▄▄ ▄▓▓█▓▓▓█▌ ██▓██▓▓██▄ ▄▀\textbackslash{}n ▀▄▄▄▓█▓██ █▓█▌ █▓ ▓████████▀\textbackslash{}n ▀███▓▓(o)██▓▌ ▐█▓█(o)█▓█████▀\textbackslash{}n ▀▀██▓█▓▓█ ████▓███▀▀\textbackslash{}n ▄ ▀▀▀▀ ▄\textbackslash{}n ▀▀█ ▐██▌\textbackslash{}n ██▄ \+\_\+\+\_\+\+\_\+\+\_\+-\/-\/-\/-\/-\/-\/▐██████▌-\/-\/-\/-\/-\/-\/\+\_\+\+\_\+\+\_\+ ▄▄██\textbackslash{}n \+\_\+\+\_\+█ █▄▄-\/-\/ \+\_\+\+\_\+\+\_\+-\/-\/-\/-\/-\/-\/▀▓▓▀-\/-\/-\/-\/-\/\+\_\+\+\_\+\+\_\+ -\/-\/▄▄█ █▀\+\_\+\+\_\+\textbackslash{}n \+\_\+\+\_\+-\/-\/ ▀█ ██▄▄▄▄ \+\_\+\+\_\+-\/-\/▄▓▓▄-\/-\/\+\_\+\+\_\+ ▄▄▄▄██ ██▀ -\/-\/\+\_\+\+\_\+\textbackslash{}n \+\_\+\+\_\+-\/-\/ \+\_\+\+\_\+-\/-\/▀█ ██ █▀▀█████▄▄▄▄▄▄███████ ██ █▀-\/-\/\+\_\+\+\_\+ -\/-\/\+\_\+\+\_\+\textbackslash{}n \+\_\+\+\_\+-\/-\/ \+\_\+\+\_\+-\/-\/ \+\_\+\+\_\+▀▀█ █ ██ ██▀▀██▀▀██ ██ █▀▀\+\_\+\+\_\+ -\/-\/\+\_\+\+\_\+ -\/-\/\+\_\+\+\_\+\textbackslash{}n \+\_\+\+\_\+-\/-\/ \+\_\+\+\_\+-\/-\/ ▀███ ██ ██ ██ ██ ████▀ -\/-\/\+\_\+\+\_\+ -\/-\/\+\_\+\+\_\+\textbackslash{}n bsi -\/-\/ \+\_\+\+\_\+-\/-\/ ▀▀▀▀▀██▄▄██▄▄██▀▀▀▀ -\/-\/\+\_\+\+\_\+ -\/-\/\textbackslash{}n \+\_\+\+\_\+ -\/-\/ -\/-\/\+\_\+\+\_\+\char`\"{}}
+
+
+
+Definition at line 90 of file enrichment\+\_\+processor.\+py.
+
+\mbox{\Hypertarget{namespaceenrichment__processor_a07f36e37a8091019d6f3c0720e948661}\label{namespaceenrichment__processor_a07f36e37a8091019d6f3c0720e948661}} 
+\index{enrichment\_processor@{enrichment\_processor}!GLOBAL\_OUTPUT\_FILE\_HANDLES@{GLOBAL\_OUTPUT\_FILE\_HANDLES}}
+\index{GLOBAL\_OUTPUT\_FILE\_HANDLES@{GLOBAL\_OUTPUT\_FILE\_HANDLES}!enrichment\_processor@{enrichment\_processor}}
+\doxysubsubsection{\texorpdfstring{GLOBAL\_OUTPUT\_FILE\_HANDLES}{GLOBAL\_OUTPUT\_FILE\_HANDLES}}
+{\footnotesize\ttfamily GLOBAL\+\_\+\+OUTPUT\+\_\+\+FILE\+\_\+\+HANDLES = list()}
+
+
+
+Definition at line 99 of file enrichment\+\_\+processor.\+py.
+
+\mbox{\Hypertarget{namespaceenrichment__processor_aab23ea304de90f84e6caad905420e74d}\label{namespaceenrichment__processor_aab23ea304de90f84e6caad905420e74d}} 
+\index{enrichment\_processor@{enrichment\_processor}!GLOBAL\_OUTPUT\_FILES@{GLOBAL\_OUTPUT\_FILES}}
+\index{GLOBAL\_OUTPUT\_FILES@{GLOBAL\_OUTPUT\_FILES}!enrichment\_processor@{enrichment\_processor}}
+\doxysubsubsection{\texorpdfstring{GLOBAL\_OUTPUT\_FILES}{GLOBAL\_OUTPUT\_FILES}}
+{\footnotesize\ttfamily bool GLOBAL\+\_\+\+OUTPUT\+\_\+\+FILES = False}
+
+
+
+Definition at line 98 of file enrichment\+\_\+processor.\+py.
+
+\mbox{\Hypertarget{namespaceenrichment__processor_a74a88a26d877884d42294871e7ec6047}\label{namespaceenrichment__processor_a74a88a26d877884d42294871e7ec6047}} 
+\index{enrichment\_processor@{enrichment\_processor}!GLOBAL\_OUTPUT\_LOCK@{GLOBAL\_OUTPUT\_LOCK}}
+\index{GLOBAL\_OUTPUT\_LOCK@{GLOBAL\_OUTPUT\_LOCK}!enrichment\_processor@{enrichment\_processor}}
+\doxysubsubsection{\texorpdfstring{GLOBAL\_OUTPUT\_LOCK}{GLOBAL\_OUTPUT\_LOCK}}
+{\footnotesize\ttfamily GLOBAL\+\_\+\+OUTPUT\+\_\+\+LOCK = threading.\+Lock()}
+
+
+
+Definition at line 103 of file enrichment\+\_\+processor.\+py.
+
+\mbox{\Hypertarget{namespaceenrichment__processor_a6ae05bcd3f2ce1bd22eb60a198fb196c}\label{namespaceenrichment__processor_a6ae05bcd3f2ce1bd22eb60a198fb196c}} 
+\index{enrichment\_processor@{enrichment\_processor}!GLOBAL\_OUTPUT\_STDOUT@{GLOBAL\_OUTPUT\_STDOUT}}
+\index{GLOBAL\_OUTPUT\_STDOUT@{GLOBAL\_OUTPUT\_STDOUT}!enrichment\_processor@{enrichment\_processor}}
+\doxysubsubsection{\texorpdfstring{GLOBAL\_OUTPUT\_STDOUT}{GLOBAL\_OUTPUT\_STDOUT}}
+{\footnotesize\ttfamily bool GLOBAL\+\_\+\+OUTPUT\+\_\+\+STDOUT = True}
+
+
+
+Definition at line 97 of file enrichment\+\_\+processor.\+py.
+
+\mbox{\Hypertarget{namespaceenrichment__processor_adbabbab74946b81c093f6491cb4e7d26}\label{namespaceenrichment__processor_adbabbab74946b81c093f6491cb4e7d26}} 
+\index{enrichment\_processor@{enrichment\_processor}!GLOBAL\_SHUTDOWN@{GLOBAL\_SHUTDOWN}}
+\index{GLOBAL\_SHUTDOWN@{GLOBAL\_SHUTDOWN}!enrichment\_processor@{enrichment\_processor}}
+\doxysubsubsection{\texorpdfstring{GLOBAL\_SHUTDOWN}{GLOBAL\_SHUTDOWN}}
+{\footnotesize\ttfamily bool GLOBAL\+\_\+\+SHUTDOWN = False}
+
+
+
+Semaphore \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#. 
+
+
+
+Definition at line 93 of file enrichment\+\_\+processor.\+py.
+
+\mbox{\Hypertarget{namespaceenrichment__processor_a671b8b9e689c8992ecd718f79b9a6fd2}\label{namespaceenrichment__processor_a671b8b9e689c8992ecd718f79b9a6fd2}} 
+\index{enrichment\_processor@{enrichment\_processor}!GLOBAL\_SPLIT\_COUNT@{GLOBAL\_SPLIT\_COUNT}}
+\index{GLOBAL\_SPLIT\_COUNT@{GLOBAL\_SPLIT\_COUNT}!enrichment\_processor@{enrichment\_processor}}
+\doxysubsubsection{\texorpdfstring{GLOBAL\_SPLIT\_COUNT}{GLOBAL\_SPLIT\_COUNT}}
+{\footnotesize\ttfamily int GLOBAL\+\_\+\+SPLIT\+\_\+\+COUNT = 0}
+
+
+
+Definition at line 106 of file enrichment\+\_\+processor.\+py.
+
+\mbox{\Hypertarget{namespaceenrichment__processor_a95dd64ce73b3e17a5cbe7d4afe8a0fcd}\label{namespaceenrichment__processor_a95dd64ce73b3e17a5cbe7d4afe8a0fcd}} 
+\index{enrichment\_processor@{enrichment\_processor}!GLOBAL\_STDERR\_LOCK@{GLOBAL\_STDERR\_LOCK}}
+\index{GLOBAL\_STDERR\_LOCK@{GLOBAL\_STDERR\_LOCK}!enrichment\_processor@{enrichment\_processor}}
+\doxysubsubsection{\texorpdfstring{GLOBAL\_STDERR\_LOCK}{GLOBAL\_STDERR\_LOCK}}
+{\footnotesize\ttfamily GLOBAL\+\_\+\+STDERR\+\_\+\+LOCK = threading.\+Lock()}
+
+
+
+Globals and Locks for output and enrichment data \#\#\#\#\#\#\#\#\#\#\#\#. 
+
+
+
+Definition at line 102 of file enrichment\+\_\+processor.\+py.
+
+\mbox{\Hypertarget{namespaceenrichment__processor_a2c0f17cd252db76bbffa3ea1d322eeea}\label{namespaceenrichment__processor_a2c0f17cd252db76bbffa3ea1d322eeea}} 
+\index{enrichment\_processor@{enrichment\_processor}!GLOBAL\_TOTAL\_COUNT@{GLOBAL\_TOTAL\_COUNT}}
+\index{GLOBAL\_TOTAL\_COUNT@{GLOBAL\_TOTAL\_COUNT}!enrichment\_processor@{enrichment\_processor}}
+\doxysubsubsection{\texorpdfstring{GLOBAL\_TOTAL\_COUNT}{GLOBAL\_TOTAL\_COUNT}}
+{\footnotesize\ttfamily int GLOBAL\+\_\+\+TOTAL\+\_\+\+COUNT = 0}
+
+
+
+Definition at line 105 of file enrichment\+\_\+processor.\+py.
+
+\mbox{\Hypertarget{namespaceenrichment__processor_a89675b48ab5dce09c518f727cf7d3f08}\label{namespaceenrichment__processor_a89675b48ab5dce09c518f727cf7d3f08}} 
+\index{enrichment\_processor@{enrichment\_processor}!GLOBAL\_VERSION@{GLOBAL\_VERSION}}
+\index{GLOBAL\_VERSION@{GLOBAL\_VERSION}!enrichment\_processor@{enrichment\_processor}}
+\doxysubsubsection{\texorpdfstring{GLOBAL\_VERSION}{GLOBAL\_VERSION}}
+{\footnotesize\ttfamily string GLOBAL\+\_\+\+VERSION = \char`\"{}MADCAT -\/ Mass Attack Detecion Connection Acceptance Tools\textbackslash{}n\+Enrichment processor v2.\+3.\+6\textbackslash{}n for TCP/IP Portmonitor v2.\+3.\+x\textbackslash{}n\+BSI 2018-\/2023\textbackslash{}n\char`\"{}}
+
+
+
+Version and Mascott strings \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#. 
+
+
+
+Definition at line 89 of file enrichment\+\_\+processor.\+py.
+

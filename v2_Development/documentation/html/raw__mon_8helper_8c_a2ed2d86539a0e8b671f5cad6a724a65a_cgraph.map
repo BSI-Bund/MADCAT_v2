@@ -1,4 +1,0 @@
-<map id="init_pcap" name="init_pcap">
-<area shape="rect" id="node1" title="Initializes PCAP sniffing with filter." alt="" coords="5,5,87,32"/>
-<area shape="rect" id="node2" href="$madcat_8helper_8h.html#a6beb2c039c319f4fb3541627bb6da8ee" title="Returns current time." alt="" coords="135,5,211,32"/>
-</map>

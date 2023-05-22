@@ -1,0 +1,142 @@
+\hypertarget{udp__ip__port__mon_8icmp__mon_8helper_8h}{}\doxysection{/home/\+MADCAT/\+BSI-\/\+Bund@Git\+Hub.\+com/github\+\_\+release/include/udp\+\_\+ip\+\_\+port\+\_\+mon.icmp\+\_\+mon.\+helper.\+h File Reference}
+\label{udp__ip__port__mon_8icmp__mon_8helper_8h}\index{/home/MADCAT/BSI-\/Bund"@GitHub.com/github\_release/include/udp\_ip\_port\_mon.icmp\_mon.helper.h@{/home/MADCAT/BSI-\/Bund"@GitHub.com/github\_release/include/udp\_ip\_port\_mon.icmp\_mon.helper.h}}
+{\ttfamily \#include \char`\"{}madcat.\+helper.\+h\char`\"{}}\newline
+Include dependency graph for udp\+\_\+ip\+\_\+port\+\_\+mon.\+icmp\+\_\+mon.\+helper.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{udp__ip__port__mon_8icmp__mon_8helper_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{udp__ip__port__mon_8icmp__mon_8helper_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \mbox{\hyperlink{udp__ip__port__mon_8icmp__mon_8helper_8h_a55a10ee3c69ff3e13197e78280a44d4a}{saved\+\_\+buffer}} (void $\ast$buffer)
+\begin{DoxyCompactList}\small\item\em Saves and returns address of main buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{udp__ip__port__mon_8icmp__mon_8helper_8h_a4f31a6fd48ee5d4579ae4aaaa3cae285}{sig\+\_\+handler}} (int signo)
+\begin{DoxyCompactList}\small\item\em Signal Handler. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{udp__ip__port__mon_8icmp__mon_8helper_8h_a83eb53ec1f0c7bbb75cba6fda31f0c4e}{sig\+\_\+handler\+\_\+abort}} (int signo)
+\begin{DoxyCompactList}\small\item\em Signal Handler. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{udp__ip__port__mon_8icmp__mon_8helper_8h_a2254ab20f2f1fbecdc277eb6b42f66b9}{get\+\_\+user\+\_\+ids}} (struct \mbox{\hyperlink{structuser__t}{user\+\_\+t}} $\ast$\mbox{\hyperlink{madcat_8common_8h_ac3ea7c3ca3d1f0d1b83800d7b6ed641e}{user}})
+\begin{DoxyCompactList}\small\item\em Fetches user IDs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{udp__ip__port__mon_8icmp__mon_8helper_8h_a2254ab20f2f1fbecdc277eb6b42f66b9}\label{udp__ip__port__mon_8icmp__mon_8helper_8h_a2254ab20f2f1fbecdc277eb6b42f66b9}} 
+\index{udp\_ip\_port\_mon.icmp\_mon.helper.h@{udp\_ip\_port\_mon.icmp\_mon.helper.h}!get\_user\_ids@{get\_user\_ids}}
+\index{get\_user\_ids@{get\_user\_ids}!udp\_ip\_port\_mon.icmp\_mon.helper.h@{udp\_ip\_port\_mon.icmp\_mon.helper.h}}
+\doxysubsubsection{\texorpdfstring{get\_user\_ids()}{get\_user\_ids()}}
+{\footnotesize\ttfamily void get\+\_\+user\+\_\+ids (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structuser__t}{user\+\_\+t}} $\ast$}]{user }\end{DoxyParamCaption})}
+
+
+
+Fetches user IDs. 
+
+\begin{DoxyVerb}Fetches user IDs for username, saved in user and writes them to the same struct.
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em user} & pointer to struct \mbox{\hyperlink{structuser__t}{user\+\_\+t}}, containing user name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void, GID and PID of user are returned in struct \mbox{\hyperlink{structuser__t}{user\+\_\+t}} user, given as parameter 
+\end{DoxyReturn}
+
+
+Definition at line 77 of file madcat.\+helper.\+c.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{udp__ip__port__mon_8icmp__mon_8helper_8h_a2254ab20f2f1fbecdc277eb6b42f66b9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{udp__ip__port__mon_8icmp__mon_8helper_8h_a55a10ee3c69ff3e13197e78280a44d4a}\label{udp__ip__port__mon_8icmp__mon_8helper_8h_a55a10ee3c69ff3e13197e78280a44d4a}} 
+\index{udp\_ip\_port\_mon.icmp\_mon.helper.h@{udp\_ip\_port\_mon.icmp\_mon.helper.h}!saved\_buffer@{saved\_buffer}}
+\index{saved\_buffer@{saved\_buffer}!udp\_ip\_port\_mon.icmp\_mon.helper.h@{udp\_ip\_port\_mon.icmp\_mon.helper.h}}
+\doxysubsubsection{\texorpdfstring{saved\_buffer()}{saved\_buffer()}}
+{\footnotesize\ttfamily void$\ast$ saved\+\_\+buffer (\begin{DoxyParamCaption}\item[{void $\ast$}]{buffer }\end{DoxyParamCaption})}
+
+
+
+Saves and returns address of main buffer. 
+
+\begin{DoxyVerb}Saves and returns address of main buffer to be freed by signal handler.
+Returns saved value, if parameter is set to NULL.
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Pointer to main buffer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to main buffer 
+\end{DoxyReturn}
+
+
+Definition at line 45 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+icmp\+\_\+mon.\+helper.\+c.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{udp__ip__port__mon_8icmp__mon_8helper_8h_a55a10ee3c69ff3e13197e78280a44d4a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{udp__ip__port__mon_8icmp__mon_8helper_8h_a4f31a6fd48ee5d4579ae4aaaa3cae285}\label{udp__ip__port__mon_8icmp__mon_8helper_8h_a4f31a6fd48ee5d4579ae4aaaa3cae285}} 
+\index{udp\_ip\_port\_mon.icmp\_mon.helper.h@{udp\_ip\_port\_mon.icmp\_mon.helper.h}!sig\_handler@{sig\_handler}}
+\index{sig\_handler@{sig\_handler}!udp\_ip\_port\_mon.icmp\_mon.helper.h@{udp\_ip\_port\_mon.icmp\_mon.helper.h}}
+\doxysubsubsection{\texorpdfstring{sig\_handler()}{sig\_handler()}}
+{\footnotesize\ttfamily void sig\+\_\+handler (\begin{DoxyParamCaption}\item[{int}]{signo }\end{DoxyParamCaption})}
+
+
+
+Signal Handler. 
+
+\begin{DoxyVerb}Generic Signal Handler for gracefull shutdown
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em signo} & Signal Number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{udp__ip__port__mon_8icmp__mon_8helper_8h_a83eb53ec1f0c7bbb75cba6fda31f0c4e}\label{udp__ip__port__mon_8icmp__mon_8helper_8h_a83eb53ec1f0c7bbb75cba6fda31f0c4e}} 
+\index{udp\_ip\_port\_mon.icmp\_mon.helper.h@{udp\_ip\_port\_mon.icmp\_mon.helper.h}!sig\_handler\_abort@{sig\_handler\_abort}}
+\index{sig\_handler\_abort@{sig\_handler\_abort}!udp\_ip\_port\_mon.icmp\_mon.helper.h@{udp\_ip\_port\_mon.icmp\_mon.helper.h}}
+\doxysubsubsection{\texorpdfstring{sig\_handler\_abort()}{sig\_handler\_abort()}}
+{\footnotesize\ttfamily void sig\+\_\+handler\+\_\+abort (\begin{DoxyParamCaption}\item[{int}]{signo }\end{DoxyParamCaption})}
+
+
+
+Signal Handler. 
+
+\begin{DoxyVerb}Generic Signal Handler for not-so-gracefull shutdown
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em signo} & Signal Number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 52 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+icmp\+\_\+mon.\+helper.\+c.
+

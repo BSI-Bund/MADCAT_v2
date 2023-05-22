@@ -1,0 +1,311 @@
+\hypertarget{structjson__data__node__t}{}\doxysection{json\+\_\+data\+\_\+node\+\_\+t Struct Reference}
+\label{structjson__data__node__t}\index{json\_data\_node\_t@{json\_data\_node\_t}}
+
+
+{\ttfamily \#include $<$raw\+\_\+mon.\+h$>$}
+
+
+
+Collaboration diagram for json\+\_\+data\+\_\+node\+\_\+t\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=225pt]{structjson__data__node__t__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{structjson__data__node__t_aa8cafb9019f401498fd60f916ba08faf}{timestamp}}
+\item 
+char $\ast$ \mbox{\hyperlink{structjson__data__node__t_a07061fa6ca8df977640340910dc6c409}{unixtime}}
+\item 
+long double \mbox{\hyperlink{structjson__data__node__t_a37e27c9944e52dfa765c9c9d7eaa0c9b}{timeasdouble}}
+\item 
+long double \mbox{\hyperlink{structjson__data__node__t_a54a0af95b2627634d0b5d753e8ebb230}{duration}}
+\item 
+char $\ast$ \mbox{\hyperlink{structjson__data__node__t_a65bee147398f9fcc9cadffe78981fd40}{start}}
+\item 
+char $\ast$ \mbox{\hyperlink{structjson__data__node__t_ad7df3e66f0d081eb6a27998bd1e681e7}{end}}
+\item 
+long long unsigned int \mbox{\hyperlink{structjson__data__node__t_a898779bb149ffe5c3d78c58b4f832a8f}{bytes\+\_\+toserver}}
+\item 
+int \mbox{\hyperlink{structjson__data__node__t_a4eb098e26965958ce878897994feb75a}{proto}}
+\item 
+struct \mbox{\hyperlink{structjson__data__node__t}{json\+\_\+data\+\_\+node\+\_\+t}} $\ast$ \mbox{\hyperlink{structjson__data__node__t_a67fcc09c1e60bf3067b58524d77834c8}{next}}
+\item 
+struct \mbox{\hyperlink{structjson__data__node__t}{json\+\_\+data\+\_\+node\+\_\+t}} $\ast$ \mbox{\hyperlink{structjson__data__node__t_a167153cead1d334f5ac434880ca8181c}{prev}}
+\item 
+uintptr\+\_\+t \mbox{\hyperlink{structjson__data__node__t_aae52a23ac03bf8722638367988f8bccb}{id}}
+\item 
+char $\ast$ \mbox{\hyperlink{structjson__data__node__t_a15fa8c1166a5274a6d45114d81f533ab}{src\+\_\+ip}}
+\item 
+int \mbox{\hyperlink{structjson__data__node__t_a2d47efc2f2609185cf802853871de027}{src\+\_\+port}}
+\item 
+char $\ast$ \mbox{\hyperlink{structjson__data__node__t_aae0a3e97dfd50eaf7499f53109b10559}{dest\+\_\+ip}}
+\item 
+char $\ast$ \mbox{\hyperlink{structjson__data__node__t_ac481d5fdeb66994b869ee6fa959f9274}{dest\+\_\+port}}
+\item 
+long double \mbox{\hyperlink{structjson__data__node__t_abcc515bd04c6332225a72e31ff74f454}{min\+\_\+rtt}}
+\item 
+long double \mbox{\hyperlink{structjson__data__node__t_a852571aa34c81f6e8d87a6aff89551b3}{last\+\_\+recv}}
+\item 
+bool \mbox{\hyperlink{structjson__data__node__t_a4355603ea4a2d9a6cd95999d5eaac11c}{firstpacket}}
+\item 
+long long unsigned int \mbox{\hyperlink{structjson__data__node__t_a49c1d57a081c9c105196af26f8bb15de}{bytes\+\_\+toclient}}
+\item 
+char $\ast$ \mbox{\hyperlink{structjson__data__node__t_ab50c43aa444046f97b72660102361682}{proxy\+\_\+ip}}
+\item 
+int \mbox{\hyperlink{structjson__data__node__t_af4e78b6dcd6aabffec6c095d66dcbe46}{proxy\+\_\+port}}
+\item 
+char $\ast$ \mbox{\hyperlink{structjson__data__node__t_a4ab81d786a4ae60a398bfd06280dd455}{backend\+\_\+ip}}
+\item 
+char $\ast$ \mbox{\hyperlink{structjson__data__node__t_aa749e5667d7c6a4746adc15cf0a231fd}{backend\+\_\+port}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 56 of file raw\+\_\+mon.\+h.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structjson__data__node__t_a4ab81d786a4ae60a398bfd06280dd455}\label{structjson__data__node__t_a4ab81d786a4ae60a398bfd06280dd455}} 
+\index{json\_data\_node\_t@{json\_data\_node\_t}!backend\_ip@{backend\_ip}}
+\index{backend\_ip@{backend\_ip}!json\_data\_node\_t@{json\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{backend\_ip}{backend\_ip}}
+{\footnotesize\ttfamily char$\ast$ backend\+\_\+ip}
+
+
+
+Definition at line 106 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+h.
+
+\mbox{\Hypertarget{structjson__data__node__t_aa749e5667d7c6a4746adc15cf0a231fd}\label{structjson__data__node__t_aa749e5667d7c6a4746adc15cf0a231fd}} 
+\index{json\_data\_node\_t@{json\_data\_node\_t}!backend\_port@{backend\_port}}
+\index{backend\_port@{backend\_port}!json\_data\_node\_t@{json\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{backend\_port}{backend\_port}}
+{\footnotesize\ttfamily char$\ast$ backend\+\_\+port}
+
+
+
+Definition at line 107 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+h.
+
+\mbox{\Hypertarget{structjson__data__node__t_a49c1d57a081c9c105196af26f8bb15de}\label{structjson__data__node__t_a49c1d57a081c9c105196af26f8bb15de}} 
+\index{json\_data\_node\_t@{json\_data\_node\_t}!bytes\_toclient@{bytes\_toclient}}
+\index{bytes\_toclient@{bytes\_toclient}!json\_data\_node\_t@{json\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{bytes\_toclient}{bytes\_toclient}}
+{\footnotesize\ttfamily long long unsigned int bytes\+\_\+toclient}
+
+
+
+Definition at line 103 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+h.
+
+\mbox{\Hypertarget{structjson__data__node__t_a898779bb149ffe5c3d78c58b4f832a8f}\label{structjson__data__node__t_a898779bb149ffe5c3d78c58b4f832a8f}} 
+\index{json\_data\_node\_t@{json\_data\_node\_t}!bytes\_toserver@{bytes\_toserver}}
+\index{bytes\_toserver@{bytes\_toserver}!json\_data\_node\_t@{json\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{bytes\_toserver}{bytes\_toserver}}
+{\footnotesize\ttfamily long long unsigned int bytes\+\_\+toserver}
+
+
+
+Definition at line 64 of file raw\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{structjson__data__node__t_aae0a3e97dfd50eaf7499f53109b10559}\label{structjson__data__node__t_aae0a3e97dfd50eaf7499f53109b10559}} 
+\index{json\_data\_node\_t@{json\_data\_node\_t}!dest\_ip@{dest\_ip}}
+\index{dest\_ip@{dest\_ip}!json\_data\_node\_t@{json\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{dest\_ip}{dest\_ip}}
+{\footnotesize\ttfamily char$\ast$ dest\+\_\+ip}
+
+
+
+Definition at line 91 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+h.
+
+\mbox{\Hypertarget{structjson__data__node__t_ac481d5fdeb66994b869ee6fa959f9274}\label{structjson__data__node__t_ac481d5fdeb66994b869ee6fa959f9274}} 
+\index{json\_data\_node\_t@{json\_data\_node\_t}!dest\_port@{dest\_port}}
+\index{dest\_port@{dest\_port}!json\_data\_node\_t@{json\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{dest\_port}{dest\_port}}
+{\footnotesize\ttfamily char$\ast$ dest\+\_\+port}
+
+
+
+Definition at line 92 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+h.
+
+\mbox{\Hypertarget{structjson__data__node__t_a54a0af95b2627634d0b5d753e8ebb230}\label{structjson__data__node__t_a54a0af95b2627634d0b5d753e8ebb230}} 
+\index{json\_data\_node\_t@{json\_data\_node\_t}!duration@{duration}}
+\index{duration@{duration}!json\_data\_node\_t@{json\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{duration}{duration}}
+{\footnotesize\ttfamily long double duration}
+
+
+
+Definition at line 61 of file raw\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{structjson__data__node__t_ad7df3e66f0d081eb6a27998bd1e681e7}\label{structjson__data__node__t_ad7df3e66f0d081eb6a27998bd1e681e7}} 
+\index{json\_data\_node\_t@{json\_data\_node\_t}!end@{end}}
+\index{end@{end}!json\_data\_node\_t@{json\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily char $\ast$ end}
+
+
+
+Definition at line 63 of file raw\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{structjson__data__node__t_a4355603ea4a2d9a6cd95999d5eaac11c}\label{structjson__data__node__t_a4355603ea4a2d9a6cd95999d5eaac11c}} 
+\index{json\_data\_node\_t@{json\_data\_node\_t}!firstpacket@{firstpacket}}
+\index{firstpacket@{firstpacket}!json\_data\_node\_t@{json\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{firstpacket}{firstpacket}}
+{\footnotesize\ttfamily bool firstpacket}
+
+
+
+Definition at line 99 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+h.
+
+\mbox{\Hypertarget{structjson__data__node__t_aae52a23ac03bf8722638367988f8bccb}\label{structjson__data__node__t_aae52a23ac03bf8722638367988f8bccb}} 
+\index{json\_data\_node\_t@{json\_data\_node\_t}!id@{id}}
+\index{id@{id}!json\_data\_node\_t@{json\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily uintptr\+\_\+t id}
+
+
+
+Definition at line 86 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+h.
+
+\mbox{\Hypertarget{structjson__data__node__t_a852571aa34c81f6e8d87a6aff89551b3}\label{structjson__data__node__t_a852571aa34c81f6e8d87a6aff89551b3}} 
+\index{json\_data\_node\_t@{json\_data\_node\_t}!last\_recv@{last\_recv}}
+\index{last\_recv@{last\_recv}!json\_data\_node\_t@{json\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{last\_recv}{last\_recv}}
+{\footnotesize\ttfamily long double last\+\_\+recv}
+
+
+
+Definition at line 98 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+h.
+
+\mbox{\Hypertarget{structjson__data__node__t_abcc515bd04c6332225a72e31ff74f454}\label{structjson__data__node__t_abcc515bd04c6332225a72e31ff74f454}} 
+\index{json\_data\_node\_t@{json\_data\_node\_t}!min\_rtt@{min\_rtt}}
+\index{min\_rtt@{min\_rtt}!json\_data\_node\_t@{json\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{min\_rtt}{min\_rtt}}
+{\footnotesize\ttfamily long double min\+\_\+rtt}
+
+
+
+Definition at line 97 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+h.
+
+\mbox{\Hypertarget{structjson__data__node__t_a67fcc09c1e60bf3067b58524d77834c8}\label{structjson__data__node__t_a67fcc09c1e60bf3067b58524d77834c8}} 
+\index{json\_data\_node\_t@{json\_data\_node\_t}!next@{next}}
+\index{next@{next}!json\_data\_node\_t@{json\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structjson__data__node__t}{json\+\_\+data\+\_\+node\+\_\+t}}$\ast$ next}
+
+
+
+Definition at line 84 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+h.
+
+\mbox{\Hypertarget{structjson__data__node__t_a167153cead1d334f5ac434880ca8181c}\label{structjson__data__node__t_a167153cead1d334f5ac434880ca8181c}} 
+\index{json\_data\_node\_t@{json\_data\_node\_t}!prev@{prev}}
+\index{prev@{prev}!json\_data\_node\_t@{json\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{prev}{prev}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structjson__data__node__t}{json\+\_\+data\+\_\+node\+\_\+t}}$\ast$ prev}
+
+
+
+Definition at line 85 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+h.
+
+\mbox{\Hypertarget{structjson__data__node__t_a4eb098e26965958ce878897994feb75a}\label{structjson__data__node__t_a4eb098e26965958ce878897994feb75a}} 
+\index{json\_data\_node\_t@{json\_data\_node\_t}!proto@{proto}}
+\index{proto@{proto}!json\_data\_node\_t@{json\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{proto}{proto}}
+{\footnotesize\ttfamily int proto}
+
+
+
+Definition at line 65 of file raw\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{structjson__data__node__t_ab50c43aa444046f97b72660102361682}\label{structjson__data__node__t_ab50c43aa444046f97b72660102361682}} 
+\index{json\_data\_node\_t@{json\_data\_node\_t}!proxy\_ip@{proxy\_ip}}
+\index{proxy\_ip@{proxy\_ip}!json\_data\_node\_t@{json\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{proxy\_ip}{proxy\_ip}}
+{\footnotesize\ttfamily char$\ast$ proxy\+\_\+ip}
+
+
+
+Definition at line 104 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+h.
+
+\mbox{\Hypertarget{structjson__data__node__t_af4e78b6dcd6aabffec6c095d66dcbe46}\label{structjson__data__node__t_af4e78b6dcd6aabffec6c095d66dcbe46}} 
+\index{json\_data\_node\_t@{json\_data\_node\_t}!proxy\_port@{proxy\_port}}
+\index{proxy\_port@{proxy\_port}!json\_data\_node\_t@{json\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{proxy\_port}{proxy\_port}}
+{\footnotesize\ttfamily int proxy\+\_\+port}
+
+
+
+Definition at line 105 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+h.
+
+\mbox{\Hypertarget{structjson__data__node__t_a15fa8c1166a5274a6d45114d81f533ab}\label{structjson__data__node__t_a15fa8c1166a5274a6d45114d81f533ab}} 
+\index{json\_data\_node\_t@{json\_data\_node\_t}!src\_ip@{src\_ip}}
+\index{src\_ip@{src\_ip}!json\_data\_node\_t@{json\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{src\_ip}{src\_ip}}
+{\footnotesize\ttfamily char$\ast$ src\+\_\+ip}
+
+
+
+Definition at line 89 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+h.
+
+\mbox{\Hypertarget{structjson__data__node__t_a2d47efc2f2609185cf802853871de027}\label{structjson__data__node__t_a2d47efc2f2609185cf802853871de027}} 
+\index{json\_data\_node\_t@{json\_data\_node\_t}!src\_port@{src\_port}}
+\index{src\_port@{src\_port}!json\_data\_node\_t@{json\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{src\_port}{src\_port}}
+{\footnotesize\ttfamily int src\+\_\+port}
+
+
+
+Definition at line 90 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+h.
+
+\mbox{\Hypertarget{structjson__data__node__t_a65bee147398f9fcc9cadffe78981fd40}\label{structjson__data__node__t_a65bee147398f9fcc9cadffe78981fd40}} 
+\index{json\_data\_node\_t@{json\_data\_node\_t}!start@{start}}
+\index{start@{start}!json\_data\_node\_t@{json\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{start}{start}}
+{\footnotesize\ttfamily char $\ast$ start}
+
+
+
+Definition at line 62 of file raw\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{structjson__data__node__t_a37e27c9944e52dfa765c9c9d7eaa0c9b}\label{structjson__data__node__t_a37e27c9944e52dfa765c9c9d7eaa0c9b}} 
+\index{json\_data\_node\_t@{json\_data\_node\_t}!timeasdouble@{timeasdouble}}
+\index{timeasdouble@{timeasdouble}!json\_data\_node\_t@{json\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{timeasdouble}{timeasdouble}}
+{\footnotesize\ttfamily long double timeasdouble}
+
+
+
+Definition at line 60 of file raw\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{structjson__data__node__t_aa8cafb9019f401498fd60f916ba08faf}\label{structjson__data__node__t_aa8cafb9019f401498fd60f916ba08faf}} 
+\index{json\_data\_node\_t@{json\_data\_node\_t}!timestamp@{timestamp}}
+\index{timestamp@{timestamp}!json\_data\_node\_t@{json\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{timestamp}{timestamp}}
+{\footnotesize\ttfamily char $\ast$ timestamp}
+
+
+
+Definition at line 58 of file raw\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{structjson__data__node__t_a07061fa6ca8df977640340910dc6c409}\label{structjson__data__node__t_a07061fa6ca8df977640340910dc6c409}} 
+\index{json\_data\_node\_t@{json\_data\_node\_t}!unixtime@{unixtime}}
+\index{unixtime@{unixtime}!json\_data\_node\_t@{json\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{unixtime}{unixtime}}
+{\footnotesize\ttfamily char $\ast$ unixtime}
+
+
+
+Definition at line 59 of file raw\+\_\+mon.\+h.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/\+MADCAT/\+BSI-\/\+Bund@\+Git\+Hub.\+com/github\+\_\+release/include/\mbox{\hyperlink{raw__mon_8h}{raw\+\_\+mon.\+h}}\item 
+/home/\+MADCAT/\+BSI-\/\+Bund@\+Git\+Hub.\+com/github\+\_\+release/include/\mbox{\hyperlink{tcp__ip__port__mon_8helper_8h}{tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+h}}\end{DoxyCompactItemize}

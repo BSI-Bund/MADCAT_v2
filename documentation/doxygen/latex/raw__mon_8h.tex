@@ -1,0 +1,134 @@
+\hypertarget{raw__mon_8h}{}\doxysection{/home/\+MADCAT/\+BSI-\/\+Bund@Git\+Hub.\+com/github\+\_\+release/include/raw\+\_\+mon.h File Reference}
+\label{raw__mon_8h}\index{/home/MADCAT/BSI-\/Bund"@GitHub.com/github\_release/include/raw\_mon.h@{/home/MADCAT/BSI-\/Bund"@GitHub.com/github\_release/include/raw\_mon.h}}
+{\ttfamily \#include \char`\"{}madcat.\+common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}madcat.\+helper.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}raw\+\_\+mon.\+helper.\+h\char`\"{}}\newline
+Include dependency graph for raw\+\_\+mon.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{raw__mon_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{raw__mon_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structjson__data__node__t}{json\+\_\+data\+\_\+node\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{raw__mon_8h_a1c6d5de492ac61ad29aec7aa9a436bbf}{VERSION}}~\char`\"{}MADCAT -\/ Mass Attack Detecion Connection Acceptance Tool\textbackslash{}n\+RAW Monitor v2.\+3.\+0\textbackslash{}n\+BSI 2018-\/2023\textbackslash{}n\char`\"{}
+\item 
+\#define \mbox{\hyperlink{raw__mon_8h_a8d7da739bb69b349f83ef21a35e78982}{ETHERNET\+\_\+\+HEADER\+\_\+\+LEN}}~14
+\item 
+\#define \mbox{\hyperlink{raw__mon_8h_ab85301937910b2756d5564ca977f1191}{IPV6\+\_\+\+HEADER\+\_\+\+LEN}}~40
+\item 
+\#define \mbox{\hyperlink{raw__mon_8h_a995cc0e5258a44b489c46f32d1627689}{IPV4\+\_\+\+HEADER\+\_\+\+MIN\+\_\+\+LEN}}~20
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{raw__mon_8h_aecc6d047e31759bba411969ba59c937a}{filter\+\_\+exp}}
+\item 
+pcap\+\_\+t $\ast$ \mbox{\hyperlink{raw__mon_8h_a6c138155d7b3442efd19d0aa3f93e548}{handle}}
+\item 
+struct pcap\+\_\+pkthdr \mbox{\hyperlink{raw__mon_8h_a6648c2001d1a1c4cb218435f9c32de2d}{header}}
+\item 
+unsigned char $\ast$ \mbox{\hyperlink{raw__mon_8h_a12f869e80da40cc0807ed2dddd5ff95e}{packet}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{raw__mon_8h_a8d7da739bb69b349f83ef21a35e78982}\label{raw__mon_8h_a8d7da739bb69b349f83ef21a35e78982}} 
+\index{raw\_mon.h@{raw\_mon.h}!ETHERNET\_HEADER\_LEN@{ETHERNET\_HEADER\_LEN}}
+\index{ETHERNET\_HEADER\_LEN@{ETHERNET\_HEADER\_LEN}!raw\_mon.h@{raw\_mon.h}}
+\doxysubsubsection{\texorpdfstring{ETHERNET\_HEADER\_LEN}{ETHERNET\_HEADER\_LEN}}
+{\footnotesize\ttfamily \#define ETHERNET\+\_\+\+HEADER\+\_\+\+LEN~14}
+
+
+
+Definition at line 45 of file raw\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{raw__mon_8h_a995cc0e5258a44b489c46f32d1627689}\label{raw__mon_8h_a995cc0e5258a44b489c46f32d1627689}} 
+\index{raw\_mon.h@{raw\_mon.h}!IPV4\_HEADER\_MIN\_LEN@{IPV4\_HEADER\_MIN\_LEN}}
+\index{IPV4\_HEADER\_MIN\_LEN@{IPV4\_HEADER\_MIN\_LEN}!raw\_mon.h@{raw\_mon.h}}
+\doxysubsubsection{\texorpdfstring{IPV4\_HEADER\_MIN\_LEN}{IPV4\_HEADER\_MIN\_LEN}}
+{\footnotesize\ttfamily \#define IPV4\+\_\+\+HEADER\+\_\+\+MIN\+\_\+\+LEN~20}
+
+
+
+Definition at line 47 of file raw\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{raw__mon_8h_ab85301937910b2756d5564ca977f1191}\label{raw__mon_8h_ab85301937910b2756d5564ca977f1191}} 
+\index{raw\_mon.h@{raw\_mon.h}!IPV6\_HEADER\_LEN@{IPV6\_HEADER\_LEN}}
+\index{IPV6\_HEADER\_LEN@{IPV6\_HEADER\_LEN}!raw\_mon.h@{raw\_mon.h}}
+\doxysubsubsection{\texorpdfstring{IPV6\_HEADER\_LEN}{IPV6\_HEADER\_LEN}}
+{\footnotesize\ttfamily \#define IPV6\+\_\+\+HEADER\+\_\+\+LEN~40}
+
+
+
+Definition at line 46 of file raw\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{raw__mon_8h_a1c6d5de492ac61ad29aec7aa9a436bbf}\label{raw__mon_8h_a1c6d5de492ac61ad29aec7aa9a436bbf}} 
+\index{raw\_mon.h@{raw\_mon.h}!VERSION@{VERSION}}
+\index{VERSION@{VERSION}!raw\_mon.h@{raw\_mon.h}}
+\doxysubsubsection{\texorpdfstring{VERSION}{VERSION}}
+{\footnotesize\ttfamily \#define VERSION~\char`\"{}MADCAT -\/ Mass Attack Detecion Connection Acceptance Tool\textbackslash{}n\+RAW Monitor v2.\+3.\+0\textbackslash{}n\+BSI 2018-\/2023\textbackslash{}n\char`\"{}}
+
+
+
+Definition at line 44 of file raw\+\_\+mon.\+h.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{raw__mon_8h_aecc6d047e31759bba411969ba59c937a}\label{raw__mon_8h_aecc6d047e31759bba411969ba59c937a}} 
+\index{raw\_mon.h@{raw\_mon.h}!filter\_exp@{filter\_exp}}
+\index{filter\_exp@{filter\_exp}!raw\_mon.h@{raw\_mon.h}}
+\doxysubsubsection{\texorpdfstring{filter\_exp}{filter\_exp}}
+{\footnotesize\ttfamily char$\ast$ filter\+\_\+exp\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 42 of file raw\+\_\+mon.\+c.
+
+\mbox{\Hypertarget{raw__mon_8h_a6c138155d7b3442efd19d0aa3f93e548}\label{raw__mon_8h_a6c138155d7b3442efd19d0aa3f93e548}} 
+\index{raw\_mon.h@{raw\_mon.h}!handle@{handle}}
+\index{handle@{handle}!raw\_mon.h@{raw\_mon.h}}
+\doxysubsubsection{\texorpdfstring{handle}{handle}}
+{\footnotesize\ttfamily pcap\+\_\+t$\ast$ handle\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 43 of file raw\+\_\+mon.\+c.
+
+\mbox{\Hypertarget{raw__mon_8h_a6648c2001d1a1c4cb218435f9c32de2d}\label{raw__mon_8h_a6648c2001d1a1c4cb218435f9c32de2d}} 
+\index{raw\_mon.h@{raw\_mon.h}!header@{header}}
+\index{header@{header}!raw\_mon.h@{raw\_mon.h}}
+\doxysubsubsection{\texorpdfstring{header}{header}}
+{\footnotesize\ttfamily struct pcap\+\_\+pkthdr header\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 43 of file raw\+\_\+mon.\+c.
+
+\mbox{\Hypertarget{raw__mon_8h_a12f869e80da40cc0807ed2dddd5ff95e}\label{raw__mon_8h_a12f869e80da40cc0807ed2dddd5ff95e}} 
+\index{raw\_mon.h@{raw\_mon.h}!packet@{packet}}
+\index{packet@{packet}!raw\_mon.h@{raw\_mon.h}}
+\doxysubsubsection{\texorpdfstring{packet}{packet}}
+{\footnotesize\ttfamily unsigned char$\ast$ packet\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 45 of file raw\+\_\+mon.\+c.
+

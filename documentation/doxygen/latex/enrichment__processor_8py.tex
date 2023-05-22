@@ -1,0 +1,91 @@
+\hypertarget{enrichment__processor_8py}{}\doxysection{/home/\+MADCAT/\+BSI-\/\+Bund@Git\+Hub.\+com/github\+\_\+release/bin/enrichment\+\_\+processor.py File Reference}
+\label{enrichment__processor_8py}\index{/home/MADCAT/BSI-\/Bund"@GitHub.com/github\_release/bin/enrichment\_processor.py@{/home/MADCAT/BSI-\/Bund"@GitHub.com/github\_release/bin/enrichment\_processor.py}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceenrichment__processor}{enrichment\+\_\+processor}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespaceenrichment__processor_af75ac90679276a2d5671e39d7af7cd61}{signal\+\_\+handler\+\_\+sigint}} (signum, frame)
+\begin{DoxyCompactList}\small\item\em SIGINT Signal Hander \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# ...for gracefull shutdown. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespaceenrichment__processor_a08a73cba3c00e136417da50e1a3a58fe}{signal\+\_\+handler\+\_\+sigabrt}} (signum, frame)
+\item 
+def \mbox{\hyperlink{namespaceenrichment__processor_a24ba1fe8c000eb5b84d913d6d285f2eb}{drop\+\_\+privileges}} (uid\+\_\+name, gid\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Drop root priviliges \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespaceenrichment__processor_af3190e25263979658234c62fdf6aff0a}{eprint}} ($\ast$args, $\ast$$\ast$kwargs)
+\begin{DoxyCompactList}\small\item\em Print on STDERR \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespaceenrichment__processor_ab2e0de78412a95cebc643c2a2079a8b3}{acquire}} ()
+\begin{DoxyCompactList}\small\item\em Acquire data for enrichment \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespaceenrichment__processor_a339b88461f4d98e3954040883ee46426}{sync\+\_\+with\+\_\+backend\+\_\+th}} ()
+\item 
+def \mbox{\hyperlink{namespaceenrichment__processor_a7fbac282e8516fdb6bd39116cb339679}{enrich}} ()
+\begin{DoxyCompactList}\small\item\em Read MADCAT Logs from FIFO and enrich \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespaceenrichment__processor_a5589e102f636c730bd39009c68f0c783}{enrich\+\_\+child}} (json\+\_\+dict\+\_\+list)
+\item 
+def \mbox{\hyperlink{namespaceenrichment__processor_a4c3e6c673b073f4f25f3e3c2815edc9f}{ext\+\_\+ip}} (json\+\_\+dict\+\_\+list)
+\item 
+def \mbox{\hyperlink{namespaceenrichment__processor_aa64f80bc640e6067da3a37de30c3262f}{backend\+\_\+id}} (json\+\_\+dict\+\_\+list)
+\item 
+def \mbox{\hyperlink{namespaceenrichment__processor_af5f47177f98a6049cb2dbd77476cf7cb}{payload\+\_\+split}} (json\+\_\+dict\+\_\+list)
+\item 
+def \mbox{\hyperlink{namespaceenrichment__processor_afaa082c33d1549e3c68a63eb981566ae}{main}} (argv)
+\begin{DoxyCompactList}\small\item\em Main \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespaceenrichment__processor_a525ae2c1d308ce3cb8a6968186abbd57}{GLOBAL\+\_\+\+IP\+\_\+\+SERVER\+\_\+\+CLIENT\+\_\+\+PRESENT}} = True
+\item 
+string \mbox{\hyperlink{namespaceenrichment__processor_ad81c3d635cd33d9d210436d3ba776b2c}{DEF\+\_\+\+MADCATLOG\+\_\+\+FIFO}} = \char`\"{}/tmp/logs.\+erm\char`\"{}
+\begin{DoxyCompactList}\small\item\em DEFAULT CONFIGURATION \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# Only in this section changes are allowed (global configuration variables beginning with \char`\"{}\+DEF\+\_\+\char`\"{}), thus for configuration purposes ;-\/) \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceenrichment__processor_a9d7626d362e7abef548bdd48e53c61d8}{DEF\+\_\+\+DNS\+\_\+\+SERVER}} = \char`\"{}resolver1.\+opendns.\+com\char`\"{}
+\item 
+string \mbox{\hyperlink{namespaceenrichment__processor_aafab4166869fd4d6127f6061cd2ef7cd}{DEF\+\_\+\+EXTIP\+\_\+\+DNSNAME}} = \char`\"{}myip.\+opendns.\+com\char`\"{}
+\item 
+int \mbox{\hyperlink{namespaceenrichment__processor_a8d105846343fc4c517e5738229589e01}{DEF\+\_\+\+ACQUIRE\+\_\+\+INTERVAL}} = 600
+\item 
+int \mbox{\hyperlink{namespaceenrichment__processor_a3fb890fbd57d534cc5b147014a9b07fc}{DEF\+\_\+\+ENR\+\_\+\+SPLIT}} = 0
+\item 
+int \mbox{\hyperlink{namespaceenrichment__processor_a60e328f4d75b84abfebe06398bc988ec}{DEF\+\_\+\+LINE\+\_\+\+LENGTH\+\_\+\+HD}} = 79
+\item 
+int \mbox{\hyperlink{namespaceenrichment__processor_a8e9e6c397db9aebc9497eee9fd9e78b6}{DEF\+\_\+\+LINE\+\_\+\+LENGTH\+\_\+\+STR}} = 32
+\item 
+float \mbox{\hyperlink{namespaceenrichment__processor_aa735aa56393b8d7b3a11e701231c9bc9}{DEF\+\_\+\+TIMEOUT}} = 0.\+1
+\item 
+string \mbox{\hyperlink{namespaceenrichment__processor_ab80c8e0ef0bce53ef5df5bd84bf5dc78}{DEF\+\_\+\+USER}} = \char`\"{}madcat\char`\"{}
+\item 
+string \mbox{\hyperlink{namespaceenrichment__processor_aeeb176e419f14793368ed15cb893f3dd}{DEF\+\_\+\+GROUP}} = \char`\"{}madcat\char`\"{}
+\item 
+\mbox{\hyperlink{namespaceenrichment__processor_a868eb36f427d808a4f240b7f7c805131}{DEF\+\_\+\+OUTPUT\+\_\+\+FILES}} = None
+\item 
+string \mbox{\hyperlink{namespaceenrichment__processor_a6d95f18dd10665b8a8af643ce4e5b6b9}{DEF\+\_\+\+IP\+\_\+\+SERVER\+\_\+\+HOST}} = \char`\"{}10.\+10.\+10.\+10\+:10000\char`\"{}
+\item 
+string \mbox{\hyperlink{namespaceenrichment__processor_a89675b48ab5dce09c518f727cf7d3f08}{GLOBAL\+\_\+\+VERSION}} = \char`\"{}MADCAT -\/ Mass Attack Detecion Connection Acceptance Tools\textbackslash{}n\+Enrichment processor v2.\+3.\+6\textbackslash{}n for TCP/IP Portmonitor v2.\+3.\+x\textbackslash{}n\+BSI 2018-\/2023\textbackslash{}n\char`\"{}
+\begin{DoxyCompactList}\small\item\em Version and Mascott strings \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceenrichment__processor_a43781bcf3c54b1ee70f7d3aeb3a852d8}{GLOBAL\+\_\+\+MASCOTT}} = \char`\"{} ▄▄▄ ▄▄▄▄▄▄\textbackslash{}n ▀▄▄ ▄▓▓█▓▓▓█▌ ██▓██▓▓██▄ ▄▀\textbackslash{}n ▀▄▄▄▓█▓██ █▓█▌ █▓ ▓████████▀\textbackslash{}n ▀███▓▓(o)██▓▌ ▐█▓█(o)█▓█████▀\textbackslash{}n ▀▀██▓█▓▓█ ████▓███▀▀\textbackslash{}n ▄ ▀▀▀▀ ▄\textbackslash{}n ▀▀█ ▐██▌\textbackslash{}n ██▄ \+\_\+\+\_\+\+\_\+\+\_\+-\/-\/-\/-\/-\/-\/▐██████▌-\/-\/-\/-\/-\/-\/\+\_\+\+\_\+\+\_\+ ▄▄██\textbackslash{}n \+\_\+\+\_\+█ █▄▄-\/-\/ \+\_\+\+\_\+\+\_\+-\/-\/-\/-\/-\/-\/▀▓▓▀-\/-\/-\/-\/-\/\+\_\+\+\_\+\+\_\+ -\/-\/▄▄█ █▀\+\_\+\+\_\+\textbackslash{}n \+\_\+\+\_\+-\/-\/ ▀█ ██▄▄▄▄ \+\_\+\+\_\+-\/-\/▄▓▓▄-\/-\/\+\_\+\+\_\+ ▄▄▄▄██ ██▀ -\/-\/\+\_\+\+\_\+\textbackslash{}n \+\_\+\+\_\+-\/-\/ \+\_\+\+\_\+-\/-\/▀█ ██ █▀▀█████▄▄▄▄▄▄███████ ██ █▀-\/-\/\+\_\+\+\_\+ -\/-\/\+\_\+\+\_\+\textbackslash{}n \+\_\+\+\_\+-\/-\/ \+\_\+\+\_\+-\/-\/ \+\_\+\+\_\+▀▀█ █ ██ ██▀▀██▀▀██ ██ █▀▀\+\_\+\+\_\+ -\/-\/\+\_\+\+\_\+ -\/-\/\+\_\+\+\_\+\textbackslash{}n \+\_\+\+\_\+-\/-\/ \+\_\+\+\_\+-\/-\/ ▀███ ██ ██ ██ ██ ████▀ -\/-\/\+\_\+\+\_\+ -\/-\/\+\_\+\+\_\+\textbackslash{}n bsi -\/-\/ \+\_\+\+\_\+-\/-\/ ▀▀▀▀▀██▄▄██▄▄██▀▀▀▀ -\/-\/\+\_\+\+\_\+ -\/-\/\textbackslash{}n \+\_\+\+\_\+ -\/-\/ -\/-\/\+\_\+\+\_\+\char`\"{}
+\item 
+bool \mbox{\hyperlink{namespaceenrichment__processor_adbabbab74946b81c093f6491cb4e7d26}{GLOBAL\+\_\+\+SHUTDOWN}} = False
+\begin{DoxyCompactList}\small\item\em Semaphore \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceenrichment__processor_ab210c73b5657ef793847fa55f96ae417}{GLOBAL\+\_\+\+ENRICHMENT}} = \mbox{\hyperlink{structdict}{dict}}()
+\begin{DoxyCompactList}\small\item\em Other globals \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespaceenrichment__processor_a6ae05bcd3f2ce1bd22eb60a198fb196c}{GLOBAL\+\_\+\+OUTPUT\+\_\+\+STDOUT}} = True
+\item 
+bool \mbox{\hyperlink{namespaceenrichment__processor_aab23ea304de90f84e6caad905420e74d}{GLOBAL\+\_\+\+OUTPUT\+\_\+\+FILES}} = False
+\item 
+\mbox{\hyperlink{namespaceenrichment__processor_a07f36e37a8091019d6f3c0720e948661}{GLOBAL\+\_\+\+OUTPUT\+\_\+\+FILE\+\_\+\+HANDLES}} = list()
+\item 
+\mbox{\hyperlink{namespaceenrichment__processor_a95dd64ce73b3e17a5cbe7d4afe8a0fcd}{GLOBAL\+\_\+\+STDERR\+\_\+\+LOCK}} = threading.\+Lock()
+\begin{DoxyCompactList}\small\item\em Globals and Locks for output and enrichment data \#\#\#\#\#\#\#\#\#\#\#\#. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceenrichment__processor_a74a88a26d877884d42294871e7ec6047}{GLOBAL\+\_\+\+OUTPUT\+\_\+\+LOCK}} = threading.\+Lock()
+\item 
+\mbox{\hyperlink{namespaceenrichment__processor_a18b086caa9e6bbb17928a51a7ec29647}{GLOBAL\+\_\+\+DATA\+\_\+\+AQUISITON\+\_\+\+LOCK}} = threading.\+Lock()
+\item 
+int \mbox{\hyperlink{namespaceenrichment__processor_a2c0f17cd252db76bbffa3ea1d322eeea}{GLOBAL\+\_\+\+TOTAL\+\_\+\+COUNT}} = 0
+\item 
+int \mbox{\hyperlink{namespaceenrichment__processor_a671b8b9e689c8992ecd718f79b9a6fd2}{GLOBAL\+\_\+\+SPLIT\+\_\+\+COUNT}} = 0
+\item 
+\mbox{\hyperlink{namespaceenrichment__processor_a0408cab284434c40e79751e4ef5fd98f}{enrich\+\_\+th}} = threading.\+Thread(target=enrich, daemon=True)
+\begin{DoxyCompactList}\small\item\em Configure main Threads \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# All threads are deamonized to make them exit with the parent process Thread for gattering enrichment data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceenrichment__processor_a328dead0e3628f8439722137eb26d60e}{aquisition\+\_\+th}} = threading.\+Thread(target=acquire, daemon=True)
+\end{DoxyCompactItemize}

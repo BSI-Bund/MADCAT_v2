@@ -1,0 +1,1200 @@
+\hypertarget{libdict__c_8c}{}\doxysection{/home/\+MADCAT/\+BSI-\/\+Bund@Git\+Hub.\+com/github\+\_\+release/lib/dict\+\_\+c/libdict\+\_\+c.c File Reference}
+\label{libdict__c_8c}\index{/home/MADCAT/BSI-\/Bund"@GitHub.com/github\_release/lib/dict\_c/libdict\_c.c@{/home/MADCAT/BSI-\/Bund"@GitHub.com/github\_release/lib/dict\_c/libdict\_c.c}}
+{\ttfamily \#include \char`\"{}libdict\+\_\+c.\+h\char`\"{}}\newline
+Include dependency graph for libdict\+\_\+c.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{libdict__c_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{libdict__c_8c_ab03c38de6344768b13bc1f2648cc5ad2}{json\+\_\+typetostr}} (int \mbox{\hyperlink{unionjson__type}{json\+\_\+type}})
+\begin{DoxyCompactList}\small\item\em Converts type defintions into strings. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structdict}{dict}} $\ast$ \mbox{\hyperlink{libdict__c_8c_a29796a1f7689a238011fa110e7082af9}{json\+\_\+dict}} (bool reset)
+\begin{DoxyCompactList}\small\item\em Helper function to manage a dict. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{libdict__c_8c_a3af1dca169193e36f9c68ebe09d07576}{dict\+\_\+printelement}} (FILE $\ast$fp, struct \mbox{\hyperlink{structdict}{dict}} $\ast$\mbox{\hyperlink{structdict}{dict}})
+\begin{DoxyCompactList}\small\item\em Print one elment of type struct dict. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{libdict__c_8c_a51fde5721ffa82f52a1bd5ec960b836d}{array\+\_\+printelement}} (FILE $\ast$fp, struct \mbox{\hyperlink{structarray}{array}} $\ast$\mbox{\hyperlink{structarray}{array}})
+\begin{DoxyCompactList}\small\item\em Print one elment of type struct array. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structdict}{dict}} $\ast$ \mbox{\hyperlink{libdict__c_8c_a6adcde67820b6ed0035482b4840af927}{dict\+\_\+new}} ()
+\begin{DoxyCompactList}\small\item\em Initializes a new dictionary of type struct dict. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structarray}{array}} $\ast$ \mbox{\hyperlink{libdict__c_8c_a459a17f26c951e423806a07ada1f9a09}{array\+\_\+new}} ()
+\begin{DoxyCompactList}\small\item\em Initializes a new array of type struct array. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structarray}{array}} $\ast$ \mbox{\hyperlink{libdict__c_8c_ada81cad02a043843e3b8f60962351e64}{array\+\_\+add}} (struct \mbox{\hyperlink{structarray}{array}} $\ast$\mbox{\hyperlink{structarray}{array}}, \+\_\+\+\_\+uint8\+\_\+t type, union \mbox{\hyperlink{unionjson__type}{json\+\_\+type}} value)
+\begin{DoxyCompactList}\small\item\em Adds an element to an array. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structdict}{dict}} $\ast$ \mbox{\hyperlink{libdict__c_8c_aa7ba093cd1b24d562a4f822529d946cc}{dict\+\_\+update}} (struct \mbox{\hyperlink{structdict}{dict}} $\ast$\mbox{\hyperlink{structdict}{dict}}, \+\_\+\+\_\+uint8\+\_\+t type, union \mbox{\hyperlink{unionjson__type}{json\+\_\+type}} value, unsigned int path\+\_\+len,...)
+\begin{DoxyCompactList}\small\item\em Updates a dictionary with a new element. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structdict}{dict}} $\ast$ \mbox{\hyperlink{libdict__c_8c_a168501876a8d0db7bf445a297c7f97d3}{\+\_\+\+\_\+dict\+\_\+add}} (struct \mbox{\hyperlink{structdict}{dict}} $\ast$\mbox{\hyperlink{structdict}{dict}}, \+\_\+\+\_\+uint8\+\_\+t type, union \mbox{\hyperlink{unionjson__type}{json\+\_\+type}} value, char $\ast$key)
+\begin{DoxyCompactList}\small\item\em Internal function to add a value to a dictonary. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{libdict__c_8c_ad37a3c20b8a339bf0f802d72293aaf34}{dict\+\_\+dump}} (FILE $\ast$fp, struct \mbox{\hyperlink{structdict}{dict}} $\ast$\mbox{\hyperlink{structdict}{dict}})
+\begin{DoxyCompactList}\small\item\em Prints a dictonary recursivly as JSON. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{libdict__c_8c_a3257c1967a6c8ba2bd904937e6ee4a8c}{dict\+\_\+dumpstr}} (struct \mbox{\hyperlink{structdict}{dict}} $\ast$\mbox{\hyperlink{structdict}{dict}})
+\begin{DoxyCompactList}\small\item\em Dumps a dictonary recursivly as JSON to a string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{libdict__c_8c_a50040fb6b2829de2eaf2d9f682990ce4}{\+\_\+\+\_\+dict\+\_\+print}} (FILE $\ast$fp, struct \mbox{\hyperlink{structdict}{dict}} $\ast$\mbox{\hyperlink{structdict}{dict}})
+\begin{DoxyCompactList}\small\item\em Internal function to recursivly print a dict structure. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{libdict__c_8c_a5e98bb8536384f22972a8e77b0ecee1d}{array\+\_\+dump}} (FILE $\ast$fp, struct \mbox{\hyperlink{structarray}{array}} $\ast$\mbox{\hyperlink{structarray}{array}})
+\begin{DoxyCompactList}\small\item\em Prints an array recursivly as JSON. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{libdict__c_8c_a1c4e82285e2e5265bc733ad43d3f6ac3}{array\+\_\+dumpstr}} (struct \mbox{\hyperlink{structarray}{array}} $\ast$\mbox{\hyperlink{structarray}{array}})
+\begin{DoxyCompactList}\small\item\em Internal function to recursivly print an array structure. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{libdict__c_8c_adef177566b15aba5dc4b094d94787551}{\+\_\+\+\_\+array\+\_\+print}} (FILE $\ast$fp, struct \mbox{\hyperlink{structarray}{array}} $\ast$\mbox{\hyperlink{structarray}{array}})
+\begin{DoxyCompactList}\small\item\em Internal function to recursivly dump an array structure as JSON to a string. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structdict}{dict}} $\ast$ \mbox{\hyperlink{libdict__c_8c_ab5c4334a5354859df367e1bf8a050f15}{dict\+\_\+get}} (struct \mbox{\hyperlink{structdict}{dict}} $\ast$\mbox{\hyperlink{structdict}{dict}}, int path\+\_\+len,...)
+\begin{DoxyCompactList}\small\item\em Function to get an element from a dictionary. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structdict}{dict}} $\ast$ \mbox{\hyperlink{libdict__c_8c_adb819e34a450056c2bffd8581488cc59}{\+\_\+\+\_\+dict\+\_\+plainsearch}} (struct \mbox{\hyperlink{structdict}{dict}} $\ast$\mbox{\hyperlink{structdict}{dict}}, char $\ast$key, struct \mbox{\hyperlink{structdict}{dict}} $\ast$$\ast$prev\+\_\+dict)
+\begin{DoxyCompactList}\small\item\em Internal Function to get an element without descending. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structdict}{dict}} $\ast$ \mbox{\hyperlink{libdict__c_8c_aa3b187986f610dbfe0e7138ecaf5b834}{dict\+\_\+empty}} (struct \mbox{\hyperlink{structdict}{dict}} $\ast$\mbox{\hyperlink{structdict}{dict}})
+\begin{DoxyCompactList}\small\item\em Emptys a dictionary, but does not free it. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{libdict__c_8c_a72174eec72aba6a82641de0a4859a4da}{dict\+\_\+free}} (struct \mbox{\hyperlink{structdict}{dict}} $\ast$\mbox{\hyperlink{structdict}{dict}})
+\begin{DoxyCompactList}\small\item\em Emptys a dictionary and frees it. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structarray}{array}} $\ast$ \mbox{\hyperlink{libdict__c_8c_ae6cc9c6a53f9b18c1a1141abced7514d}{array\+\_\+empty}} (struct \mbox{\hyperlink{structarray}{array}} $\ast$\mbox{\hyperlink{structarray}{array}})
+\begin{DoxyCompactList}\small\item\em Emptys an array, but does not free it. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{libdict__c_8c_abb8df193fba807b68ce0039440c126e3}{array\+\_\+free}} (struct \mbox{\hyperlink{structarray}{array}} $\ast$\mbox{\hyperlink{structarray}{array}})
+\begin{DoxyCompactList}\small\item\em Emptys an array and frees it. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structdict}{dict}} $\ast$ \mbox{\hyperlink{libdict__c_8c_a5afcbbf2ec1aef0f3c9c5366e7de9cdc}{\+\_\+\+\_\+dict\+\_\+delrec}} (struct \mbox{\hyperlink{structdict}{dict}} $\ast$\mbox{\hyperlink{structdict}{dict}}, int path\+\_\+len, char $\ast$next\+\_\+key, va\+\_\+list keys)
+\begin{DoxyCompactList}\small\item\em Internal Function to delete an element in a struct dict. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{libdict__c_8c_a39d71b8cb506457484e48dab3ed449ed}{dict\+\_\+del}} (struct \mbox{\hyperlink{structdict}{dict}} $\ast$$\ast$dict\+\_\+ptr, int path\+\_\+len,...)
+\begin{DoxyCompactList}\small\item\em Deletes an element in a struct dict. \end{DoxyCompactList}\item 
+long unsigned int \mbox{\hyperlink{libdict__c_8c_a8dad6d11fa54bf85129156f410b8bdb0}{array\+\_\+len}} (struct \mbox{\hyperlink{structarray}{array}} $\ast$\mbox{\hyperlink{structarray}{array}})
+\begin{DoxyCompactList}\small\item\em Returns the length of an array. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structarray}{array}} $\ast$ \mbox{\hyperlink{libdict__c_8c_a7c9222272e266e1bbc5d14725f241e37}{array\+\_\+get}} (struct \mbox{\hyperlink{structarray}{array}} $\ast$\mbox{\hyperlink{structarray}{array}}, long int pos)
+\begin{DoxyCompactList}\small\item\em Gets an element from an array. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{libdict__c_8c_a5cc1b236df4c3e4552f652a6e46b51e1}{array\+\_\+del}} (struct \mbox{\hyperlink{structarray}{array}} $\ast$\mbox{\hyperlink{structarray}{array}}, long int pos)
+\begin{DoxyCompactList}\small\item\em Deletes an element from an array. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{libdict__c_8c_a69622ec01206a1639945348069b95c89}{dict\+\_\+append}} (struct \mbox{\hyperlink{structdict}{dict}} $\ast$source\+\_\+dict, struct \mbox{\hyperlink{structdict}{dict}} $\ast$dest\+\_\+dict)
+\begin{DoxyCompactList}\small\item\em Appends two struct dict. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$const \mbox{\hyperlink{libdict__c_8c_a336b08ef514e318638ee74045136c7ff}{\+\_\+\+\_\+json\+\_\+hex\+\_\+format}} \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em Format strings for output of hexadecimal numbers as string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{libdict__c_8c_adef177566b15aba5dc4b094d94787551}\label{libdict__c_8c_adef177566b15aba5dc4b094d94787551}} 
+\index{libdict\_c.c@{libdict\_c.c}!\_\_array\_print@{\_\_array\_print}}
+\index{\_\_array\_print@{\_\_array\_print}!libdict\_c.c@{libdict\_c.c}}
+\doxysubsubsection{\texorpdfstring{\_\_array\_print()}{\_\_array\_print()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+array\+\_\+print (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{fp,  }\item[{struct \mbox{\hyperlink{structarray}{array}} $\ast$}]{array }\end{DoxyParamCaption})}
+
+
+
+Internal function to recursivly dump an array structure as JSON to a string. 
+
+\begin{DoxyVerb}Dumps an array, descending recursivly in dict/array structures as JSON, by returning a string.
+The string must be freed by calling function!
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em fp} & File pointer for output, e.\+g. stderr \\
+\hline
+{\em array} & address of struct array to print recursivly; has to be freed in calling function. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 404 of file libdict\+\_\+c.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{libdict__c_8c_adef177566b15aba5dc4b094d94787551_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{libdict__c_8c_adef177566b15aba5dc4b094d94787551_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{libdict__c_8c_a168501876a8d0db7bf445a297c7f97d3}\label{libdict__c_8c_a168501876a8d0db7bf445a297c7f97d3}} 
+\index{libdict\_c.c@{libdict\_c.c}!\_\_dict\_add@{\_\_dict\_add}}
+\index{\_\_dict\_add@{\_\_dict\_add}!libdict\_c.c@{libdict\_c.c}}
+\doxysubsubsection{\texorpdfstring{\_\_dict\_add()}{\_\_dict\_add()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structdict}{dict}}$\ast$ \+\_\+\+\_\+dict\+\_\+add (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structdict}{dict}} $\ast$}]{dict,  }\item[{\+\_\+\+\_\+uint8\+\_\+t}]{type,  }\item[{union \mbox{\hyperlink{unionjson__type}{json\+\_\+type}}}]{value,  }\item[{char $\ast$}]{key }\end{DoxyParamCaption})}
+
+
+
+Internal function to add a value to a dictonary. 
+
+\begin{DoxyVerb}Internal function to add a value to a dictonary without descending in nested dictionaries ("plain")
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em dict} & struct dict to add element to \\
+\hline
+{\em type} & data type of new element \\
+\hline
+{\em value} & value of the new element, given as union \mbox{\hyperlink{unionjson__type}{json\+\_\+type}} \\
+\hline
+{\em key} & key of the new element \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+initialized, new array 
+\end{DoxyReturn}
+
+
+Definition at line 267 of file libdict\+\_\+c.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{libdict__c_8c_a168501876a8d0db7bf445a297c7f97d3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{libdict__c_8c_a168501876a8d0db7bf445a297c7f97d3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{libdict__c_8c_a5afcbbf2ec1aef0f3c9c5366e7de9cdc}\label{libdict__c_8c_a5afcbbf2ec1aef0f3c9c5366e7de9cdc}} 
+\index{libdict\_c.c@{libdict\_c.c}!\_\_dict\_delrec@{\_\_dict\_delrec}}
+\index{\_\_dict\_delrec@{\_\_dict\_delrec}!libdict\_c.c@{libdict\_c.c}}
+\doxysubsubsection{\texorpdfstring{\_\_dict\_delrec()}{\_\_dict\_delrec()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structdict}{dict}}$\ast$ \+\_\+\+\_\+dict\+\_\+delrec (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structdict}{dict}} $\ast$}]{dict,  }\item[{int}]{path\+\_\+len,  }\item[{char $\ast$}]{next\+\_\+key,  }\item[{va\+\_\+list}]{keys }\end{DoxyParamCaption})}
+
+
+
+Internal Function to delete an element in a struct dict. 
+
+\begin{DoxyVerb}Deletes an element in a struct dict, given a path to the element.
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em dict} & struct dict to delete element from \\
+\hline
+{\em path\+\_\+len} & length of variadic list, specifiying the path to the element beeing deleted \\
+\hline
+{\em next\+\_\+key} & next key on path \\
+\hline
+{\em keys} & list of keys as va\+\_\+list, specifying the rest of the path to the element beeing deleted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Address of deleted element, if deletion was succesfull, NULL if not found 
+\end{DoxyReturn}
+
+
+Definition at line 531 of file libdict\+\_\+c.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{libdict__c_8c_a5afcbbf2ec1aef0f3c9c5366e7de9cdc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{libdict__c_8c_a5afcbbf2ec1aef0f3c9c5366e7de9cdc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{libdict__c_8c_adb819e34a450056c2bffd8581488cc59}\label{libdict__c_8c_adb819e34a450056c2bffd8581488cc59}} 
+\index{libdict\_c.c@{libdict\_c.c}!\_\_dict\_plainsearch@{\_\_dict\_plainsearch}}
+\index{\_\_dict\_plainsearch@{\_\_dict\_plainsearch}!libdict\_c.c@{libdict\_c.c}}
+\doxysubsubsection{\texorpdfstring{\_\_dict\_plainsearch()}{\_\_dict\_plainsearch()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structdict}{dict}}$\ast$ \+\_\+\+\_\+dict\+\_\+plainsearch (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structdict}{dict}} $\ast$}]{dict,  }\item[{char $\ast$}]{key,  }\item[{struct \mbox{\hyperlink{structdict}{dict}} $\ast$$\ast$}]{prev\+\_\+dict }\end{DoxyParamCaption})}
+
+
+
+Internal Function to get an element without descending. 
+
+\begin{DoxyVerb}Internal Function to get an element without descending in nested dict/array structures ("plain search")
+Be aware if searching for nested dicts or arrays, you have to descend manually, example:
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em dict} & struct dict to get element from \\
+\hline
+{\em key} & key to search for \\
+\hline
+{\em prev\+\_\+dict} & the address of the element bevor the searched one is stored here (e.\+g. for deletion) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+address of struct dict if found, NULL if not found 
+\end{DoxyReturn}
+
+
+Definition at line 472 of file libdict\+\_\+c.\+c.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{libdict__c_8c_adb819e34a450056c2bffd8581488cc59_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{libdict__c_8c_a50040fb6b2829de2eaf2d9f682990ce4}\label{libdict__c_8c_a50040fb6b2829de2eaf2d9f682990ce4}} 
+\index{libdict\_c.c@{libdict\_c.c}!\_\_dict\_print@{\_\_dict\_print}}
+\index{\_\_dict\_print@{\_\_dict\_print}!libdict\_c.c@{libdict\_c.c}}
+\doxysubsubsection{\texorpdfstring{\_\_dict\_print()}{\_\_dict\_print()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+dict\+\_\+print (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{fp,  }\item[{struct \mbox{\hyperlink{structdict}{dict}} $\ast$}]{dict }\end{DoxyParamCaption})}
+
+
+
+Internal function to recursivly print a dict structure. 
+
+\begin{DoxyVerb}Prints a dictonary, descending recursivly in dict/array structures as JSON.
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em fp} & File pointer for output, e.\+g. stderr \\
+\hline
+{\em dict} & address of struct dict to print recursivly \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 331 of file libdict\+\_\+c.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{libdict__c_8c_a50040fb6b2829de2eaf2d9f682990ce4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{libdict__c_8c_a50040fb6b2829de2eaf2d9f682990ce4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{libdict__c_8c_ada81cad02a043843e3b8f60962351e64}\label{libdict__c_8c_ada81cad02a043843e3b8f60962351e64}} 
+\index{libdict\_c.c@{libdict\_c.c}!array\_add@{array\_add}}
+\index{array\_add@{array\_add}!libdict\_c.c@{libdict\_c.c}}
+\doxysubsubsection{\texorpdfstring{array\_add()}{array\_add()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structarray}{array}}$\ast$ array\+\_\+add (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structarray}{array}} $\ast$}]{array,  }\item[{\+\_\+\+\_\+uint8\+\_\+t}]{type,  }\item[{union \mbox{\hyperlink{unionjson__type}{json\+\_\+type}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Adds an element to an array. 
+
+\begin{DoxyVerb}Adds an element to an array with type as defined by JSON_* defines.
+The value is taken from a union json_type.
+Returns the address of the added element
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em array} & struct array to add new element to \\
+\hline
+{\em type} & data type of new element \\
+\hline
+{\em value} & value of the new element, given as union \mbox{\hyperlink{unionjson__type}{json\+\_\+type}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Address of added element 
+\end{DoxyReturn}
+
+
+Definition at line 151 of file libdict\+\_\+c.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{libdict__c_8c_ada81cad02a043843e3b8f60962351e64_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{libdict__c_8c_a5cc1b236df4c3e4552f652a6e46b51e1}\label{libdict__c_8c_a5cc1b236df4c3e4552f652a6e46b51e1}} 
+\index{libdict\_c.c@{libdict\_c.c}!array\_del@{array\_del}}
+\index{array\_del@{array\_del}!libdict\_c.c@{libdict\_c.c}}
+\doxysubsubsection{\texorpdfstring{array\_del()}{array\_del()}}
+{\footnotesize\ttfamily bool array\+\_\+del (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structarray}{array}} $\ast$}]{array,  }\item[{long int}]{pos }\end{DoxyParamCaption})}
+
+
+
+Deletes an element from an array. 
+
+\begin{DoxyVerb}Deletes an element from an array given its postition starting with 0.
+Nested dicts/arrays are freed.
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em array} & struct array to delete element from \\
+\hline
+{\em pos} & postition of the element \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if deletion was succesfull, False if not found 
+\end{DoxyReturn}
+
+
+Definition at line 640 of file libdict\+\_\+c.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{libdict__c_8c_a5cc1b236df4c3e4552f652a6e46b51e1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{libdict__c_8c_a5e98bb8536384f22972a8e77b0ecee1d}\label{libdict__c_8c_a5e98bb8536384f22972a8e77b0ecee1d}} 
+\index{libdict\_c.c@{libdict\_c.c}!array\_dump@{array\_dump}}
+\index{array\_dump@{array\_dump}!libdict\_c.c@{libdict\_c.c}}
+\doxysubsubsection{\texorpdfstring{array\_dump()}{array\_dump()}}
+{\footnotesize\ttfamily void array\+\_\+dump (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{fp,  }\item[{struct \mbox{\hyperlink{structarray}{array}} $\ast$}]{array }\end{DoxyParamCaption})}
+
+
+
+Prints an array recursivly as JSON. 
+
+\begin{DoxyVerb}Prints an array, descending recursivly in dict/array structures as JSON
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em fp} & File pointer for output, e.\+g. stderr \\
+\hline
+{\em array} & address of struct array to print recursivly \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 380 of file libdict\+\_\+c.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{libdict__c_8c_a5e98bb8536384f22972a8e77b0ecee1d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{libdict__c_8c_a5e98bb8536384f22972a8e77b0ecee1d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{libdict__c_8c_a1c4e82285e2e5265bc733ad43d3f6ac3}\label{libdict__c_8c_a1c4e82285e2e5265bc733ad43d3f6ac3}} 
+\index{libdict\_c.c@{libdict\_c.c}!array\_dumpstr@{array\_dumpstr}}
+\index{array\_dumpstr@{array\_dumpstr}!libdict\_c.c@{libdict\_c.c}}
+\doxysubsubsection{\texorpdfstring{array\_dumpstr()}{array\_dumpstr()}}
+{\footnotesize\ttfamily char$\ast$ array\+\_\+dumpstr (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structarray}{array}} $\ast$}]{array }\end{DoxyParamCaption})}
+
+
+
+Internal function to recursivly print an array structure. 
+
+\begin{DoxyVerb}Prints an array, descending recursivly in dict/array structures as JSON.
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em fp} & File pointer for output, e.\+g. stderr \\
+\hline
+{\em array} & address of struct array to print recursivly \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 388 of file libdict\+\_\+c.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{libdict__c_8c_a1c4e82285e2e5265bc733ad43d3f6ac3_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{libdict__c_8c_ae6cc9c6a53f9b18c1a1141abced7514d}\label{libdict__c_8c_ae6cc9c6a53f9b18c1a1141abced7514d}} 
+\index{libdict\_c.c@{libdict\_c.c}!array\_empty@{array\_empty}}
+\index{array\_empty@{array\_empty}!libdict\_c.c@{libdict\_c.c}}
+\doxysubsubsection{\texorpdfstring{array\_empty()}{array\_empty()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structarray}{array}}$\ast$ array\+\_\+empty (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structarray}{array}} $\ast$}]{array }\end{DoxyParamCaption})}
+
+
+
+Emptys an array, but does not free it. 
+
+\begin{DoxyVerb}Emptys an array, but does not free it. Nested dicts/arrays are freed.
+The array passed to dict_empty is marked as JSON_EMPTY.
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em array} & struct array to empty \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+address of struct array, that has been emptied 
+\end{DoxyReturn}
+
+
+Definition at line 511 of file libdict\+\_\+c.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{libdict__c_8c_ae6cc9c6a53f9b18c1a1141abced7514d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{libdict__c_8c_ae6cc9c6a53f9b18c1a1141abced7514d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{libdict__c_8c_abb8df193fba807b68ce0039440c126e3}\label{libdict__c_8c_abb8df193fba807b68ce0039440c126e3}} 
+\index{libdict\_c.c@{libdict\_c.c}!array\_free@{array\_free}}
+\index{array\_free@{array\_free}!libdict\_c.c@{libdict\_c.c}}
+\doxysubsubsection{\texorpdfstring{array\_free()}{array\_free()}}
+{\footnotesize\ttfamily void array\+\_\+free (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structarray}{array}} $\ast$}]{array }\end{DoxyParamCaption})}
+
+
+
+Emptys an array and frees it. 
+
+\begin{DoxyVerb}Emptys an array, and frees it. Nested dicts/arrays are also freed.
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em array} & struct array to free \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 525 of file libdict\+\_\+c.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{libdict__c_8c_abb8df193fba807b68ce0039440c126e3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{libdict__c_8c_abb8df193fba807b68ce0039440c126e3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{libdict__c_8c_a7c9222272e266e1bbc5d14725f241e37}\label{libdict__c_8c_a7c9222272e266e1bbc5d14725f241e37}} 
+\index{libdict\_c.c@{libdict\_c.c}!array\_get@{array\_get}}
+\index{array\_get@{array\_get}!libdict\_c.c@{libdict\_c.c}}
+\doxysubsubsection{\texorpdfstring{array\_get()}{array\_get()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structarray}{array}}$\ast$ array\+\_\+get (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structarray}{array}} $\ast$}]{array,  }\item[{long int}]{pos }\end{DoxyParamCaption})}
+
+
+
+Gets an element from an array. 
+
+\begin{DoxyVerb}Gets an element of an array given its postition starting with 0.
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em array} & struct array to get element from \\
+\hline
+{\em pos} & postition of the element \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+address of the element found, NULL if not found 
+\end{DoxyReturn}
+
+
+Definition at line 627 of file libdict\+\_\+c.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{libdict__c_8c_a7c9222272e266e1bbc5d14725f241e37_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{libdict__c_8c_a7c9222272e266e1bbc5d14725f241e37_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{libdict__c_8c_a8dad6d11fa54bf85129156f410b8bdb0}\label{libdict__c_8c_a8dad6d11fa54bf85129156f410b8bdb0}} 
+\index{libdict\_c.c@{libdict\_c.c}!array\_len@{array\_len}}
+\index{array\_len@{array\_len}!libdict\_c.c@{libdict\_c.c}}
+\doxysubsubsection{\texorpdfstring{array\_len()}{array\_len()}}
+{\footnotesize\ttfamily long unsigned int array\+\_\+len (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structarray}{array}} $\ast$}]{array }\end{DoxyParamCaption})}
+
+
+
+Returns the length of an array. 
+
+\begin{DoxyVerb}Returns the length of an array. Elements with type JSON_EMPTY are ignored.
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em array} & struct array to get length from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+length of array 
+\end{DoxyReturn}
+
+
+Definition at line 614 of file libdict\+\_\+c.\+c.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{libdict__c_8c_a8dad6d11fa54bf85129156f410b8bdb0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{libdict__c_8c_a459a17f26c951e423806a07ada1f9a09}\label{libdict__c_8c_a459a17f26c951e423806a07ada1f9a09}} 
+\index{libdict\_c.c@{libdict\_c.c}!array\_new@{array\_new}}
+\index{array\_new@{array\_new}!libdict\_c.c@{libdict\_c.c}}
+\doxysubsubsection{\texorpdfstring{array\_new()}{array\_new()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structarray}{array}}$\ast$ array\+\_\+new (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes a new array of type struct array. 
+
+\begin{DoxyVerb}Fresh initialized arrays are set completly to 0,
+so the are implicit set to JSON_EMPTY and thus marked as "free to use".
+\end{DoxyVerb}
+
+
+\begin{DoxyReturn}{Returns}
+initialized, new array 
+\end{DoxyReturn}
+
+
+Definition at line 147 of file libdict\+\_\+c.\+c.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{libdict__c_8c_a459a17f26c951e423806a07ada1f9a09_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{libdict__c_8c_a51fde5721ffa82f52a1bd5ec960b836d}\label{libdict__c_8c_a51fde5721ffa82f52a1bd5ec960b836d}} 
+\index{libdict\_c.c@{libdict\_c.c}!array\_printelement@{array\_printelement}}
+\index{array\_printelement@{array\_printelement}!libdict\_c.c@{libdict\_c.c}}
+\doxysubsubsection{\texorpdfstring{array\_printelement()}{array\_printelement()}}
+{\footnotesize\ttfamily void array\+\_\+printelement (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{fp,  }\item[{struct \mbox{\hyperlink{structarray}{array}} $\ast$}]{array }\end{DoxyParamCaption})}
+
+
+
+Print one elment of type struct array. 
+
+\begin{DoxyVerb}Prints only the given element and does not follow the linked list.
+Usefull for debugging your code (or mine).
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em fp} & File pointer for output, e.\+g. stderr \\
+\hline
+{\em dict} & address of single struct array to print \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 105 of file libdict\+\_\+c.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{libdict__c_8c_a51fde5721ffa82f52a1bd5ec960b836d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{libdict__c_8c_a69622ec01206a1639945348069b95c89}\label{libdict__c_8c_a69622ec01206a1639945348069b95c89}} 
+\index{libdict\_c.c@{libdict\_c.c}!dict\_append@{dict\_append}}
+\index{dict\_append@{dict\_append}!libdict\_c.c@{libdict\_c.c}}
+\doxysubsubsection{\texorpdfstring{dict\_append()}{dict\_append()}}
+{\footnotesize\ttfamily bool dict\+\_\+append (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structdict}{dict}} $\ast$}]{source\+\_\+dict,  }\item[{struct \mbox{\hyperlink{structdict}{dict}} $\ast$}]{dest\+\_\+dict }\end{DoxyParamCaption})}
+
+
+
+Appends two struct dict. 
+
+\begin{DoxyVerb}Appends two struct dict, but does *not* ensure valid JSON, e.g. duplicate key usage.
+source_dict is not copied to dest_dict, so do not free, if appending was succesfull.
+On the other hand, you have to deal with it, if appending was not succesull.
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em source\+\_\+dict} & dictionary to append \\
+\hline
+{\em dest\+\_\+dict} & dictonary to append source\+\_\+dict to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if appending was succesfull, False in case of an error 
+\end{DoxyReturn}
+
+
+Definition at line 684 of file libdict\+\_\+c.\+c.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{libdict__c_8c_a69622ec01206a1639945348069b95c89_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{libdict__c_8c_a39d71b8cb506457484e48dab3ed449ed}\label{libdict__c_8c_a39d71b8cb506457484e48dab3ed449ed}} 
+\index{libdict\_c.c@{libdict\_c.c}!dict\_del@{dict\_del}}
+\index{dict\_del@{dict\_del}!libdict\_c.c@{libdict\_c.c}}
+\doxysubsubsection{\texorpdfstring{dict\_del()}{dict\_del()}}
+{\footnotesize\ttfamily bool dict\+\_\+del (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structdict}{dict}} $\ast$$\ast$}]{dict\+\_\+ptr,  }\item[{int}]{path\+\_\+len,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+Deletes an element in a struct dict. 
+
+\begin{DoxyVerb}Deletes an element in a struct dict, given a path to the element.
+The pointer to the dictionary may be altered, if the first element is the one deleted.
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em dict\+\_\+ptr} & struct dict to delete element from \\
+\hline
+{\em path\+\_\+len} & length of variadic list, specifiying the path to the element beeing deleted \\
+\hline
+{\em path} & variadict list specifiyng the path to the element beeing deleted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if deletion was succesfull, False if not found 
+\end{DoxyReturn}
+
+
+Definition at line 586 of file libdict\+\_\+c.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{libdict__c_8c_a39d71b8cb506457484e48dab3ed449ed_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{libdict__c_8c_ad37a3c20b8a339bf0f802d72293aaf34}\label{libdict__c_8c_ad37a3c20b8a339bf0f802d72293aaf34}} 
+\index{libdict\_c.c@{libdict\_c.c}!dict\_dump@{dict\_dump}}
+\index{dict\_dump@{dict\_dump}!libdict\_c.c@{libdict\_c.c}}
+\doxysubsubsection{\texorpdfstring{dict\_dump()}{dict\_dump()}}
+{\footnotesize\ttfamily void dict\+\_\+dump (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{fp,  }\item[{struct \mbox{\hyperlink{structdict}{dict}} $\ast$}]{dict }\end{DoxyParamCaption})}
+
+
+
+Prints a dictonary recursivly as JSON. 
+
+\begin{DoxyVerb}Prints a dictonary, descending recursivly in dict/array structures as JSON
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em fp} & File pointer for output, e.\+g. stderr \\
+\hline
+{\em dict} & address of struct dict to print recursivly \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 307 of file libdict\+\_\+c.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{libdict__c_8c_ad37a3c20b8a339bf0f802d72293aaf34_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{libdict__c_8c_ad37a3c20b8a339bf0f802d72293aaf34_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{libdict__c_8c_a3257c1967a6c8ba2bd904937e6ee4a8c}\label{libdict__c_8c_a3257c1967a6c8ba2bd904937e6ee4a8c}} 
+\index{libdict\_c.c@{libdict\_c.c}!dict\_dumpstr@{dict\_dumpstr}}
+\index{dict\_dumpstr@{dict\_dumpstr}!libdict\_c.c@{libdict\_c.c}}
+\doxysubsubsection{\texorpdfstring{dict\_dumpstr()}{dict\_dumpstr()}}
+{\footnotesize\ttfamily char$\ast$ dict\+\_\+dumpstr (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structdict}{dict}} $\ast$}]{dict }\end{DoxyParamCaption})}
+
+
+
+Dumps a dictonary recursivly as JSON to a string. 
+
+\begin{DoxyVerb}Dumps a dictonary, descending recursivly in dict/array structures as JSON, by returning a string.
+The string must be freed by calling function!
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em dict} & address of struct dict to print recursivly \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to resulting string; has to be freed in calling function. 
+\end{DoxyReturn}
+
+
+Definition at line 315 of file libdict\+\_\+c.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{libdict__c_8c_a3257c1967a6c8ba2bd904937e6ee4a8c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{libdict__c_8c_a3257c1967a6c8ba2bd904937e6ee4a8c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{libdict__c_8c_aa3b187986f610dbfe0e7138ecaf5b834}\label{libdict__c_8c_aa3b187986f610dbfe0e7138ecaf5b834}} 
+\index{libdict\_c.c@{libdict\_c.c}!dict\_empty@{dict\_empty}}
+\index{dict\_empty@{dict\_empty}!libdict\_c.c@{libdict\_c.c}}
+\doxysubsubsection{\texorpdfstring{dict\_empty()}{dict\_empty()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structdict}{dict}} $\ast$ dict\+\_\+empty (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structdict}{dict}} $\ast$}]{dict }\end{DoxyParamCaption})}
+
+
+
+Emptys a dictionary, but does not free it. 
+
+\begin{DoxyVerb}Emptys a dictionary, but does not free it. Nested dicts/arrays are freed.
+The dict passed to dict_empty is marked as JSON_EMPTY.
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em dict} & struct dict to empty \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+address of struct dict, that has been emptied 
+\end{DoxyReturn}
+
+
+Definition at line 484 of file libdict\+\_\+c.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{libdict__c_8c_aa3b187986f610dbfe0e7138ecaf5b834_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{libdict__c_8c_aa3b187986f610dbfe0e7138ecaf5b834_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{libdict__c_8c_a72174eec72aba6a82641de0a4859a4da}\label{libdict__c_8c_a72174eec72aba6a82641de0a4859a4da}} 
+\index{libdict\_c.c@{libdict\_c.c}!dict\_free@{dict\_free}}
+\index{dict\_free@{dict\_free}!libdict\_c.c@{libdict\_c.c}}
+\doxysubsubsection{\texorpdfstring{dict\_free()}{dict\_free()}}
+{\footnotesize\ttfamily void dict\+\_\+free (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structdict}{dict}} $\ast$}]{dict }\end{DoxyParamCaption})}
+
+
+
+Emptys a dictionary and frees it. 
+
+\begin{DoxyVerb}Emptys a dictionary, and frees it. Nested dicts/arrays are also freed.
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em dict} & struct dict to free \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 502 of file libdict\+\_\+c.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{libdict__c_8c_a72174eec72aba6a82641de0a4859a4da_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{libdict__c_8c_a72174eec72aba6a82641de0a4859a4da_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{libdict__c_8c_ab5c4334a5354859df367e1bf8a050f15}\label{libdict__c_8c_ab5c4334a5354859df367e1bf8a050f15}} 
+\index{libdict\_c.c@{libdict\_c.c}!dict\_get@{dict\_get}}
+\index{dict\_get@{dict\_get}!libdict\_c.c@{libdict\_c.c}}
+\doxysubsubsection{\texorpdfstring{dict\_get()}{dict\_get()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structdict}{dict}}$\ast$ dict\+\_\+get (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structdict}{dict}} $\ast$}]{dict,  }\item[{int}]{path\+\_\+len,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+Function to get an element from a dictionary. 
+
+\begin{DoxyVerb}Gets an element from a dictionary.
+Be aware if searching for nested dicts or arrays, you have to descend manually, example:
+Given a struct dict* dict with the following content:
+{"Wolf":"Hurz", "INNER":{"Rabbit":null, "Fox":true}, "Tiger":17}
+This code:
+     ret = dict_get(dict, 1, "INNER");
+     printf("%s\n", ret->key);
+     printf("%s\n", ret->next->key);
+Will print:
+     INNER
+     Tiger
+In contrast this code:
+     ret = dict_get(dict, 1, "INNER")->value.object;
+     printf("%s\n", ret->key);
+     printf("%s\n", ret->next->key);
+Will print:
+     Rabbit
+     Fox
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em dict} & struct dict to get element from \\
+\hline
+{\em path\+\_\+len} & length of variadic list, specifiying the path get element from \\
+\hline
+{\em path} & variadict list specifiyng the path to get element from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+address of struct dict if found, NULL if not found 
+\end{DoxyReturn}
+
+
+Definition at line 440 of file libdict\+\_\+c.\+c.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{libdict__c_8c_ab5c4334a5354859df367e1bf8a050f15_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{libdict__c_8c_a6adcde67820b6ed0035482b4840af927}\label{libdict__c_8c_a6adcde67820b6ed0035482b4840af927}} 
+\index{libdict\_c.c@{libdict\_c.c}!dict\_new@{dict\_new}}
+\index{dict\_new@{dict\_new}!libdict\_c.c@{libdict\_c.c}}
+\doxysubsubsection{\texorpdfstring{dict\_new()}{dict\_new()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structdict}{dict}}$\ast$ dict\+\_\+new (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes a new dictionary of type struct dict. 
+
+\begin{DoxyVerb}Fresh initialized dictionarys are set completly to 0,
+so the are implicit set to JSON_EMPTY and thus marked as "free to use".
+\end{DoxyVerb}
+
+
+\begin{DoxyReturn}{Returns}
+initialized, new dictionary 
+\end{DoxyReturn}
+
+
+Definition at line 143 of file libdict\+\_\+c.\+c.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{libdict__c_8c_a6adcde67820b6ed0035482b4840af927_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{libdict__c_8c_a3af1dca169193e36f9c68ebe09d07576}\label{libdict__c_8c_a3af1dca169193e36f9c68ebe09d07576}} 
+\index{libdict\_c.c@{libdict\_c.c}!dict\_printelement@{dict\_printelement}}
+\index{dict\_printelement@{dict\_printelement}!libdict\_c.c@{libdict\_c.c}}
+\doxysubsubsection{\texorpdfstring{dict\_printelement()}{dict\_printelement()}}
+{\footnotesize\ttfamily void dict\+\_\+printelement (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{fp,  }\item[{struct \mbox{\hyperlink{structdict}{dict}} $\ast$}]{dict }\end{DoxyParamCaption})}
+
+
+
+Print one elment of type struct dict. 
+
+\begin{DoxyVerb}Prints only the given element and does not follow the linked list.
+Usefull for debugging your code (or mine).
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em fp} & File pointer for output, e.\+g. stderr \\
+\hline
+{\em dict} & address of single struct dict to print \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 65 of file libdict\+\_\+c.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{libdict__c_8c_a3af1dca169193e36f9c68ebe09d07576_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{libdict__c_8c_a3af1dca169193e36f9c68ebe09d07576_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{libdict__c_8c_aa7ba093cd1b24d562a4f822529d946cc}\label{libdict__c_8c_aa7ba093cd1b24d562a4f822529d946cc}} 
+\index{libdict\_c.c@{libdict\_c.c}!dict\_update@{dict\_update}}
+\index{dict\_update@{dict\_update}!libdict\_c.c@{libdict\_c.c}}
+\doxysubsubsection{\texorpdfstring{dict\_update()}{dict\_update()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structdict}{dict}}$\ast$ dict\+\_\+update (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structdict}{dict}} $\ast$}]{dict,  }\item[{\+\_\+\+\_\+uint8\+\_\+t}]{type,  }\item[{union \mbox{\hyperlink{unionjson__type}{json\+\_\+type}}}]{value,  }\item[{unsigned int}]{path\+\_\+len,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+Updates a dictionary with a new element. 
+
+\begin{DoxyVerb}Updates a dictionary with a new element, using a path and ensures valid JSON.
+The value is taken from a union json_type.
+Returns the address of the added element and NULL in case of an error.
+If updating the dict with a string, the string is copied, so it eventually has to be freed in calling function.
+If updating the dict with a nested dict or array, you must not free it, but have to deal with it eventually if updating fails.
+
+If the new element does not exist in path, it will be added, example:
+Given the following structure stored under struct dict* dict: 
+{"Cougar":1, "Rabbit":null}
+The following code:
+     struct dict* dict = dict_new();
+     union json_type value;
+     //The addition of "cougar" and "rabbit" is omitted here, but follows the same principle
+     value.boolean = true;
+     dict_update(dict, JSON_BOOL, value, 1, "Fox");
+ Results in:
+{"Cougar":1, "Rabbit":null, "Fox":true}
+
+If a new element is on a given path, that does not exist, the path is dynamicly updated.
+Given:
+{"Cougar":1, "Rabbit":null}
+The following code:
+     value.boolean = true;
+     dict_update(dict, JSON_BOOL, value, 4, "1", "A", "iii", "Fox");
+Results in:
+{"Cougar":1, "Rabbit":null, "1":{"A":{"iii":{"Fox":true}}}}
+
+If the path is "blocked" by an none JSON_OBJ - type, the update will fail an NULL is returned.
+Given:
+{"Cougar":1, "Rabbit":null, "1":{"A":{"iii":{"Fox":true}}}}
+The following code is going to fail:
+     value.boolean = true;
+     dict_update(dict, JSON_BOOL, value, 5, "1", "A", "iii", "Fox", "Wolf");
+Because "Fox" is part of the path to new element "Wolf" and not a JSON_OBJ, but a JSON_BOOL - type.
+
+When adding a JSON_HEX - type value, be sure to set the format for this value for the output you desired:
+Given an empty dict initialized by dict_new(), the following code:
+     value.hex.number = 10; value.hex.format = HEX_FORMAT_04;
+     dict_update(dict, JSON_HEX, value, 1, "Hex Test");
+Resulst in the following output:
+{"Hex Test":"0x000a"}
+
+You can combine all functions to set any desired values, just be sure to descent in dict/array structures when necessary, Example:
+Given:
+{"Lamb":5, "Wolf":"Hurz", "INNER":{"Puma":false, "Rabbit":null, "Fox":true, "ARRAY":["0x000a", "asdfjklo", {}]}}
+The following code:     
+     value.hex.number = 0xDEADBEEF; value.hex.format = HEX_FORMAT_STD;
+     dict_update(array_get(dict_get(dict, 2, "INNER", "ARRAY")->value.array, 2)->value.object, JSON_HEX, value, 1, "DEADBEEF");
+Results in:
+{"Lamb":5, "Wolf":"Hurz", "INNER":{"Puma":false, "Rabbit":null, "Fox":true, "ARRAY":["0x000a", "asdfjklo", {"DEADBEEF":"0xdeadbeef"}]}}
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em dict} & struct dict to update with new element \\
+\hline
+{\em type} & data type of new element \\
+\hline
+{\em value} & value of the new element, given as union \mbox{\hyperlink{unionjson__type}{json\+\_\+type}} \\
+\hline
+{\em path\+\_\+len} & length of variadic list, specifiying the path to add to \\
+\hline
+{\em path} & variadict list specifiyng the path to add to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Address of added element, NULL in case of an error 
+\end{DoxyReturn}
+
+
+Definition at line 184 of file libdict\+\_\+c.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{libdict__c_8c_aa7ba093cd1b24d562a4f822529d946cc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{libdict__c_8c_aa7ba093cd1b24d562a4f822529d946cc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{libdict__c_8c_a29796a1f7689a238011fa110e7082af9}\label{libdict__c_8c_a29796a1f7689a238011fa110e7082af9}} 
+\index{libdict\_c.c@{libdict\_c.c}!json\_dict@{json\_dict}}
+\index{json\_dict@{json\_dict}!libdict\_c.c@{libdict\_c.c}}
+\doxysubsubsection{\texorpdfstring{json\_dict()}{json\_dict()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structdict}{dict}}$\ast$ json\+\_\+dict (\begin{DoxyParamCaption}\item[{bool}]{reset }\end{DoxyParamCaption})}
+
+
+
+Helper function to manage a dict. 
+
+\begin{DoxyVerb}Not necessary, but useful function to avoid the use of global vars.
+To free the static dict of this function and get a new dict set reset to true.
+To get the static dict w/o reset, set reset to false.
+To free the static dict of this function use:
+dict_free(json_dict(false));
+
+Copy this function an rename it if you want to manage more dictionaries this way at the same time.
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em reset} & Reset static dict \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Address of static dict 
+\end{DoxyReturn}
+
+
+Definition at line 55 of file libdict\+\_\+c.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{libdict__c_8c_a29796a1f7689a238011fa110e7082af9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{libdict__c_8c_a29796a1f7689a238011fa110e7082af9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{libdict__c_8c_ab03c38de6344768b13bc1f2648cc5ad2}\label{libdict__c_8c_ab03c38de6344768b13bc1f2648cc5ad2}} 
+\index{libdict\_c.c@{libdict\_c.c}!json\_typetostr@{json\_typetostr}}
+\index{json\_typetostr@{json\_typetostr}!libdict\_c.c@{libdict\_c.c}}
+\doxysubsubsection{\texorpdfstring{json\_typetostr()}{json\_typetostr()}}
+{\footnotesize\ttfamily char$\ast$ json\+\_\+typetostr (\begin{DoxyParamCaption}\item[{int}]{json\+\_\+type }\end{DoxyParamCaption})}
+
+
+
+Converts type defintions into strings. 
+
+\begin{DoxyVerb}Outout is a human readable string
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{unionjson__type}{json\+\_\+type}}} & JSON type definition \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Human readable string 
+\end{DoxyReturn}
+
+
+Definition at line 39 of file libdict\+\_\+c.\+c.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{libdict__c_8c_ab03c38de6344768b13bc1f2648cc5ad2_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{libdict__c_8c_a336b08ef514e318638ee74045136c7ff}\label{libdict__c_8c_a336b08ef514e318638ee74045136c7ff}} 
+\index{libdict\_c.c@{libdict\_c.c}!\_\_json\_hex\_format@{\_\_json\_hex\_format}}
+\index{\_\_json\_hex\_format@{\_\_json\_hex\_format}!libdict\_c.c@{libdict\_c.c}}
+\doxysubsubsection{\texorpdfstring{\_\_json\_hex\_format}{\_\_json\_hex\_format}}
+{\footnotesize\ttfamily const char$\ast$ const \+\_\+\+\_\+json\+\_\+hex\+\_\+format\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}\(\backslash\)"{}0x\%lx\(\backslash\)"{}"{}},   }
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}\(\backslash\)"{}0x\%02lx\(\backslash\)"{}"{}}, }
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}\(\backslash\)"{}0x\%04lx\(\backslash\)"{}"{}}, }
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}\(\backslash\)"{}0x\%05lx\(\backslash\)"{}"{}}, }
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}\(\backslash\)"{}0x\%08lx\(\backslash\)"{}"{}} }
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Format strings for output of hexadecimal numbers as string. 
+
+\begin{DoxyVerb}Defines the format strings for use with the defined constants HEX_FORMAT_*
+\end{DoxyVerb}
+ 
+
+Definition at line 29 of file libdict\+\_\+c.\+c.
+

@@ -1,0 +1,8 @@
+<map id="json_dict" name="json_dict">
+<area shape="rect" id="node1" title="Helper function to manage a dict." alt="" coords="5,31,85,57"/>
+<area shape="rect" id="node2" href="$libdict__c_8c.html#a72174eec72aba6a82641de0a4859a4da" title="Emptys a dictionary and frees it." alt="" coords="134,5,213,32"/>
+<area shape="rect" id="node6" href="$libdict__c_8c.html#a6adcde67820b6ed0035482b4840af927" title="Initializes a new dictionary of type struct dict." alt="" coords="133,56,213,83"/>
+<area shape="rect" id="node3" href="$libdict__c_8c.html#aa3b187986f610dbfe0e7138ecaf5b834" title="Emptys a dictionary, but does not free it." alt="" coords="261,5,356,32"/>
+<area shape="rect" id="node4" href="$libdict__c_8c.html#abb8df193fba807b68ce0039440c126e3" title="Emptys an array and frees it." alt="" coords="404,5,493,32"/>
+<area shape="rect" id="node5" href="$libdict__c_8c.html#ae6cc9c6a53f9b18c1a1141abced7514d" title="Emptys an array, but does not free it." alt="" coords="541,5,647,32"/>
+</map>

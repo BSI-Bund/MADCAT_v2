@@ -1,0 +1,150 @@
+\hypertarget{unionjson__type}{}\doxysection{json\+\_\+type Union Reference}
+\label{unionjson__type}\index{json\_type@{json\_type}}
+
+
+Representation of JSON-\/\+Types.  
+
+
+
+
+{\ttfamily \#include $<$libdict\+\_\+c.\+h$>$}
+
+
+
+Collaboration diagram for json\+\_\+type\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=265pt]{unionjson__type__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{unionjson__type_a857e4e5a2613b7cf584dbf12dae00525}{boolean}}
+\item 
+long double \mbox{\hyperlink{unionjson__type_a455237c86a1dff3f37fe93da1216a6f0}{floating}}
+\item 
+long long int \mbox{\hyperlink{unionjson__type_a5283f2dae5da803262f8deb3c71525f0}{integer}}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>unsigned long int \mbox{\hyperlink{unionjson__type_a063310b7caf6e37bb29faf3ee80bd436}{number}}\\
+\>\_\_uint8\_t \mbox{\hyperlink{unionjson__type_a2401ff64a12b85806df0eb3a569619ef}{format}}\\
+\} \mbox{\hyperlink{unionjson__type_a2aa0b7ff6f3a1c6578641ef823918b3f}{hex}}\\
+
+\end{tabbing}\item 
+char $\ast$ \mbox{\hyperlink{unionjson__type_aed1cfb225a5fb77461e7972691e68a72}{string}}
+\item 
+struct \mbox{\hyperlink{structarray}{array}} $\ast$ \mbox{\hyperlink{unionjson__type_a02883074b530c44f320b1490d0dfee66}{array}}
+\item 
+struct \mbox{\hyperlink{structdict}{dict}} $\ast$ \mbox{\hyperlink{unionjson__type_ab4e026a737fcbf1dafc14b7f8f2c5883}{object}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Representation of JSON-\/\+Types. 
+
+\begin{DoxyVerb}Union as representation of JSON-Types.
+JSON_HEX is going to be saved in an nested unnamed struct, containing its value as an integer an a format specifier for output as string representation.
+\end{DoxyVerb}
+ 
+
+Definition at line 95 of file libdict\+\_\+c.\+h.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{unionjson__type_a02883074b530c44f320b1490d0dfee66}\label{unionjson__type_a02883074b530c44f320b1490d0dfee66}} 
+\index{json\_type@{json\_type}!array@{array}}
+\index{array@{array}!json\_type@{json\_type}}
+\doxysubsubsection{\texorpdfstring{array}{array}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structarray}{array}}$\ast$ \mbox{\hyperlink{structarray}{array}}}
+
+
+
+Definition at line 104 of file libdict\+\_\+c.\+h.
+
+\mbox{\Hypertarget{unionjson__type_a857e4e5a2613b7cf584dbf12dae00525}\label{unionjson__type_a857e4e5a2613b7cf584dbf12dae00525}} 
+\index{json\_type@{json\_type}!boolean@{boolean}}
+\index{boolean@{boolean}!json\_type@{json\_type}}
+\doxysubsubsection{\texorpdfstring{boolean}{boolean}}
+{\footnotesize\ttfamily bool boolean}
+
+
+
+Definition at line 96 of file libdict\+\_\+c.\+h.
+
+\mbox{\Hypertarget{unionjson__type_a455237c86a1dff3f37fe93da1216a6f0}\label{unionjson__type_a455237c86a1dff3f37fe93da1216a6f0}} 
+\index{json\_type@{json\_type}!floating@{floating}}
+\index{floating@{floating}!json\_type@{json\_type}}
+\doxysubsubsection{\texorpdfstring{floating}{floating}}
+{\footnotesize\ttfamily long double floating}
+
+
+
+Definition at line 97 of file libdict\+\_\+c.\+h.
+
+\mbox{\Hypertarget{unionjson__type_a2401ff64a12b85806df0eb3a569619ef}\label{unionjson__type_a2401ff64a12b85806df0eb3a569619ef}} 
+\index{json\_type@{json\_type}!format@{format}}
+\index{format@{format}!json\_type@{json\_type}}
+\doxysubsubsection{\texorpdfstring{format}{format}}
+{\footnotesize\ttfamily \+\_\+\+\_\+uint8\+\_\+t format}
+
+
+
+Definition at line 101 of file libdict\+\_\+c.\+h.
+
+\mbox{\Hypertarget{unionjson__type_a2aa0b7ff6f3a1c6578641ef823918b3f}\label{unionjson__type_a2aa0b7ff6f3a1c6578641ef823918b3f}} 
+\index{json\_type@{json\_type}!hex@{hex}}
+\index{hex@{hex}!json\_type@{json\_type}}
+\doxysubsubsection{\texorpdfstring{}{}}
+{\footnotesize\ttfamily struct \{ ... \}  hex}
+
+\mbox{\Hypertarget{unionjson__type_a5283f2dae5da803262f8deb3c71525f0}\label{unionjson__type_a5283f2dae5da803262f8deb3c71525f0}} 
+\index{json\_type@{json\_type}!integer@{integer}}
+\index{integer@{integer}!json\_type@{json\_type}}
+\doxysubsubsection{\texorpdfstring{integer}{integer}}
+{\footnotesize\ttfamily long long int integer}
+
+
+
+Definition at line 98 of file libdict\+\_\+c.\+h.
+
+\mbox{\Hypertarget{unionjson__type_a063310b7caf6e37bb29faf3ee80bd436}\label{unionjson__type_a063310b7caf6e37bb29faf3ee80bd436}} 
+\index{json\_type@{json\_type}!number@{number}}
+\index{number@{number}!json\_type@{json\_type}}
+\doxysubsubsection{\texorpdfstring{number}{number}}
+{\footnotesize\ttfamily unsigned long int number}
+
+
+
+Definition at line 100 of file libdict\+\_\+c.\+h.
+
+\mbox{\Hypertarget{unionjson__type_ab4e026a737fcbf1dafc14b7f8f2c5883}\label{unionjson__type_ab4e026a737fcbf1dafc14b7f8f2c5883}} 
+\index{json\_type@{json\_type}!object@{object}}
+\index{object@{object}!json\_type@{json\_type}}
+\doxysubsubsection{\texorpdfstring{object}{object}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structdict}{dict}}$\ast$ object}
+
+
+
+Definition at line 105 of file libdict\+\_\+c.\+h.
+
+\mbox{\Hypertarget{unionjson__type_aed1cfb225a5fb77461e7972691e68a72}\label{unionjson__type_aed1cfb225a5fb77461e7972691e68a72}} 
+\index{json\_type@{json\_type}!string@{string}}
+\index{string@{string}!json\_type@{json\_type}}
+\doxysubsubsection{\texorpdfstring{string}{string}}
+{\footnotesize\ttfamily char$\ast$ string}
+
+
+
+Definition at line 103 of file libdict\+\_\+c.\+h.
+
+
+
+The documentation for this union was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/\+MADCAT/\+BSI-\/\+Bund@\+Git\+Hub.\+com/github\+\_\+release/include/dict\+\_\+c/\mbox{\hyperlink{libdict__c_8h}{libdict\+\_\+c.\+h}}\end{DoxyCompactItemize}

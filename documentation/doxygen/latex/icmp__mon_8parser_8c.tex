@@ -1,0 +1,262 @@
+\hypertarget{icmp__mon_8parser_8c}{}\doxysection{/home/\+MADCAT/\+BSI-\/\+Bund@Git\+Hub.\+com/github\+\_\+release/lib/icmp\+\_\+mon.parser.\+c File Reference}
+\label{icmp__mon_8parser_8c}\index{/home/MADCAT/BSI-\/Bund"@GitHub.com/github\_release/lib/icmp\_mon.parser.c@{/home/MADCAT/BSI-\/Bund"@GitHub.com/github\_release/lib/icmp\_mon.parser.c}}
+{\ttfamily \#include \char`\"{}icmp\+\_\+mon.\+parser.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}icmp\+\_\+mon.\+helper.\+h\char`\"{}}\newline
+Include dependency graph for icmp\+\_\+mon.\+parser.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{icmp__mon_8parser_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{icmp__mon_8parser_8c_ac79ef79b81bf5796e8221d6986247a64}{parse\+\_\+ipopt}} (int opt\+\_\+cpclno, const char $\ast$opt\+\_\+name, unsigned char $\ast$$\ast$opt\+\_\+ptr\+\_\+ptr, const unsigned char $\ast$beginofoptions\+\_\+addr, const unsigned char $\ast$endofoptions\+\_\+addr, struct \mbox{\hyperlink{structdict}{dict}} $\ast$$\ast$json)
+\begin{DoxyCompactList}\small\item\em Parse IP Options. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{icmp__mon_8parser_8c_aaefd53a906634ceebc1a53934b4dff6e}{analyze\+\_\+ip\+\_\+header}} (const unsigned char $\ast$\mbox{\hyperlink{raw__mon_8h_a12f869e80da40cc0807ed2dddd5ff95e}{packet}}, int recv\+\_\+len, struct \mbox{\hyperlink{structdict}{dict}} $\ast$$\ast$json)
+\begin{DoxyCompactList}\small\item\em Parse and analyze IP Header. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{icmp__mon_8parser_8c_a4b3e44459f0e15ba7c2df377e4acd618}{analyze\+\_\+udp\+\_\+header}} (const unsigned char $\ast$\mbox{\hyperlink{raw__mon_8h_a12f869e80da40cc0807ed2dddd5ff95e}{packet}}, int recv\+\_\+len, struct \mbox{\hyperlink{structdict}{dict}} $\ast$$\ast$json)
+\begin{DoxyCompactList}\small\item\em Parse and analyze UDP Header. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{icmp__mon_8parser_8c_aeb96ab8b749310eba5dc93d3400f6543}{parse\+\_\+tcpopt\+\_\+w\+\_\+length}} (int opt\+\_\+kind, int opt\+\_\+len, const char $\ast$opt\+\_\+name, unsigned char $\ast$$\ast$opt\+\_\+ptr\+\_\+ptr, const unsigned char $\ast$beginofoptions\+\_\+addr, const unsigned char $\ast$endofoptions\+\_\+addr, struct \mbox{\hyperlink{structdict}{dict}} $\ast$$\ast$json)
+\begin{DoxyCompactList}\small\item\em Parse TCP Options. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{icmp__mon_8parser_8c_a994d097f267c871a372a1011f829bb49}{analyze\+\_\+tcp\+\_\+header}} (const unsigned char $\ast$\mbox{\hyperlink{raw__mon_8h_a12f869e80da40cc0807ed2dddd5ff95e}{packet}}, int recv\+\_\+len, struct \mbox{\hyperlink{structdict}{dict}} $\ast$$\ast$json)
+\begin{DoxyCompactList}\small\item\em Parse and analyze TCP Header. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{icmp__mon_8parser_8c_aaefd53a906634ceebc1a53934b4dff6e}\label{icmp__mon_8parser_8c_aaefd53a906634ceebc1a53934b4dff6e}} 
+\index{icmp\_mon.parser.c@{icmp\_mon.parser.c}!analyze\_ip\_header@{analyze\_ip\_header}}
+\index{analyze\_ip\_header@{analyze\_ip\_header}!icmp\_mon.parser.c@{icmp\_mon.parser.c}}
+\doxysubsubsection{\texorpdfstring{analyze\_ip\_header()}{analyze\_ip\_header()}}
+{\footnotesize\ttfamily bool analyze\+\_\+ip\+\_\+header (\begin{DoxyParamCaption}\item[{const unsigned char $\ast$}]{packet,  }\item[{int}]{recv\+\_\+len,  }\item[{struct \mbox{\hyperlink{structdict}{dict}} $\ast$$\ast$}]{json }\end{DoxyParamCaption})}
+
+
+
+Parse and analyze IP Header. 
+
+\begin{DoxyVerb}Parses and analyzes a IP Header
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em packet} & Pointer to the raw packet data \\
+\hline
+{\em caplen} & length of raw packet data \\
+\hline
+{\em json} & if set to NULL, the global json\+\_\+dict(...) function is used to obtain dictionary, else a new dict spawned by dict\+\_\+new(...) shall be passed and data is returned using this pointer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true for success, fals in case of an error. 
+\end{DoxyReturn}
+
+
+Definition at line 60 of file icmp\+\_\+mon.\+parser.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{icmp__mon_8parser_8c_aaefd53a906634ceebc1a53934b4dff6e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{icmp__mon_8parser_8c_aaefd53a906634ceebc1a53934b4dff6e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{icmp__mon_8parser_8c_a994d097f267c871a372a1011f829bb49}\label{icmp__mon_8parser_8c_a994d097f267c871a372a1011f829bb49}} 
+\index{icmp\_mon.parser.c@{icmp\_mon.parser.c}!analyze\_tcp\_header@{analyze\_tcp\_header}}
+\index{analyze\_tcp\_header@{analyze\_tcp\_header}!icmp\_mon.parser.c@{icmp\_mon.parser.c}}
+\doxysubsubsection{\texorpdfstring{analyze\_tcp\_header()}{analyze\_tcp\_header()}}
+{\footnotesize\ttfamily int analyze\+\_\+tcp\+\_\+header (\begin{DoxyParamCaption}\item[{const unsigned char $\ast$}]{packet,  }\item[{int}]{recv\+\_\+len,  }\item[{struct \mbox{\hyperlink{structdict}{dict}} $\ast$$\ast$}]{json }\end{DoxyParamCaption})}
+
+
+
+Parse and analyze TCP Header. 
+
+\begin{DoxyVerb}Parses and analyzes a TCP Header
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em packet} & Pointer to the raw packet data \\
+\hline
+{\em caplen} & length of raw packet data \\
+\hline
+{\em json} & if set to NULL, the global json\+\_\+dict(...) function is used to obtain dictionary, else a new dict spawned by dict\+\_\+new(...) shall be passed and data is returned using this pointer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of bytes in TCP Payload, $<$0 in case of an error. 
+\end{DoxyReturn}
+
+
+Definition at line 295 of file icmp\+\_\+mon.\+parser.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{icmp__mon_8parser_8c_a994d097f267c871a372a1011f829bb49_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{icmp__mon_8parser_8c_a994d097f267c871a372a1011f829bb49_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{icmp__mon_8parser_8c_a4b3e44459f0e15ba7c2df377e4acd618}\label{icmp__mon_8parser_8c_a4b3e44459f0e15ba7c2df377e4acd618}} 
+\index{icmp\_mon.parser.c@{icmp\_mon.parser.c}!analyze\_udp\_header@{analyze\_udp\_header}}
+\index{analyze\_udp\_header@{analyze\_udp\_header}!icmp\_mon.parser.c@{icmp\_mon.parser.c}}
+\doxysubsubsection{\texorpdfstring{analyze\_udp\_header()}{analyze\_udp\_header()}}
+{\footnotesize\ttfamily int analyze\+\_\+udp\+\_\+header (\begin{DoxyParamCaption}\item[{const unsigned char $\ast$}]{packet,  }\item[{int}]{recv\+\_\+len,  }\item[{struct \mbox{\hyperlink{structdict}{dict}} $\ast$$\ast$}]{json }\end{DoxyParamCaption})}
+
+
+
+Parse and analyze UDP Header. 
+
+\begin{DoxyVerb}Parses and analyzes a UDP Header
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em packet} & Pointer to the raw packet data \\
+\hline
+{\em caplen} & length of raw packet data \\
+\hline
+{\em json} & if set to NULL, the global json\+\_\+dict(...) function is used to obtain dictionary, else a new dict spawned by dict\+\_\+new(...) shall be passed and data is returned using this pointer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of bytes in UDP Payload, $<$0 in case of an error. 
+\end{DoxyReturn}
+
+
+Definition at line 223 of file icmp\+\_\+mon.\+parser.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{icmp__mon_8parser_8c_a4b3e44459f0e15ba7c2df377e4acd618_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{icmp__mon_8parser_8c_a4b3e44459f0e15ba7c2df377e4acd618_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{icmp__mon_8parser_8c_ac79ef79b81bf5796e8221d6986247a64}\label{icmp__mon_8parser_8c_ac79ef79b81bf5796e8221d6986247a64}} 
+\index{icmp\_mon.parser.c@{icmp\_mon.parser.c}!parse\_ipopt@{parse\_ipopt}}
+\index{parse\_ipopt@{parse\_ipopt}!icmp\_mon.parser.c@{icmp\_mon.parser.c}}
+\doxysubsubsection{\texorpdfstring{parse\_ipopt()}{parse\_ipopt()}}
+{\footnotesize\ttfamily bool parse\+\_\+ipopt (\begin{DoxyParamCaption}\item[{int}]{opt\+\_\+cpclno,  }\item[{const char $\ast$}]{opt\+\_\+name,  }\item[{unsigned char $\ast$$\ast$}]{opt\+\_\+ptr\+\_\+ptr,  }\item[{const unsigned char $\ast$}]{beginofoptions\+\_\+addr,  }\item[{const unsigned char $\ast$}]{endofoptions\+\_\+addr,  }\item[{struct \mbox{\hyperlink{structdict}{dict}} $\ast$$\ast$}]{json }\end{DoxyParamCaption})}
+
+
+
+Parse IP Options. 
+
+\begin{DoxyVerb}Parses IP Options and returns false in case of an error.
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em opt\+\_\+cpclno} & Option Number as defined by IANA \\
+\hline
+{\em opt\+\_\+name} & Option Name \\
+\hline
+{\em opt\+\_\+ptr\+\_\+ptr} & Pointer to options number in raw data \\
+\hline
+{\em beginofoptions\+\_\+addr} & Beginning Address of options \\
+\hline
+{\em endofoptions\+\_\+addr} & End Address of options \\
+\hline
+{\em json} & if set to NULL, the global json\+\_\+dict(...) function is used to obtain dictionary, else a new dict spawned by dict\+\_\+new(...) shall be passed and data is returned using this pointer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true for success, fals in case of an error. 
+\end{DoxyReturn}
+
+
+Definition at line 42 of file icmp\+\_\+mon.\+parser.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{icmp__mon_8parser_8c_ac79ef79b81bf5796e8221d6986247a64_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{icmp__mon_8parser_8c_ac79ef79b81bf5796e8221d6986247a64_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{icmp__mon_8parser_8c_aeb96ab8b749310eba5dc93d3400f6543}\label{icmp__mon_8parser_8c_aeb96ab8b749310eba5dc93d3400f6543}} 
+\index{icmp\_mon.parser.c@{icmp\_mon.parser.c}!parse\_tcpopt\_w\_length@{parse\_tcpopt\_w\_length}}
+\index{parse\_tcpopt\_w\_length@{parse\_tcpopt\_w\_length}!icmp\_mon.parser.c@{icmp\_mon.parser.c}}
+\doxysubsubsection{\texorpdfstring{parse\_tcpopt\_w\_length()}{parse\_tcpopt\_w\_length()}}
+{\footnotesize\ttfamily bool parse\+\_\+tcpopt\+\_\+w\+\_\+length (\begin{DoxyParamCaption}\item[{int}]{opt\+\_\+kind,  }\item[{int}]{opt\+\_\+len,  }\item[{const char $\ast$}]{opt\+\_\+name,  }\item[{unsigned char $\ast$$\ast$}]{opt\+\_\+ptr\+\_\+ptr,  }\item[{const unsigned char $\ast$}]{beginofoptions\+\_\+addr,  }\item[{const unsigned char $\ast$}]{endofoptions\+\_\+addr,  }\item[{struct \mbox{\hyperlink{structdict}{dict}} $\ast$$\ast$}]{json }\end{DoxyParamCaption})}
+
+
+
+Parse TCP Options. 
+
+\begin{DoxyVerb}Parses TCP Options and returns false in case of an error.
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em opt\+\_\+kind} & Option Number as defined by IANA/\+RFCs \\
+\hline
+{\em opt\+\_\+len} & Option length as defined by IANA/\+RFCs \\
+\hline
+{\em opt\+\_\+name} & Option Name \\
+\hline
+{\em opt\+\_\+ptr\+\_\+ptr} & Pointer to options number in raw data \\
+\hline
+{\em beginofoptions\+\_\+addr} & Beginning Address of options \\
+\hline
+{\em endofoptions\+\_\+addr} & End Address of options \\
+\hline
+{\em json} & if set to NULL, the global json\+\_\+dict(...) function is used to obtain dictionary, else a new dict spawned by dict\+\_\+new(...) shall be passed and data is returned using this pointer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true for success, fals in case of an error. 
+\end{DoxyReturn}
+
+
+Definition at line 277 of file icmp\+\_\+mon.\+parser.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{icmp__mon_8parser_8c_aeb96ab8b749310eba5dc93d3400f6543_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{icmp__mon_8parser_8c_aeb96ab8b749310eba5dc93d3400f6543_icgraph}
+\end{center}
+\end{figure}

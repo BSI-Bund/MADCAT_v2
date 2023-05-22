@@ -1,0 +1,13 @@
+<map id="sig_handler_parent" name="sig_handler_parent">
+<area shape="rect" id="node1" title="Signal Handler for parent watchdog." alt="" coords="5,56,152,83"/>
+<area shape="rect" id="node2" href="$tcp__ip__port__mon_8helper_8c.html#a372ece5e34aa05e6865239df4b1f5a6e" title="Gets proxy config from linked List." alt="" coords="219,5,342,32"/>
+<area shape="rect" id="node3" href="$tcp__ip__port__mon_8helper_8c.html#a326cc0de985cdd63f70bc63d63878af8" title="Generic signal handler." alt="" coords="200,56,361,83"/>
+<area shape="rect" id="node11" href="$madcat_8helper_8c.html#a6beb2c039c319f4fb3541627bb6da8ee" title="Returns current time." alt="" coords="243,107,319,133"/>
+<area shape="rect" id="node4" href="$libdict__c_8c.html#a72174eec72aba6a82641de0a4859a4da" title="Emptys a dictionary and frees it." alt="" coords="575,5,654,32"/>
+<area shape="rect" id="node8" href="$libdict__c_8c.html#a29796a1f7689a238011fa110e7082af9" title="Helper function to manage a dict." alt="" coords="428,56,508,83"/>
+<area shape="rect" id="node10" href="$tcp__ip__port__mon_8helper_8c.html#a2b73f874293662fb6b8aac2dcc366deb" title="Frees an element of the proxy configuration list." alt="" coords="409,107,527,133"/>
+<area shape="rect" id="node5" href="$libdict__c_8c.html#aa3b187986f610dbfe0e7138ecaf5b834" title="Emptys a dictionary, but does not free it." alt="" coords="703,5,797,32"/>
+<area shape="rect" id="node6" href="$libdict__c_8c.html#abb8df193fba807b68ce0039440c126e3" title="Emptys an array and frees it." alt="" coords="845,5,935,32"/>
+<area shape="rect" id="node7" href="$libdict__c_8c.html#ae6cc9c6a53f9b18c1a1141abced7514d" title="Emptys an array, but does not free it." alt="" coords="983,5,1088,32"/>
+<area shape="rect" id="node9" href="$libdict__c_8c.html#a6adcde67820b6ed0035482b4840af927" title="Initializes a new dictionary of type struct dict." alt="" coords="575,56,655,83"/>
+</map>

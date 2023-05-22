@@ -1,0 +1,418 @@
+\hypertarget{structudpcon__data__node__t}{}\doxysection{udpcon\+\_\+data\+\_\+node\+\_\+t Struct Reference}
+\label{structudpcon__data__node__t}\index{udpcon\_data\_node\_t@{udpcon\_data\_node\_t}}
+
+
+{\ttfamily \#include $<$udp\+\_\+ip\+\_\+port\+\_\+mon.\+h$>$}
+
+
+
+Collaboration diagram for udpcon\+\_\+data\+\_\+node\+\_\+t\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{structudpcon__data__node__t__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structudpcon__data__node__t}{udpcon\+\_\+data\+\_\+node\+\_\+t}} $\ast$ \mbox{\hyperlink{structudpcon__data__node__t_ad3879a75b9cf66d8520c1b0f09cc0a80}{next}}
+\item 
+struct \mbox{\hyperlink{structudpcon__data__node__t}{udpcon\+\_\+data\+\_\+node\+\_\+t}} $\ast$ \mbox{\hyperlink{structudpcon__data__node__t_a3bec77a187f9d94224fa70371eef6d31}{prev}}
+\item 
+\mbox{\hyperlink{udp__ip__port__mon_8h_a0256ec76a45dccdf8197da10675df7c5}{udpcon\+\_\+id\+\_\+t}} \mbox{\hyperlink{structudpcon__data__node__t_a5b20d4e14250602a362be18a27dcf8b3}{id\+\_\+tobackend}}
+\item 
+\mbox{\hyperlink{udp__ip__port__mon_8h_a0256ec76a45dccdf8197da10675df7c5}{udpcon\+\_\+id\+\_\+t}} \mbox{\hyperlink{structudpcon__data__node__t_ab5001cdaa5b4f1d2448c2106450f9caa}{id\+\_\+fromclient}}
+\item 
+struct sockaddr\+\_\+in $\ast$ \mbox{\hyperlink{structudpcon__data__node__t_a8dc47823ecc2bc538bd2f6733eff82f0}{backend\+\_\+socket}}
+\item 
+int \mbox{\hyperlink{structudpcon__data__node__t_acaf95de2fe0eeae78b9833cfbfd917dc}{backend\+\_\+socket\+\_\+fd}}
+\item 
+struct sockaddr\+\_\+in $\ast$ \mbox{\hyperlink{structudpcon__data__node__t_aa594545c7fcaf4fc4bf0837789644e6f}{client\+\_\+socket}}
+\item 
+int \mbox{\hyperlink{structudpcon__data__node__t_acdd1f9ce5cfb6c148331b6d3ce2c841c}{client\+\_\+socket\+\_\+fd}}
+\item 
+struct sockaddr\+\_\+in \mbox{\hyperlink{structudpcon__data__node__t_a8f1b6e32a7cc5b11a3d97b8ea072f91c}{client\+\_\+localport}}
+\item 
+long long int \mbox{\hyperlink{structudpcon__data__node__t_a1c2329d080b809dbccc9c28c98f7aa67}{last\+\_\+seen}}
+\item 
+long double \mbox{\hyperlink{structudpcon__data__node__t_abcc515bd04c6332225a72e31ff74f454}{min\+\_\+rtt}}
+\item 
+bool \mbox{\hyperlink{structudpcon__data__node__t_a2b916ab7be795cf2bb73fdbe7eb9cf79}{proxied}}
+\item 
+char $\ast$ \mbox{\hyperlink{structudpcon__data__node__t_a15fa8c1166a5274a6d45114d81f533ab}{src\+\_\+ip}}
+\item 
+int \mbox{\hyperlink{structudpcon__data__node__t_a2d47efc2f2609185cf802853871de027}{src\+\_\+port}}
+\item 
+char $\ast$ \mbox{\hyperlink{structudpcon__data__node__t_aae0a3e97dfd50eaf7499f53109b10559}{dest\+\_\+ip}}
+\item 
+int \mbox{\hyperlink{structudpcon__data__node__t_aea0a47e783f1f8835d331d9bc0ea2b73}{dest\+\_\+port}}
+\item 
+char $\ast$ \mbox{\hyperlink{structudpcon__data__node__t_a2f26eae919bf9f5656b4250df8743e28}{timestamp}}
+\item 
+long long int \mbox{\hyperlink{structudpcon__data__node__t_a865706a61cdcba810ddd9db56581d8b7}{unixtime}}
+\item 
+long double \mbox{\hyperlink{structudpcon__data__node__t_a37e27c9944e52dfa765c9c9d7eaa0c9b}{timeasdouble}}
+\item 
+char $\ast$ \mbox{\hyperlink{structudpcon__data__node__t_ab40328f79e021050ac262dc0a6019667}{start}}
+\item 
+char $\ast$ \mbox{\hyperlink{structudpcon__data__node__t_a8fd806ad19b8f5513a4cf18cbf77532c}{end}}
+\item 
+long double \mbox{\hyperlink{structudpcon__data__node__t_a54a0af95b2627634d0b5d753e8ebb230}{duration}}
+\item 
+long long unsigned int \mbox{\hyperlink{structudpcon__data__node__t_a898779bb149ffe5c3d78c58b4f832a8f}{bytes\+\_\+toserver}}
+\item 
+long long unsigned int \mbox{\hyperlink{structudpcon__data__node__t_a49c1d57a081c9c105196af26f8bb15de}{bytes\+\_\+toclient}}
+\item 
+char $\ast$ \mbox{\hyperlink{structudpcon__data__node__t_ab50c43aa444046f97b72660102361682}{proxy\+\_\+ip}}
+\item 
+int \mbox{\hyperlink{structudpcon__data__node__t_af4e78b6dcd6aabffec6c095d66dcbe46}{proxy\+\_\+port}}
+\item 
+char $\ast$ \mbox{\hyperlink{structudpcon__data__node__t_a4ab81d786a4ae60a398bfd06280dd455}{backend\+\_\+ip}}
+\item 
+int \mbox{\hyperlink{structudpcon__data__node__t_a2ecd5df60b39e92f014d43b639ab7de2}{backend\+\_\+port}}
+\item 
+unsigned char $\ast$ \mbox{\hyperlink{structudpcon__data__node__t_a330f1bb25881c43b17265cdc48d8b5a2}{payload}}
+\item 
+long long unsigned int \mbox{\hyperlink{structudpcon__data__node__t_ab806badf7cc7838efb38a86eebfbdaba}{payload\+\_\+len}}
+\item 
+unsigned char $\ast$ \mbox{\hyperlink{structudpcon__data__node__t_a0ebb4edf6b628194c87b9f53d07b6d87}{first\+\_\+dgram}}
+\item 
+long unsigned int \mbox{\hyperlink{structudpcon__data__node__t_a6c885cc7de1a65a6f116ed3a473472ff}{first\+\_\+dgram\+\_\+len}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 138 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structudpcon__data__node__t_a4ab81d786a4ae60a398bfd06280dd455}\label{structudpcon__data__node__t_a4ab81d786a4ae60a398bfd06280dd455}} 
+\index{udpcon\_data\_node\_t@{udpcon\_data\_node\_t}!backend\_ip@{backend\_ip}}
+\index{backend\_ip@{backend\_ip}!udpcon\_data\_node\_t@{udpcon\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{backend\_ip}{backend\_ip}}
+{\footnotesize\ttfamily char$\ast$ backend\+\_\+ip}
+
+
+
+Definition at line 169 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{structudpcon__data__node__t_a2ecd5df60b39e92f014d43b639ab7de2}\label{structudpcon__data__node__t_a2ecd5df60b39e92f014d43b639ab7de2}} 
+\index{udpcon\_data\_node\_t@{udpcon\_data\_node\_t}!backend\_port@{backend\_port}}
+\index{backend\_port@{backend\_port}!udpcon\_data\_node\_t@{udpcon\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{backend\_port}{backend\_port}}
+{\footnotesize\ttfamily int backend\+\_\+port}
+
+
+
+Definition at line 170 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{structudpcon__data__node__t_a8dc47823ecc2bc538bd2f6733eff82f0}\label{structudpcon__data__node__t_a8dc47823ecc2bc538bd2f6733eff82f0}} 
+\index{udpcon\_data\_node\_t@{udpcon\_data\_node\_t}!backend\_socket@{backend\_socket}}
+\index{backend\_socket@{backend\_socket}!udpcon\_data\_node\_t@{udpcon\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{backend\_socket}{backend\_socket}}
+{\footnotesize\ttfamily struct sockaddr\+\_\+in$\ast$ backend\+\_\+socket}
+
+
+
+Definition at line 145 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{structudpcon__data__node__t_acaf95de2fe0eeae78b9833cfbfd917dc}\label{structudpcon__data__node__t_acaf95de2fe0eeae78b9833cfbfd917dc}} 
+\index{udpcon\_data\_node\_t@{udpcon\_data\_node\_t}!backend\_socket\_fd@{backend\_socket\_fd}}
+\index{backend\_socket\_fd@{backend\_socket\_fd}!udpcon\_data\_node\_t@{udpcon\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{backend\_socket\_fd}{backend\_socket\_fd}}
+{\footnotesize\ttfamily int backend\+\_\+socket\+\_\+fd}
+
+
+
+Definition at line 146 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{structudpcon__data__node__t_a49c1d57a081c9c105196af26f8bb15de}\label{structudpcon__data__node__t_a49c1d57a081c9c105196af26f8bb15de}} 
+\index{udpcon\_data\_node\_t@{udpcon\_data\_node\_t}!bytes\_toclient@{bytes\_toclient}}
+\index{bytes\_toclient@{bytes\_toclient}!udpcon\_data\_node\_t@{udpcon\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{bytes\_toclient}{bytes\_toclient}}
+{\footnotesize\ttfamily long long unsigned int bytes\+\_\+toclient}
+
+
+
+Definition at line 166 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{structudpcon__data__node__t_a898779bb149ffe5c3d78c58b4f832a8f}\label{structudpcon__data__node__t_a898779bb149ffe5c3d78c58b4f832a8f}} 
+\index{udpcon\_data\_node\_t@{udpcon\_data\_node\_t}!bytes\_toserver@{bytes\_toserver}}
+\index{bytes\_toserver@{bytes\_toserver}!udpcon\_data\_node\_t@{udpcon\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{bytes\_toserver}{bytes\_toserver}}
+{\footnotesize\ttfamily long long unsigned int bytes\+\_\+toserver}
+
+
+
+Definition at line 165 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{structudpcon__data__node__t_a8f1b6e32a7cc5b11a3d97b8ea072f91c}\label{structudpcon__data__node__t_a8f1b6e32a7cc5b11a3d97b8ea072f91c}} 
+\index{udpcon\_data\_node\_t@{udpcon\_data\_node\_t}!client\_localport@{client\_localport}}
+\index{client\_localport@{client\_localport}!udpcon\_data\_node\_t@{udpcon\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{client\_localport}{client\_localport}}
+{\footnotesize\ttfamily struct sockaddr\+\_\+in client\+\_\+localport}
+
+
+
+Definition at line 148 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{structudpcon__data__node__t_aa594545c7fcaf4fc4bf0837789644e6f}\label{structudpcon__data__node__t_aa594545c7fcaf4fc4bf0837789644e6f}} 
+\index{udpcon\_data\_node\_t@{udpcon\_data\_node\_t}!client\_socket@{client\_socket}}
+\index{client\_socket@{client\_socket}!udpcon\_data\_node\_t@{udpcon\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{client\_socket}{client\_socket}}
+{\footnotesize\ttfamily struct sockaddr\+\_\+in$\ast$ client\+\_\+socket}
+
+
+
+Definition at line 147 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{structudpcon__data__node__t_acdd1f9ce5cfb6c148331b6d3ce2c841c}\label{structudpcon__data__node__t_acdd1f9ce5cfb6c148331b6d3ce2c841c}} 
+\index{udpcon\_data\_node\_t@{udpcon\_data\_node\_t}!client\_socket\_fd@{client\_socket\_fd}}
+\index{client\_socket\_fd@{client\_socket\_fd}!udpcon\_data\_node\_t@{udpcon\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{client\_socket\_fd}{client\_socket\_fd}}
+{\footnotesize\ttfamily int client\+\_\+socket\+\_\+fd}
+
+
+
+Definition at line 148 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{structudpcon__data__node__t_aae0a3e97dfd50eaf7499f53109b10559}\label{structudpcon__data__node__t_aae0a3e97dfd50eaf7499f53109b10559}} 
+\index{udpcon\_data\_node\_t@{udpcon\_data\_node\_t}!dest\_ip@{dest\_ip}}
+\index{dest\_ip@{dest\_ip}!udpcon\_data\_node\_t@{udpcon\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{dest\_ip}{dest\_ip}}
+{\footnotesize\ttfamily char$\ast$ dest\+\_\+ip}
+
+
+
+Definition at line 157 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{structudpcon__data__node__t_aea0a47e783f1f8835d331d9bc0ea2b73}\label{structudpcon__data__node__t_aea0a47e783f1f8835d331d9bc0ea2b73}} 
+\index{udpcon\_data\_node\_t@{udpcon\_data\_node\_t}!dest\_port@{dest\_port}}
+\index{dest\_port@{dest\_port}!udpcon\_data\_node\_t@{udpcon\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{dest\_port}{dest\_port}}
+{\footnotesize\ttfamily int dest\+\_\+port}
+
+
+
+Definition at line 158 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{structudpcon__data__node__t_a54a0af95b2627634d0b5d753e8ebb230}\label{structudpcon__data__node__t_a54a0af95b2627634d0b5d753e8ebb230}} 
+\index{udpcon\_data\_node\_t@{udpcon\_data\_node\_t}!duration@{duration}}
+\index{duration@{duration}!udpcon\_data\_node\_t@{udpcon\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{duration}{duration}}
+{\footnotesize\ttfamily long double duration}
+
+
+
+Definition at line 164 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{structudpcon__data__node__t_a8fd806ad19b8f5513a4cf18cbf77532c}\label{structudpcon__data__node__t_a8fd806ad19b8f5513a4cf18cbf77532c}} 
+\index{udpcon\_data\_node\_t@{udpcon\_data\_node\_t}!end@{end}}
+\index{end@{end}!udpcon\_data\_node\_t@{udpcon\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily char$\ast$ end}
+
+
+
+Definition at line 163 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{structudpcon__data__node__t_a0ebb4edf6b628194c87b9f53d07b6d87}\label{structudpcon__data__node__t_a0ebb4edf6b628194c87b9f53d07b6d87}} 
+\index{udpcon\_data\_node\_t@{udpcon\_data\_node\_t}!first\_dgram@{first\_dgram}}
+\index{first\_dgram@{first\_dgram}!udpcon\_data\_node\_t@{udpcon\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{first\_dgram}{first\_dgram}}
+{\footnotesize\ttfamily unsigned char$\ast$ first\+\_\+dgram}
+
+
+
+Definition at line 174 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{structudpcon__data__node__t_a6c885cc7de1a65a6f116ed3a473472ff}\label{structudpcon__data__node__t_a6c885cc7de1a65a6f116ed3a473472ff}} 
+\index{udpcon\_data\_node\_t@{udpcon\_data\_node\_t}!first\_dgram\_len@{first\_dgram\_len}}
+\index{first\_dgram\_len@{first\_dgram\_len}!udpcon\_data\_node\_t@{udpcon\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{first\_dgram\_len}{first\_dgram\_len}}
+{\footnotesize\ttfamily long unsigned int first\+\_\+dgram\+\_\+len}
+
+
+
+Definition at line 175 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{structudpcon__data__node__t_ab5001cdaa5b4f1d2448c2106450f9caa}\label{structudpcon__data__node__t_ab5001cdaa5b4f1d2448c2106450f9caa}} 
+\index{udpcon\_data\_node\_t@{udpcon\_data\_node\_t}!id\_fromclient@{id\_fromclient}}
+\index{id\_fromclient@{id\_fromclient}!udpcon\_data\_node\_t@{udpcon\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{id\_fromclient}{id\_fromclient}}
+{\footnotesize\ttfamily \mbox{\hyperlink{udp__ip__port__mon_8h_a0256ec76a45dccdf8197da10675df7c5}{udpcon\+\_\+id\+\_\+t}} id\+\_\+fromclient}
+
+
+
+Definition at line 143 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{structudpcon__data__node__t_a5b20d4e14250602a362be18a27dcf8b3}\label{structudpcon__data__node__t_a5b20d4e14250602a362be18a27dcf8b3}} 
+\index{udpcon\_data\_node\_t@{udpcon\_data\_node\_t}!id\_tobackend@{id\_tobackend}}
+\index{id\_tobackend@{id\_tobackend}!udpcon\_data\_node\_t@{udpcon\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{id\_tobackend}{id\_tobackend}}
+{\footnotesize\ttfamily \mbox{\hyperlink{udp__ip__port__mon_8h_a0256ec76a45dccdf8197da10675df7c5}{udpcon\+\_\+id\+\_\+t}} id\+\_\+tobackend}
+
+
+
+Definition at line 142 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{structudpcon__data__node__t_a1c2329d080b809dbccc9c28c98f7aa67}\label{structudpcon__data__node__t_a1c2329d080b809dbccc9c28c98f7aa67}} 
+\index{udpcon\_data\_node\_t@{udpcon\_data\_node\_t}!last\_seen@{last\_seen}}
+\index{last\_seen@{last\_seen}!udpcon\_data\_node\_t@{udpcon\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{last\_seen}{last\_seen}}
+{\footnotesize\ttfamily long long int last\+\_\+seen}
+
+
+
+Definition at line 151 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{structudpcon__data__node__t_abcc515bd04c6332225a72e31ff74f454}\label{structudpcon__data__node__t_abcc515bd04c6332225a72e31ff74f454}} 
+\index{udpcon\_data\_node\_t@{udpcon\_data\_node\_t}!min\_rtt@{min\_rtt}}
+\index{min\_rtt@{min\_rtt}!udpcon\_data\_node\_t@{udpcon\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{min\_rtt}{min\_rtt}}
+{\footnotesize\ttfamily long double min\+\_\+rtt}
+
+
+
+Definition at line 152 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{structudpcon__data__node__t_ad3879a75b9cf66d8520c1b0f09cc0a80}\label{structudpcon__data__node__t_ad3879a75b9cf66d8520c1b0f09cc0a80}} 
+\index{udpcon\_data\_node\_t@{udpcon\_data\_node\_t}!next@{next}}
+\index{next@{next}!udpcon\_data\_node\_t@{udpcon\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structudpcon__data__node__t}{udpcon\+\_\+data\+\_\+node\+\_\+t}}$\ast$ next}
+
+
+
+Definition at line 139 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{structudpcon__data__node__t_a330f1bb25881c43b17265cdc48d8b5a2}\label{structudpcon__data__node__t_a330f1bb25881c43b17265cdc48d8b5a2}} 
+\index{udpcon\_data\_node\_t@{udpcon\_data\_node\_t}!payload@{payload}}
+\index{payload@{payload}!udpcon\_data\_node\_t@{udpcon\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{payload}{payload}}
+{\footnotesize\ttfamily unsigned char$\ast$ payload}
+
+
+
+Definition at line 172 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{structudpcon__data__node__t_ab806badf7cc7838efb38a86eebfbdaba}\label{structudpcon__data__node__t_ab806badf7cc7838efb38a86eebfbdaba}} 
+\index{udpcon\_data\_node\_t@{udpcon\_data\_node\_t}!payload\_len@{payload\_len}}
+\index{payload\_len@{payload\_len}!udpcon\_data\_node\_t@{udpcon\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{payload\_len}{payload\_len}}
+{\footnotesize\ttfamily long long unsigned int payload\+\_\+len}
+
+
+
+Definition at line 173 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{structudpcon__data__node__t_a3bec77a187f9d94224fa70371eef6d31}\label{structudpcon__data__node__t_a3bec77a187f9d94224fa70371eef6d31}} 
+\index{udpcon\_data\_node\_t@{udpcon\_data\_node\_t}!prev@{prev}}
+\index{prev@{prev}!udpcon\_data\_node\_t@{udpcon\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{prev}{prev}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structudpcon__data__node__t}{udpcon\+\_\+data\+\_\+node\+\_\+t}}$\ast$ prev}
+
+
+
+Definition at line 140 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{structudpcon__data__node__t_a2b916ab7be795cf2bb73fdbe7eb9cf79}\label{structudpcon__data__node__t_a2b916ab7be795cf2bb73fdbe7eb9cf79}} 
+\index{udpcon\_data\_node\_t@{udpcon\_data\_node\_t}!proxied@{proxied}}
+\index{proxied@{proxied}!udpcon\_data\_node\_t@{udpcon\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{proxied}{proxied}}
+{\footnotesize\ttfamily bool proxied}
+
+
+
+Definition at line 153 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{structudpcon__data__node__t_ab50c43aa444046f97b72660102361682}\label{structudpcon__data__node__t_ab50c43aa444046f97b72660102361682}} 
+\index{udpcon\_data\_node\_t@{udpcon\_data\_node\_t}!proxy\_ip@{proxy\_ip}}
+\index{proxy\_ip@{proxy\_ip}!udpcon\_data\_node\_t@{udpcon\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{proxy\_ip}{proxy\_ip}}
+{\footnotesize\ttfamily char$\ast$ proxy\+\_\+ip}
+
+
+
+Definition at line 167 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{structudpcon__data__node__t_af4e78b6dcd6aabffec6c095d66dcbe46}\label{structudpcon__data__node__t_af4e78b6dcd6aabffec6c095d66dcbe46}} 
+\index{udpcon\_data\_node\_t@{udpcon\_data\_node\_t}!proxy\_port@{proxy\_port}}
+\index{proxy\_port@{proxy\_port}!udpcon\_data\_node\_t@{udpcon\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{proxy\_port}{proxy\_port}}
+{\footnotesize\ttfamily int proxy\+\_\+port}
+
+
+
+Definition at line 168 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{structudpcon__data__node__t_a15fa8c1166a5274a6d45114d81f533ab}\label{structudpcon__data__node__t_a15fa8c1166a5274a6d45114d81f533ab}} 
+\index{udpcon\_data\_node\_t@{udpcon\_data\_node\_t}!src\_ip@{src\_ip}}
+\index{src\_ip@{src\_ip}!udpcon\_data\_node\_t@{udpcon\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{src\_ip}{src\_ip}}
+{\footnotesize\ttfamily char$\ast$ src\+\_\+ip}
+
+
+
+Definition at line 155 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{structudpcon__data__node__t_a2d47efc2f2609185cf802853871de027}\label{structudpcon__data__node__t_a2d47efc2f2609185cf802853871de027}} 
+\index{udpcon\_data\_node\_t@{udpcon\_data\_node\_t}!src\_port@{src\_port}}
+\index{src\_port@{src\_port}!udpcon\_data\_node\_t@{udpcon\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{src\_port}{src\_port}}
+{\footnotesize\ttfamily int src\+\_\+port}
+
+
+
+Definition at line 156 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{structudpcon__data__node__t_ab40328f79e021050ac262dc0a6019667}\label{structudpcon__data__node__t_ab40328f79e021050ac262dc0a6019667}} 
+\index{udpcon\_data\_node\_t@{udpcon\_data\_node\_t}!start@{start}}
+\index{start@{start}!udpcon\_data\_node\_t@{udpcon\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{start}{start}}
+{\footnotesize\ttfamily char$\ast$ start}
+
+
+
+Definition at line 162 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{structudpcon__data__node__t_a37e27c9944e52dfa765c9c9d7eaa0c9b}\label{structudpcon__data__node__t_a37e27c9944e52dfa765c9c9d7eaa0c9b}} 
+\index{udpcon\_data\_node\_t@{udpcon\_data\_node\_t}!timeasdouble@{timeasdouble}}
+\index{timeasdouble@{timeasdouble}!udpcon\_data\_node\_t@{udpcon\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{timeasdouble}{timeasdouble}}
+{\footnotesize\ttfamily long double timeasdouble}
+
+
+
+Definition at line 161 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{structudpcon__data__node__t_a2f26eae919bf9f5656b4250df8743e28}\label{structudpcon__data__node__t_a2f26eae919bf9f5656b4250df8743e28}} 
+\index{udpcon\_data\_node\_t@{udpcon\_data\_node\_t}!timestamp@{timestamp}}
+\index{timestamp@{timestamp}!udpcon\_data\_node\_t@{udpcon\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{timestamp}{timestamp}}
+{\footnotesize\ttfamily char$\ast$ timestamp}
+
+
+
+Definition at line 159 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{structudpcon__data__node__t_a865706a61cdcba810ddd9db56581d8b7}\label{structudpcon__data__node__t_a865706a61cdcba810ddd9db56581d8b7}} 
+\index{udpcon\_data\_node\_t@{udpcon\_data\_node\_t}!unixtime@{unixtime}}
+\index{unixtime@{unixtime}!udpcon\_data\_node\_t@{udpcon\_data\_node\_t}}
+\doxysubsubsection{\texorpdfstring{unixtime}{unixtime}}
+{\footnotesize\ttfamily long long int unixtime}
+
+
+
+Definition at line 160 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/\+MADCAT/\+BSI-\/\+Bund@\+Git\+Hub.\+com/github\+\_\+release/include/\mbox{\hyperlink{udp__ip__port__mon_8h}{udp\+\_\+ip\+\_\+port\+\_\+mon.\+h}}\end{DoxyCompactItemize}

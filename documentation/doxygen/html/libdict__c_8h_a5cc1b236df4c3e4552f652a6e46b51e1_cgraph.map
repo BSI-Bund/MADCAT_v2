@@ -1,0 +1,9 @@
+<map id="array_del" name="array_del">
+<area shape="rect" id="node1" title="Deletes an element from an array." alt="" coords="5,29,88,55"/>
+<area shape="rect" id="node2" href="$libdict__c_8c.html#abb8df193fba807b68ce0039440c126e3" title="Emptys an array and frees it." alt="" coords="136,29,225,55"/>
+<area shape="rect" id="node4" href="$libdict__c_8c.html#a72174eec72aba6a82641de0a4859a4da" title="Emptys a dictionary and frees it." alt="" coords="427,29,505,55"/>
+<area shape="rect" id="node6" href="$libdict__c_8c.html#a7c9222272e266e1bbc5d14725f241e37" title="Gets an element from an array." alt="" coords="139,105,223,131"/>
+<area shape="rect" id="node3" href="$libdict__c_8c.html#ae6cc9c6a53f9b18c1a1141abced7514d" title="Emptys an array, but does not free it." alt="" coords="273,29,379,55"/>
+<area shape="rect" id="node5" href="$libdict__c_8c.html#aa3b187986f610dbfe0e7138ecaf5b834" title="Emptys a dictionary, but does not free it." alt="" coords="553,29,648,55"/>
+<area shape="rect" id="node7" href="$libdict__c_8c.html#a8dad6d11fa54bf85129156f410b8bdb0" title="Returns the length of an array." alt="" coords="285,130,367,157"/>
+</map>

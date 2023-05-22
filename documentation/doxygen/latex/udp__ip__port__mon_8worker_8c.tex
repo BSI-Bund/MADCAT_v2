@@ -1,0 +1,67 @@
+\hypertarget{udp__ip__port__mon_8worker_8c}{}\doxysection{/home/\+MADCAT/\+BSI-\/\+Bund@Git\+Hub.\+com/github\+\_\+release/lib/udp\+\_\+ip\+\_\+port\+\_\+mon.worker.\+c File Reference}
+\label{udp__ip__port__mon_8worker_8c}\index{/home/MADCAT/BSI-\/Bund"@GitHub.com/github\_release/lib/udp\_ip\_port\_mon.worker.c@{/home/MADCAT/BSI-\/Bund"@GitHub.com/github\_release/lib/udp\_ip\_port\_mon.worker.c}}
+{\ttfamily \#include \char`\"{}udp\+\_\+ip\+\_\+port\+\_\+mon.\+worker.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}udp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$netinet/in.\+h$>$}\newline
+Include dependency graph for udp\+\_\+ip\+\_\+port\+\_\+mon.\+worker.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{udp__ip__port__mon_8worker_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{udp__ip__port__mon_8worker_8c_aaae5749ec5d157f425c18ec62ee1c122}{worker\+\_\+udp}} (unsigned char $\ast$buffer, int recv\+\_\+len, char $\ast$hostaddress, char $\ast$data\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Handels incoming UDP Datagramms. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{udp__ip__port__mon_8worker_8c_aaae5749ec5d157f425c18ec62ee1c122}\label{udp__ip__port__mon_8worker_8c_aaae5749ec5d157f425c18ec62ee1c122}} 
+\index{udp\_ip\_port\_mon.worker.c@{udp\_ip\_port\_mon.worker.c}!worker\_udp@{worker\_udp}}
+\index{worker\_udp@{worker\_udp}!udp\_ip\_port\_mon.worker.c@{udp\_ip\_port\_mon.worker.c}}
+\doxysubsubsection{\texorpdfstring{worker\_udp()}{worker\_udp()}}
+{\footnotesize\ttfamily int worker\+\_\+udp (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{buffer,  }\item[{int}]{recv\+\_\+len,  }\item[{char $\ast$}]{hostaddress,  }\item[{char $\ast$}]{data\+\_\+path }\end{DoxyParamCaption})}
+
+
+
+Handels incoming UDP Datagramms. 
+
+\begin{DoxyVerb}Handels UDP Datagramms, proxying and matching of related UDP datagrams to UDP "Connections"
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Pointer to the raw packet data \\
+\hline
+{\em recv\+\_\+len} & length of raw packet data \\
+\hline
+{\em hostaddress} & local address to filter for \\
+\hline
+{\em data\+\_\+path} & Path to save payload data to\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 in case of success, $<$0 in case of an error. 
+\end{DoxyReturn}
+
+
+Definition at line 46 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+worker.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{udp__ip__port__mon_8worker_8c_aaae5749ec5d157f425c18ec62ee1c122_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{udp__ip__port__mon_8worker_8c_aaae5749ec5d157f425c18ec62ee1c122_icgraph}
+\end{center}
+\end{figure}

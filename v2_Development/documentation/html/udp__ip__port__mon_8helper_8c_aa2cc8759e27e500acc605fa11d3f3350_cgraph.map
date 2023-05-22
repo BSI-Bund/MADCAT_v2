@@ -1,5 +1,0 @@
-<map id="uc_del" name="uc_del">
-<area shape="rect" id="node1" title="Deletes an element from the UDP connection tracking list." alt="" coords="5,5,69,32"/>
-<area shape="rect" id="node2" href="$udp__ip__port__mon_8helper_8c.html#afcc45acfda05a3f2dd70fd52f2bd57f1" title="Gets an element from the UDP connection tracking list." alt="" coords="117,5,183,32"/>
-<area shape="rect" id="node3" href="$udp__ip__port__mon_8helper_8c.html#a053fc1725952e733ef6d5706dbe8221d" title="Checks, if two (long) connection IDs are equal." alt="" coords="231,5,307,32"/>
-</map>

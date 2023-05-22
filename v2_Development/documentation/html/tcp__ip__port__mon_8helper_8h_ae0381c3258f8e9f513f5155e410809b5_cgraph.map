@@ -1,7 +1,0 @@
-<map id="sig_handler_pcapchild" name="sig_handler_pcapchild">
-<area shape="rect" id="node1" title="Signal Handler for PCAP childs." alt="" coords="5,56,172,83"/>
-<area shape="rect" id="node2" href="$tcp__ip__port__mon_8helper_8c.html#a326cc0de985cdd63f70bc63d63878af8" title="Generic signal handler." alt="" coords="220,31,381,57"/>
-<area shape="rect" id="node5" href="$madcat_8helper_8h.html#a6beb2c039c319f4fb3541627bb6da8ee" title="Returns current time." alt="" coords="263,81,339,108"/>
-<area shape="rect" id="node3" href="$madcat_8helper_8h.html#ac0c229edf48308e883bc9a1ddcf2ed73" title="Reset or initialize new JSON output." alt="" coords="452,5,524,32"/>
-<area shape="rect" id="node4" href="$tcp__ip__port__mon_8helper_8c.html#a2b73f874293662fb6b8aac2dcc366deb" title="Frees an element of the proxy configuration list." alt="" coords="429,56,547,83"/>
-</map>

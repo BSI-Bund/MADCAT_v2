@@ -1,0 +1,265 @@
+\hypertarget{server__socket_8c}{}\doxysection{/home/\+MADCAT/\+BSI-\/\+Bund@Git\+Hub.\+com/github\+\_\+release/lib/rsp/server\+\_\+socket.c File Reference}
+\label{server__socket_8c}\index{/home/MADCAT/BSI-\/Bund"@GitHub.com/github\_release/lib/rsp/server\_socket.c@{/home/MADCAT/BSI-\/Bund"@GitHub.com/github\_release/lib/rsp/server\_socket.c}}
+{\ttfamily \#include \char`\"{}rsp.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$sys/epoll.\+h$>$}\newline
+Include dependency graph for server\+\_\+socket.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{server__socket_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structserver__socket__event__data}{server\+\_\+socket\+\_\+event\+\_\+data}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{server__socket_8c_a7513688db912c932f647dc85edd9d838}{MAX\+\_\+\+LISTEN\+\_\+\+BACKLOG}}~4096
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{server__socket_8c_a1ab555566636e85b3be14cdba2d5c572}{on\+\_\+client\+\_\+read}} (void $\ast$closure, char $\ast$buffer, int len)
+\item 
+void \mbox{\hyperlink{server__socket_8c_a693f32e9fb6b7edf596420f9f2d9a15b}{on\+\_\+client\+\_\+close}} (void $\ast$closure)
+\item 
+void \mbox{\hyperlink{server__socket_8c_aab1da7a99a5aed8b44e4abc32b41f99b}{on\+\_\+backend\+\_\+read}} (void $\ast$closure, char $\ast$buffer, int len)
+\item 
+void \mbox{\hyperlink{server__socket_8c_a61c48eebf03f797ff8b9bbfbf6ed7f06}{on\+\_\+backend\+\_\+close}} (void $\ast$closure)
+\item 
+struct \mbox{\hyperlink{structproxy__data}{proxy\+\_\+data}} $\ast$ \mbox{\hyperlink{server__socket_8c_ad848ac79ac429ca69cdd7e1acdfe927b}{handle\+\_\+client\+\_\+connection}} (int client\+\_\+socket\+\_\+fd, char $\ast$backend\+\_\+host, char $\ast$backend\+\_\+port\+\_\+str)
+\item 
+void \mbox{\hyperlink{server__socket_8c_af99353db289e9e02638064766931600b}{handle\+\_\+server\+\_\+socket\+\_\+event}} (struct \mbox{\hyperlink{structepoll__event__handler}{epoll\+\_\+event\+\_\+handler}} $\ast$self, uint32\+\_\+t events)
+\item 
+int \mbox{\hyperlink{server__socket_8c_a6f4deb343cf55ef8ba2ab96d0c27edd9}{create\+\_\+and\+\_\+bind}} (char $\ast$\mbox{\hyperlink{tcp__ip__port__mon_8h_a73a3329037a7f561b878ea12a220e5be}{hostaddr}}, char $\ast$server\+\_\+port\+\_\+str)
+\item 
+struct \mbox{\hyperlink{structepoll__event__handler}{epoll\+\_\+event\+\_\+handler}} $\ast$ \mbox{\hyperlink{server__socket_8c_add960c608a7bfaa7884d7ad973a47eb3}{create\+\_\+server\+\_\+socket\+\_\+handler}} (char $\ast$server\+\_\+addr, char $\ast$server\+\_\+port\+\_\+str, char $\ast$backend\+\_\+addr, char $\ast$backend\+\_\+port\+\_\+str)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{server__socket_8c_a7513688db912c932f647dc85edd9d838}\label{server__socket_8c_a7513688db912c932f647dc85edd9d838}} 
+\index{server\_socket.c@{server\_socket.c}!MAX\_LISTEN\_BACKLOG@{MAX\_LISTEN\_BACKLOG}}
+\index{MAX\_LISTEN\_BACKLOG@{MAX\_LISTEN\_BACKLOG}!server\_socket.c@{server\_socket.c}}
+\doxysubsubsection{\texorpdfstring{MAX\_LISTEN\_BACKLOG}{MAX\_LISTEN\_BACKLOG}}
+{\footnotesize\ttfamily \#define MAX\+\_\+\+LISTEN\+\_\+\+BACKLOG~4096}
+
+
+
+Definition at line 56 of file server\+\_\+socket.\+c.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{server__socket_8c_a6f4deb343cf55ef8ba2ab96d0c27edd9}\label{server__socket_8c_a6f4deb343cf55ef8ba2ab96d0c27edd9}} 
+\index{server\_socket.c@{server\_socket.c}!create\_and\_bind@{create\_and\_bind}}
+\index{create\_and\_bind@{create\_and\_bind}!server\_socket.c@{server\_socket.c}}
+\doxysubsubsection{\texorpdfstring{create\_and\_bind()}{create\_and\_bind()}}
+{\footnotesize\ttfamily int create\+\_\+and\+\_\+bind (\begin{DoxyParamCaption}\item[{char $\ast$}]{hostaddr,  }\item[{char $\ast$}]{server\+\_\+port\+\_\+str }\end{DoxyParamCaption})}
+
+
+
+Definition at line 262 of file server\+\_\+socket.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{server__socket_8c_a6f4deb343cf55ef8ba2ab96d0c27edd9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{server__socket_8c_a6f4deb343cf55ef8ba2ab96d0c27edd9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{server__socket_8c_add960c608a7bfaa7884d7ad973a47eb3}\label{server__socket_8c_add960c608a7bfaa7884d7ad973a47eb3}} 
+\index{server\_socket.c@{server\_socket.c}!create\_server\_socket\_handler@{create\_server\_socket\_handler}}
+\index{create\_server\_socket\_handler@{create\_server\_socket\_handler}!server\_socket.c@{server\_socket.c}}
+\doxysubsubsection{\texorpdfstring{create\_server\_socket\_handler()}{create\_server\_socket\_handler()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structepoll__event__handler}{epoll\+\_\+event\+\_\+handler}}$\ast$ create\+\_\+server\+\_\+socket\+\_\+handler (\begin{DoxyParamCaption}\item[{char $\ast$}]{server\+\_\+addr,  }\item[{char $\ast$}]{server\+\_\+port\+\_\+str,  }\item[{char $\ast$}]{backend\+\_\+addr,  }\item[{char $\ast$}]{backend\+\_\+port\+\_\+str }\end{DoxyParamCaption})}
+
+
+
+Definition at line 352 of file server\+\_\+socket.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{server__socket_8c_add960c608a7bfaa7884d7ad973a47eb3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{server__socket_8c_add960c608a7bfaa7884d7ad973a47eb3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{server__socket_8c_ad848ac79ac429ca69cdd7e1acdfe927b}\label{server__socket_8c_ad848ac79ac429ca69cdd7e1acdfe927b}} 
+\index{server\_socket.c@{server\_socket.c}!handle\_client\_connection@{handle\_client\_connection}}
+\index{handle\_client\_connection@{handle\_client\_connection}!server\_socket.c@{server\_socket.c}}
+\doxysubsubsection{\texorpdfstring{handle\_client\_connection()}{handle\_client\_connection()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structproxy__data}{proxy\+\_\+data}}$\ast$ handle\+\_\+client\+\_\+connection (\begin{DoxyParamCaption}\item[{int}]{client\+\_\+socket\+\_\+fd,  }\item[{char $\ast$}]{backend\+\_\+host,  }\item[{char $\ast$}]{backend\+\_\+port\+\_\+str }\end{DoxyParamCaption})}
+
+
+
+Definition at line 143 of file server\+\_\+socket.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{server__socket_8c_ad848ac79ac429ca69cdd7e1acdfe927b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{server__socket_8c_ad848ac79ac429ca69cdd7e1acdfe927b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{server__socket_8c_af99353db289e9e02638064766931600b}\label{server__socket_8c_af99353db289e9e02638064766931600b}} 
+\index{server\_socket.c@{server\_socket.c}!handle\_server\_socket\_event@{handle\_server\_socket\_event}}
+\index{handle\_server\_socket\_event@{handle\_server\_socket\_event}!server\_socket.c@{server\_socket.c}}
+\doxysubsubsection{\texorpdfstring{handle\_server\_socket\_event()}{handle\_server\_socket\_event()}}
+{\footnotesize\ttfamily void handle\+\_\+server\+\_\+socket\+\_\+event (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structepoll__event__handler}{epoll\+\_\+event\+\_\+handler}} $\ast$}]{self,  }\item[{uint32\+\_\+t}]{events }\end{DoxyParamCaption})}
+
+
+
+Definition at line 206 of file server\+\_\+socket.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{server__socket_8c_af99353db289e9e02638064766931600b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{server__socket_8c_af99353db289e9e02638064766931600b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{server__socket_8c_a61c48eebf03f797ff8b9bbfbf6ed7f06}\label{server__socket_8c_a61c48eebf03f797ff8b9bbfbf6ed7f06}} 
+\index{server\_socket.c@{server\_socket.c}!on\_backend\_close@{on\_backend\_close}}
+\index{on\_backend\_close@{on\_backend\_close}!server\_socket.c@{server\_socket.c}}
+\doxysubsubsection{\texorpdfstring{on\_backend\_close()}{on\_backend\_close()}}
+{\footnotesize\ttfamily void on\+\_\+backend\+\_\+close (\begin{DoxyParamCaption}\item[{void $\ast$}]{closure }\end{DoxyParamCaption})}
+
+
+
+Definition at line 126 of file server\+\_\+socket.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{server__socket_8c_a61c48eebf03f797ff8b9bbfbf6ed7f06_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{server__socket_8c_a61c48eebf03f797ff8b9bbfbf6ed7f06_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{server__socket_8c_aab1da7a99a5aed8b44e4abc32b41f99b}\label{server__socket_8c_aab1da7a99a5aed8b44e4abc32b41f99b}} 
+\index{server\_socket.c@{server\_socket.c}!on\_backend\_read@{on\_backend\_read}}
+\index{on\_backend\_read@{on\_backend\_read}!server\_socket.c@{server\_socket.c}}
+\doxysubsubsection{\texorpdfstring{on\_backend\_read()}{on\_backend\_read()}}
+{\footnotesize\ttfamily void on\+\_\+backend\+\_\+read (\begin{DoxyParamCaption}\item[{void $\ast$}]{closure,  }\item[{char $\ast$}]{buffer,  }\item[{int}]{len }\end{DoxyParamCaption})}
+
+
+
+Definition at line 111 of file server\+\_\+socket.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{server__socket_8c_aab1da7a99a5aed8b44e4abc32b41f99b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{server__socket_8c_aab1da7a99a5aed8b44e4abc32b41f99b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{server__socket_8c_a693f32e9fb6b7edf596420f9f2d9a15b}\label{server__socket_8c_a693f32e9fb6b7edf596420f9f2d9a15b}} 
+\index{server\_socket.c@{server\_socket.c}!on\_client\_close@{on\_client\_close}}
+\index{on\_client\_close@{on\_client\_close}!server\_socket.c@{server\_socket.c}}
+\doxysubsubsection{\texorpdfstring{on\_client\_close()}{on\_client\_close()}}
+{\footnotesize\ttfamily void on\+\_\+client\+\_\+close (\begin{DoxyParamCaption}\item[{void $\ast$}]{closure }\end{DoxyParamCaption})}
+
+
+
+Definition at line 95 of file server\+\_\+socket.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{server__socket_8c_a693f32e9fb6b7edf596420f9f2d9a15b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{server__socket_8c_a693f32e9fb6b7edf596420f9f2d9a15b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{server__socket_8c_a1ab555566636e85b3be14cdba2d5c572}\label{server__socket_8c_a1ab555566636e85b3be14cdba2d5c572}} 
+\index{server\_socket.c@{server\_socket.c}!on\_client\_read@{on\_client\_read}}
+\index{on\_client\_read@{on\_client\_read}!server\_socket.c@{server\_socket.c}}
+\doxysubsubsection{\texorpdfstring{on\_client\_read()}{on\_client\_read()}}
+{\footnotesize\ttfamily void on\+\_\+client\+\_\+read (\begin{DoxyParamCaption}\item[{void $\ast$}]{closure,  }\item[{char $\ast$}]{buffer,  }\item[{int}]{len }\end{DoxyParamCaption})}
+
+
+
+Definition at line 72 of file server\+\_\+socket.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{server__socket_8c_a1ab555566636e85b3be14cdba2d5c572_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{server__socket_8c_a1ab555566636e85b3be14cdba2d5c572_icgraph}
+\end{center}
+\end{figure}

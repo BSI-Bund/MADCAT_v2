@@ -1,0 +1,564 @@
+\hypertarget{udp__ip__port__mon_8h}{}\doxysection{/home/\+MADCAT/\+BSI-\/\+Bund@Git\+Hub.\+com/github\+\_\+release/include/udp\+\_\+ip\+\_\+port\+\_\+mon.h File Reference}
+\label{udp__ip__port__mon_8h}\index{/home/MADCAT/BSI-\/Bund"@GitHub.com/github\_release/include/udp\_ip\_port\_mon.h@{/home/MADCAT/BSI-\/Bund"@GitHub.com/github\_release/include/udp\_ip\_port\_mon.h}}
+{\ttfamily \#include \char`\"{}madcat.\+common.\+h\char`\"{}}\newline
+Include dependency graph for udp\+\_\+ip\+\_\+port\+\_\+mon.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{udp__ip__port__mon_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{udp__ip__port__mon_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmy__uint128__t}{my\+\_\+uint128\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structipv4udp__t}{ipv4udp\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structproxy__conf__udp__node__t}{proxy\+\_\+conf\+\_\+udp\+\_\+node\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structproxy__conf__udp__t}{proxy\+\_\+conf\+\_\+udp\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structudpcon__data__t}{udpcon\+\_\+data\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structudpcon__data__node__t}{udpcon\+\_\+data\+\_\+node\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{udp__ip__port__mon_8h_a1c6d5de492ac61ad29aec7aa9a436bbf}{VERSION}}~\char`\"{}MADCAT -\/ Mass Attack Detecion Connection Acceptance Tool\textbackslash{}n\+UDP-\/IP Port Monitor v2.\+3.\+0\textbackslash{}n\+BSI 2018-\/2023\textbackslash{}n\char`\"{}
+\item 
+\#define \mbox{\hyperlink{udp__ip__port__mon_8h_ac8932031ba2c6d324056a751296553ba}{UDP\+\_\+\+HEADER\+\_\+\+LEN}}~8
+\item 
+\#define \mbox{\hyperlink{udp__ip__port__mon_8h_ad8de5d7bc52ac5b7a250a9689245207c}{IP\+\_\+\+OR\+\_\+\+TCP\+\_\+\+HEADER\+\_\+\+MINLEN}}~20
+\item 
+\#define \mbox{\hyperlink{udp__ip__port__mon_8h_a79c48d35afc7873614502689e1bf9b65}{DEFAULT\+\_\+\+BUFSIZE}}~9000
+\item 
+\#define \mbox{\hyperlink{udp__ip__port__mon_8h_a8d7da739bb69b349f83ef21a35e78982}{ETHERNET\+\_\+\+HEADER\+\_\+\+LEN}}~14
+\item 
+\#define \mbox{\hyperlink{udp__ip__port__mon_8h_afb5fa0b66e36695d7e1afac1971209c1}{PCN\+\_\+\+STRLEN}}~6
+\item 
+\#define \mbox{\hyperlink{udp__ip__port__mon_8h_a5dfac8d8eba1287ed6234d98601d93c5}{MY\+\_\+\+IPOPT\+\_\+\+COPY}}~0x80
+\item 
+\#define \mbox{\hyperlink{udp__ip__port__mon_8h_ae4b90707fe87a0a8968ac7f8acf11e79}{MY\+\_\+\+IPOPT\+\_\+\+CONTROL}}~0x00
+\item 
+\#define \mbox{\hyperlink{udp__ip__port__mon_8h_a5fb395f5ba882cb95010533fc732f3a0}{MY\+\_\+\+IPOPT\+\_\+\+RESERVED1}}~0x20
+\item 
+\#define \mbox{\hyperlink{udp__ip__port__mon_8h_a6cae275a6a655018cc09f88560bb219f}{MY\+\_\+\+IPOPT\+\_\+\+MEASUREMENT}}~0x40
+\item 
+\#define \mbox{\hyperlink{udp__ip__port__mon_8h_a4ccae38a1f1776a95273b7f3e6210ff5}{MY\+\_\+\+IPOPT\+\_\+\+RESERVED2}}~0x60
+\item 
+\#define \mbox{\hyperlink{udp__ip__port__mon_8h_a4277a246d0ac57453f4f8f7999e16f9e}{MY\+\_\+\+IPOPT\+\_\+\+EOOL}}~(0 $\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_ae4b90707fe87a0a8968ac7f8acf11e79}{MY\+\_\+\+IPOPT\+\_\+\+CONTROL}})
+\item 
+\#define \mbox{\hyperlink{udp__ip__port__mon_8h_abf6e236ffef4ac8fdb3e0c1bcb520885}{MY\+\_\+\+IPOPT\+\_\+\+NOP}}~(1 $\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_ae4b90707fe87a0a8968ac7f8acf11e79}{MY\+\_\+\+IPOPT\+\_\+\+CONTROL}})
+\item 
+\#define \mbox{\hyperlink{udp__ip__port__mon_8h_ade2c57896a0596eb0f077de4868d9d61}{MY\+\_\+\+IPOPT\+\_\+\+SEC}}~(2 $\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_a5dfac8d8eba1287ed6234d98601d93c5}{MY\+\_\+\+IPOPT\+\_\+\+COPY}}$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_ae4b90707fe87a0a8968ac7f8acf11e79}{MY\+\_\+\+IPOPT\+\_\+\+CONTROL}})       /$\ast$ RFC 791/1108 $\ast$/
+\item 
+\#define \mbox{\hyperlink{udp__ip__port__mon_8h_a3b0b8e3f9d6319b5669297f1f30c745f}{MY\+\_\+\+IPOPT\+\_\+\+LSR}}~(3 $\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_a5dfac8d8eba1287ed6234d98601d93c5}{MY\+\_\+\+IPOPT\+\_\+\+COPY}}$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_ae4b90707fe87a0a8968ac7f8acf11e79}{MY\+\_\+\+IPOPT\+\_\+\+CONTROL}})
+\item 
+\#define \mbox{\hyperlink{udp__ip__port__mon_8h_aa287a4b6c681ff892b59d8a4512f0d3f}{MY\+\_\+\+IPOPT\+\_\+\+TS}}~(4 $\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_a6cae275a6a655018cc09f88560bb219f}{MY\+\_\+\+IPOPT\+\_\+\+MEASUREMENT}})
+\item 
+\#define \mbox{\hyperlink{udp__ip__port__mon_8h_a014780192c45d2e6f1f111c6c401f30b}{MY\+\_\+\+IPOPT\+\_\+\+ESEC}}~(5 $\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_a5dfac8d8eba1287ed6234d98601d93c5}{MY\+\_\+\+IPOPT\+\_\+\+COPY}}$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_ae4b90707fe87a0a8968ac7f8acf11e79}{MY\+\_\+\+IPOPT\+\_\+\+CONTROL}})       /$\ast$ RFC 1108 $\ast$/
+\item 
+\#define \mbox{\hyperlink{udp__ip__port__mon_8h_ab9d487a574ecb31d01d3f2dd6f521d80}{MY\+\_\+\+IPOPT\+\_\+\+CIPSO}}~(6 $\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_a5dfac8d8eba1287ed6234d98601d93c5}{MY\+\_\+\+IPOPT\+\_\+\+COPY}}$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_ae4b90707fe87a0a8968ac7f8acf11e79}{MY\+\_\+\+IPOPT\+\_\+\+CONTROL}})       /$\ast$ draft-\/ietf-\/cipso-\/ipsecurity-\/01 $\ast$/
+\item 
+\#define \mbox{\hyperlink{udp__ip__port__mon_8h_a6b6df5142d634621c210d63af7690beb}{MY\+\_\+\+IPOPT\+\_\+\+RR}}~(7 $\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_ae4b90707fe87a0a8968ac7f8acf11e79}{MY\+\_\+\+IPOPT\+\_\+\+CONTROL}})
+\item 
+\#define \mbox{\hyperlink{udp__ip__port__mon_8h_a38116cac375c30e23bec31cd9967f2a0}{MY\+\_\+\+IPOPT\+\_\+\+SID}}~(8 $\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_a5dfac8d8eba1287ed6234d98601d93c5}{MY\+\_\+\+IPOPT\+\_\+\+COPY}}$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_ae4b90707fe87a0a8968ac7f8acf11e79}{MY\+\_\+\+IPOPT\+\_\+\+CONTROL}})
+\item 
+\#define \mbox{\hyperlink{udp__ip__port__mon_8h_a7f13460f8f16a9f013898a909c6a9dfb}{MY\+\_\+\+IPOPT\+\_\+\+SSR}}~(9 $\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_a5dfac8d8eba1287ed6234d98601d93c5}{MY\+\_\+\+IPOPT\+\_\+\+COPY}}$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_ae4b90707fe87a0a8968ac7f8acf11e79}{MY\+\_\+\+IPOPT\+\_\+\+CONTROL}})
+\item 
+\#define \mbox{\hyperlink{udp__ip__port__mon_8h_a6e885fdbbd120783cc99b91d53966981}{MY\+\_\+\+IPOPT\+\_\+\+ZSU}}~(10$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_ae4b90707fe87a0a8968ac7f8acf11e79}{MY\+\_\+\+IPOPT\+\_\+\+CONTROL}})                  /$\ast$ Zsu $\ast$/
+\item 
+\#define \mbox{\hyperlink{udp__ip__port__mon_8h_ad9c190d207e617a2c79f7ca3f7c5c62e}{MY\+\_\+\+IPOPT\+\_\+\+MTUP}}~(11$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_ae4b90707fe87a0a8968ac7f8acf11e79}{MY\+\_\+\+IPOPT\+\_\+\+CONTROL}})                  /$\ast$ RFC 1063 $\ast$/
+\item 
+\#define \mbox{\hyperlink{udp__ip__port__mon_8h_a377938b1113c7625b94a572280bc35ea}{MY\+\_\+\+IPOPT\+\_\+\+MTUR}}~(12$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_ae4b90707fe87a0a8968ac7f8acf11e79}{MY\+\_\+\+IPOPT\+\_\+\+CONTROL}})                  /$\ast$ RFC 1063 $\ast$/
+\item 
+\#define \mbox{\hyperlink{udp__ip__port__mon_8h_add7b9daff305de51c4821e295412e0ab}{MY\+\_\+\+IPOPT\+\_\+\+FINN}}~(13$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_a5dfac8d8eba1287ed6234d98601d93c5}{MY\+\_\+\+IPOPT\+\_\+\+COPY}}$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_a6cae275a6a655018cc09f88560bb219f}{MY\+\_\+\+IPOPT\+\_\+\+MEASUREMENT}})   /$\ast$ Finn $\ast$/
+\item 
+\#define \mbox{\hyperlink{udp__ip__port__mon_8h_a86bd13c848b42dc9ace30fa958d6addf}{MY\+\_\+\+IPOPT\+\_\+\+VISA}}~(14$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_a5dfac8d8eba1287ed6234d98601d93c5}{MY\+\_\+\+IPOPT\+\_\+\+COPY}}$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_ae4b90707fe87a0a8968ac7f8acf11e79}{MY\+\_\+\+IPOPT\+\_\+\+CONTROL}})       /$\ast$ Estrin $\ast$/
+\item 
+\#define \mbox{\hyperlink{udp__ip__port__mon_8h_af248cfed6ca66ca706ae8e1fa3ee7837}{MY\+\_\+\+IPOPT\+\_\+\+ENCODE}}~(15$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_ae4b90707fe87a0a8968ac7f8acf11e79}{MY\+\_\+\+IPOPT\+\_\+\+CONTROL}})                  /$\ast$ Ver\+Steeg $\ast$/
+\item 
+\#define \mbox{\hyperlink{udp__ip__port__mon_8h_ab13ac6923fd022cf8904cce8042f0c85}{MY\+\_\+\+IPOPT\+\_\+\+IMITD}}~(16$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_a5dfac8d8eba1287ed6234d98601d93c5}{MY\+\_\+\+IPOPT\+\_\+\+COPY}}$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_ae4b90707fe87a0a8968ac7f8acf11e79}{MY\+\_\+\+IPOPT\+\_\+\+CONTROL}})       /$\ast$ Lee $\ast$/
+\item 
+\#define \mbox{\hyperlink{udp__ip__port__mon_8h_ab6099ff0f7ee853dc48da7e4c958012e}{MY\+\_\+\+IPOPT\+\_\+\+EIP}}~(17$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_a5dfac8d8eba1287ed6234d98601d93c5}{MY\+\_\+\+IPOPT\+\_\+\+COPY}}$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_ae4b90707fe87a0a8968ac7f8acf11e79}{MY\+\_\+\+IPOPT\+\_\+\+CONTROL}})       /$\ast$ RFC 1385 $\ast$/
+\item 
+\#define \mbox{\hyperlink{udp__ip__port__mon_8h_a896774b046baa56eace7fa93fceed310}{MY\+\_\+\+IPOPT\+\_\+\+TR}}~(18$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_a6cae275a6a655018cc09f88560bb219f}{MY\+\_\+\+IPOPT\+\_\+\+MEASUREMENT}})              /$\ast$ RFC 1393 $\ast$/
+\item 
+\#define \mbox{\hyperlink{udp__ip__port__mon_8h_a0b2680c6453c789bdd660d8cf59a686e}{MY\+\_\+\+IPOPT\+\_\+\+ADDEXT}}~(19$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_a5dfac8d8eba1287ed6234d98601d93c5}{MY\+\_\+\+IPOPT\+\_\+\+COPY}}$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_ae4b90707fe87a0a8968ac7f8acf11e79}{MY\+\_\+\+IPOPT\+\_\+\+CONTROL}})       /$\ast$ Ullmann IPv7 $\ast$/
+\item 
+\#define \mbox{\hyperlink{udp__ip__port__mon_8h_a6e4aea18d4aba88b97ed4466f9017c62}{MY\+\_\+\+IPOPT\+\_\+\+RTRALT}}~(20$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_a5dfac8d8eba1287ed6234d98601d93c5}{MY\+\_\+\+IPOPT\+\_\+\+COPY}}$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_ae4b90707fe87a0a8968ac7f8acf11e79}{MY\+\_\+\+IPOPT\+\_\+\+CONTROL}})       /$\ast$ RFC 2113 $\ast$/
+\item 
+\#define \mbox{\hyperlink{udp__ip__port__mon_8h_a89f327b8a724fbdfef78e5d358a3434d}{MY\+\_\+\+IPOPT\+\_\+\+SDB}}~(21$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_a5dfac8d8eba1287ed6234d98601d93c5}{MY\+\_\+\+IPOPT\+\_\+\+COPY}}$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_ae4b90707fe87a0a8968ac7f8acf11e79}{MY\+\_\+\+IPOPT\+\_\+\+CONTROL}})       /$\ast$ RFC 1770 Graff $\ast$/
+\item 
+\#define \mbox{\hyperlink{udp__ip__port__mon_8h_a19b200de5cd8223713b9becd0853047f}{MY\+\_\+\+IPOPT\+\_\+\+UN}}~(22$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_a5dfac8d8eba1287ed6234d98601d93c5}{MY\+\_\+\+IPOPT\+\_\+\+COPY}}$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_ae4b90707fe87a0a8968ac7f8acf11e79}{MY\+\_\+\+IPOPT\+\_\+\+CONTROL}})       /$\ast$ Released 18-\/Oct-\/2005 $\ast$/
+\item 
+\#define \mbox{\hyperlink{udp__ip__port__mon_8h_a04d27d7495af013912b317182df3d70c}{MY\+\_\+\+IPOPT\+\_\+\+DPS}}~(23$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_a5dfac8d8eba1287ed6234d98601d93c5}{MY\+\_\+\+IPOPT\+\_\+\+COPY}}$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_ae4b90707fe87a0a8968ac7f8acf11e79}{MY\+\_\+\+IPOPT\+\_\+\+CONTROL}})       /$\ast$ Malis $\ast$/
+\item 
+\#define \mbox{\hyperlink{udp__ip__port__mon_8h_ab018e4df6f9e63f5a795a31ff520fdc5}{MY\+\_\+\+IPOPT\+\_\+\+UMP}}~(24$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_a5dfac8d8eba1287ed6234d98601d93c5}{MY\+\_\+\+IPOPT\+\_\+\+COPY}}$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_ae4b90707fe87a0a8968ac7f8acf11e79}{MY\+\_\+\+IPOPT\+\_\+\+CONTROL}})       /$\ast$ Farinacci $\ast$/
+\item 
+\#define \mbox{\hyperlink{udp__ip__port__mon_8h_a9760461b2f8c9a2c89c409f67cc237a1}{MY\+\_\+\+IPOPT\+\_\+\+QS}}~(25$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_ae4b90707fe87a0a8968ac7f8acf11e79}{MY\+\_\+\+IPOPT\+\_\+\+CONTROL}})                  /$\ast$ RFC 4782 $\ast$/
+\item 
+\#define \mbox{\hyperlink{udp__ip__port__mon_8h_a554e3f50ae40a7f1d9bd4d47c251bb52}{MY\+\_\+\+IPOPT\+\_\+\+EXP}}~(30$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_ae4b90707fe87a0a8968ac7f8acf11e79}{MY\+\_\+\+IPOPT\+\_\+\+CONTROL}}) /$\ast$ RFC 4727 $\ast$/
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structmy__uint128__t}{my\+\_\+uint128\+\_\+t}} \mbox{\hyperlink{udp__ip__port__mon_8h_a0256ec76a45dccdf8197da10675df7c5}{udpcon\+\_\+id\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+sem\+\_\+t $\ast$ \mbox{\hyperlink{udp__ip__port__mon_8h_a1f128d35710674a4cea27c1e0bc994a1}{conlistsem}}
+\item 
+pthread\+\_\+t \mbox{\hyperlink{udp__ip__port__mon_8h_a6cd677e7312ead243aee7954b3e6485b}{cleanup\+\_\+t\+\_\+id}}
+\item 
+struct \mbox{\hyperlink{structproxy__conf__udp__t}{proxy\+\_\+conf\+\_\+udp\+\_\+t}} $\ast$ \mbox{\hyperlink{udp__ip__port__mon_8h_a0963f23532c420d423352d102222870b}{pc}}
+\item 
+struct \mbox{\hyperlink{structudpcon__data__t}{udpcon\+\_\+data\+\_\+t}} $\ast$ \mbox{\hyperlink{udp__ip__port__mon_8h_a2181b4b2161e7c9309f238c93e1dc262}{uc}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{udp__ip__port__mon_8h_a79c48d35afc7873614502689e1bf9b65}\label{udp__ip__port__mon_8h_a79c48d35afc7873614502689e1bf9b65}} 
+\index{udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}!DEFAULT\_BUFSIZE@{DEFAULT\_BUFSIZE}}
+\index{DEFAULT\_BUFSIZE@{DEFAULT\_BUFSIZE}!udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_BUFSIZE}{DEFAULT\_BUFSIZE}}
+{\footnotesize\ttfamily \#define DEFAULT\+\_\+\+BUFSIZE~9000}
+
+
+
+Definition at line 45 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{udp__ip__port__mon_8h_a8d7da739bb69b349f83ef21a35e78982}\label{udp__ip__port__mon_8h_a8d7da739bb69b349f83ef21a35e78982}} 
+\index{udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}!ETHERNET\_HEADER\_LEN@{ETHERNET\_HEADER\_LEN}}
+\index{ETHERNET\_HEADER\_LEN@{ETHERNET\_HEADER\_LEN}!udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}}
+\doxysubsubsection{\texorpdfstring{ETHERNET\_HEADER\_LEN}{ETHERNET\_HEADER\_LEN}}
+{\footnotesize\ttfamily \#define ETHERNET\+\_\+\+HEADER\+\_\+\+LEN~14}
+
+
+
+Definition at line 46 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{udp__ip__port__mon_8h_ad8de5d7bc52ac5b7a250a9689245207c}\label{udp__ip__port__mon_8h_ad8de5d7bc52ac5b7a250a9689245207c}} 
+\index{udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}!IP\_OR\_TCP\_HEADER\_MINLEN@{IP\_OR\_TCP\_HEADER\_MINLEN}}
+\index{IP\_OR\_TCP\_HEADER\_MINLEN@{IP\_OR\_TCP\_HEADER\_MINLEN}!udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}}
+\doxysubsubsection{\texorpdfstring{IP\_OR\_TCP\_HEADER\_MINLEN}{IP\_OR\_TCP\_HEADER\_MINLEN}}
+{\footnotesize\ttfamily \#define IP\+\_\+\+OR\+\_\+\+TCP\+\_\+\+HEADER\+\_\+\+MINLEN~20}
+
+
+
+Definition at line 44 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{udp__ip__port__mon_8h_a0b2680c6453c789bdd660d8cf59a686e}\label{udp__ip__port__mon_8h_a0b2680c6453c789bdd660d8cf59a686e}} 
+\index{udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}!MY\_IPOPT\_ADDEXT@{MY\_IPOPT\_ADDEXT}}
+\index{MY\_IPOPT\_ADDEXT@{MY\_IPOPT\_ADDEXT}!udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}}
+\doxysubsubsection{\texorpdfstring{MY\_IPOPT\_ADDEXT}{MY\_IPOPT\_ADDEXT}}
+{\footnotesize\ttfamily \#define MY\+\_\+\+IPOPT\+\_\+\+ADDEXT~(19$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_a5dfac8d8eba1287ed6234d98601d93c5}{MY\+\_\+\+IPOPT\+\_\+\+COPY}}$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_ae4b90707fe87a0a8968ac7f8acf11e79}{MY\+\_\+\+IPOPT\+\_\+\+CONTROL}})       /$\ast$ Ullmann IPv7 $\ast$/}
+
+
+
+Definition at line 78 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{udp__ip__port__mon_8h_ab9d487a574ecb31d01d3f2dd6f521d80}\label{udp__ip__port__mon_8h_ab9d487a574ecb31d01d3f2dd6f521d80}} 
+\index{udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}!MY\_IPOPT\_CIPSO@{MY\_IPOPT\_CIPSO}}
+\index{MY\_IPOPT\_CIPSO@{MY\_IPOPT\_CIPSO}!udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}}
+\doxysubsubsection{\texorpdfstring{MY\_IPOPT\_CIPSO}{MY\_IPOPT\_CIPSO}}
+{\footnotesize\ttfamily \#define MY\+\_\+\+IPOPT\+\_\+\+CIPSO~(6 $\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_a5dfac8d8eba1287ed6234d98601d93c5}{MY\+\_\+\+IPOPT\+\_\+\+COPY}}$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_ae4b90707fe87a0a8968ac7f8acf11e79}{MY\+\_\+\+IPOPT\+\_\+\+CONTROL}})       /$\ast$ draft-\/ietf-\/cipso-\/ipsecurity-\/01 $\ast$/}
+
+
+
+Definition at line 65 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{udp__ip__port__mon_8h_ae4b90707fe87a0a8968ac7f8acf11e79}\label{udp__ip__port__mon_8h_ae4b90707fe87a0a8968ac7f8acf11e79}} 
+\index{udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}!MY\_IPOPT\_CONTROL@{MY\_IPOPT\_CONTROL}}
+\index{MY\_IPOPT\_CONTROL@{MY\_IPOPT\_CONTROL}!udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}}
+\doxysubsubsection{\texorpdfstring{MY\_IPOPT\_CONTROL}{MY\_IPOPT\_CONTROL}}
+{\footnotesize\ttfamily \#define MY\+\_\+\+IPOPT\+\_\+\+CONTROL~0x00}
+
+
+
+Definition at line 53 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{udp__ip__port__mon_8h_a5dfac8d8eba1287ed6234d98601d93c5}\label{udp__ip__port__mon_8h_a5dfac8d8eba1287ed6234d98601d93c5}} 
+\index{udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}!MY\_IPOPT\_COPY@{MY\_IPOPT\_COPY}}
+\index{MY\_IPOPT\_COPY@{MY\_IPOPT\_COPY}!udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}}
+\doxysubsubsection{\texorpdfstring{MY\_IPOPT\_COPY}{MY\_IPOPT\_COPY}}
+{\footnotesize\ttfamily \#define MY\+\_\+\+IPOPT\+\_\+\+COPY~0x80}
+
+
+
+Definition at line 51 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{udp__ip__port__mon_8h_a04d27d7495af013912b317182df3d70c}\label{udp__ip__port__mon_8h_a04d27d7495af013912b317182df3d70c}} 
+\index{udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}!MY\_IPOPT\_DPS@{MY\_IPOPT\_DPS}}
+\index{MY\_IPOPT\_DPS@{MY\_IPOPT\_DPS}!udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}}
+\doxysubsubsection{\texorpdfstring{MY\_IPOPT\_DPS}{MY\_IPOPT\_DPS}}
+{\footnotesize\ttfamily \#define MY\+\_\+\+IPOPT\+\_\+\+DPS~(23$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_a5dfac8d8eba1287ed6234d98601d93c5}{MY\+\_\+\+IPOPT\+\_\+\+COPY}}$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_ae4b90707fe87a0a8968ac7f8acf11e79}{MY\+\_\+\+IPOPT\+\_\+\+CONTROL}})       /$\ast$ Malis $\ast$/}
+
+
+
+Definition at line 82 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{udp__ip__port__mon_8h_ab6099ff0f7ee853dc48da7e4c958012e}\label{udp__ip__port__mon_8h_ab6099ff0f7ee853dc48da7e4c958012e}} 
+\index{udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}!MY\_IPOPT\_EIP@{MY\_IPOPT\_EIP}}
+\index{MY\_IPOPT\_EIP@{MY\_IPOPT\_EIP}!udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}}
+\doxysubsubsection{\texorpdfstring{MY\_IPOPT\_EIP}{MY\_IPOPT\_EIP}}
+{\footnotesize\ttfamily \#define MY\+\_\+\+IPOPT\+\_\+\+EIP~(17$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_a5dfac8d8eba1287ed6234d98601d93c5}{MY\+\_\+\+IPOPT\+\_\+\+COPY}}$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_ae4b90707fe87a0a8968ac7f8acf11e79}{MY\+\_\+\+IPOPT\+\_\+\+CONTROL}})       /$\ast$ RFC 1385 $\ast$/}
+
+
+
+Definition at line 76 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{udp__ip__port__mon_8h_af248cfed6ca66ca706ae8e1fa3ee7837}\label{udp__ip__port__mon_8h_af248cfed6ca66ca706ae8e1fa3ee7837}} 
+\index{udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}!MY\_IPOPT\_ENCODE@{MY\_IPOPT\_ENCODE}}
+\index{MY\_IPOPT\_ENCODE@{MY\_IPOPT\_ENCODE}!udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}}
+\doxysubsubsection{\texorpdfstring{MY\_IPOPT\_ENCODE}{MY\_IPOPT\_ENCODE}}
+{\footnotesize\ttfamily \#define MY\+\_\+\+IPOPT\+\_\+\+ENCODE~(15$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_ae4b90707fe87a0a8968ac7f8acf11e79}{MY\+\_\+\+IPOPT\+\_\+\+CONTROL}})                  /$\ast$ Ver\+Steeg $\ast$/}
+
+
+
+Definition at line 74 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{udp__ip__port__mon_8h_a4277a246d0ac57453f4f8f7999e16f9e}\label{udp__ip__port__mon_8h_a4277a246d0ac57453f4f8f7999e16f9e}} 
+\index{udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}!MY\_IPOPT\_EOOL@{MY\_IPOPT\_EOOL}}
+\index{MY\_IPOPT\_EOOL@{MY\_IPOPT\_EOOL}!udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}}
+\doxysubsubsection{\texorpdfstring{MY\_IPOPT\_EOOL}{MY\_IPOPT\_EOOL}}
+{\footnotesize\ttfamily \#define MY\+\_\+\+IPOPT\+\_\+\+EOOL~(0 $\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_ae4b90707fe87a0a8968ac7f8acf11e79}{MY\+\_\+\+IPOPT\+\_\+\+CONTROL}})}
+
+
+
+Definition at line 59 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{udp__ip__port__mon_8h_a014780192c45d2e6f1f111c6c401f30b}\label{udp__ip__port__mon_8h_a014780192c45d2e6f1f111c6c401f30b}} 
+\index{udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}!MY\_IPOPT\_ESEC@{MY\_IPOPT\_ESEC}}
+\index{MY\_IPOPT\_ESEC@{MY\_IPOPT\_ESEC}!udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}}
+\doxysubsubsection{\texorpdfstring{MY\_IPOPT\_ESEC}{MY\_IPOPT\_ESEC}}
+{\footnotesize\ttfamily \#define MY\+\_\+\+IPOPT\+\_\+\+ESEC~(5 $\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_a5dfac8d8eba1287ed6234d98601d93c5}{MY\+\_\+\+IPOPT\+\_\+\+COPY}}$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_ae4b90707fe87a0a8968ac7f8acf11e79}{MY\+\_\+\+IPOPT\+\_\+\+CONTROL}})       /$\ast$ RFC 1108 $\ast$/}
+
+
+
+Definition at line 64 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{udp__ip__port__mon_8h_a554e3f50ae40a7f1d9bd4d47c251bb52}\label{udp__ip__port__mon_8h_a554e3f50ae40a7f1d9bd4d47c251bb52}} 
+\index{udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}!MY\_IPOPT\_EXP@{MY\_IPOPT\_EXP}}
+\index{MY\_IPOPT\_EXP@{MY\_IPOPT\_EXP}!udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}}
+\doxysubsubsection{\texorpdfstring{MY\_IPOPT\_EXP}{MY\_IPOPT\_EXP}}
+{\footnotesize\ttfamily \#define MY\+\_\+\+IPOPT\+\_\+\+EXP~(30$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_ae4b90707fe87a0a8968ac7f8acf11e79}{MY\+\_\+\+IPOPT\+\_\+\+CONTROL}}) /$\ast$ RFC 4727 $\ast$/}
+
+
+
+Definition at line 85 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{udp__ip__port__mon_8h_add7b9daff305de51c4821e295412e0ab}\label{udp__ip__port__mon_8h_add7b9daff305de51c4821e295412e0ab}} 
+\index{udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}!MY\_IPOPT\_FINN@{MY\_IPOPT\_FINN}}
+\index{MY\_IPOPT\_FINN@{MY\_IPOPT\_FINN}!udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}}
+\doxysubsubsection{\texorpdfstring{MY\_IPOPT\_FINN}{MY\_IPOPT\_FINN}}
+{\footnotesize\ttfamily \#define MY\+\_\+\+IPOPT\+\_\+\+FINN~(13$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_a5dfac8d8eba1287ed6234d98601d93c5}{MY\+\_\+\+IPOPT\+\_\+\+COPY}}$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_a6cae275a6a655018cc09f88560bb219f}{MY\+\_\+\+IPOPT\+\_\+\+MEASUREMENT}})   /$\ast$ Finn $\ast$/}
+
+
+
+Definition at line 72 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{udp__ip__port__mon_8h_ab13ac6923fd022cf8904cce8042f0c85}\label{udp__ip__port__mon_8h_ab13ac6923fd022cf8904cce8042f0c85}} 
+\index{udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}!MY\_IPOPT\_IMITD@{MY\_IPOPT\_IMITD}}
+\index{MY\_IPOPT\_IMITD@{MY\_IPOPT\_IMITD}!udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}}
+\doxysubsubsection{\texorpdfstring{MY\_IPOPT\_IMITD}{MY\_IPOPT\_IMITD}}
+{\footnotesize\ttfamily \#define MY\+\_\+\+IPOPT\+\_\+\+IMITD~(16$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_a5dfac8d8eba1287ed6234d98601d93c5}{MY\+\_\+\+IPOPT\+\_\+\+COPY}}$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_ae4b90707fe87a0a8968ac7f8acf11e79}{MY\+\_\+\+IPOPT\+\_\+\+CONTROL}})       /$\ast$ Lee $\ast$/}
+
+
+
+Definition at line 75 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{udp__ip__port__mon_8h_a3b0b8e3f9d6319b5669297f1f30c745f}\label{udp__ip__port__mon_8h_a3b0b8e3f9d6319b5669297f1f30c745f}} 
+\index{udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}!MY\_IPOPT\_LSR@{MY\_IPOPT\_LSR}}
+\index{MY\_IPOPT\_LSR@{MY\_IPOPT\_LSR}!udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}}
+\doxysubsubsection{\texorpdfstring{MY\_IPOPT\_LSR}{MY\_IPOPT\_LSR}}
+{\footnotesize\ttfamily \#define MY\+\_\+\+IPOPT\+\_\+\+LSR~(3 $\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_a5dfac8d8eba1287ed6234d98601d93c5}{MY\+\_\+\+IPOPT\+\_\+\+COPY}}$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_ae4b90707fe87a0a8968ac7f8acf11e79}{MY\+\_\+\+IPOPT\+\_\+\+CONTROL}})}
+
+
+
+Definition at line 62 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{udp__ip__port__mon_8h_a6cae275a6a655018cc09f88560bb219f}\label{udp__ip__port__mon_8h_a6cae275a6a655018cc09f88560bb219f}} 
+\index{udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}!MY\_IPOPT\_MEASUREMENT@{MY\_IPOPT\_MEASUREMENT}}
+\index{MY\_IPOPT\_MEASUREMENT@{MY\_IPOPT\_MEASUREMENT}!udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}}
+\doxysubsubsection{\texorpdfstring{MY\_IPOPT\_MEASUREMENT}{MY\_IPOPT\_MEASUREMENT}}
+{\footnotesize\ttfamily \#define MY\+\_\+\+IPOPT\+\_\+\+MEASUREMENT~0x40}
+
+
+
+Definition at line 55 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{udp__ip__port__mon_8h_ad9c190d207e617a2c79f7ca3f7c5c62e}\label{udp__ip__port__mon_8h_ad9c190d207e617a2c79f7ca3f7c5c62e}} 
+\index{udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}!MY\_IPOPT\_MTUP@{MY\_IPOPT\_MTUP}}
+\index{MY\_IPOPT\_MTUP@{MY\_IPOPT\_MTUP}!udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}}
+\doxysubsubsection{\texorpdfstring{MY\_IPOPT\_MTUP}{MY\_IPOPT\_MTUP}}
+{\footnotesize\ttfamily \#define MY\+\_\+\+IPOPT\+\_\+\+MTUP~(11$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_ae4b90707fe87a0a8968ac7f8acf11e79}{MY\+\_\+\+IPOPT\+\_\+\+CONTROL}})                  /$\ast$ RFC 1063 $\ast$/}
+
+
+
+Definition at line 70 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{udp__ip__port__mon_8h_a377938b1113c7625b94a572280bc35ea}\label{udp__ip__port__mon_8h_a377938b1113c7625b94a572280bc35ea}} 
+\index{udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}!MY\_IPOPT\_MTUR@{MY\_IPOPT\_MTUR}}
+\index{MY\_IPOPT\_MTUR@{MY\_IPOPT\_MTUR}!udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}}
+\doxysubsubsection{\texorpdfstring{MY\_IPOPT\_MTUR}{MY\_IPOPT\_MTUR}}
+{\footnotesize\ttfamily \#define MY\+\_\+\+IPOPT\+\_\+\+MTUR~(12$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_ae4b90707fe87a0a8968ac7f8acf11e79}{MY\+\_\+\+IPOPT\+\_\+\+CONTROL}})                  /$\ast$ RFC 1063 $\ast$/}
+
+
+
+Definition at line 71 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{udp__ip__port__mon_8h_abf6e236ffef4ac8fdb3e0c1bcb520885}\label{udp__ip__port__mon_8h_abf6e236ffef4ac8fdb3e0c1bcb520885}} 
+\index{udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}!MY\_IPOPT\_NOP@{MY\_IPOPT\_NOP}}
+\index{MY\_IPOPT\_NOP@{MY\_IPOPT\_NOP}!udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}}
+\doxysubsubsection{\texorpdfstring{MY\_IPOPT\_NOP}{MY\_IPOPT\_NOP}}
+{\footnotesize\ttfamily \#define MY\+\_\+\+IPOPT\+\_\+\+NOP~(1 $\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_ae4b90707fe87a0a8968ac7f8acf11e79}{MY\+\_\+\+IPOPT\+\_\+\+CONTROL}})}
+
+
+
+Definition at line 60 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{udp__ip__port__mon_8h_a9760461b2f8c9a2c89c409f67cc237a1}\label{udp__ip__port__mon_8h_a9760461b2f8c9a2c89c409f67cc237a1}} 
+\index{udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}!MY\_IPOPT\_QS@{MY\_IPOPT\_QS}}
+\index{MY\_IPOPT\_QS@{MY\_IPOPT\_QS}!udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}}
+\doxysubsubsection{\texorpdfstring{MY\_IPOPT\_QS}{MY\_IPOPT\_QS}}
+{\footnotesize\ttfamily \#define MY\+\_\+\+IPOPT\+\_\+\+QS~(25$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_ae4b90707fe87a0a8968ac7f8acf11e79}{MY\+\_\+\+IPOPT\+\_\+\+CONTROL}})                  /$\ast$ RFC 4782 $\ast$/}
+
+
+
+Definition at line 84 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{udp__ip__port__mon_8h_a5fb395f5ba882cb95010533fc732f3a0}\label{udp__ip__port__mon_8h_a5fb395f5ba882cb95010533fc732f3a0}} 
+\index{udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}!MY\_IPOPT\_RESERVED1@{MY\_IPOPT\_RESERVED1}}
+\index{MY\_IPOPT\_RESERVED1@{MY\_IPOPT\_RESERVED1}!udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}}
+\doxysubsubsection{\texorpdfstring{MY\_IPOPT\_RESERVED1}{MY\_IPOPT\_RESERVED1}}
+{\footnotesize\ttfamily \#define MY\+\_\+\+IPOPT\+\_\+\+RESERVED1~0x20}
+
+
+
+Definition at line 54 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{udp__ip__port__mon_8h_a4ccae38a1f1776a95273b7f3e6210ff5}\label{udp__ip__port__mon_8h_a4ccae38a1f1776a95273b7f3e6210ff5}} 
+\index{udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}!MY\_IPOPT\_RESERVED2@{MY\_IPOPT\_RESERVED2}}
+\index{MY\_IPOPT\_RESERVED2@{MY\_IPOPT\_RESERVED2}!udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}}
+\doxysubsubsection{\texorpdfstring{MY\_IPOPT\_RESERVED2}{MY\_IPOPT\_RESERVED2}}
+{\footnotesize\ttfamily \#define MY\+\_\+\+IPOPT\+\_\+\+RESERVED2~0x60}
+
+
+
+Definition at line 56 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{udp__ip__port__mon_8h_a6b6df5142d634621c210d63af7690beb}\label{udp__ip__port__mon_8h_a6b6df5142d634621c210d63af7690beb}} 
+\index{udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}!MY\_IPOPT\_RR@{MY\_IPOPT\_RR}}
+\index{MY\_IPOPT\_RR@{MY\_IPOPT\_RR}!udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}}
+\doxysubsubsection{\texorpdfstring{MY\_IPOPT\_RR}{MY\_IPOPT\_RR}}
+{\footnotesize\ttfamily \#define MY\+\_\+\+IPOPT\+\_\+\+RR~(7 $\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_ae4b90707fe87a0a8968ac7f8acf11e79}{MY\+\_\+\+IPOPT\+\_\+\+CONTROL}})}
+
+
+
+Definition at line 66 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{udp__ip__port__mon_8h_a6e4aea18d4aba88b97ed4466f9017c62}\label{udp__ip__port__mon_8h_a6e4aea18d4aba88b97ed4466f9017c62}} 
+\index{udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}!MY\_IPOPT\_RTRALT@{MY\_IPOPT\_RTRALT}}
+\index{MY\_IPOPT\_RTRALT@{MY\_IPOPT\_RTRALT}!udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}}
+\doxysubsubsection{\texorpdfstring{MY\_IPOPT\_RTRALT}{MY\_IPOPT\_RTRALT}}
+{\footnotesize\ttfamily \#define MY\+\_\+\+IPOPT\+\_\+\+RTRALT~(20$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_a5dfac8d8eba1287ed6234d98601d93c5}{MY\+\_\+\+IPOPT\+\_\+\+COPY}}$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_ae4b90707fe87a0a8968ac7f8acf11e79}{MY\+\_\+\+IPOPT\+\_\+\+CONTROL}})       /$\ast$ RFC 2113 $\ast$/}
+
+
+
+Definition at line 79 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{udp__ip__port__mon_8h_a89f327b8a724fbdfef78e5d358a3434d}\label{udp__ip__port__mon_8h_a89f327b8a724fbdfef78e5d358a3434d}} 
+\index{udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}!MY\_IPOPT\_SDB@{MY\_IPOPT\_SDB}}
+\index{MY\_IPOPT\_SDB@{MY\_IPOPT\_SDB}!udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}}
+\doxysubsubsection{\texorpdfstring{MY\_IPOPT\_SDB}{MY\_IPOPT\_SDB}}
+{\footnotesize\ttfamily \#define MY\+\_\+\+IPOPT\+\_\+\+SDB~(21$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_a5dfac8d8eba1287ed6234d98601d93c5}{MY\+\_\+\+IPOPT\+\_\+\+COPY}}$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_ae4b90707fe87a0a8968ac7f8acf11e79}{MY\+\_\+\+IPOPT\+\_\+\+CONTROL}})       /$\ast$ RFC 1770 Graff $\ast$/}
+
+
+
+Definition at line 80 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{udp__ip__port__mon_8h_ade2c57896a0596eb0f077de4868d9d61}\label{udp__ip__port__mon_8h_ade2c57896a0596eb0f077de4868d9d61}} 
+\index{udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}!MY\_IPOPT\_SEC@{MY\_IPOPT\_SEC}}
+\index{MY\_IPOPT\_SEC@{MY\_IPOPT\_SEC}!udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}}
+\doxysubsubsection{\texorpdfstring{MY\_IPOPT\_SEC}{MY\_IPOPT\_SEC}}
+{\footnotesize\ttfamily \#define MY\+\_\+\+IPOPT\+\_\+\+SEC~(2 $\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_a5dfac8d8eba1287ed6234d98601d93c5}{MY\+\_\+\+IPOPT\+\_\+\+COPY}}$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_ae4b90707fe87a0a8968ac7f8acf11e79}{MY\+\_\+\+IPOPT\+\_\+\+CONTROL}})       /$\ast$ RFC 791/1108 $\ast$/}
+
+
+
+Definition at line 61 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{udp__ip__port__mon_8h_a38116cac375c30e23bec31cd9967f2a0}\label{udp__ip__port__mon_8h_a38116cac375c30e23bec31cd9967f2a0}} 
+\index{udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}!MY\_IPOPT\_SID@{MY\_IPOPT\_SID}}
+\index{MY\_IPOPT\_SID@{MY\_IPOPT\_SID}!udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}}
+\doxysubsubsection{\texorpdfstring{MY\_IPOPT\_SID}{MY\_IPOPT\_SID}}
+{\footnotesize\ttfamily \#define MY\+\_\+\+IPOPT\+\_\+\+SID~(8 $\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_a5dfac8d8eba1287ed6234d98601d93c5}{MY\+\_\+\+IPOPT\+\_\+\+COPY}}$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_ae4b90707fe87a0a8968ac7f8acf11e79}{MY\+\_\+\+IPOPT\+\_\+\+CONTROL}})}
+
+
+
+Definition at line 67 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{udp__ip__port__mon_8h_a7f13460f8f16a9f013898a909c6a9dfb}\label{udp__ip__port__mon_8h_a7f13460f8f16a9f013898a909c6a9dfb}} 
+\index{udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}!MY\_IPOPT\_SSR@{MY\_IPOPT\_SSR}}
+\index{MY\_IPOPT\_SSR@{MY\_IPOPT\_SSR}!udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}}
+\doxysubsubsection{\texorpdfstring{MY\_IPOPT\_SSR}{MY\_IPOPT\_SSR}}
+{\footnotesize\ttfamily \#define MY\+\_\+\+IPOPT\+\_\+\+SSR~(9 $\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_a5dfac8d8eba1287ed6234d98601d93c5}{MY\+\_\+\+IPOPT\+\_\+\+COPY}}$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_ae4b90707fe87a0a8968ac7f8acf11e79}{MY\+\_\+\+IPOPT\+\_\+\+CONTROL}})}
+
+
+
+Definition at line 68 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{udp__ip__port__mon_8h_a896774b046baa56eace7fa93fceed310}\label{udp__ip__port__mon_8h_a896774b046baa56eace7fa93fceed310}} 
+\index{udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}!MY\_IPOPT\_TR@{MY\_IPOPT\_TR}}
+\index{MY\_IPOPT\_TR@{MY\_IPOPT\_TR}!udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}}
+\doxysubsubsection{\texorpdfstring{MY\_IPOPT\_TR}{MY\_IPOPT\_TR}}
+{\footnotesize\ttfamily \#define MY\+\_\+\+IPOPT\+\_\+\+TR~(18$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_a6cae275a6a655018cc09f88560bb219f}{MY\+\_\+\+IPOPT\+\_\+\+MEASUREMENT}})              /$\ast$ RFC 1393 $\ast$/}
+
+
+
+Definition at line 77 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{udp__ip__port__mon_8h_aa287a4b6c681ff892b59d8a4512f0d3f}\label{udp__ip__port__mon_8h_aa287a4b6c681ff892b59d8a4512f0d3f}} 
+\index{udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}!MY\_IPOPT\_TS@{MY\_IPOPT\_TS}}
+\index{MY\_IPOPT\_TS@{MY\_IPOPT\_TS}!udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}}
+\doxysubsubsection{\texorpdfstring{MY\_IPOPT\_TS}{MY\_IPOPT\_TS}}
+{\footnotesize\ttfamily \#define MY\+\_\+\+IPOPT\+\_\+\+TS~(4 $\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_a6cae275a6a655018cc09f88560bb219f}{MY\+\_\+\+IPOPT\+\_\+\+MEASUREMENT}})}
+
+
+
+Definition at line 63 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{udp__ip__port__mon_8h_ab018e4df6f9e63f5a795a31ff520fdc5}\label{udp__ip__port__mon_8h_ab018e4df6f9e63f5a795a31ff520fdc5}} 
+\index{udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}!MY\_IPOPT\_UMP@{MY\_IPOPT\_UMP}}
+\index{MY\_IPOPT\_UMP@{MY\_IPOPT\_UMP}!udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}}
+\doxysubsubsection{\texorpdfstring{MY\_IPOPT\_UMP}{MY\_IPOPT\_UMP}}
+{\footnotesize\ttfamily \#define MY\+\_\+\+IPOPT\+\_\+\+UMP~(24$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_a5dfac8d8eba1287ed6234d98601d93c5}{MY\+\_\+\+IPOPT\+\_\+\+COPY}}$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_ae4b90707fe87a0a8968ac7f8acf11e79}{MY\+\_\+\+IPOPT\+\_\+\+CONTROL}})       /$\ast$ Farinacci $\ast$/}
+
+
+
+Definition at line 83 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{udp__ip__port__mon_8h_a19b200de5cd8223713b9becd0853047f}\label{udp__ip__port__mon_8h_a19b200de5cd8223713b9becd0853047f}} 
+\index{udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}!MY\_IPOPT\_UN@{MY\_IPOPT\_UN}}
+\index{MY\_IPOPT\_UN@{MY\_IPOPT\_UN}!udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}}
+\doxysubsubsection{\texorpdfstring{MY\_IPOPT\_UN}{MY\_IPOPT\_UN}}
+{\footnotesize\ttfamily \#define MY\+\_\+\+IPOPT\+\_\+\+UN~(22$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_a5dfac8d8eba1287ed6234d98601d93c5}{MY\+\_\+\+IPOPT\+\_\+\+COPY}}$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_ae4b90707fe87a0a8968ac7f8acf11e79}{MY\+\_\+\+IPOPT\+\_\+\+CONTROL}})       /$\ast$ Released 18-\/Oct-\/2005 $\ast$/}
+
+
+
+Definition at line 81 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{udp__ip__port__mon_8h_a86bd13c848b42dc9ace30fa958d6addf}\label{udp__ip__port__mon_8h_a86bd13c848b42dc9ace30fa958d6addf}} 
+\index{udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}!MY\_IPOPT\_VISA@{MY\_IPOPT\_VISA}}
+\index{MY\_IPOPT\_VISA@{MY\_IPOPT\_VISA}!udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}}
+\doxysubsubsection{\texorpdfstring{MY\_IPOPT\_VISA}{MY\_IPOPT\_VISA}}
+{\footnotesize\ttfamily \#define MY\+\_\+\+IPOPT\+\_\+\+VISA~(14$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_a5dfac8d8eba1287ed6234d98601d93c5}{MY\+\_\+\+IPOPT\+\_\+\+COPY}}$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_ae4b90707fe87a0a8968ac7f8acf11e79}{MY\+\_\+\+IPOPT\+\_\+\+CONTROL}})       /$\ast$ Estrin $\ast$/}
+
+
+
+Definition at line 73 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{udp__ip__port__mon_8h_a6e885fdbbd120783cc99b91d53966981}\label{udp__ip__port__mon_8h_a6e885fdbbd120783cc99b91d53966981}} 
+\index{udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}!MY\_IPOPT\_ZSU@{MY\_IPOPT\_ZSU}}
+\index{MY\_IPOPT\_ZSU@{MY\_IPOPT\_ZSU}!udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}}
+\doxysubsubsection{\texorpdfstring{MY\_IPOPT\_ZSU}{MY\_IPOPT\_ZSU}}
+{\footnotesize\ttfamily \#define MY\+\_\+\+IPOPT\+\_\+\+ZSU~(10$\vert$\mbox{\hyperlink{udp__ip__port__mon_8h_ae4b90707fe87a0a8968ac7f8acf11e79}{MY\+\_\+\+IPOPT\+\_\+\+CONTROL}})                  /$\ast$ Zsu $\ast$/}
+
+
+
+Definition at line 69 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{udp__ip__port__mon_8h_afb5fa0b66e36695d7e1afac1971209c1}\label{udp__ip__port__mon_8h_afb5fa0b66e36695d7e1afac1971209c1}} 
+\index{udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}!PCN\_STRLEN@{PCN\_STRLEN}}
+\index{PCN\_STRLEN@{PCN\_STRLEN}!udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}}
+\doxysubsubsection{\texorpdfstring{PCN\_STRLEN}{PCN\_STRLEN}}
+{\footnotesize\ttfamily \#define PCN\+\_\+\+STRLEN~6}
+
+
+
+Definition at line 47 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{udp__ip__port__mon_8h_ac8932031ba2c6d324056a751296553ba}\label{udp__ip__port__mon_8h_ac8932031ba2c6d324056a751296553ba}} 
+\index{udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}!UDP\_HEADER\_LEN@{UDP\_HEADER\_LEN}}
+\index{UDP\_HEADER\_LEN@{UDP\_HEADER\_LEN}!udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}}
+\doxysubsubsection{\texorpdfstring{UDP\_HEADER\_LEN}{UDP\_HEADER\_LEN}}
+{\footnotesize\ttfamily \#define UDP\+\_\+\+HEADER\+\_\+\+LEN~8}
+
+
+
+Definition at line 43 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+\mbox{\Hypertarget{udp__ip__port__mon_8h_a1c6d5de492ac61ad29aec7aa9a436bbf}\label{udp__ip__port__mon_8h_a1c6d5de492ac61ad29aec7aa9a436bbf}} 
+\index{udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}!VERSION@{VERSION}}
+\index{VERSION@{VERSION}!udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}}
+\doxysubsubsection{\texorpdfstring{VERSION}{VERSION}}
+{\footnotesize\ttfamily \#define VERSION~\char`\"{}MADCAT -\/ Mass Attack Detecion Connection Acceptance Tool\textbackslash{}n\+UDP-\/IP Port Monitor v2.\+3.\+0\textbackslash{}n\+BSI 2018-\/2023\textbackslash{}n\char`\"{}}
+
+
+
+Definition at line 40 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+h.
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{udp__ip__port__mon_8h_a0256ec76a45dccdf8197da10675df7c5}\label{udp__ip__port__mon_8h_a0256ec76a45dccdf8197da10675df7c5}} 
+\index{udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}!udpcon\_id\_t@{udpcon\_id\_t}}
+\index{udpcon\_id\_t@{udpcon\_id\_t}!udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}}
+\doxysubsubsection{\texorpdfstring{udpcon\_id\_t}{udpcon\_id\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structmy__uint128__t}{my\+\_\+uint128\+\_\+t}} \mbox{\hyperlink{udp__ip__port__mon_8h_a0256ec76a45dccdf8197da10675df7c5}{udpcon\+\_\+id\+\_\+t}}}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{udp__ip__port__mon_8h_a6cd677e7312ead243aee7954b3e6485b}\label{udp__ip__port__mon_8h_a6cd677e7312ead243aee7954b3e6485b}} 
+\index{udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}!cleanup\_t\_id@{cleanup\_t\_id}}
+\index{cleanup\_t\_id@{cleanup\_t\_id}!udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}}
+\doxysubsubsection{\texorpdfstring{cleanup\_t\_id}{cleanup\_t\_id}}
+{\footnotesize\ttfamily pthread\+\_\+t cleanup\+\_\+t\+\_\+id\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 45 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+c.
+
+\mbox{\Hypertarget{udp__ip__port__mon_8h_a1f128d35710674a4cea27c1e0bc994a1}\label{udp__ip__port__mon_8h_a1f128d35710674a4cea27c1e0bc994a1}} 
+\index{udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}!conlistsem@{conlistsem}}
+\index{conlistsem@{conlistsem}!udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}}
+\doxysubsubsection{\texorpdfstring{conlistsem}{conlistsem}}
+{\footnotesize\ttfamily sem\+\_\+t$\ast$ conlistsem\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 44 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+c.
+
+\mbox{\Hypertarget{udp__ip__port__mon_8h_a0963f23532c420d423352d102222870b}\label{udp__ip__port__mon_8h_a0963f23532c420d423352d102222870b}} 
+\index{udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}!pc@{pc}}
+\index{pc@{pc}!udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}}
+\doxysubsubsection{\texorpdfstring{pc}{pc}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structproxy__conf__udp__t}{proxy\+\_\+conf\+\_\+udp\+\_\+t}}$\ast$ pc\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 46 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+c.
+
+\mbox{\Hypertarget{udp__ip__port__mon_8h_a2181b4b2161e7c9309f238c93e1dc262}\label{udp__ip__port__mon_8h_a2181b4b2161e7c9309f238c93e1dc262}} 
+\index{udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}!uc@{uc}}
+\index{uc@{uc}!udp\_ip\_port\_mon.h@{udp\_ip\_port\_mon.h}}
+\doxysubsubsection{\texorpdfstring{uc}{uc}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structudpcon__data__t}{udpcon\+\_\+data\+\_\+t}}$\ast$ uc\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 47 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+c.
+

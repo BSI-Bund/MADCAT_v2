@@ -1,0 +1,106 @@
+\hypertarget{structdict}{}\doxysection{dict Struct Reference}
+\label{structdict}\index{dict@{dict}}
+
+
+Element of a dictonary as double linked list.  
+
+
+
+
+{\ttfamily \#include $<$libdict\+\_\+c.\+h$>$}
+
+
+
+Collaboration diagram for dict\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=177pt]{structdict__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structdict}{dict}} $\ast$ \mbox{\hyperlink{structdict_acb2702ae6433001a6eab51ea7a80b8b3}{next}}
+\item 
+struct \mbox{\hyperlink{structdict}{dict}} $\ast$ \mbox{\hyperlink{structdict_a2379e20846762f5cd4d7a8a6d853e9ac}{prev}}
+\item 
+\+\_\+\+\_\+uint8\+\_\+t \mbox{\hyperlink{structdict_a1fef9978191b64ebd4b0b2da57494686}{type}}
+\item 
+char $\ast$ \mbox{\hyperlink{structdict_a5892a9181e6a332f84d27aecd41dcd12}{key}}
+\item 
+union \mbox{\hyperlink{unionjson__type}{json\+\_\+type}} \mbox{\hyperlink{structdict_a0f280f0643d518bc0cd4ed9097891b78}{value}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Element of a dictonary as double linked list. 
+
+\begin{DoxyVerb}-next and prev are the pointers to maintain the linked list
+-type stores the data-type, stored in value
+-value stores the data
+-key stores the dictonary key, which is always a string in JSON.
+\end{DoxyVerb}
+ 
+
+Definition at line 117 of file libdict\+\_\+c.\+h.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structdict_a5892a9181e6a332f84d27aecd41dcd12}\label{structdict_a5892a9181e6a332f84d27aecd41dcd12}} 
+\index{dict@{dict}!key@{key}}
+\index{key@{key}!dict@{dict}}
+\doxysubsubsection{\texorpdfstring{key}{key}}
+{\footnotesize\ttfamily char$\ast$ key}
+
+
+
+Definition at line 121 of file libdict\+\_\+c.\+h.
+
+\mbox{\Hypertarget{structdict_acb2702ae6433001a6eab51ea7a80b8b3}\label{structdict_acb2702ae6433001a6eab51ea7a80b8b3}} 
+\index{dict@{dict}!next@{next}}
+\index{next@{next}!dict@{dict}}
+\doxysubsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structdict}{dict}}$\ast$ next}
+
+
+
+Definition at line 118 of file libdict\+\_\+c.\+h.
+
+\mbox{\Hypertarget{structdict_a2379e20846762f5cd4d7a8a6d853e9ac}\label{structdict_a2379e20846762f5cd4d7a8a6d853e9ac}} 
+\index{dict@{dict}!prev@{prev}}
+\index{prev@{prev}!dict@{dict}}
+\doxysubsubsection{\texorpdfstring{prev}{prev}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structdict}{dict}}$\ast$ prev}
+
+
+
+Definition at line 119 of file libdict\+\_\+c.\+h.
+
+\mbox{\Hypertarget{structdict_a1fef9978191b64ebd4b0b2da57494686}\label{structdict_a1fef9978191b64ebd4b0b2da57494686}} 
+\index{dict@{dict}!type@{type}}
+\index{type@{type}!dict@{dict}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily \+\_\+\+\_\+uint8\+\_\+t type}
+
+
+
+Definition at line 120 of file libdict\+\_\+c.\+h.
+
+\mbox{\Hypertarget{structdict_a0f280f0643d518bc0cd4ed9097891b78}\label{structdict_a0f280f0643d518bc0cd4ed9097891b78}} 
+\index{dict@{dict}!value@{value}}
+\index{value@{value}!dict@{dict}}
+\doxysubsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily union \mbox{\hyperlink{unionjson__type}{json\+\_\+type}} value}
+
+
+
+Definition at line 121 of file libdict\+\_\+c.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/\+MADCAT/\+BSI-\/\+Bund@\+Git\+Hub.\+com/github\+\_\+release/include/dict\+\_\+c/\mbox{\hyperlink{libdict__c_8h}{libdict\+\_\+c.\+h}}\end{DoxyCompactItemize}

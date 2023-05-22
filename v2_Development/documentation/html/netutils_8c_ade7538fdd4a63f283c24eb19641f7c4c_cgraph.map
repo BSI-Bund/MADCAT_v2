@@ -1,7 +1,0 @@
-<map id="connect_to_backend" name="connect_to_backend">
-<area shape="rect" id="node1" title="RSP Proxy function." alt="" coords="5,31,160,57"/>
-<area shape="rect" id="node2" href="$logging_8h.html#ae9131a8f0d2837fda898b286699d8543" title="RSP Proxy function." alt="" coords="363,5,432,32"/>
-<area shape="rect" id="node4" href="$logging_8h.html#ab3c25307c3be2273e9c40a68b828b44c" title="RSP Proxy function." alt="" coords="208,56,315,83"/>
-<area shape="rect" id="node3" href="$madcat_8helper_8h.html#a6beb2c039c319f4fb3541627bb6da8ee" title="Returns current time." alt="" coords="480,31,556,57"/>
-<area shape="rect" id="node5" href="$logging_8c.html#ae9131a8f0d2837fda898b286699d8543" title="RSP Proxy function." alt="" coords="363,56,432,83"/>
-</map>

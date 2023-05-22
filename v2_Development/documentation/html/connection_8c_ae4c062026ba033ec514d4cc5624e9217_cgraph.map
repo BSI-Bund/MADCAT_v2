@@ -1,7 +1,0 @@
-<map id="connection_really_close" name="connection_really_close">
-<area shape="rect" id="node1" title=" " alt="" coords="5,56,184,83"/>
-<area shape="rect" id="node2" href="$epollinterface_8h.html#a10e12a3faa82ce01d36edd2a581dfa56" title="RSP Proxy function." alt="" coords="233,5,398,32"/>
-<area shape="rect" id="node3" href="$epollinterface_8h.html#ab3c24e532ea83ff5ea6110341a61e0de" title="RSP Proxy function." alt="" coords="232,56,399,83"/>
-<area shape="rect" id="node4" href="$logging_8h.html#ae9131a8f0d2837fda898b286699d8543" title="RSP Proxy function." alt="" coords="281,107,350,133"/>
-<area shape="rect" id="node5" href="$madcat_8helper_8h.html#a6beb2c039c319f4fb3541627bb6da8ee" title="Returns current time." alt="" coords="447,107,523,133"/>
-</map>

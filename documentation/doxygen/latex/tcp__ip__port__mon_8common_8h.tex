@@ -1,0 +1,138 @@
+\hypertarget{tcp__ip__port__mon_8common_8h}{}\doxysection{/home/\+MADCAT/\+BSI-\/\+Bund@Git\+Hub.\+com/github\+\_\+release/include/tcp\+\_\+ip\+\_\+port\+\_\+mon.common.\+h File Reference}
+\label{tcp__ip__port__mon_8common_8h}\index{/home/MADCAT/BSI-\/Bund"@GitHub.com/github\_release/include/tcp\_ip\_port\_mon.common.h@{/home/MADCAT/BSI-\/Bund"@GitHub.com/github\_release/include/tcp\_ip\_port\_mon.common.h}}
+{\ttfamily \#include \char`\"{}madcat.\+common.\+h\char`\"{}}\newline
+Include dependency graph for tcp\+\_\+ip\+\_\+port\+\_\+mon.\+common.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tcp__ip__port__mon_8common_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tcp__ip__port__mon_8common_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcon__status__t}{con\+\_\+status\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{tcp__ip__port__mon_8common_8h_a73a3329037a7f561b878ea12a220e5be}{hostaddr}} \mbox{[}INET6\+\_\+\+ADDRSTRLEN\mbox{]}
+\item 
+int \mbox{\hyperlink{tcp__ip__port__mon_8common_8h_acf7873b5dc228f0d578e40d20e7ca842}{pcap\+\_\+pid}}
+\item 
+int \mbox{\hyperlink{tcp__ip__port__mon_8common_8h_af8cf2c03bf0f07600f1c54bee79c523c}{listner\+\_\+pid}}
+\item 
+sem\+\_\+t $\ast$ \mbox{\hyperlink{tcp__ip__port__mon_8common_8h_a728f30f04542e356dcdeebe51b46f67f}{hdrsem}}
+\item 
+sem\+\_\+t $\ast$ \mbox{\hyperlink{tcp__ip__port__mon_8common_8h_a203747ddb1e738c50d31070f3ef6e839}{consem}}
+\item 
+FILE $\ast$ \mbox{\hyperlink{tcp__ip__port__mon_8common_8h_aa8bd9bf017a5d4210af62e2f8f7090b2}{confifo}}
+\item 
+FILE $\ast$ \mbox{\hyperlink{tcp__ip__port__mon_8common_8h_ae0bba3600a85500bff7da483567a4d6f}{hdrfifo}}
+\item 
+int \mbox{\hyperlink{tcp__ip__port__mon_8common_8h_a89f7bfcfc90ba724ea32bb137d5f5f93}{openfd}}
+\item 
+pcap\+\_\+t $\ast$ \mbox{\hyperlink{tcp__ip__port__mon_8common_8h_a6c138155d7b3442efd19d0aa3f93e548}{handle}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{tcp__ip__port__mon_8common_8h_aa8bd9bf017a5d4210af62e2f8f7090b2}\label{tcp__ip__port__mon_8common_8h_aa8bd9bf017a5d4210af62e2f8f7090b2}} 
+\index{tcp\_ip\_port\_mon.common.h@{tcp\_ip\_port\_mon.common.h}!confifo@{confifo}}
+\index{confifo@{confifo}!tcp\_ip\_port\_mon.common.h@{tcp\_ip\_port\_mon.common.h}}
+\doxysubsubsection{\texorpdfstring{confifo}{confifo}}
+{\footnotesize\ttfamily FILE$\ast$ confifo\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 50 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+c.
+
+\mbox{\Hypertarget{tcp__ip__port__mon_8common_8h_a203747ddb1e738c50d31070f3ef6e839}\label{tcp__ip__port__mon_8common_8h_a203747ddb1e738c50d31070f3ef6e839}} 
+\index{tcp\_ip\_port\_mon.common.h@{tcp\_ip\_port\_mon.common.h}!consem@{consem}}
+\index{consem@{consem}!tcp\_ip\_port\_mon.common.h@{tcp\_ip\_port\_mon.common.h}}
+\doxysubsubsection{\texorpdfstring{consem}{consem}}
+{\footnotesize\ttfamily sem\+\_\+t$\ast$ consem\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 49 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+c.
+
+\mbox{\Hypertarget{tcp__ip__port__mon_8common_8h_a6c138155d7b3442efd19d0aa3f93e548}\label{tcp__ip__port__mon_8common_8h_a6c138155d7b3442efd19d0aa3f93e548}} 
+\index{tcp\_ip\_port\_mon.common.h@{tcp\_ip\_port\_mon.common.h}!handle@{handle}}
+\index{handle@{handle}!tcp\_ip\_port\_mon.common.h@{tcp\_ip\_port\_mon.common.h}}
+\doxysubsubsection{\texorpdfstring{handle}{handle}}
+{\footnotesize\ttfamily pcap\+\_\+t$\ast$ handle\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 43 of file raw\+\_\+mon.\+c.
+
+\mbox{\Hypertarget{tcp__ip__port__mon_8common_8h_ae0bba3600a85500bff7da483567a4d6f}\label{tcp__ip__port__mon_8common_8h_ae0bba3600a85500bff7da483567a4d6f}} 
+\index{tcp\_ip\_port\_mon.common.h@{tcp\_ip\_port\_mon.common.h}!hdrfifo@{hdrfifo}}
+\index{hdrfifo@{hdrfifo}!tcp\_ip\_port\_mon.common.h@{tcp\_ip\_port\_mon.common.h}}
+\doxysubsubsection{\texorpdfstring{hdrfifo}{hdrfifo}}
+{\footnotesize\ttfamily FILE$\ast$ hdrfifo\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 51 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+c.
+
+\mbox{\Hypertarget{tcp__ip__port__mon_8common_8h_a728f30f04542e356dcdeebe51b46f67f}\label{tcp__ip__port__mon_8common_8h_a728f30f04542e356dcdeebe51b46f67f}} 
+\index{tcp\_ip\_port\_mon.common.h@{tcp\_ip\_port\_mon.common.h}!hdrsem@{hdrsem}}
+\index{hdrsem@{hdrsem}!tcp\_ip\_port\_mon.common.h@{tcp\_ip\_port\_mon.common.h}}
+\doxysubsubsection{\texorpdfstring{hdrsem}{hdrsem}}
+{\footnotesize\ttfamily sem\+\_\+t$\ast$ hdrsem\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 48 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+c.
+
+\mbox{\Hypertarget{tcp__ip__port__mon_8common_8h_a73a3329037a7f561b878ea12a220e5be}\label{tcp__ip__port__mon_8common_8h_a73a3329037a7f561b878ea12a220e5be}} 
+\index{tcp\_ip\_port\_mon.common.h@{tcp\_ip\_port\_mon.common.h}!hostaddr@{hostaddr}}
+\index{hostaddr@{hostaddr}!tcp\_ip\_port\_mon.common.h@{tcp\_ip\_port\_mon.common.h}}
+\doxysubsubsection{\texorpdfstring{hostaddr}{hostaddr}}
+{\footnotesize\ttfamily char hostaddr\mbox{[}INET6\+\_\+\+ADDRSTRLEN\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 43 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+c.
+
+\mbox{\Hypertarget{tcp__ip__port__mon_8common_8h_af8cf2c03bf0f07600f1c54bee79c523c}\label{tcp__ip__port__mon_8common_8h_af8cf2c03bf0f07600f1c54bee79c523c}} 
+\index{tcp\_ip\_port\_mon.common.h@{tcp\_ip\_port\_mon.common.h}!listner\_pid@{listner\_pid}}
+\index{listner\_pid@{listner\_pid}!tcp\_ip\_port\_mon.common.h@{tcp\_ip\_port\_mon.common.h}}
+\doxysubsubsection{\texorpdfstring{listner\_pid}{listner\_pid}}
+{\footnotesize\ttfamily int listner\+\_\+pid\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 46 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+c.
+
+\mbox{\Hypertarget{tcp__ip__port__mon_8common_8h_a89f7bfcfc90ba724ea32bb137d5f5f93}\label{tcp__ip__port__mon_8common_8h_a89f7bfcfc90ba724ea32bb137d5f5f93}} 
+\index{tcp\_ip\_port\_mon.common.h@{tcp\_ip\_port\_mon.common.h}!openfd@{openfd}}
+\index{openfd@{openfd}!tcp\_ip\_port\_mon.common.h@{tcp\_ip\_port\_mon.common.h}}
+\doxysubsubsection{\texorpdfstring{openfd}{openfd}}
+{\footnotesize\ttfamily int openfd\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 52 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+c.
+
+\mbox{\Hypertarget{tcp__ip__port__mon_8common_8h_acf7873b5dc228f0d578e40d20e7ca842}\label{tcp__ip__port__mon_8common_8h_acf7873b5dc228f0d578e40d20e7ca842}} 
+\index{tcp\_ip\_port\_mon.common.h@{tcp\_ip\_port\_mon.common.h}!pcap\_pid@{pcap\_pid}}
+\index{pcap\_pid@{pcap\_pid}!tcp\_ip\_port\_mon.common.h@{tcp\_ip\_port\_mon.common.h}}
+\doxysubsubsection{\texorpdfstring{pcap\_pid}{pcap\_pid}}
+{\footnotesize\ttfamily int pcap\+\_\+pid\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 45 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+c.
+

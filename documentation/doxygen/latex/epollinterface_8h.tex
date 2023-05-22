@@ -1,0 +1,198 @@
+\hypertarget{epollinterface_8h}{}\doxysection{/home/\+MADCAT/\+BSI-\/\+Bund@Git\+Hub.\+com/github\+\_\+release/include/rsp/epollinterface.h File Reference}
+\label{epollinterface_8h}\index{/home/MADCAT/BSI-\/Bund"@GitHub.com/github\_release/include/rsp/epollinterface.h@{/home/MADCAT/BSI-\/Bund"@GitHub.com/github\_release/include/rsp/epollinterface.h}}
+{\ttfamily \#include \char`\"{}tcp\+\_\+ip\+\_\+port\+\_\+mon.\+h\char`\"{}}\newline
+Include dependency graph for epollinterface.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{epollinterface_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{epollinterface_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structepoll__event__handler}{epoll\+\_\+event\+\_\+handler}}
+\item 
+struct \mbox{\hyperlink{structfree__list__entry}{free\+\_\+list\+\_\+entry}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{epollinterface_8h_a3fe01b122a74c459b424bf095bca16b5}{epoll\+\_\+init}} ()
+\begin{DoxyCompactList}\small\item\em RSP Proxy function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{epollinterface_8h_a0999db099c3b5cd416111f5b259bf09b}{epoll\+\_\+add\+\_\+handler}} (struct \mbox{\hyperlink{structepoll__event__handler}{epoll\+\_\+event\+\_\+handler}} $\ast$handler, uint32\+\_\+t event\+\_\+mask)
+\begin{DoxyCompactList}\small\item\em RSP Proxy function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{epollinterface_8h_ab3c24e532ea83ff5ea6110341a61e0de}{epoll\+\_\+remove\+\_\+handler}} (struct \mbox{\hyperlink{structepoll__event__handler}{epoll\+\_\+event\+\_\+handler}} $\ast$handler)
+\begin{DoxyCompactList}\small\item\em RSP Proxy function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{epollinterface_8h_a10e12a3faa82ce01d36edd2a581dfa56}{epoll\+\_\+add\+\_\+to\+\_\+free\+\_\+list}} (void $\ast$block)
+\begin{DoxyCompactList}\small\item\em RSP Proxy function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{epollinterface_8h_a4ea8f7233c45d7b25553d5acde9e3e34}{epoll\+\_\+do\+\_\+reactor\+\_\+loop}} ()
+\begin{DoxyCompactList}\small\item\em RSP Proxy function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structfree__list__entry}{free\+\_\+list\+\_\+entry}} $\ast$ \mbox{\hyperlink{epollinterface_8h_ae2f45378ba80fb07b474d77b17af8fd0}{free\+\_\+list}}
+\item 
+struct \mbox{\hyperlink{structepoll__event__handler}{epoll\+\_\+event\+\_\+handler}} $\ast$ \mbox{\hyperlink{epollinterface_8h_abb6b2399f0e9cd7ebafae6ac159742e9}{epoll\+\_\+server\+\_\+hdl}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{epollinterface_8h_a0999db099c3b5cd416111f5b259bf09b}\label{epollinterface_8h_a0999db099c3b5cd416111f5b259bf09b}} 
+\index{epollinterface.h@{epollinterface.h}!epoll\_add\_handler@{epoll\_add\_handler}}
+\index{epoll\_add\_handler@{epoll\_add\_handler}!epollinterface.h@{epollinterface.h}}
+\doxysubsubsection{\texorpdfstring{epoll\_add\_handler()}{epoll\_add\_handler()}}
+{\footnotesize\ttfamily void epoll\+\_\+add\+\_\+handler (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structepoll__event__handler}{epoll\+\_\+event\+\_\+handler}} $\ast$}]{handler,  }\item[{uint32\+\_\+t}]{event\+\_\+mask }\end{DoxyParamCaption})}
+
+
+
+RSP Proxy function. 
+
+Documentation\+: \href{http://www.gilesthomas.com/2013/08/writing-a-reverse-proxyloadbalancer-from-the-ground-up-in-c-part-0/}{\texttt{ http\+://www.\+gilesthomas.\+com/2013/08/writing-\/a-\/reverse-\/proxyloadbalancer-\/from-\/the-\/ground-\/up-\/in-\/c-\/part-\/0/}} 
+
+Definition at line 77 of file epollinterface.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{epollinterface_8h_a0999db099c3b5cd416111f5b259bf09b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{epollinterface_8h_a0999db099c3b5cd416111f5b259bf09b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{epollinterface_8h_a10e12a3faa82ce01d36edd2a581dfa56}\label{epollinterface_8h_a10e12a3faa82ce01d36edd2a581dfa56}} 
+\index{epollinterface.h@{epollinterface.h}!epoll\_add\_to\_free\_list@{epoll\_add\_to\_free\_list}}
+\index{epoll\_add\_to\_free\_list@{epoll\_add\_to\_free\_list}!epollinterface.h@{epollinterface.h}}
+\doxysubsubsection{\texorpdfstring{epoll\_add\_to\_free\_list()}{epoll\_add\_to\_free\_list()}}
+{\footnotesize\ttfamily void epoll\+\_\+add\+\_\+to\+\_\+free\+\_\+list (\begin{DoxyParamCaption}\item[{void $\ast$}]{block }\end{DoxyParamCaption})}
+
+
+
+RSP Proxy function. 
+
+Documentation\+: \href{http://www.gilesthomas.com/2013/08/writing-a-reverse-proxyloadbalancer-from-the-ground-up-in-c-part-0/}{\texttt{ http\+://www.\+gilesthomas.\+com/2013/08/writing-\/a-\/reverse-\/proxyloadbalancer-\/from-\/the-\/ground-\/up-\/in-\/c-\/part-\/0/}} 
+
+Definition at line 97 of file epollinterface.\+c.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{epollinterface_8h_a10e12a3faa82ce01d36edd2a581dfa56_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{epollinterface_8h_a4ea8f7233c45d7b25553d5acde9e3e34}\label{epollinterface_8h_a4ea8f7233c45d7b25553d5acde9e3e34}} 
+\index{epollinterface.h@{epollinterface.h}!epoll\_do\_reactor\_loop@{epoll\_do\_reactor\_loop}}
+\index{epoll\_do\_reactor\_loop@{epoll\_do\_reactor\_loop}!epollinterface.h@{epollinterface.h}}
+\doxysubsubsection{\texorpdfstring{epoll\_do\_reactor\_loop()}{epoll\_do\_reactor\_loop()}}
+{\footnotesize\ttfamily void epoll\+\_\+do\+\_\+reactor\+\_\+loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+RSP Proxy function. 
+
+Documentation\+: \href{http://www.gilesthomas.com/2013/08/writing-a-reverse-proxyloadbalancer-from-the-ground-up-in-c-part-0/}{\texttt{ http\+://www.\+gilesthomas.\+com/2013/08/writing-\/a-\/reverse-\/proxyloadbalancer-\/from-\/the-\/ground-\/up-\/in-\/c-\/part-\/0/}} 
+
+Definition at line 106 of file epollinterface.\+c.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{epollinterface_8h_a4ea8f7233c45d7b25553d5acde9e3e34_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{epollinterface_8h_a3fe01b122a74c459b424bf095bca16b5}\label{epollinterface_8h_a3fe01b122a74c459b424bf095bca16b5}} 
+\index{epollinterface.h@{epollinterface.h}!epoll\_init@{epoll\_init}}
+\index{epoll\_init@{epoll\_init}!epollinterface.h@{epollinterface.h}}
+\doxysubsubsection{\texorpdfstring{epoll\_init()}{epoll\_init()}}
+{\footnotesize\ttfamily void epoll\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+RSP Proxy function. 
+
+Documentation\+: \href{http://www.gilesthomas.com/2013/08/writing-a-reverse-proxyloadbalancer-from-the-ground-up-in-c-part-0/}{\texttt{ http\+://www.\+gilesthomas.\+com/2013/08/writing-\/a-\/reverse-\/proxyloadbalancer-\/from-\/the-\/ground-\/up-\/in-\/c-\/part-\/0/}} 
+
+Definition at line 67 of file epollinterface.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{epollinterface_8h_a3fe01b122a74c459b424bf095bca16b5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=287pt]{epollinterface_8h_a3fe01b122a74c459b424bf095bca16b5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{epollinterface_8h_ab3c24e532ea83ff5ea6110341a61e0de}\label{epollinterface_8h_ab3c24e532ea83ff5ea6110341a61e0de}} 
+\index{epollinterface.h@{epollinterface.h}!epoll\_remove\_handler@{epoll\_remove\_handler}}
+\index{epoll\_remove\_handler@{epoll\_remove\_handler}!epollinterface.h@{epollinterface.h}}
+\doxysubsubsection{\texorpdfstring{epoll\_remove\_handler()}{epoll\_remove\_handler()}}
+{\footnotesize\ttfamily void epoll\+\_\+remove\+\_\+handler (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structepoll__event__handler}{epoll\+\_\+event\+\_\+handler}} $\ast$}]{handler }\end{DoxyParamCaption})}
+
+
+
+RSP Proxy function. 
+
+Documentation\+: \href{http://www.gilesthomas.com/2013/08/writing-a-reverse-proxyloadbalancer-from-the-ground-up-in-c-part-0/}{\texttt{ http\+://www.\+gilesthomas.\+com/2013/08/writing-\/a-\/reverse-\/proxyloadbalancer-\/from-\/the-\/ground-\/up-\/in-\/c-\/part-\/0/}} 
+
+Definition at line 91 of file epollinterface.\+c.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{epollinterface_8h_ab3c24e532ea83ff5ea6110341a61e0de_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{epollinterface_8h_abb6b2399f0e9cd7ebafae6ac159742e9}\label{epollinterface_8h_abb6b2399f0e9cd7ebafae6ac159742e9}} 
+\index{epollinterface.h@{epollinterface.h}!epoll\_server\_hdl@{epoll\_server\_hdl}}
+\index{epoll\_server\_hdl@{epoll\_server\_hdl}!epollinterface.h@{epollinterface.h}}
+\doxysubsubsection{\texorpdfstring{epoll\_server\_hdl}{epoll\_server\_hdl}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structepoll__event__handler}{epoll\+\_\+event\+\_\+handler}}$\ast$ epoll\+\_\+server\+\_\+hdl\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 63 of file epollinterface.\+c.
+
+\mbox{\Hypertarget{epollinterface_8h_ae2f45378ba80fb07b474d77b17af8fd0}\label{epollinterface_8h_ae2f45378ba80fb07b474d77b17af8fd0}} 
+\index{epollinterface.h@{epollinterface.h}!free\_list@{free\_list}}
+\index{free\_list@{free\_list}!epollinterface.h@{epollinterface.h}}
+\doxysubsubsection{\texorpdfstring{free\_list}{free\_list}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structfree__list__entry}{free\+\_\+list\+\_\+entry}}$\ast$ free\+\_\+list\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 62 of file epollinterface.\+c.
+

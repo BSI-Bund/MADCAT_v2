@@ -1,0 +1,215 @@
+\hypertarget{madcat_8common_8h}{}\doxysection{/home/\+MADCAT/\+BSI-\/\+Bund@Git\+Hub.\+com/github\+\_\+release/include/madcat.common.\+h File Reference}
+\label{madcat_8common_8h}\index{/home/MADCAT/BSI-\/Bund"@GitHub.com/github\_release/include/madcat.common.h@{/home/MADCAT/BSI-\/Bund"@GitHub.com/github\_release/include/madcat.common.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$signal.\+h$>$}\newline
+{\ttfamily \#include $<$netinet/in.\+h$>$}\newline
+{\ttfamily \#include $<$netinet/ip.\+h$>$}\newline
+{\ttfamily \#include $<$netinet/udp.\+h$>$}\newline
+{\ttfamily \#include $<$netinet/tcp.\+h$>$}\newline
+{\ttfamily \#include $<$linux/netfilter\+\_\+ipv4.\+h$>$}\newline
+{\ttfamily \#include $<$sys/socket.\+h$>$}\newline
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+{\ttfamily \#include $<$arpa/inet.\+h$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$sys/time.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$pwd.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdarg.\+h$>$}\newline
+{\ttfamily \#include $<$sys/file.\+h$>$}\newline
+{\ttfamily \#include $<$openssl/sha.\+h$>$}\newline
+{\ttfamily \#include $<$lua5.\+1/lauxlib.\+h$>$}\newline
+{\ttfamily \#include $<$lua5.\+1/lualib.\+h$>$}\newline
+{\ttfamily \#include $<$sys/stat.\+h$>$}\newline
+{\ttfamily \#include $<$pcap.\+h$>$}\newline
+{\ttfamily \#include $<$sys/shm.\+h$>$}\newline
+{\ttfamily \#include $<$semaphore.\+h$>$}\newline
+{\ttfamily \#include $<$sys/wait.\+h$>$}\newline
+{\ttfamily \#include $<$sys/prctl.\+h$>$}\newline
+{\ttfamily \#include $<$pthread.\+h$>$}\newline
+{\ttfamily \#include $<$net/ethernet.\+h$>$}\newline
+{\ttfamily \#include $<$linux/ipv6.\+h$>$}\newline
+{\ttfamily \#include $<$linux/netfilter\+\_\+ipv6/ip6\+\_\+tables.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}libdict\+\_\+c.\+h\char`\"{}}\newline
+Include dependency graph for madcat.\+common.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{madcat_8common_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{madcat_8common_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structuser__t}{user\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{madcat_8common_8h_ad72dbcf6d0153db1b8d8a58001feed83}{DEBUG}}~0
+\item 
+\#define \mbox{\hyperlink{madcat_8common_8h_a8fb447618db946a9e2a596d9ea18763f}{\+\_\+\+DEFAULT\+\_\+\+SOURCE}}~1
+\item 
+\#define \mbox{\hyperlink{madcat_8common_8h_a9f31a6165d764da5addc853dc8690766}{IP6\+T\+\_\+\+SO\+\_\+\+ORIGINAL\+\_\+\+DST}}~80
+\item 
+\#define \mbox{\hyperlink{madcat_8common_8h_a7c33e4c8a9cb93530c8affef181047cf}{CHECK}}(result,  check)
+\item 
+\#define \mbox{\hyperlink{madcat_8common_8h_a5a533620d39bcb47748b62a0669adcfb}{MASCOTT}}~\char`\"{}                             ▄▄▄               ▄▄▄▄▄▄\textbackslash{}n                 ▀▄▄      ▄▓▓█▓▓▓█▌           ██▓██▓▓██▄     ▄▀\textbackslash{}n                    ▀▄▄▄▓█▓██   █▓█▌         █▓   ▓████████▀\textbackslash{}n                       ▀███▓▓(o)██▓▌       ▐█▓█(o)█▓█████▀\textbackslash{}n                         ▀▀██▓█▓▓█         ████▓███▀▀\textbackslash{}n                  ▄            ▀▀▀▀                          ▄\textbackslash{}n                ▀▀█                                         ▐██▌\textbackslash{}n                  ██▄     \+\_\+\+\_\+\+\_\+\+\_\+-\/-\/-\/-\/-\/-\/▐██████▌-\/-\/-\/-\/-\/-\/\+\_\+\+\_\+\+\_\+     ▄▄██\textbackslash{}n                 \+\_\+\+\_\+█ █▄▄-\/-\/   \+\_\+\+\_\+\+\_\+-\/-\/-\/-\/-\/-\/▀▓▓▀-\/-\/-\/-\/-\/\+\_\+\+\_\+\+\_\+   -\/-\/▄▄█ █▀\+\_\+\+\_\+\textbackslash{}n             \+\_\+\+\_\+-\/-\/   ▀█  ██▄▄▄▄    \+\_\+\+\_\+-\/-\/▄▓▓▄-\/-\/\+\_\+\+\_\+   ▄▄▄▄██  ██▀   -\/-\/\+\_\+\+\_\+\textbackslash{}n         \+\_\+\+\_\+-\/-\/     \+\_\+\+\_\+-\/-\/▀█ ██  █▀▀█████▄▄▄▄▄▄███████  ██ █▀-\/-\/\+\_\+\+\_\+      -\/-\/\+\_\+\+\_\+\textbackslash{}n     \+\_\+\+\_\+-\/-\/     \+\_\+\+\_\+-\/-\/    \+\_\+\+\_\+▀▀█  █  ██  ██▀▀██▀▀██  ██  █▀▀\+\_\+\+\_\+    -\/-\/\+\_\+\+\_\+      -\/-\/\+\_\+\+\_\+\textbackslash{}n         \+\_\+\+\_\+-\/-\/     \+\_\+\+\_\+-\/-\/     ▀███ ██  ██  ██  ██ ████▀     -\/-\/\+\_\+\+\_\+    -\/-\/\+\_\+\+\_\+\textbackslash{}n bsi   -\/-\/     \+\_\+\+\_\+-\/-\/             ▀▀▀▀▀██▄▄██▄▄██▀▀▀▀           -\/-\/\+\_\+\+\_\+    -\/-\/\textbackslash{}n         \+\_\+\+\_\+ -\/-\/                                                   -\/-\/\+\_\+\+\_\+\textbackslash{}n\char`\"{}
+\item 
+\#define \mbox{\hyperlink{madcat_8common_8h_a943afdb7a415a72b444ecbc5c9286fae}{PATH\+\_\+\+LEN}}~4097
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{madcat_8common_8h_a8fe8afd6e9df454b9a9dacf09193022b}{EMPTY\+\_\+\+STR}} \mbox{[}1\mbox{]}
+\item 
+int \mbox{\hyperlink{madcat_8common_8h_afb19b851dbcd1447c226a8a98c26979d}{loglevel}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{madcat_8common_8h_ae81131921ea72aac4f77f49bdd53421b}{sessionkey}}
+\item 
+union \mbox{\hyperlink{unionjson__type}{json\+\_\+type}} \mbox{\hyperlink{madcat_8common_8h_a0abd45b90670c421a1ae706dad611f2b}{json\+\_\+value}}
+\item 
+struct \mbox{\hyperlink{structuser__t}{user\+\_\+t}} \mbox{\hyperlink{madcat_8common_8h_ac3ea7c3ca3d1f0d1b83800d7b6ed641e}{user}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{madcat_8common_8h_a8fb447618db946a9e2a596d9ea18763f}\label{madcat_8common_8h_a8fb447618db946a9e2a596d9ea18763f}} 
+\index{madcat.common.h@{madcat.common.h}!\_DEFAULT\_SOURCE@{\_DEFAULT\_SOURCE}}
+\index{\_DEFAULT\_SOURCE@{\_DEFAULT\_SOURCE}!madcat.common.h@{madcat.common.h}}
+\doxysubsubsection{\texorpdfstring{\_DEFAULT\_SOURCE}{\_DEFAULT\_SOURCE}}
+{\footnotesize\ttfamily \#define \+\_\+\+DEFAULT\+\_\+\+SOURCE~1}
+
+
+
+Definition at line 50 of file madcat.\+common.\+h.
+
+\mbox{\Hypertarget{madcat_8common_8h_a7c33e4c8a9cb93530c8affef181047cf}\label{madcat_8common_8h_a7c33e4c8a9cb93530c8affef181047cf}} 
+\index{madcat.common.h@{madcat.common.h}!CHECK@{CHECK}}
+\index{CHECK@{CHECK}!madcat.common.h@{madcat.common.h}}
+\doxysubsubsection{\texorpdfstring{CHECK}{CHECK}}
+{\footnotesize\ttfamily \#define CHECK(\begin{DoxyParamCaption}\item[{}]{result,  }\item[{}]{check }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{        (\{                                                                 \(\backslash\)}
+\DoxyCodeLine{                typeof(result) retval = (result);                                           \(\backslash\)}
+\DoxyCodeLine{                if (!(retval check)) \{                                                      \(\backslash\)}
+\DoxyCodeLine{                        fprintf(stderr, \textcolor{stringliteral}{"{}ERROR: Return value from function call '\%s' is NOT \%s at \%s:\%d.\(\backslash\)n\(\backslash\)tERRNO(\%d): \%s\(\backslash\)n"{}},          \(\backslash\)}
+\DoxyCodeLine{                                        \#result, \#check, \_\_FILE\_\_, \_\_LINE\_\_, errno, strerror(errno)); \(\backslash\)}
+\DoxyCodeLine{                        kill(getpid(), SIGUSR1);                                            \(\backslash\)}
+\DoxyCodeLine{                \}                                                                       \(\backslash\)}
+\DoxyCodeLine{                retval;                                                                     \(\backslash\)}
+\DoxyCodeLine{        \})}
+
+\end{DoxyCode}
+
+
+Definition at line 95 of file madcat.\+common.\+h.
+
+\mbox{\Hypertarget{madcat_8common_8h_ad72dbcf6d0153db1b8d8a58001feed83}\label{madcat_8common_8h_ad72dbcf6d0153db1b8d8a58001feed83}} 
+\index{madcat.common.h@{madcat.common.h}!DEBUG@{DEBUG}}
+\index{DEBUG@{DEBUG}!madcat.common.h@{madcat.common.h}}
+\doxysubsubsection{\texorpdfstring{DEBUG}{DEBUG}}
+{\footnotesize\ttfamily \#define DEBUG~0}
+
+
+
+Definition at line 39 of file madcat.\+common.\+h.
+
+\mbox{\Hypertarget{madcat_8common_8h_a9f31a6165d764da5addc853dc8690766}\label{madcat_8common_8h_a9f31a6165d764da5addc853dc8690766}} 
+\index{madcat.common.h@{madcat.common.h}!IP6T\_SO\_ORIGINAL\_DST@{IP6T\_SO\_ORIGINAL\_DST}}
+\index{IP6T\_SO\_ORIGINAL\_DST@{IP6T\_SO\_ORIGINAL\_DST}!madcat.common.h@{madcat.common.h}}
+\doxysubsubsection{\texorpdfstring{IP6T\_SO\_ORIGINAL\_DST}{IP6T\_SO\_ORIGINAL\_DST}}
+{\footnotesize\ttfamily \#define IP6\+T\+\_\+\+SO\+\_\+\+ORIGINAL\+\_\+\+DST~80}
+
+
+
+Definition at line 91 of file madcat.\+common.\+h.
+
+\mbox{\Hypertarget{madcat_8common_8h_a5a533620d39bcb47748b62a0669adcfb}\label{madcat_8common_8h_a5a533620d39bcb47748b62a0669adcfb}} 
+\index{madcat.common.h@{madcat.common.h}!MASCOTT@{MASCOTT}}
+\index{MASCOTT@{MASCOTT}!madcat.common.h@{madcat.common.h}}
+\doxysubsubsection{\texorpdfstring{MASCOTT}{MASCOTT}}
+{\footnotesize\ttfamily \#define MASCOTT~\char`\"{}                             ▄▄▄               ▄▄▄▄▄▄\textbackslash{}n                 ▀▄▄      ▄▓▓█▓▓▓█▌           ██▓██▓▓██▄     ▄▀\textbackslash{}n                    ▀▄▄▄▓█▓██   █▓█▌         █▓   ▓████████▀\textbackslash{}n                       ▀███▓▓(o)██▓▌       ▐█▓█(o)█▓█████▀\textbackslash{}n                         ▀▀██▓█▓▓█         ████▓███▀▀\textbackslash{}n                  ▄            ▀▀▀▀                          ▄\textbackslash{}n                ▀▀█                                         ▐██▌\textbackslash{}n                  ██▄     \+\_\+\+\_\+\+\_\+\+\_\+-\/-\/-\/-\/-\/-\/▐██████▌-\/-\/-\/-\/-\/-\/\+\_\+\+\_\+\+\_\+     ▄▄██\textbackslash{}n                 \+\_\+\+\_\+█ █▄▄-\/-\/   \+\_\+\+\_\+\+\_\+-\/-\/-\/-\/-\/-\/▀▓▓▀-\/-\/-\/-\/-\/\+\_\+\+\_\+\+\_\+   -\/-\/▄▄█ █▀\+\_\+\+\_\+\textbackslash{}n             \+\_\+\+\_\+-\/-\/   ▀█  ██▄▄▄▄    \+\_\+\+\_\+-\/-\/▄▓▓▄-\/-\/\+\_\+\+\_\+   ▄▄▄▄██  ██▀   -\/-\/\+\_\+\+\_\+\textbackslash{}n         \+\_\+\+\_\+-\/-\/     \+\_\+\+\_\+-\/-\/▀█ ██  █▀▀█████▄▄▄▄▄▄███████  ██ █▀-\/-\/\+\_\+\+\_\+      -\/-\/\+\_\+\+\_\+\textbackslash{}n     \+\_\+\+\_\+-\/-\/     \+\_\+\+\_\+-\/-\/    \+\_\+\+\_\+▀▀█  █  ██  ██▀▀██▀▀██  ██  █▀▀\+\_\+\+\_\+    -\/-\/\+\_\+\+\_\+      -\/-\/\+\_\+\+\_\+\textbackslash{}n         \+\_\+\+\_\+-\/-\/     \+\_\+\+\_\+-\/-\/     ▀███ ██  ██  ██  ██ ████▀     -\/-\/\+\_\+\+\_\+    -\/-\/\+\_\+\+\_\+\textbackslash{}n bsi   -\/-\/     \+\_\+\+\_\+-\/-\/             ▀▀▀▀▀██▄▄██▄▄██▀▀▀▀           -\/-\/\+\_\+\+\_\+    -\/-\/\textbackslash{}n         \+\_\+\+\_\+ -\/-\/                                                   -\/-\/\+\_\+\+\_\+\textbackslash{}n\char`\"{}}
+
+
+
+Definition at line 106 of file madcat.\+common.\+h.
+
+\mbox{\Hypertarget{madcat_8common_8h_a943afdb7a415a72b444ecbc5c9286fae}\label{madcat_8common_8h_a943afdb7a415a72b444ecbc5c9286fae}} 
+\index{madcat.common.h@{madcat.common.h}!PATH\_LEN@{PATH\_LEN}}
+\index{PATH\_LEN@{PATH\_LEN}!madcat.common.h@{madcat.common.h}}
+\doxysubsubsection{\texorpdfstring{PATH\_LEN}{PATH\_LEN}}
+{\footnotesize\ttfamily \#define PATH\+\_\+\+LEN~4097}
+
+
+
+Definition at line 107 of file madcat.\+common.\+h.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{madcat_8common_8h_a8fe8afd6e9df454b9a9dacf09193022b}\label{madcat_8common_8h_a8fe8afd6e9df454b9a9dacf09193022b}} 
+\index{madcat.common.h@{madcat.common.h}!EMPTY\_STR@{EMPTY\_STR}}
+\index{EMPTY\_STR@{EMPTY\_STR}!madcat.common.h@{madcat.common.h}}
+\doxysubsubsection{\texorpdfstring{EMPTY\_STR}{EMPTY\_STR}}
+{\footnotesize\ttfamily char EMPTY\+\_\+\+STR\mbox{[}1\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 44 of file madcat.\+helper.\+c.
+
+\mbox{\Hypertarget{madcat_8common_8h_a0abd45b90670c421a1ae706dad611f2b}\label{madcat_8common_8h_a0abd45b90670c421a1ae706dad611f2b}} 
+\index{madcat.common.h@{madcat.common.h}!json\_value@{json\_value}}
+\index{json\_value@{json\_value}!madcat.common.h@{madcat.common.h}}
+\doxysubsubsection{\texorpdfstring{json\_value}{json\_value}}
+{\footnotesize\ttfamily union \mbox{\hyperlink{unionjson__type}{json\+\_\+type}} json\+\_\+value\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 46 of file madcat.\+helper.\+c.
+
+\mbox{\Hypertarget{madcat_8common_8h_afb19b851dbcd1447c226a8a98c26979d}\label{madcat_8common_8h_afb19b851dbcd1447c226a8a98c26979d}} 
+\index{madcat.common.h@{madcat.common.h}!loglevel@{loglevel}}
+\index{loglevel@{loglevel}!madcat.common.h@{madcat.common.h}}
+\doxysubsubsection{\texorpdfstring{loglevel}{loglevel}}
+{\footnotesize\ttfamily int loglevel\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 45 of file madcat.\+helper.\+c.
+
+\mbox{\Hypertarget{madcat_8common_8h_ae81131921ea72aac4f77f49bdd53421b}\label{madcat_8common_8h_ae81131921ea72aac4f77f49bdd53421b}} 
+\index{madcat.common.h@{madcat.common.h}!sessionkey@{sessionkey}}
+\index{sessionkey@{sessionkey}!madcat.common.h@{madcat.common.h}}
+\doxysubsubsection{\texorpdfstring{sessionkey}{sessionkey}}
+{\footnotesize\ttfamily uint64\+\_\+t sessionkey\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 46 of file madcat.\+helper.\+c.
+
+\mbox{\Hypertarget{madcat_8common_8h_ac3ea7c3ca3d1f0d1b83800d7b6ed641e}\label{madcat_8common_8h_ac3ea7c3ca3d1f0d1b83800d7b6ed641e}} 
+\index{madcat.common.h@{madcat.common.h}!user@{user}}
+\index{user@{user}!madcat.common.h@{madcat.common.h}}
+\doxysubsubsection{\texorpdfstring{user}{user}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structuser__t}{user\+\_\+t}} user\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 46 of file madcat.\+helper.\+c.
+

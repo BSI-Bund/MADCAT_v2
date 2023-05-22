@@ -1,0 +1,238 @@
+\hypertarget{tcp__ip__port__mon_8parser_8c}{}\doxysection{/home/\+MADCAT/\+BSI-\/\+Bund@Git\+Hub.\+com/github\+\_\+release/lib/tcp\+\_\+ip\+\_\+port\+\_\+mon.parser.\+c File Reference}
+\label{tcp__ip__port__mon_8parser_8c}\index{/home/MADCAT/BSI-\/Bund"@GitHub.com/github\_release/lib/tcp\_ip\_port\_mon.parser.c@{/home/MADCAT/BSI-\/Bund"@GitHub.com/github\_release/lib/tcp\_ip\_port\_mon.parser.c}}
+{\ttfamily \#include \char`\"{}tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tcp\+\_\+ip\+\_\+port\+\_\+mon.\+parser.\+h\char`\"{}}\newline
+Include dependency graph for tcp\+\_\+ip\+\_\+port\+\_\+mon.\+parser.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tcp__ip__port__mon_8parser_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{tcp__ip__port__mon_8parser_8c_a1e55671b8afd44a94d457ab53e4c46af}{parse\+\_\+ipopt}} (int opt\+\_\+cpclno, const char $\ast$opt\+\_\+name, unsigned char $\ast$$\ast$opt\+\_\+ptr\+\_\+ptr, const unsigned char $\ast$beginofoptions\+\_\+addr, const unsigned char $\ast$endofoptions\+\_\+addr)
+\begin{DoxyCompactList}\small\item\em Parse IP Options. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{tcp__ip__port__mon_8parser_8c_af159af81ab4b85c87fe3ce457d02a39e}{analyze\+\_\+ip\+\_\+header}} (const unsigned char $\ast$\mbox{\hyperlink{raw__mon_8h_a12f869e80da40cc0807ed2dddd5ff95e}{packet}}, bpf\+\_\+u\+\_\+int32 caplen)
+\begin{DoxyCompactList}\small\item\em Parse and analyze IP Header. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{tcp__ip__port__mon_8parser_8c_ae12d026258df0bdfdba5aef6290a937a}{parse\+\_\+tcpopt\+\_\+w\+\_\+length}} (int opt\+\_\+kind, int opt\+\_\+len, const char $\ast$opt\+\_\+name, unsigned char $\ast$$\ast$opt\+\_\+ptr\+\_\+ptr, const unsigned char $\ast$beginofoptions\+\_\+addr, const unsigned char $\ast$endofoptions\+\_\+addr)
+\begin{DoxyCompactList}\small\item\em Parse TCP Options. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{tcp__ip__port__mon_8parser_8c_abd96819c6743046917cc7e0321a9a4f4}{analyze\+\_\+tcp\+\_\+header}} (const unsigned char $\ast$\mbox{\hyperlink{raw__mon_8h_a12f869e80da40cc0807ed2dddd5ff95e}{packet}}, bpf\+\_\+u\+\_\+int32 caplen)
+\begin{DoxyCompactList}\small\item\em Parse and analyze TCP Header. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{tcp__ip__port__mon_8parser_8c_a494eb9dfb4372e831e5472d65d0e19c6}{analyze\+\_\+tcp\+\_\+header\+\_\+w\+\_\+flags}} (const unsigned char $\ast$\mbox{\hyperlink{raw__mon_8h_a12f869e80da40cc0807ed2dddd5ff95e}{packet}}, bpf\+\_\+u\+\_\+int32 caplen, uint16\+\_\+t $\ast$tcp\+\_\+flags)
+\begin{DoxyCompactList}\small\item\em Parse and analyze TCP Header and returns Flags. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{tcp__ip__port__mon_8parser_8c_af159af81ab4b85c87fe3ce457d02a39e}\label{tcp__ip__port__mon_8parser_8c_af159af81ab4b85c87fe3ce457d02a39e}} 
+\index{tcp\_ip\_port\_mon.parser.c@{tcp\_ip\_port\_mon.parser.c}!analyze\_ip\_header@{analyze\_ip\_header}}
+\index{analyze\_ip\_header@{analyze\_ip\_header}!tcp\_ip\_port\_mon.parser.c@{tcp\_ip\_port\_mon.parser.c}}
+\doxysubsubsection{\texorpdfstring{analyze\_ip\_header()}{analyze\_ip\_header()}}
+{\footnotesize\ttfamily int analyze\+\_\+ip\+\_\+header (\begin{DoxyParamCaption}\item[{const unsigned char $\ast$}]{packet,  }\item[{bpf\+\_\+u\+\_\+int32}]{caplen }\end{DoxyParamCaption})}
+
+
+
+Parse and analyze IP Header. 
+
+\begin{DoxyVerb}Parses and analyzes a IP Header
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em packet} & Pointer to the raw packet data \\
+\hline
+{\em caplen} & length of raw packet data\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$<$0 in case of an error, IPv4 ID field in case of success. 
+\end{DoxyReturn}
+
+
+Definition at line 58 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+parser.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tcp__ip__port__mon_8parser_8c_af159af81ab4b85c87fe3ce457d02a39e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{tcp__ip__port__mon_8parser_8c_abd96819c6743046917cc7e0321a9a4f4}\label{tcp__ip__port__mon_8parser_8c_abd96819c6743046917cc7e0321a9a4f4}} 
+\index{tcp\_ip\_port\_mon.parser.c@{tcp\_ip\_port\_mon.parser.c}!analyze\_tcp\_header@{analyze\_tcp\_header}}
+\index{analyze\_tcp\_header@{analyze\_tcp\_header}!tcp\_ip\_port\_mon.parser.c@{tcp\_ip\_port\_mon.parser.c}}
+\doxysubsubsection{\texorpdfstring{analyze\_tcp\_header()}{analyze\_tcp\_header()}}
+{\footnotesize\ttfamily int analyze\+\_\+tcp\+\_\+header (\begin{DoxyParamCaption}\item[{const unsigned char $\ast$}]{packet,  }\item[{bpf\+\_\+u\+\_\+int32}]{caplen }\end{DoxyParamCaption})}
+
+
+
+Parse and analyze TCP Header. 
+
+\begin{DoxyVerb}Parses and analyzes a TCP Header by calling analyze_tcp_header_w_flags
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em packet} & Pointer to the raw packet data \\
+\hline
+{\em caplen} & length of raw packet data\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of bytes in TCP Payload, $<$0 in case of an error. 
+\end{DoxyReturn}
+
+
+Definition at line 229 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+parser.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tcp__ip__port__mon_8parser_8c_abd96819c6743046917cc7e0321a9a4f4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{tcp__ip__port__mon_8parser_8c_a494eb9dfb4372e831e5472d65d0e19c6}\label{tcp__ip__port__mon_8parser_8c_a494eb9dfb4372e831e5472d65d0e19c6}} 
+\index{tcp\_ip\_port\_mon.parser.c@{tcp\_ip\_port\_mon.parser.c}!analyze\_tcp\_header\_w\_flags@{analyze\_tcp\_header\_w\_flags}}
+\index{analyze\_tcp\_header\_w\_flags@{analyze\_tcp\_header\_w\_flags}!tcp\_ip\_port\_mon.parser.c@{tcp\_ip\_port\_mon.parser.c}}
+\doxysubsubsection{\texorpdfstring{analyze\_tcp\_header\_w\_flags()}{analyze\_tcp\_header\_w\_flags()}}
+{\footnotesize\ttfamily int analyze\+\_\+tcp\+\_\+header\+\_\+w\+\_\+flags (\begin{DoxyParamCaption}\item[{const unsigned char $\ast$}]{packet,  }\item[{bpf\+\_\+u\+\_\+int32}]{caplen,  }\item[{uint16\+\_\+t $\ast$}]{tcp\+\_\+flags }\end{DoxyParamCaption})}
+
+
+
+Parse and analyze TCP Header and returns Flags. 
+
+\begin{DoxyVerb}Parses and analyzes a TCP Header and returns TCP-Flags in tcp_flags
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em packet} & Pointer to the raw packet data \\
+\hline
+{\em caplen} & length of raw packet data \\
+\hline
+{\em tcp\+\_\+flags} & Pointer to uint16\+\_\+t to store TCP-\/\+Flags in.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of bytes in TCP Payload, $<$0 in case of an error. 
+\end{DoxyReturn}
+
+
+Definition at line 235 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+parser.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tcp__ip__port__mon_8parser_8c_a494eb9dfb4372e831e5472d65d0e19c6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{tcp__ip__port__mon_8parser_8c_a494eb9dfb4372e831e5472d65d0e19c6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{tcp__ip__port__mon_8parser_8c_a1e55671b8afd44a94d457ab53e4c46af}\label{tcp__ip__port__mon_8parser_8c_a1e55671b8afd44a94d457ab53e4c46af}} 
+\index{tcp\_ip\_port\_mon.parser.c@{tcp\_ip\_port\_mon.parser.c}!parse\_ipopt@{parse\_ipopt}}
+\index{parse\_ipopt@{parse\_ipopt}!tcp\_ip\_port\_mon.parser.c@{tcp\_ip\_port\_mon.parser.c}}
+\doxysubsubsection{\texorpdfstring{parse\_ipopt()}{parse\_ipopt()}}
+{\footnotesize\ttfamily bool parse\+\_\+ipopt (\begin{DoxyParamCaption}\item[{int}]{opt\+\_\+cpclno,  }\item[{const char $\ast$}]{opt\+\_\+name,  }\item[{unsigned char $\ast$$\ast$}]{opt\+\_\+ptr\+\_\+ptr,  }\item[{const unsigned char $\ast$}]{beginofoptions\+\_\+addr,  }\item[{const unsigned char $\ast$}]{endofoptions\+\_\+addr }\end{DoxyParamCaption})}
+
+
+
+Parse IP Options. 
+
+\begin{DoxyVerb}Parses IP Options and returns false in case of an error.
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em opt\+\_\+cpclno} & Option Number as defined by IANA \\
+\hline
+{\em opt\+\_\+name} & Option Name \\
+\hline
+{\em opt\+\_\+ptr\+\_\+ptr} & Pointer to options number in raw data \\
+\hline
+{\em beginofoptions\+\_\+addr} & Beginning Address of options \\
+\hline
+{\em endofoptions\+\_\+addr} & End Address of options\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true for success, fals in case of an error. 
+\end{DoxyReturn}
+
+
+Definition at line 45 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+parser.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tcp__ip__port__mon_8parser_8c_a1e55671b8afd44a94d457ab53e4c46af_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{tcp__ip__port__mon_8parser_8c_a1e55671b8afd44a94d457ab53e4c46af_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{tcp__ip__port__mon_8parser_8c_ae12d026258df0bdfdba5aef6290a937a}\label{tcp__ip__port__mon_8parser_8c_ae12d026258df0bdfdba5aef6290a937a}} 
+\index{tcp\_ip\_port\_mon.parser.c@{tcp\_ip\_port\_mon.parser.c}!parse\_tcpopt\_w\_length@{parse\_tcpopt\_w\_length}}
+\index{parse\_tcpopt\_w\_length@{parse\_tcpopt\_w\_length}!tcp\_ip\_port\_mon.parser.c@{tcp\_ip\_port\_mon.parser.c}}
+\doxysubsubsection{\texorpdfstring{parse\_tcpopt\_w\_length()}{parse\_tcpopt\_w\_length()}}
+{\footnotesize\ttfamily bool parse\+\_\+tcpopt\+\_\+w\+\_\+length (\begin{DoxyParamCaption}\item[{int}]{opt\+\_\+kind,  }\item[{int}]{opt\+\_\+len,  }\item[{const char $\ast$}]{opt\+\_\+name,  }\item[{unsigned char $\ast$$\ast$}]{opt\+\_\+ptr\+\_\+ptr,  }\item[{const unsigned char $\ast$}]{beginofoptions\+\_\+addr,  }\item[{const unsigned char $\ast$}]{endofoptions\+\_\+addr }\end{DoxyParamCaption})}
+
+
+
+Parse TCP Options. 
+
+\begin{DoxyVerb}Parses TCP Options and returns false in case of an error.
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em opt\+\_\+kind} & Option Number as defined by IANA/\+RFCs \\
+\hline
+{\em opt\+\_\+len} & Option length as defined by IANA/\+RFCs \\
+\hline
+{\em opt\+\_\+name} & Option Name \\
+\hline
+{\em opt\+\_\+ptr\+\_\+ptr} & Pointer to options number in raw data \\
+\hline
+{\em beginofoptions\+\_\+addr} & Beginning Address of options \\
+\hline
+{\em endofoptions\+\_\+addr} & End Address of options\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true for success, fals in case of an error. 
+\end{DoxyReturn}
+
+
+Definition at line 216 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+parser.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tcp__ip__port__mon_8parser_8c_ae12d026258df0bdfdba5aef6290a937a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tcp__ip__port__mon_8parser_8c_ae12d026258df0bdfdba5aef6290a937a_icgraph}
+\end{center}
+\end{figure}

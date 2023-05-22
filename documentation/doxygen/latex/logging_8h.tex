@@ -1,0 +1,135 @@
+\hypertarget{logging_8h}{}\doxysection{/home/\+MADCAT/\+BSI-\/\+Bund@Git\+Hub.\+com/github\+\_\+release/include/rsp/logging.h File Reference}
+\label{logging_8h}\index{/home/MADCAT/BSI-\/Bund"@GitHub.com/github\_release/include/rsp/logging.h@{/home/MADCAT/BSI-\/Bund"@GitHub.com/github\_release/include/rsp/logging.h}}
+{\ttfamily \#include \char`\"{}tcp\+\_\+ip\+\_\+port\+\_\+mon.\+h\char`\"{}}\newline
+Include dependency graph for logging.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{logging_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{logging_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{logging_8h_ae9131a8f0d2837fda898b286699d8543}{rsp\+\_\+log}} (char $\ast$format,...)
+\begin{DoxyCompactList}\small\item\em RSP Proxy function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{logging_8h_ab3c25307c3be2273e9c40a68b828b44c}{rsp\+\_\+log\+\_\+error}} (char $\ast$message)
+\begin{DoxyCompactList}\small\item\em RSP Proxy function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{logging_8h_a63074acb3bb14bd35f640f1ca6ff9b9c}{json\+\_\+out}} (struct \mbox{\hyperlink{structjson__data__t}{json\+\_\+data\+\_\+t}} $\ast$\mbox{\hyperlink{tcp__ip__port__mon_8helper_8h_a82efb4f841936a5a8f8c7c6da9252ef0}{jd}}, uintptr\+\_\+t id)
+\begin{DoxyCompactList}\small\item\em Prints Results in JSON-\/\+Format from linked list to STDOUT. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{logging_8h_a63074acb3bb14bd35f640f1ca6ff9b9c}\label{logging_8h_a63074acb3bb14bd35f640f1ca6ff9b9c}} 
+\index{logging.h@{logging.h}!json\_out@{json\_out}}
+\index{json\_out@{json\_out}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{json\_out()}{json\_out()}}
+{\footnotesize\ttfamily void json\+\_\+out (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structjson__data__t}{json\+\_\+data\+\_\+t}} $\ast$}]{jd,  }\item[{uintptr\+\_\+t}]{id }\end{DoxyParamCaption})}
+
+
+
+Prints Results in JSON-\/\+Format from linked list to STDOUT. 
+
+\begin{DoxyVerb}Prints Results in JSON-Format to STDOUT, using libdict_c functions
+Takes a connection ID as argument.
+Intended for proxied TCP connections.
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em jd} & Linked list, containing the element, which should be printed as result \\
+\hline
+{\em id} & Connection ID identifying the desired output. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 79 of file logging.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{logging_8h_a63074acb3bb14bd35f640f1ca6ff9b9c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{logging_8h_a63074acb3bb14bd35f640f1ca6ff9b9c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{logging_8h_ae9131a8f0d2837fda898b286699d8543}\label{logging_8h_ae9131a8f0d2837fda898b286699d8543}} 
+\index{logging.h@{logging.h}!rsp\_log@{rsp\_log}}
+\index{rsp\_log@{rsp\_log}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{rsp\_log()}{rsp\_log()}}
+{\footnotesize\ttfamily void rsp\+\_\+log (\begin{DoxyParamCaption}\item[{char $\ast$}]{format,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+RSP Proxy function. 
+
+Documentation\+: \href{http://www.gilesthomas.com/2013/08/writing-a-reverse-proxyloadbalancer-from-the-ground-up-in-c-part-0/}{\texttt{ http\+://www.\+gilesthomas.\+com/2013/08/writing-\/a-\/reverse-\/proxyloadbalancer-\/from-\/the-\/ground-\/up-\/in-\/c-\/part-\/0/}} 
+
+Definition at line 55 of file logging.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=225pt]{logging_8h_ae9131a8f0d2837fda898b286699d8543_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{logging_8h_ae9131a8f0d2837fda898b286699d8543_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{logging_8h_ab3c25307c3be2273e9c40a68b828b44c}\label{logging_8h_ab3c25307c3be2273e9c40a68b828b44c}} 
+\index{logging.h@{logging.h}!rsp\_log\_error@{rsp\_log\_error}}
+\index{rsp\_log\_error@{rsp\_log\_error}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{rsp\_log\_error()}{rsp\_log\_error()}}
+{\footnotesize\ttfamily void rsp\+\_\+log\+\_\+error (\begin{DoxyParamCaption}\item[{char $\ast$}]{message }\end{DoxyParamCaption})}
+
+
+
+RSP Proxy function. 
+
+Documentation\+: \href{http://www.gilesthomas.com/2013/08/writing-a-reverse-proxyloadbalancer-from-the-ground-up-in-c-part-0/}{\texttt{ http\+://www.\+gilesthomas.\+com/2013/08/writing-\/a-\/reverse-\/proxyloadbalancer-\/from-\/the-\/ground-\/up-\/in-\/c-\/part-\/0/}} 
+
+Definition at line 73 of file logging.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{logging_8h_ab3c25307c3be2273e9c40a68b828b44c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{logging_8h_ab3c25307c3be2273e9c40a68b828b44c_icgraph}
+\end{center}
+\end{figure}

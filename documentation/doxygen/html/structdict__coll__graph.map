@@ -1,0 +1,5 @@
+<map id="dict" name="dict">
+<area shape="rect" id="node1" title="Element of a dictonary as double linked list." alt="" coords="25,7,72,33"/>
+<area shape="rect" id="node2" href="$unionjson__type.html" title="Representation of JSON&#45;Types." alt="" coords="6,97,91,124"/>
+<area shape="rect" id="node3" href="$structarray.html" title="Element of an array as linked list." alt="" coords="21,187,77,213"/>
+</map>

@@ -1,0 +1,53 @@
+\hypertarget{client_8py}{}\doxysection{/home/\+MADCAT/\+BSI-\/\+Bund@Git\+Hub.\+com/github\+\_\+release/bin/ip\+\_\+server/client.py File Reference}
+\label{client_8py}\index{/home/MADCAT/BSI-\/Bund"@GitHub.com/github\_release/bin/ip\_server/client.py@{/home/MADCAT/BSI-\/Bund"@GitHub.com/github\_release/bin/ip\_server/client.py}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceclient}{client}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespaceclient_a8f9c40a7777e3491e034fd199348909d}{eprint}} ($\ast$args, $\ast$$\ast$kwargs)
+\begin{DoxyCompactList}\small\item\em Helper \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespaceclient_a94bde87c574b5e44e49e1e7a96973784}{retval\+\_\+btoa}} (retval)
+\item 
+def \mbox{\hyperlink{namespaceclient_a801c9ef2f1e92fdab4e529efd18e83b4}{send\+\_\+update}} (ext\+\_\+ip, lan\+\_\+ip=CONST\+\_\+\+EMPTY\+\_\+\+IP, human\+\_\+readable=True, retry=True, log\+\_\+preamble=GLOBAL\+\_\+\+CONFIG\mbox{[}\char`\"{}log\+\_\+preamble\char`\"{}\mbox{]})
+\begin{DoxyCompactList}\small\item\em API \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespaceclient_addc4dcdca47a1481fbc3f2380a5596f6}{send\+\_\+idupdate}} (eventid, backend\+\_\+port, backend\+\_\+ip, proxy\+\_\+port, proxy\+\_\+ip=CONST\+\_\+\+EMPTY\+\_\+\+IP, human\+\_\+readable=True, retry=True, log\+\_\+preamble=GLOBAL\+\_\+\+CONFIG\mbox{[}\char`\"{}log\+\_\+preamble\char`\"{}\mbox{]})
+\item 
+def \mbox{\hyperlink{namespaceclient_a30cca2a2f4ecc3d20342adce73db4123}{send\+\_\+query}} (lan\+\_\+ip=CONST\+\_\+\+EMPTY\+\_\+\+IP, human\+\_\+readable=True, retry=True, log\+\_\+preamble=GLOBAL\+\_\+\+CONFIG\mbox{[}\char`\"{}log\+\_\+preamble\char`\"{}\mbox{]})
+\item 
+def \mbox{\hyperlink{namespaceclient_a24482da179a020506b0e807168b070d9}{send\+\_\+idquery}} (backend\+\_\+port, backend\+\_\+ip, proxy\+\_\+port, proxy\+\_\+ip=CONST\+\_\+\+EMPTY\+\_\+\+IP, human\+\_\+readable=True, retry=True, log\+\_\+preamble=GLOBAL\+\_\+\+CONFIG\mbox{[}\char`\"{}log\+\_\+preamble\char`\"{}\mbox{]})
+\item 
+def \mbox{\hyperlink{namespaceclient_a7892d6f58bfcb8349f28913f2346555f}{config}} (address\+\_\+port, log\+\_\+preamble=\char`\"{}\char`\"{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceclient_a107066ffe8d41729596e8f0721d47754}{GLOBAL\+\_\+\+CONFIG}} = \mbox{\hyperlink{structdict}{dict}}()
+\begin{DoxyCompactList}\small\item\em config \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceclient_a89675b48ab5dce09c518f727cf7d3f08}{GLOBAL\+\_\+\+VERSION}} = \char`\"{}MADCAT -\/ Mass Attack Detecion Connection Acceptance Tools\textbackslash{}n\+IP Server Client Dummy Module\textbackslash{}n BSI 2023\textbackslash{}n\char`\"{}
+\begin{DoxyCompactList}\small\item\em Version and Mascott strings \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceclient_a43781bcf3c54b1ee70f7d3aeb3a852d8}{GLOBAL\+\_\+\+MASCOTT}} = \char`\"{} ▄▄▄ ▄▄▄▄▄▄\textbackslash{}n ▀▄▄ ▄▓▓█▓▓▓█▌ ██▓██▓▓██▄ ▄▀\textbackslash{}n ▀▄▄▄▓█▓██ █▓█▌ █▓ ▓████████▀\textbackslash{}n ▀███▓▓(o)██▓▌ ▐█▓█(o)█▓█████▀\textbackslash{}n ▀▀██▓█▓▓█ ████▓███▀▀\textbackslash{}n ▄ ▀▀▀▀ ▄\textbackslash{}n ▀▀█ ▐██▌\textbackslash{}n ██▄ \+\_\+\+\_\+\+\_\+\+\_\+-\/-\/-\/-\/-\/-\/▐██████▌-\/-\/-\/-\/-\/-\/\+\_\+\+\_\+\+\_\+ ▄▄██\textbackslash{}n \+\_\+\+\_\+█ █▄▄-\/-\/ \+\_\+\+\_\+\+\_\+-\/-\/-\/-\/-\/-\/▀▓▓▀-\/-\/-\/-\/-\/\+\_\+\+\_\+\+\_\+ -\/-\/▄▄█ █▀\+\_\+\+\_\+\textbackslash{}n \+\_\+\+\_\+-\/-\/ ▀█ ██▄▄▄▄ \+\_\+\+\_\+-\/-\/▄▓▓▄-\/-\/\+\_\+\+\_\+ ▄▄▄▄██ ██▀ -\/-\/\+\_\+\+\_\+\textbackslash{}n \+\_\+\+\_\+-\/-\/ \+\_\+\+\_\+-\/-\/▀█ ██ █▀▀█████▄▄▄▄▄▄███████ ██ █▀-\/-\/\+\_\+\+\_\+ -\/-\/\+\_\+\+\_\+\textbackslash{}n \+\_\+\+\_\+-\/-\/ \+\_\+\+\_\+-\/-\/ \+\_\+\+\_\+▀▀█ █ ██ ██▀▀██▀▀██ ██ █▀▀\+\_\+\+\_\+ -\/-\/\+\_\+\+\_\+ -\/-\/\+\_\+\+\_\+\textbackslash{}n \+\_\+\+\_\+-\/-\/ \+\_\+\+\_\+-\/-\/ ▀███ ██ ██ ██ ██ ████▀ -\/-\/\+\_\+\+\_\+ -\/-\/\+\_\+\+\_\+\textbackslash{}n bsi -\/-\/ \+\_\+\+\_\+-\/-\/ ▀▀▀▀▀██▄▄██▄▄██▀▀▀▀ -\/-\/\+\_\+\+\_\+ -\/-\/\textbackslash{}n \+\_\+\+\_\+ -\/-\/ -\/-\/\+\_\+\+\_\+\char`\"{}
+\item 
+string \mbox{\hyperlink{namespaceclient_a22829a1a26a5962e538aea6660bc631f}{CONST\+\_\+\+EMPTY\+\_\+\+IP}} = b\textquotesingle{}\textbackslash{}x00\textbackslash{}x00\textbackslash{}x00\textbackslash{}x00\textquotesingle{}
+\begin{DoxyCompactList}\small\item\em Globals, Constants, Locks \#\#\#\#\#\#\#\#\#\#\#\#. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespaceclient_a4541d686aabb3e1ae595631c0ea11470}{PROT\+\_\+\+SERVER\+\_\+\+RESPCODE\+\_\+\+LEN}} = 1
+\begin{DoxyCompactList}\small\item\em Protocol \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceclient_a7d021a6754bfc04dce4e186ed8b56a31}{PROT\+\_\+\+UPDATE\+\_\+\+OK}} = b\textquotesingle{}\textbackslash{}x00\textquotesingle{}
+\item 
+string \mbox{\hyperlink{namespaceclient_a883e43bb25fe3a18180c90f532f3a985}{PROT\+\_\+\+IDUPDATE\+\_\+\+OK}} = b\textquotesingle{}\textbackslash{}x01\textquotesingle{}
+\item 
+string \mbox{\hyperlink{namespaceclient_a269c6d0900e3d7dfe46764e41968d0ff}{PROT\+\_\+\+QUERY\+\_\+\+NOTFOUND}} = b\textquotesingle{}\textbackslash{}x7f\textquotesingle{}
+\item 
+string \mbox{\hyperlink{namespaceclient_ab0f04030df0fecb934e2c9656aea9650}{PROT\+\_\+\+IDQUERY\+\_\+\+NOTFOUND}} = b\textquotesingle{}\textbackslash{}x7e\textquotesingle{}
+\item 
+string \mbox{\hyperlink{namespaceclient_a28dc3edc473f315d2c787c9e8a1d0cc0}{PROT\+\_\+\+QUERY\+\_\+\+ERROR}} = b\textquotesingle{}\textbackslash{}xfe\textquotesingle{}
+\item 
+string \mbox{\hyperlink{namespaceclient_af8fde8ab02c9c089176b322003a5a00b}{PROT\+\_\+\+IDQUERY\+\_\+\+ERROR}} = b\textquotesingle{}\textbackslash{}xfd\textquotesingle{}
+\item 
+string \mbox{\hyperlink{namespaceclient_a48861c860f09d29237d18c942cfdc211}{PROT\+\_\+\+GENERAL\+\_\+\+ERROR}} = b\textquotesingle{}\textbackslash{}xff\textquotesingle{}
+\item 
+string \mbox{\hyperlink{namespaceclient_a52b69a5ddc0c8d7be74cf20b1ab40735}{PROT\+\_\+\+SERVER\+\_\+\+ERROR}} = b\textquotesingle{}\textbackslash{}xef\textquotesingle{}
+\end{DoxyCompactItemize}

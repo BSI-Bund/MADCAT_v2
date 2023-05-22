@@ -1,0 +1,79 @@
+\hypertarget{tcp__ip__port__mon_8worker_8c}{}\doxysection{/home/\+MADCAT/\+BSI-\/\+Bund@Git\+Hub.\+com/github\+\_\+release/lib/tcp\+\_\+ip\+\_\+port\+\_\+mon.worker.\+c File Reference}
+\label{tcp__ip__port__mon_8worker_8c}\index{/home/MADCAT/BSI-\/Bund"@GitHub.com/github\_release/lib/tcp\_ip\_port\_mon.worker.c@{/home/MADCAT/BSI-\/Bund"@GitHub.com/github\_release/lib/tcp\_ip\_port\_mon.worker.c}}
+{\ttfamily \#include \char`\"{}tcp\+\_\+ip\+\_\+port\+\_\+mon.\+worker.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+h\char`\"{}}\newline
+Include dependency graph for tcp\+\_\+ip\+\_\+port\+\_\+mon.\+worker.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tcp__ip__port__mon_8worker_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+long int \mbox{\hyperlink{tcp__ip__port__mon_8worker_8c_a977ae554979c343c82f78097a34241bc}{worker\+\_\+tcp}} (const char $\ast$dst\+\_\+addr, const int dest\+\_\+port, const char $\ast$src\+\_\+addr, const int src\+\_\+port, const long double timeout, const char $\ast$data\+\_\+path, const int max\+\_\+file\+\_\+size, const int s, FILE $\ast$\mbox{\hyperlink{tcp__ip__port__mon_8h_aa8bd9bf017a5d4210af62e2f8f7090b2}{confifo}}, char $\ast$proto\+\_\+str)
+\begin{DoxyCompactList}\small\item\em Handels incoming TCP connections. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{tcp__ip__port__mon_8worker_8c_a977ae554979c343c82f78097a34241bc}\label{tcp__ip__port__mon_8worker_8c_a977ae554979c343c82f78097a34241bc}} 
+\index{tcp\_ip\_port\_mon.worker.c@{tcp\_ip\_port\_mon.worker.c}!worker\_tcp@{worker\_tcp}}
+\index{worker\_tcp@{worker\_tcp}!tcp\_ip\_port\_mon.worker.c@{tcp\_ip\_port\_mon.worker.c}}
+\doxysubsubsection{\texorpdfstring{worker\_tcp()}{worker\_tcp()}}
+{\footnotesize\ttfamily long int worker\+\_\+tcp (\begin{DoxyParamCaption}\item[{const char $\ast$}]{dst\+\_\+addr,  }\item[{const int}]{dest\+\_\+port,  }\item[{const char $\ast$}]{src\+\_\+addr,  }\item[{const int}]{src\+\_\+port,  }\item[{const long double}]{timeout,  }\item[{const char $\ast$}]{data\+\_\+path,  }\item[{const int}]{max\+\_\+file\+\_\+size,  }\item[{const int}]{s,  }\item[{FILE $\ast$}]{confifo,  }\item[{char $\ast$}]{proto\+\_\+str }\end{DoxyParamCaption})}
+
+
+
+Handels incoming TCP connections. 
+
+\begin{DoxyVerb}Handels a TCP connection, which is not proxied and
+writes out payloads and results in JSON-Format to a FiFo.
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em dst\+\_\+addr} & Destination IP of connection \\
+\hline
+{\em dest\+\_\+port} & Destination Port of connection \\
+\hline
+{\em src\+\_\+addr} & Source IP of connection \\
+\hline
+{\em src\+\_\+port} & Source Port of connection \\
+\hline
+{\em timeout} & Desired connection timeout \\
+\hline
+{\em data\+\_\+path} & Path to save payload data to \\
+\hline
+{\em max\+\_\+file\+\_\+size} & Maximum size of payload-\/files \\
+\hline
+{\em s} & Socket of connection \\
+\hline
+{\em confifo} & Fi\+Fo to write JSON-\/output to \\
+\hline
+{\em proto\+\_\+str} & String to put in JSON output proto-\/field \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of received bytes in case of success, $<$0 in case of an error. 
+\end{DoxyReturn}
+
+
+Definition at line 44 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+worker.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tcp__ip__port__mon_8worker_8c_a977ae554979c343c82f78097a34241bc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{tcp__ip__port__mon_8worker_8c_a977ae554979c343c82f78097a34241bc_icgraph}
+\end{center}
+\end{figure}

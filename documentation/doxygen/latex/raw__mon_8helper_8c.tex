@@ -1,0 +1,194 @@
+\hypertarget{raw__mon_8helper_8c}{}\doxysection{/home/\+MADCAT/\+BSI-\/\+Bund@Git\+Hub.\+com/github\+\_\+release/lib/raw\+\_\+mon.helper.\+c File Reference}
+\label{raw__mon_8helper_8c}\index{/home/MADCAT/BSI-\/Bund"@GitHub.com/github\_release/lib/raw\_mon.helper.c@{/home/MADCAT/BSI-\/Bund"@GitHub.com/github\_release/lib/raw\_mon.helper.c}}
+{\ttfamily \#include \char`\"{}raw\+\_\+mon.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}raw\+\_\+mon.\+helper.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}madcat.\+helper.\+h\char`\"{}}\newline
+Include dependency graph for raw\+\_\+mon.\+helper.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{raw__mon_8helper_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{raw__mon_8helper_8c_a2d1620797b5adc18cafbe917d73e33a3}{print\+\_\+help\+\_\+raw}} (char $\ast$progname)
+\begin{DoxyCompactList}\small\item\em Print RAW help message. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{raw__mon_8helper_8c_a00c4be853f8e492946bc5bd447ea2a47}{sig\+\_\+handler\+\_\+raw}} (int signo)
+\begin{DoxyCompactList}\small\item\em Signal Handler for RAW parent. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{raw__mon_8helper_8c_ae7a184931af0c4a34f994f5514b2eac0}{drop\+\_\+root\+\_\+privs}} (struct \mbox{\hyperlink{structuser__t}{user\+\_\+t}} \mbox{\hyperlink{madcat_8common_8h_ac3ea7c3ca3d1f0d1b83800d7b6ed641e}{user}}, const char $\ast$entity)
+\begin{DoxyCompactList}\small\item\em Drops root priviliges. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{raw__mon_8helper_8c_a2ed2d86539a0e8b671f5cad6a724a65a}{init\+\_\+pcap}} (char $\ast$dev, pcap\+\_\+t $\ast$$\ast$\mbox{\hyperlink{tcp__ip__port__mon_8common_8h_a6c138155d7b3442efd19d0aa3f93e548}{handle}}, const char $\ast$\mbox{\hyperlink{raw__mon_8h_aecc6d047e31759bba411969ba59c937a}{filter\+\_\+exp}})
+\begin{DoxyCompactList}\small\item\em Initializes PCAP sniffing with filter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{raw__mon_8helper_8c_ae7a184931af0c4a34f994f5514b2eac0}\label{raw__mon_8helper_8c_ae7a184931af0c4a34f994f5514b2eac0}} 
+\index{raw\_mon.helper.c@{raw\_mon.helper.c}!drop\_root\_privs@{drop\_root\_privs}}
+\index{drop\_root\_privs@{drop\_root\_privs}!raw\_mon.helper.c@{raw\_mon.helper.c}}
+\doxysubsubsection{\texorpdfstring{drop\_root\_privs()}{drop\_root\_privs()}}
+{\footnotesize\ttfamily void drop\+\_\+root\+\_\+privs (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structuser__t}{user\+\_\+t}}}]{user,  }\item[{const char $\ast$}]{entity }\end{DoxyParamCaption})}
+
+
+
+Drops root priviliges. 
+
+\begin{DoxyVerb}Trys to drop root privilges to a specific user and
+prints result to STDERR
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em user} & User to drop the priviliges to \\
+\hline
+{\em entity} & String for output to identify e.\+g. the Thread which droped priviliges \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 80 of file raw\+\_\+mon.\+helper.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{raw__mon_8helper_8c_ae7a184931af0c4a34f994f5514b2eac0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{raw__mon_8helper_8c_ae7a184931af0c4a34f994f5514b2eac0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{raw__mon_8helper_8c_a2ed2d86539a0e8b671f5cad6a724a65a}\label{raw__mon_8helper_8c_a2ed2d86539a0e8b671f5cad6a724a65a}} 
+\index{raw\_mon.helper.c@{raw\_mon.helper.c}!init\_pcap@{init\_pcap}}
+\index{init\_pcap@{init\_pcap}!raw\_mon.helper.c@{raw\_mon.helper.c}}
+\doxysubsubsection{\texorpdfstring{init\_pcap()}{init\_pcap()}}
+{\footnotesize\ttfamily int init\+\_\+pcap (\begin{DoxyParamCaption}\item[{char $\ast$}]{dev,  }\item[{pcap\+\_\+t $\ast$$\ast$}]{handle,  }\item[{const char $\ast$}]{filter\+\_\+exp }\end{DoxyParamCaption})}
+
+
+
+Initializes PCAP sniffing with filter. 
+
+\begin{DoxyVerb}Initializes PCAP sniffing, using configured filter
+Returns 0 on succes, otherwise returns:
+-1: pcap_lookupnet failed
+-2: pcap_open_live failed
+
+Aborts, if pcap_compile failed or pcap_setfilter failed
+
+For filter expressions see https://www.tcpdump.org/manpages/pcap-filter.7.html
+See documentation of libpcap for further infomation.
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em dev} & Name of the device to start PCAP-\/\+Sniffing on \\
+\hline
+{\em handle} & PCAP Handle to be initialized \\
+\hline
+{\em filter\+\_\+exp} & Configured filter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 und success, $<$0 if an error occured 
+\end{DoxyReturn}
+
+
+Definition at line 96 of file raw\+\_\+mon.\+helper.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{raw__mon_8helper_8c_a2ed2d86539a0e8b671f5cad6a724a65a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{raw__mon_8helper_8c_a2ed2d86539a0e8b671f5cad6a724a65a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{raw__mon_8helper_8c_a2d1620797b5adc18cafbe917d73e33a3}\label{raw__mon_8helper_8c_a2d1620797b5adc18cafbe917d73e33a3}} 
+\index{raw\_mon.helper.c@{raw\_mon.helper.c}!print\_help\_raw@{print\_help\_raw}}
+\index{print\_help\_raw@{print\_help\_raw}!raw\_mon.helper.c@{raw\_mon.helper.c}}
+\doxysubsubsection{\texorpdfstring{print\_help\_raw()}{print\_help\_raw()}}
+{\footnotesize\ttfamily void print\+\_\+help\+\_\+raw (\begin{DoxyParamCaption}\item[{char $\ast$}]{progname }\end{DoxyParamCaption})}
+
+
+
+Print RAW help message. 
+
+\begin{DoxyVerb}Prints usage of raw_mon
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em progname} & Binary name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 46 of file raw\+\_\+mon.\+helper.\+c.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{raw__mon_8helper_8c_a2d1620797b5adc18cafbe917d73e33a3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{raw__mon_8helper_8c_a00c4be853f8e492946bc5bd447ea2a47}\label{raw__mon_8helper_8c_a00c4be853f8e492946bc5bd447ea2a47}} 
+\index{raw\_mon.helper.c@{raw\_mon.helper.c}!sig\_handler\_raw@{sig\_handler\_raw}}
+\index{sig\_handler\_raw@{sig\_handler\_raw}!raw\_mon.helper.c@{raw\_mon.helper.c}}
+\doxysubsubsection{\texorpdfstring{sig\_handler\_raw()}{sig\_handler\_raw()}}
+{\footnotesize\ttfamily void sig\+\_\+handler\+\_\+raw (\begin{DoxyParamCaption}\item[{int}]{signo }\end{DoxyParamCaption})}
+
+
+
+Signal Handler for RAW parent. 
+
+\begin{DoxyVerb}Signal Handler for RAW parent for gracefull shutdown
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em signo} & Signal Number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 64 of file raw\+\_\+mon.\+helper.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{raw__mon_8helper_8c_a00c4be853f8e492946bc5bd447ea2a47_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{raw__mon_8helper_8c_a00c4be853f8e492946bc5bd447ea2a47_icgraph}
+\end{center}
+\end{figure}

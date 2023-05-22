@@ -1,0 +1,1003 @@
+\hypertarget{tcp__ip__port__mon_8helper_8h}{}\doxysection{/home/\+MADCAT/\+BSI-\/\+Bund@Git\+Hub.\+com/github\+\_\+release/include/tcp\+\_\+ip\+\_\+port\+\_\+mon.helper.\+h File Reference}
+\label{tcp__ip__port__mon_8helper_8h}\index{/home/MADCAT/BSI-\/Bund"@GitHub.com/github\_release/include/tcp\_ip\_port\_mon.helper.h@{/home/MADCAT/BSI-\/Bund"@GitHub.com/github\_release/include/tcp\_ip\_port\_mon.helper.h}}
+{\ttfamily \#include \char`\"{}tcp\+\_\+ip\+\_\+port\+\_\+mon.\+common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}madcat.\+helper.\+h\char`\"{}}\newline
+Include dependency graph for tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tcp__ip__port__mon_8helper_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tcp__ip__port__mon_8helper_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structproxy__conf__tcp__node__t}{proxy\+\_\+conf\+\_\+tcp\+\_\+node\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structproxy__conf__tcp__t}{proxy\+\_\+conf\+\_\+tcp\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structjson__data__t}{json\+\_\+data\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structjson__data__node__t}{json\+\_\+data\+\_\+node\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{tcp__ip__port__mon_8helper_8h_a52e61302bf02a4a36d483908f3904f91}{PCAP\+\_\+\+FILTER}}~\char`\"{}tcp\mbox{[}tcpflags\mbox{]} \& (tcp-\/syn) != 0 and tcp\mbox{[}tcpflags\mbox{]} \& (tcp-\/ack) == 0 and dst host \char`\"{}
+\item 
+\#define \mbox{\hyperlink{tcp__ip__port__mon_8helper_8h_a050bc6925d546e7a26352c70d15b32f4}{PCAP\+\_\+\+FILTER\+\_\+v6}}~\char`\"{}ip6 and dst host \char`\"{}
+\item 
+\#define \mbox{\hyperlink{tcp__ip__port__mon_8helper_8h_a244782b917efc6287550580de6c46765}{HEADER\+\_\+\+FIFO}}~\char`\"{}/tmp/header\+\_\+json.\+tpm\char`\"{}
+\item 
+\#define \mbox{\hyperlink{tcp__ip__port__mon_8helper_8h_a595c19a19ac61ebde06acee895aca281}{CONNECT\+\_\+\+FIFO}}~\char`\"{}/tmp/connect\+\_\+json.\+tpm\char`\"{}
+\item 
+\#define \mbox{\hyperlink{tcp__ip__port__mon_8helper_8h_af171daab99173bfa3113094850ace5a4}{HEADER\+\_\+\+FIFO\+\_\+v6}}~\char`\"{}/tmp/header\+\_\+json\+\_\+v6.\+tpm\char`\"{}
+\item 
+\#define \mbox{\hyperlink{tcp__ip__port__mon_8helper_8h_ac0ded7072b19eefa1cc599a68367c79c}{CONNECT\+\_\+\+FIFO\+\_\+v6}}~\char`\"{}/tmp/connect\+\_\+json\+\_\+v6.\+tpm\char`\"{}
+\item 
+\#define \mbox{\hyperlink{tcp__ip__port__mon_8helper_8h_afb5fa0b66e36695d7e1afac1971209c1}{PCN\+\_\+\+STRLEN}}~6
+\item 
+\#define \mbox{\hyperlink{tcp__ip__port__mon_8helper_8h_a95e531d3a58c0adb143121e47391de94}{STR\+\_\+\+BUFFER\+\_\+\+SIZE}}~65536
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{tcp__ip__port__mon_8helper_8h_a6d5a5c061a9dbb14c68cc1a1c3c20b44}{print\+\_\+help\+\_\+tcp}} (char $\ast$progname)
+\begin{DoxyCompactList}\small\item\em Print TCP help message. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{tcp__ip__port__mon_8helper_8h_a54a46c5d40b0b5c54931b85cafb95604}{init\+\_\+pcap}} (char $\ast$dev, char $\ast$dev\+\_\+addr, pcap\+\_\+t $\ast$$\ast$\mbox{\hyperlink{tcp__ip__port__mon_8common_8h_a6c138155d7b3442efd19d0aa3f93e548}{handle}}, char $\ast$pcap\+\_\+filter\+\_\+str)
+\begin{DoxyCompactList}\small\item\em Initializes PCAP sniffing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tcp__ip__port__mon_8helper_8h_aebf7f80b74b7121247e4e5cc72f9cf64}{drop\+\_\+root\+\_\+privs}} (struct \mbox{\hyperlink{structuser__t}{user\+\_\+t}} \mbox{\hyperlink{madcat_8common_8h_ac3ea7c3ca3d1f0d1b83800d7b6ed641e}{user}}, const char $\ast$entity, bool silent)
+\begin{DoxyCompactList}\small\item\em Drops root priviliges. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tcp__ip__port__mon_8helper_8h_a326cc0de985cdd63f70bc63d63878af8}{sig\+\_\+handler\+\_\+common}} ()
+\begin{DoxyCompactList}\small\item\em Generic signal handler. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tcp__ip__port__mon_8helper_8h_ac433680f23b88af46210c15995ca053d}{sig\+\_\+handler\+\_\+parent}} (int signo)
+\begin{DoxyCompactList}\small\item\em Signal Handler for parent watchdog. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tcp__ip__port__mon_8helper_8h_a654dcae3572bd765b6afac9fb8073f90}{sig\+\_\+handler\+\_\+sigchld}} (int signo)
+\begin{DoxyCompactList}\small\item\em Signal Handler for listner Thread. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tcp__ip__port__mon_8helper_8h_ae0381c3258f8e9f513f5155e410809b5}{sig\+\_\+handler\+\_\+pcapchild}} (int signo)
+\begin{DoxyCompactList}\small\item\em Signal Handler for PCAP childs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tcp__ip__port__mon_8helper_8h_aab6a9b7700246d6e437211fdcf7af8b5}{sig\+\_\+handler\+\_\+listnerchild}} (int signo)
+\begin{DoxyCompactList}\small\item\em Signal Handler for listner thread childs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tcp__ip__port__mon_8helper_8h_ac2c92ad6dfc1a2b8b0c9c2098657dc8b}{sig\+\_\+handler\+\_\+proxychild}} (int signo)
+\begin{DoxyCompactList}\small\item\em Signal Handler for proxy childs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tcp__ip__port__mon_8helper_8h_ab2bf156a8f8b5cefe43cd20c5d1f45e0}{sig\+\_\+handler\+\_\+shutdown}} (int signo)
+\begin{DoxyCompactList}\small\item\em Debug Signal Handler. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{tcp__ip__port__mon_8helper_8h_a02f16b8df3469e6756d8c6870faa88f4}{get\+\_\+config\+\_\+table}} (lua\+\_\+\+State $\ast$L, char $\ast$name, struct \mbox{\hyperlink{structproxy__conf__tcp__t}{proxy\+\_\+conf\+\_\+tcp\+\_\+t}} $\ast$\mbox{\hyperlink{udp__ip__port__mon_8h_a0963f23532c420d423352d102222870b}{pc}})
+\begin{DoxyCompactList}\small\item\em Reads proxy configuration from parsed LUA-\/\+File. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structproxy__conf__tcp__t}{proxy\+\_\+conf\+\_\+tcp\+\_\+t}} $\ast$ \mbox{\hyperlink{tcp__ip__port__mon_8helper_8h_a1bf9c7e0ce5f17b1aed0a3b2172049c6}{pctcp\+\_\+init}} ()
+\begin{DoxyCompactList}\small\item\em Initializes linked list conataining proxy configuration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tcp__ip__port__mon_8helper_8h_a872ec08fc30352f73a0ff1eda07d53ef}{pctcp\+\_\+push}} (struct \mbox{\hyperlink{structproxy__conf__tcp__t}{proxy\+\_\+conf\+\_\+tcp\+\_\+t}} $\ast$\mbox{\hyperlink{udp__ip__port__mon_8h_a0963f23532c420d423352d102222870b}{pc}}, int listenport, char $\ast$backendaddr, int backendport)
+\begin{DoxyCompactList}\small\item\em Pushes new proxy config Item to linked List. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structproxy__conf__tcp__node__t}{proxy\+\_\+conf\+\_\+tcp\+\_\+node\+\_\+t}} $\ast$ \mbox{\hyperlink{tcp__ip__port__mon_8helper_8h_a372ece5e34aa05e6865239df4b1f5a6e}{pctcp\+\_\+get\+\_\+lport}} (struct \mbox{\hyperlink{structproxy__conf__tcp__t}{proxy\+\_\+conf\+\_\+tcp\+\_\+t}} $\ast$\mbox{\hyperlink{udp__ip__port__mon_8h_a0963f23532c420d423352d102222870b}{pc}}, int listenport)
+\begin{DoxyCompactList}\small\item\em Gets proxy config from linked List. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structproxy__conf__tcp__node__t}{proxy\+\_\+conf\+\_\+tcp\+\_\+node\+\_\+t}} $\ast$ \mbox{\hyperlink{tcp__ip__port__mon_8helper_8h_a93e8a37271e1d5700d394e86a84cbf2b}{pctcp\+\_\+get\+\_\+pid}} (struct \mbox{\hyperlink{structproxy__conf__tcp__t}{proxy\+\_\+conf\+\_\+tcp\+\_\+t}} $\ast$\mbox{\hyperlink{udp__ip__port__mon_8h_a0963f23532c420d423352d102222870b}{pc}}, pid\+\_\+t pid)
+\begin{DoxyCompactList}\small\item\em Gets proxy config from linked List. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tcp__ip__port__mon_8helper_8h_a2b73f874293662fb6b8aac2dcc366deb}{pctcp\+\_\+free\+\_\+list}} (struct \mbox{\hyperlink{structproxy__conf__tcp__node__t}{proxy\+\_\+conf\+\_\+tcp\+\_\+node\+\_\+t}} $\ast$pctcp\+\_\+node)
+\begin{DoxyCompactList}\small\item\em Frees an element of the proxy configuration list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tcp__ip__port__mon_8helper_8h_a6dbf49ed094da738457a73e5a803f023}{pctcp\+\_\+print}} (struct \mbox{\hyperlink{structproxy__conf__tcp__t}{proxy\+\_\+conf\+\_\+tcp\+\_\+t}} $\ast$\mbox{\hyperlink{udp__ip__port__mon_8h_a0963f23532c420d423352d102222870b}{pc}})
+\begin{DoxyCompactList}\small\item\em Prints current proxy configuration. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structjson__data__t}{json\+\_\+data\+\_\+t}} $\ast$ \mbox{\hyperlink{tcp__ip__port__mon_8helper_8h_a4031bc45481d69344020c2c8edf53f27}{jd\+\_\+init}} ()
+\begin{DoxyCompactList}\small\item\em Initializes JSON Data linked list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tcp__ip__port__mon_8helper_8h_aa32a5e723dda2163bbd89a090c505118}{jd\+\_\+push}} (struct \mbox{\hyperlink{structjson__data__t}{json\+\_\+data\+\_\+t}} $\ast$\mbox{\hyperlink{tcp__ip__port__mon_8helper_8h_a82efb4f841936a5a8f8c7c6da9252ef0}{jd}}, long long unsigned int id)
+\begin{DoxyCompactList}\small\item\em Pushes JSON Data element to a linked list. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structjson__data__node__t}{json\+\_\+data\+\_\+node\+\_\+t}} $\ast$ \mbox{\hyperlink{tcp__ip__port__mon_8helper_8h_ab664b171846c5e46f56b055451b393b0}{jd\+\_\+get}} (struct \mbox{\hyperlink{structjson__data__t}{json\+\_\+data\+\_\+t}} $\ast$\mbox{\hyperlink{tcp__ip__port__mon_8helper_8h_a82efb4f841936a5a8f8c7c6da9252ef0}{jd}}, uintptr\+\_\+t id)
+\begin{DoxyCompactList}\small\item\em Gets a JSON Data linked list element. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{tcp__ip__port__mon_8helper_8h_a830f20f7357a8691c4b6ac391c7342e2}{jd\+\_\+del}} (struct \mbox{\hyperlink{structjson__data__t}{json\+\_\+data\+\_\+t}} $\ast$\mbox{\hyperlink{tcp__ip__port__mon_8helper_8h_a82efb4f841936a5a8f8c7c6da9252ef0}{jd}}, uintptr\+\_\+t id)
+\begin{DoxyCompactList}\small\item\em Removes a JSON Data linked list element. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tcp__ip__port__mon_8helper_8h_abfcbe06db8b7669c2eefcd42829dd7ed}{jd\+\_\+free\+\_\+list}} (struct \mbox{\hyperlink{structjson__data__node__t}{json\+\_\+data\+\_\+node\+\_\+t}} $\ast$jd\+\_\+node)
+\begin{DoxyCompactList}\small\item\em Removes all JSON Data elements from a linked list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tcp__ip__port__mon_8helper_8h_a0084e131af5f2f1460b94a814b4911e5}{jd\+\_\+print\+\_\+list}} (struct \mbox{\hyperlink{structjson__data__t}{json\+\_\+data\+\_\+t}} $\ast$\mbox{\hyperlink{tcp__ip__port__mon_8helper_8h_a82efb4f841936a5a8f8c7c6da9252ef0}{jd}})
+\begin{DoxyCompactList}\small\item\em Prints all JSON Data elements in a linked list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structproxy__conf__tcp__t}{proxy\+\_\+conf\+\_\+tcp\+\_\+t}} $\ast$ \mbox{\hyperlink{tcp__ip__port__mon_8helper_8h_a7adc9e75512c104c23b4d7d16b8a16ad}{pc}}
+\item 
+struct \mbox{\hyperlink{structjson__data__t}{json\+\_\+data\+\_\+t}} $\ast$ \mbox{\hyperlink{tcp__ip__port__mon_8helper_8h_a82efb4f841936a5a8f8c7c6da9252ef0}{jd}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{tcp__ip__port__mon_8helper_8h_a595c19a19ac61ebde06acee895aca281}\label{tcp__ip__port__mon_8helper_8h_a595c19a19ac61ebde06acee895aca281}} 
+\index{tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}!CONNECT\_FIFO@{CONNECT\_FIFO}}
+\index{CONNECT\_FIFO@{CONNECT\_FIFO}!tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}}
+\doxysubsubsection{\texorpdfstring{CONNECT\_FIFO}{CONNECT\_FIFO}}
+{\footnotesize\ttfamily \#define CONNECT\+\_\+\+FIFO~\char`\"{}/tmp/connect\+\_\+json.\+tpm\char`\"{}}
+
+
+
+Definition at line 52 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+h.
+
+\mbox{\Hypertarget{tcp__ip__port__mon_8helper_8h_ac0ded7072b19eefa1cc599a68367c79c}\label{tcp__ip__port__mon_8helper_8h_ac0ded7072b19eefa1cc599a68367c79c}} 
+\index{tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}!CONNECT\_FIFO\_v6@{CONNECT\_FIFO\_v6}}
+\index{CONNECT\_FIFO\_v6@{CONNECT\_FIFO\_v6}!tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}}
+\doxysubsubsection{\texorpdfstring{CONNECT\_FIFO\_v6}{CONNECT\_FIFO\_v6}}
+{\footnotesize\ttfamily \#define CONNECT\+\_\+\+FIFO\+\_\+v6~\char`\"{}/tmp/connect\+\_\+json\+\_\+v6.\+tpm\char`\"{}}
+
+
+
+Definition at line 54 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+h.
+
+\mbox{\Hypertarget{tcp__ip__port__mon_8helper_8h_a244782b917efc6287550580de6c46765}\label{tcp__ip__port__mon_8helper_8h_a244782b917efc6287550580de6c46765}} 
+\index{tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}!HEADER\_FIFO@{HEADER\_FIFO}}
+\index{HEADER\_FIFO@{HEADER\_FIFO}!tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}}
+\doxysubsubsection{\texorpdfstring{HEADER\_FIFO}{HEADER\_FIFO}}
+{\footnotesize\ttfamily \#define HEADER\+\_\+\+FIFO~\char`\"{}/tmp/header\+\_\+json.\+tpm\char`\"{}}
+
+
+
+Definition at line 51 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+h.
+
+\mbox{\Hypertarget{tcp__ip__port__mon_8helper_8h_af171daab99173bfa3113094850ace5a4}\label{tcp__ip__port__mon_8helper_8h_af171daab99173bfa3113094850ace5a4}} 
+\index{tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}!HEADER\_FIFO\_v6@{HEADER\_FIFO\_v6}}
+\index{HEADER\_FIFO\_v6@{HEADER\_FIFO\_v6}!tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}}
+\doxysubsubsection{\texorpdfstring{HEADER\_FIFO\_v6}{HEADER\_FIFO\_v6}}
+{\footnotesize\ttfamily \#define HEADER\+\_\+\+FIFO\+\_\+v6~\char`\"{}/tmp/header\+\_\+json\+\_\+v6.\+tpm\char`\"{}}
+
+
+
+Definition at line 53 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+h.
+
+\mbox{\Hypertarget{tcp__ip__port__mon_8helper_8h_a52e61302bf02a4a36d483908f3904f91}\label{tcp__ip__port__mon_8helper_8h_a52e61302bf02a4a36d483908f3904f91}} 
+\index{tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}!PCAP\_FILTER@{PCAP\_FILTER}}
+\index{PCAP\_FILTER@{PCAP\_FILTER}!tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}}
+\doxysubsubsection{\texorpdfstring{PCAP\_FILTER}{PCAP\_FILTER}}
+{\footnotesize\ttfamily \#define PCAP\+\_\+\+FILTER~\char`\"{}tcp\mbox{[}tcpflags\mbox{]} \& (tcp-\/syn) != 0 and tcp\mbox{[}tcpflags\mbox{]} \& (tcp-\/ack) == 0 and dst host \char`\"{}}
+
+
+
+Definition at line 44 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+h.
+
+\mbox{\Hypertarget{tcp__ip__port__mon_8helper_8h_a050bc6925d546e7a26352c70d15b32f4}\label{tcp__ip__port__mon_8helper_8h_a050bc6925d546e7a26352c70d15b32f4}} 
+\index{tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}!PCAP\_FILTER\_v6@{PCAP\_FILTER\_v6}}
+\index{PCAP\_FILTER\_v6@{PCAP\_FILTER\_v6}!tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}}
+\doxysubsubsection{\texorpdfstring{PCAP\_FILTER\_v6}{PCAP\_FILTER\_v6}}
+{\footnotesize\ttfamily \#define PCAP\+\_\+\+FILTER\+\_\+v6~\char`\"{}ip6 and dst host \char`\"{}}
+
+
+
+Definition at line 50 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+h.
+
+\mbox{\Hypertarget{tcp__ip__port__mon_8helper_8h_afb5fa0b66e36695d7e1afac1971209c1}\label{tcp__ip__port__mon_8helper_8h_afb5fa0b66e36695d7e1afac1971209c1}} 
+\index{tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}!PCN\_STRLEN@{PCN\_STRLEN}}
+\index{PCN\_STRLEN@{PCN\_STRLEN}!tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}}
+\doxysubsubsection{\texorpdfstring{PCN\_STRLEN}{PCN\_STRLEN}}
+{\footnotesize\ttfamily \#define PCN\+\_\+\+STRLEN~6}
+
+
+
+Definition at line 56 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+h.
+
+\mbox{\Hypertarget{tcp__ip__port__mon_8helper_8h_a95e531d3a58c0adb143121e47391de94}\label{tcp__ip__port__mon_8helper_8h_a95e531d3a58c0adb143121e47391de94}} 
+\index{tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}!STR\_BUFFER\_SIZE@{STR\_BUFFER\_SIZE}}
+\index{STR\_BUFFER\_SIZE@{STR\_BUFFER\_SIZE}!tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}}
+\doxysubsubsection{\texorpdfstring{STR\_BUFFER\_SIZE}{STR\_BUFFER\_SIZE}}
+{\footnotesize\ttfamily \#define STR\+\_\+\+BUFFER\+\_\+\+SIZE~65536}
+
+
+
+Definition at line 57 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+h.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{tcp__ip__port__mon_8helper_8h_aebf7f80b74b7121247e4e5cc72f9cf64}\label{tcp__ip__port__mon_8helper_8h_aebf7f80b74b7121247e4e5cc72f9cf64}} 
+\index{tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}!drop\_root\_privs@{drop\_root\_privs}}
+\index{drop\_root\_privs@{drop\_root\_privs}!tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}}
+\doxysubsubsection{\texorpdfstring{drop\_root\_privs()}{drop\_root\_privs()}}
+{\footnotesize\ttfamily void drop\+\_\+root\+\_\+privs (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structuser__t}{user\+\_\+t}}}]{user,  }\item[{const char $\ast$}]{entity,  }\item[{bool}]{silent }\end{DoxyParamCaption})}
+
+
+
+Drops root priviliges. 
+
+\begin{DoxyVerb}Trys to drop root privilges to a specific user and
+prints result to STDERR, if silent is set to false.
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em user} & User to drop the priviliges to \\
+\hline
+{\em entity} & String for output to identify e.\+g. the Thread which droped priviliges \\
+\hline
+{\em silent} & Turns silent mode on if set to true, thus dropping priviliges silently \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 132 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{tcp__ip__port__mon_8helper_8h_aebf7f80b74b7121247e4e5cc72f9cf64_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{tcp__ip__port__mon_8helper_8h_a02f16b8df3469e6756d8c6870faa88f4}\label{tcp__ip__port__mon_8helper_8h_a02f16b8df3469e6756d8c6870faa88f4}} 
+\index{tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}!get\_config\_table@{get\_config\_table}}
+\index{get\_config\_table@{get\_config\_table}!tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}}
+\doxysubsubsection{\texorpdfstring{get\_config\_table()}{get\_config\_table()}}
+{\footnotesize\ttfamily int get\+\_\+config\+\_\+table (\begin{DoxyParamCaption}\item[{lua\+\_\+\+State $\ast$}]{L,  }\item[{char $\ast$}]{name,  }\item[{struct \mbox{\hyperlink{structproxy__conf__tcp__t}{proxy\+\_\+conf\+\_\+tcp\+\_\+t}} $\ast$}]{pc }\end{DoxyParamCaption})}
+
+
+
+Reads proxy configuration from parsed LUA-\/\+File. 
+
+\begin{DoxyVerb}Reads proxy configuration for configuration item name
+from parsed LUA-File (by luaL_dofile(...) )and
+saves config items in linked list pc
+Returns number of read elements.
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em L} & Lua State structure from lua\+L\+\_\+dofile(...) \\
+\hline
+{\em name} & String containing the name of the configuration Item \\
+\hline
+{\em pc} & Linked List containing proxy configuration \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 322 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{tcp__ip__port__mon_8helper_8h_a02f16b8df3469e6756d8c6870faa88f4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{tcp__ip__port__mon_8helper_8h_a02f16b8df3469e6756d8c6870faa88f4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{tcp__ip__port__mon_8helper_8h_a54a46c5d40b0b5c54931b85cafb95604}\label{tcp__ip__port__mon_8helper_8h_a54a46c5d40b0b5c54931b85cafb95604}} 
+\index{tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}!init\_pcap@{init\_pcap}}
+\index{init\_pcap@{init\_pcap}!tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}}
+\doxysubsubsection{\texorpdfstring{init\_pcap()}{init\_pcap()}}
+{\footnotesize\ttfamily int init\+\_\+pcap (\begin{DoxyParamCaption}\item[{char $\ast$}]{dev,  }\item[{char $\ast$}]{dev\+\_\+addr,  }\item[{pcap\+\_\+t $\ast$$\ast$}]{handle,  }\item[{char $\ast$}]{pcap\+\_\+filter\+\_\+str }\end{DoxyParamCaption})}
+
+
+
+Initializes PCAP sniffing. 
+
+\begin{DoxyVerb}Initializes PCAP sniffing of TCP-SYNs.
+Returns 0 on succes, otherwise returns:
+-1: pcap_lookupnet failed
+-2: pcap_open_live failed
+-3: pcap_compile failed
+-4: pcap_setfilter failed
+
+See documentation of libpcap for further infomation.
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em dev} & Name of the device to start PCAP-\/\+Sniffing on \\
+\hline
+{\em dev\+\_\+addr} & IP Address of this interface \\
+\hline
+{\em handle} & PCAP Handle to be initialized \\
+\hline
+{\em pcap\+\_\+filter\+\_\+str} & Filter-\/\+Rules for sniffing \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 und success, $<$0 if an error occured 
+\end{DoxyReturn}
+
+
+Definition at line 97 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+c.
+
+\mbox{\Hypertarget{tcp__ip__port__mon_8helper_8h_a830f20f7357a8691c4b6ac391c7342e2}\label{tcp__ip__port__mon_8helper_8h_a830f20f7357a8691c4b6ac391c7342e2}} 
+\index{tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}!jd\_del@{jd\_del}}
+\index{jd\_del@{jd\_del}!tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}}
+\doxysubsubsection{\texorpdfstring{jd\_del()}{jd\_del()}}
+{\footnotesize\ttfamily bool jd\+\_\+del (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structjson__data__t}{json\+\_\+data\+\_\+t}} $\ast$}]{jd,  }\item[{uintptr\+\_\+t}]{id }\end{DoxyParamCaption})}
+
+
+
+Removes a JSON Data linked list element. 
+
+\begin{DoxyVerb}Removes a JSON Data linked list element,
+identified by ID and returns true if found, false otherwise
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em jd} & Linked list \\
+\hline
+{\em id} & ID of the element to remove from list \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if element could be deleted, False if not found 
+\end{DoxyReturn}
+
+
+Definition at line 483 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{tcp__ip__port__mon_8helper_8h_a830f20f7357a8691c4b6ac391c7342e2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tcp__ip__port__mon_8helper_8h_a830f20f7357a8691c4b6ac391c7342e2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{tcp__ip__port__mon_8helper_8h_abfcbe06db8b7669c2eefcd42829dd7ed}\label{tcp__ip__port__mon_8helper_8h_abfcbe06db8b7669c2eefcd42829dd7ed}} 
+\index{tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}!jd\_free\_list@{jd\_free\_list}}
+\index{jd\_free\_list@{jd\_free\_list}!tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}}
+\doxysubsubsection{\texorpdfstring{jd\_free\_list()}{jd\_free\_list()}}
+{\footnotesize\ttfamily void jd\+\_\+free\+\_\+list (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structjson__data__node__t}{json\+\_\+data\+\_\+node\+\_\+t}} $\ast$}]{jd\+\_\+node }\end{DoxyParamCaption})}
+
+
+
+Removes all JSON Data elements from a linked list. 
+
+\begin{DoxyVerb}Deletes recursively all JSON Data linked list elements after the list element specified,
+including the one specified.
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em jd\+\_\+node} & Linked list elment \\
+\hline
+{\em id} & ID of the element to remove from list \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 510 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{tcp__ip__port__mon_8helper_8h_abfcbe06db8b7669c2eefcd42829dd7ed_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tcp__ip__port__mon_8helper_8h_abfcbe06db8b7669c2eefcd42829dd7ed_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{tcp__ip__port__mon_8helper_8h_ab664b171846c5e46f56b055451b393b0}\label{tcp__ip__port__mon_8helper_8h_ab664b171846c5e46f56b055451b393b0}} 
+\index{tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}!jd\_get@{jd\_get}}
+\index{jd\_get@{jd\_get}!tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}}
+\doxysubsubsection{\texorpdfstring{jd\_get()}{jd\_get()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structjson__data__node__t}{json\+\_\+data\+\_\+node\+\_\+t}}$\ast$ jd\+\_\+get (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structjson__data__t}{json\+\_\+data\+\_\+t}} $\ast$}]{jd,  }\item[{uintptr\+\_\+t}]{id }\end{DoxyParamCaption})}
+
+
+
+Gets a JSON Data linked list element. 
+
+\begin{DoxyVerb}Fetches a JSON Data linked list element,
+identified by ID and returns it, if found.
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em jd} & Linked list \\
+\hline
+{\em id} & ID to search for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Linked list element, 0 if not found 
+\end{DoxyReturn}
+
+
+Definition at line 473 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+c.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tcp__ip__port__mon_8helper_8h_ab664b171846c5e46f56b055451b393b0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{tcp__ip__port__mon_8helper_8h_a4031bc45481d69344020c2c8edf53f27}\label{tcp__ip__port__mon_8helper_8h_a4031bc45481d69344020c2c8edf53f27}} 
+\index{tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}!jd\_init@{jd\_init}}
+\index{jd\_init@{jd\_init}!tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}}
+\doxysubsubsection{\texorpdfstring{jd\_init()}{jd\_init()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structjson__data__t}{json\+\_\+data\+\_\+t}}$\ast$ jd\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes JSON Data linked list. 
+
+\begin{DoxyVerb}Initializes JSON Data linked list,
+holding results
+\end{DoxyVerb}
+ \begin{DoxyReturn}{Returns}
+Pointer to the new JSON Data linked list 
+\end{DoxyReturn}
+
+
+Definition at line 431 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+c.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{tcp__ip__port__mon_8helper_8h_a4031bc45481d69344020c2c8edf53f27_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{tcp__ip__port__mon_8helper_8h_a0084e131af5f2f1460b94a814b4911e5}\label{tcp__ip__port__mon_8helper_8h_a0084e131af5f2f1460b94a814b4911e5}} 
+\index{tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}!jd\_print\_list@{jd\_print\_list}}
+\index{jd\_print\_list@{jd\_print\_list}!tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}}
+\doxysubsubsection{\texorpdfstring{jd\_print\_list()}{jd\_print\_list()}}
+{\footnotesize\ttfamily void jd\+\_\+print\+\_\+list (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structjson__data__t}{json\+\_\+data\+\_\+t}} $\ast$}]{jd }\end{DoxyParamCaption})}
+
+
+
+Prints all JSON Data elements in a linked list. 
+
+\begin{DoxyVerb}Prints all JSON Data elements in a linked list
+to STDERR
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em jd} & Linked list \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 519 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+c.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tcp__ip__port__mon_8helper_8h_a0084e131af5f2f1460b94a814b4911e5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{tcp__ip__port__mon_8helper_8h_aa32a5e723dda2163bbd89a090c505118}\label{tcp__ip__port__mon_8helper_8h_aa32a5e723dda2163bbd89a090c505118}} 
+\index{tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}!jd\_push@{jd\_push}}
+\index{jd\_push@{jd\_push}!tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}}
+\doxysubsubsection{\texorpdfstring{jd\_push()}{jd\_push()}}
+{\footnotesize\ttfamily void jd\+\_\+push (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structjson__data__t}{json\+\_\+data\+\_\+t}} $\ast$}]{jd,  }\item[{long long unsigned int}]{id }\end{DoxyParamCaption})}
+
+
+
+Pushes JSON Data element to a linked list. 
+
+\begin{DoxyVerb}Pushes JSON Data element to a linked list
+with ID id
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em jd} & linked list \\
+\hline
+{\em id} & ID for the pushed element \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 438 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+c.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tcp__ip__port__mon_8helper_8h_aa32a5e723dda2163bbd89a090c505118_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{tcp__ip__port__mon_8helper_8h_a2b73f874293662fb6b8aac2dcc366deb}\label{tcp__ip__port__mon_8helper_8h_a2b73f874293662fb6b8aac2dcc366deb}} 
+\index{tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}!pctcp\_free\_list@{pctcp\_free\_list}}
+\index{pctcp\_free\_list@{pctcp\_free\_list}!tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}}
+\doxysubsubsection{\texorpdfstring{pctcp\_free\_list()}{pctcp\_free\_list()}}
+{\footnotesize\ttfamily void pctcp\+\_\+free\+\_\+list (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structproxy__conf__tcp__node__t}{proxy\+\_\+conf\+\_\+tcp\+\_\+node\+\_\+t}} $\ast$}]{pctcp\+\_\+node }\end{DoxyParamCaption})}
+
+
+
+Frees an element of the proxy configuration list. 
+
+\begin{DoxyVerb}Frees an element of the proxy configuration list
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em pctcp\+\_\+node} & Linked list element to be freed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 409 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+c.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tcp__ip__port__mon_8helper_8h_a2b73f874293662fb6b8aac2dcc366deb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{tcp__ip__port__mon_8helper_8h_a372ece5e34aa05e6865239df4b1f5a6e}\label{tcp__ip__port__mon_8helper_8h_a372ece5e34aa05e6865239df4b1f5a6e}} 
+\index{tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}!pctcp\_get\_lport@{pctcp\_get\_lport}}
+\index{pctcp\_get\_lport@{pctcp\_get\_lport}!tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}}
+\doxysubsubsection{\texorpdfstring{pctcp\_get\_lport()}{pctcp\_get\_lport()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structproxy__conf__tcp__node__t}{proxy\+\_\+conf\+\_\+tcp\+\_\+node\+\_\+t}}$\ast$ pctcp\+\_\+get\+\_\+lport (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structproxy__conf__tcp__t}{proxy\+\_\+conf\+\_\+tcp\+\_\+t}} $\ast$}]{pc,  }\item[{int}]{listenport }\end{DoxyParamCaption})}
+
+
+
+Gets proxy config from linked List. 
+
+\begin{DoxyVerb}Gets proxy configuration for a specific port
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em pc} & Linked List containing proxy configuration \\
+\hline
+{\em listenport} & Port to listen on \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Linked list element, containing proxy configuration 
+\end{DoxyReturn}
+
+
+Definition at line 389 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+c.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tcp__ip__port__mon_8helper_8h_a372ece5e34aa05e6865239df4b1f5a6e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{tcp__ip__port__mon_8helper_8h_a93e8a37271e1d5700d394e86a84cbf2b}\label{tcp__ip__port__mon_8helper_8h_a93e8a37271e1d5700d394e86a84cbf2b}} 
+\index{tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}!pctcp\_get\_pid@{pctcp\_get\_pid}}
+\index{pctcp\_get\_pid@{pctcp\_get\_pid}!tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}}
+\doxysubsubsection{\texorpdfstring{pctcp\_get\_pid()}{pctcp\_get\_pid()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structproxy__conf__tcp__node__t}{proxy\+\_\+conf\+\_\+tcp\+\_\+node\+\_\+t}}$\ast$ pctcp\+\_\+get\+\_\+pid (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structproxy__conf__tcp__t}{proxy\+\_\+conf\+\_\+tcp\+\_\+t}} $\ast$}]{pc,  }\item[{pid\+\_\+t}]{pid }\end{DoxyParamCaption})}
+
+
+
+Gets proxy config from linked List. 
+
+\begin{DoxyVerb}Gets proxy configuration for a specific proxy-child PID
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em pc} & Linked List containing proxy configuration \\
+\hline
+{\em pid} & Proxy-\/\+Child PID \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Linked list element, containing proxy configuration 
+\end{DoxyReturn}
+
+
+Definition at line 399 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+c.
+
+\mbox{\Hypertarget{tcp__ip__port__mon_8helper_8h_a1bf9c7e0ce5f17b1aed0a3b2172049c6}\label{tcp__ip__port__mon_8helper_8h_a1bf9c7e0ce5f17b1aed0a3b2172049c6}} 
+\index{tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}!pctcp\_init@{pctcp\_init}}
+\index{pctcp\_init@{pctcp\_init}!tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}}
+\doxysubsubsection{\texorpdfstring{pctcp\_init()}{pctcp\_init()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structproxy__conf__tcp__t}{proxy\+\_\+conf\+\_\+tcp\+\_\+t}}$\ast$ pctcp\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes linked list conataining proxy configuration. 
+
+\begin{DoxyVerb}Initializes linked list conataining proxy configuration
+\end{DoxyVerb}
+ \begin{DoxyReturn}{Returns}
+Pointer to linked list conaining proxy configuration 
+\end{DoxyReturn}
+
+
+Definition at line 362 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+c.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{tcp__ip__port__mon_8helper_8h_a1bf9c7e0ce5f17b1aed0a3b2172049c6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{tcp__ip__port__mon_8helper_8h_a6dbf49ed094da738457a73e5a803f023}\label{tcp__ip__port__mon_8helper_8h_a6dbf49ed094da738457a73e5a803f023}} 
+\index{tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}!pctcp\_print@{pctcp\_print}}
+\index{pctcp\_print@{pctcp\_print}!tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}}
+\doxysubsubsection{\texorpdfstring{pctcp\_print()}{pctcp\_print()}}
+{\footnotesize\ttfamily void pctcp\+\_\+print (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structproxy__conf__tcp__t}{proxy\+\_\+conf\+\_\+tcp\+\_\+t}} $\ast$}]{pc }\end{DoxyParamCaption})}
+
+
+
+Prints current proxy configuration. 
+
+\begin{DoxyVerb}Prints current proxy configuration, stored in a linked list
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em pc} & Linked list conatining proxy configuration items \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 419 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+c.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{tcp__ip__port__mon_8helper_8h_a6dbf49ed094da738457a73e5a803f023_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{tcp__ip__port__mon_8helper_8h_a872ec08fc30352f73a0ff1eda07d53ef}\label{tcp__ip__port__mon_8helper_8h_a872ec08fc30352f73a0ff1eda07d53ef}} 
+\index{tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}!pctcp\_push@{pctcp\_push}}
+\index{pctcp\_push@{pctcp\_push}!tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}}
+\doxysubsubsection{\texorpdfstring{pctcp\_push()}{pctcp\_push()}}
+{\footnotesize\ttfamily void pctcp\+\_\+push (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structproxy__conf__tcp__t}{proxy\+\_\+conf\+\_\+tcp\+\_\+t}} $\ast$}]{pc,  }\item[{int}]{listenport,  }\item[{char $\ast$}]{backendaddr,  }\item[{int}]{backendport }\end{DoxyParamCaption})}
+
+
+
+Pushes new proxy config Item to linked List. 
+
+\begin{DoxyVerb}Pushes new proxy config Item to linked List pc
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em pc} & Linked List containing proxy configuration \\
+\hline
+{\em listenport} & Port to listen on \\
+\hline
+{\em backendaddr} & IP Address of backend \\
+\hline
+{\em backendport} & Port backend is listening on \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 370 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+c.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tcp__ip__port__mon_8helper_8h_a872ec08fc30352f73a0ff1eda07d53ef_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{tcp__ip__port__mon_8helper_8h_a6d5a5c061a9dbb14c68cc1a1c3c20b44}\label{tcp__ip__port__mon_8helper_8h_a6d5a5c061a9dbb14c68cc1a1c3c20b44}} 
+\index{tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}!print\_help\_tcp@{print\_help\_tcp}}
+\index{print\_help\_tcp@{print\_help\_tcp}!tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}}
+\doxysubsubsection{\texorpdfstring{print\_help\_tcp()}{print\_help\_tcp()}}
+{\footnotesize\ttfamily void print\+\_\+help\+\_\+tcp (\begin{DoxyParamCaption}\item[{char $\ast$}]{progname }\end{DoxyParamCaption})}
+
+
+
+Print TCP help message. 
+
+\begin{DoxyVerb}Prints usage of tcp_ip_mon
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em progname} & Binary name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 63 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+c.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{tcp__ip__port__mon_8helper_8h_a6d5a5c061a9dbb14c68cc1a1c3c20b44_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{tcp__ip__port__mon_8helper_8h_a326cc0de985cdd63f70bc63d63878af8}\label{tcp__ip__port__mon_8helper_8h_a326cc0de985cdd63f70bc63d63878af8}} 
+\index{tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}!sig\_handler\_common@{sig\_handler\_common}}
+\index{sig\_handler\_common@{sig\_handler\_common}!tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}}
+\doxysubsubsection{\texorpdfstring{sig\_handler\_common()}{sig\_handler\_common()}}
+{\footnotesize\ttfamily void sig\+\_\+handler\+\_\+common (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Generic signal handler. 
+
+\begin{DoxyVerb}Signal handler helper function with common frees, etc. for parents and childs
+\end{DoxyVerb}
+ \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 151 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tcp__ip__port__mon_8helper_8h_a326cc0de985cdd63f70bc63d63878af8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tcp__ip__port__mon_8helper_8h_a326cc0de985cdd63f70bc63d63878af8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{tcp__ip__port__mon_8helper_8h_aab6a9b7700246d6e437211fdcf7af8b5}\label{tcp__ip__port__mon_8helper_8h_aab6a9b7700246d6e437211fdcf7af8b5}} 
+\index{tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}!sig\_handler\_listnerchild@{sig\_handler\_listnerchild}}
+\index{sig\_handler\_listnerchild@{sig\_handler\_listnerchild}!tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}}
+\doxysubsubsection{\texorpdfstring{sig\_handler\_listnerchild()}{sig\_handler\_listnerchild()}}
+{\footnotesize\ttfamily void sig\+\_\+handler\+\_\+listnerchild (\begin{DoxyParamCaption}\item[{int}]{signo }\end{DoxyParamCaption})}
+
+
+
+Signal Handler for listner thread childs. 
+
+\begin{DoxyVerb}Signal Handler for listner thread childs
+\end{DoxyVerb}
+ \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 243 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tcp__ip__port__mon_8helper_8h_aab6a9b7700246d6e437211fdcf7af8b5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=289pt]{tcp__ip__port__mon_8helper_8h_aab6a9b7700246d6e437211fdcf7af8b5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{tcp__ip__port__mon_8helper_8h_ac433680f23b88af46210c15995ca053d}\label{tcp__ip__port__mon_8helper_8h_ac433680f23b88af46210c15995ca053d}} 
+\index{tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}!sig\_handler\_parent@{sig\_handler\_parent}}
+\index{sig\_handler\_parent@{sig\_handler\_parent}!tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}}
+\doxysubsubsection{\texorpdfstring{sig\_handler\_parent()}{sig\_handler\_parent()}}
+{\footnotesize\ttfamily void sig\+\_\+handler\+\_\+parent (\begin{DoxyParamCaption}\item[{int}]{signo }\end{DoxyParamCaption})}
+
+
+
+Signal Handler for parent watchdog. 
+
+\begin{DoxyVerb}Signal Handler for parent watchdog
+\end{DoxyVerb}
+ \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 169 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tcp__ip__port__mon_8helper_8h_ac433680f23b88af46210c15995ca053d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=267pt]{tcp__ip__port__mon_8helper_8h_ac433680f23b88af46210c15995ca053d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{tcp__ip__port__mon_8helper_8h_ae0381c3258f8e9f513f5155e410809b5}\label{tcp__ip__port__mon_8helper_8h_ae0381c3258f8e9f513f5155e410809b5}} 
+\index{tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}!sig\_handler\_pcapchild@{sig\_handler\_pcapchild}}
+\index{sig\_handler\_pcapchild@{sig\_handler\_pcapchild}!tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}}
+\doxysubsubsection{\texorpdfstring{sig\_handler\_pcapchild()}{sig\_handler\_pcapchild()}}
+{\footnotesize\ttfamily void sig\+\_\+handler\+\_\+pcapchild (\begin{DoxyParamCaption}\item[{int}]{signo }\end{DoxyParamCaption})}
+
+
+
+Signal Handler for PCAP childs. 
+
+\begin{DoxyVerb}Signal Handler for PCAP (Sniffer) childs
+\end{DoxyVerb}
+ \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 226 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tcp__ip__port__mon_8helper_8h_ae0381c3258f8e9f513f5155e410809b5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{tcp__ip__port__mon_8helper_8h_ae0381c3258f8e9f513f5155e410809b5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{tcp__ip__port__mon_8helper_8h_ac2c92ad6dfc1a2b8b0c9c2098657dc8b}\label{tcp__ip__port__mon_8helper_8h_ac2c92ad6dfc1a2b8b0c9c2098657dc8b}} 
+\index{tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}!sig\_handler\_proxychild@{sig\_handler\_proxychild}}
+\index{sig\_handler\_proxychild@{sig\_handler\_proxychild}!tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}}
+\doxysubsubsection{\texorpdfstring{sig\_handler\_proxychild()}{sig\_handler\_proxychild()}}
+{\footnotesize\ttfamily void sig\+\_\+handler\+\_\+proxychild (\begin{DoxyParamCaption}\item[{int}]{signo }\end{DoxyParamCaption})}
+
+
+
+Signal Handler for proxy childs. 
+
+\begin{DoxyVerb}Signal Handler for proxy childs
+\end{DoxyVerb}
+ \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 274 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tcp__ip__port__mon_8helper_8h_ac2c92ad6dfc1a2b8b0c9c2098657dc8b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{tcp__ip__port__mon_8helper_8h_ac2c92ad6dfc1a2b8b0c9c2098657dc8b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{tcp__ip__port__mon_8helper_8h_ab2bf156a8f8b5cefe43cd20c5d1f45e0}\label{tcp__ip__port__mon_8helper_8h_ab2bf156a8f8b5cefe43cd20c5d1f45e0}} 
+\index{tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}!sig\_handler\_shutdown@{sig\_handler\_shutdown}}
+\index{sig\_handler\_shutdown@{sig\_handler\_shutdown}!tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}}
+\doxysubsubsection{\texorpdfstring{sig\_handler\_shutdown()}{sig\_handler\_shutdown()}}
+{\footnotesize\ttfamily void sig\+\_\+handler\+\_\+shutdown (\begin{DoxyParamCaption}\item[{int}]{signo }\end{DoxyParamCaption})}
+
+
+
+Debug Signal Handler. 
+
+\begin{DoxyVerb}Debug Signal Handler for SIGUSR1 to initiate gracefull shutdown, e.g. by CHECK-Macro
+\end{DoxyVerb}
+ \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 307 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{tcp__ip__port__mon_8helper_8h_ab2bf156a8f8b5cefe43cd20c5d1f45e0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{tcp__ip__port__mon_8helper_8h_a654dcae3572bd765b6afac9fb8073f90}\label{tcp__ip__port__mon_8helper_8h_a654dcae3572bd765b6afac9fb8073f90}} 
+\index{tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}!sig\_handler\_sigchld@{sig\_handler\_sigchld}}
+\index{sig\_handler\_sigchld@{sig\_handler\_sigchld}!tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}}
+\doxysubsubsection{\texorpdfstring{sig\_handler\_sigchld()}{sig\_handler\_sigchld()}}
+{\footnotesize\ttfamily void sig\+\_\+handler\+\_\+sigchld (\begin{DoxyParamCaption}\item[{int}]{signo }\end{DoxyParamCaption})}
+
+
+
+Signal Handler for listner Thread. 
+
+\begin{DoxyVerb}Signal Handler for Listner Parent to prevent childs becoming Zombies
+\end{DoxyVerb}
+ \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 207 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+c.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{tcp__ip__port__mon_8helper_8h_a654dcae3572bd765b6afac9fb8073f90_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{tcp__ip__port__mon_8helper_8h_a82efb4f841936a5a8f8c7c6da9252ef0}\label{tcp__ip__port__mon_8helper_8h_a82efb4f841936a5a8f8c7c6da9252ef0}} 
+\index{tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}!jd@{jd}}
+\index{jd@{jd}!tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}}
+\doxysubsubsection{\texorpdfstring{jd}{jd}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structjson__data__t}{json\+\_\+data\+\_\+t}}$\ast$ jd\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 57 of file tcp\+\_\+ip\+\_\+port\+\_\+mon.\+helper.\+c.
+
+\mbox{\Hypertarget{tcp__ip__port__mon_8helper_8h_a7adc9e75512c104c23b4d7d16b8a16ad}\label{tcp__ip__port__mon_8helper_8h_a7adc9e75512c104c23b4d7d16b8a16ad}} 
+\index{tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}!pc@{pc}}
+\index{pc@{pc}!tcp\_ip\_port\_mon.helper.h@{tcp\_ip\_port\_mon.helper.h}}
+\doxysubsubsection{\texorpdfstring{pc}{pc}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structproxy__conf__tcp__t}{proxy\+\_\+conf\+\_\+tcp\+\_\+t}}$\ast$ pc\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 46 of file udp\+\_\+ip\+\_\+port\+\_\+mon.\+c.
+

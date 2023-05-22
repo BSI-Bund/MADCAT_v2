@@ -1,8 +1,0 @@
-<map id="json_out" name="json_out">
-<area shape="rect" id="node1" title="Prints Results in JSON&#45;Format from linked list to STDOUT." alt="" coords="5,107,83,133"/>
-<area shape="rect" id="node2" href="$icmp__mon_8parser_8h.html#ac910079b842f59787bb3f04106c9a903" title="Parse and analyze IP Header." alt="" coords="137,5,281,32"/>
-<area shape="rect" id="node3" href="$icmp__mon_8parser_8h.html#aa6bec19369f9805bec4446f04817982a" title="Parse and analyze UDP Header." alt="" coords="131,56,287,83"/>
-<area shape="rect" id="node4" href="$madcat_8helper_8h.html#ab3dab1728c4764a429ddd57578c2310c" title="Prints binary data as hexdump." alt="" coords="163,107,254,133"/>
-<area shape="rect" id="node5" href="$madcat_8helper_8h.html#ac0c229edf48308e883bc9a1ddcf2ed73" title="Reset or initialize new JSON output." alt="" coords="173,157,245,184"/>
-<area shape="rect" id="node6" href="$madcat_8helper_8h.html#a383f315188aceb39ffe699743ecd27b2" title="Prints binary data as hex string." alt="" coords="145,208,272,235"/>
-</map>

@@ -1,0 +1,5 @@
+<map id="array_len" name="array_len">
+<area shape="rect" id="node1" title="Returns the length of an array." alt="" coords="268,5,351,32"/>
+<area shape="rect" id="node2" href="$libdict__c_8c.html#a7c9222272e266e1bbc5d14725f241e37" title="Gets an element from an array." alt="" coords="136,5,220,32"/>
+<area shape="rect" id="node3" href="$libdict__c_8c.html#a5cc1b236df4c3e4552f652a6e46b51e1" title="Deletes an element from an array." alt="" coords="5,5,88,32"/>
+</map>

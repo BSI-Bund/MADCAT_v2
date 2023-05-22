@@ -1,0 +1,123 @@
+\hypertarget{tcp__ip__port__mon__postprocessor_8py}{}\doxysection{/home/\+MADCAT/\+BSI-\/\+Bund@Git\+Hub.\+com/github\+\_\+release/bin/tcp\+\_\+ip\+\_\+port\+\_\+mon\+\_\+postprocessor.py File Reference}
+\label{tcp__ip__port__mon__postprocessor_8py}\index{/home/MADCAT/BSI-\/Bund"@GitHub.com/github\_release/bin/tcp\_ip\_port\_mon\_postprocessor.py@{/home/MADCAT/BSI-\/Bund"@GitHub.com/github\_release/bin/tcp\_ip\_port\_mon\_postprocessor.py}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor}{tcp\+\_\+ip\+\_\+port\+\_\+mon\+\_\+postprocessor}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_a88ec02b0f0cd9b1430d8fc849a329750}{signal\+\_\+handler\+\_\+sigint}} (signum, frame)
+\begin{DoxyCompactList}\small\item\em SIGINT Signal Hander \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# ...for gracefull shutdown. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_a7f3511b987c4d499e8004a44fc227712}{signal\+\_\+handler\+\_\+sigabrt}} (signum, frame)
+\item 
+def \mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_a56a3052069ec42aa22d4c66bea47a99c}{eprint}} ($\ast$args, $\ast$$\ast$kwargs)
+\begin{DoxyCompactList}\small\item\em Print on STDERR \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_ad906d8f60b6b952a6d38a95d15634e79}{build\+\_\+syn\+\_\+dict}} ()
+\begin{DoxyCompactList}\small\item\em Fill SYN dictonary with data from corresponding. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_acb80160eac6391a1cb8467a6baa5d1df}{build\+\_\+con\+\_\+dict}} ()
+\begin{DoxyCompactList}\small\item\em Fill Connection dictonary with data from corres. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_aa79e12608005c47e5964fb4bd6b1a0b6}{output\+\_\+accepted\+\_\+con}} ()
+\begin{DoxyCompactList}\small\item\em Print connections including their SYNs (if feas. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_a24486052f96554f966ea7791b1feec66}{output\+\_\+syn\+\_\+scans}} ()
+\begin{DoxyCompactList}\small\item\em Print SYNs as SYN-\/\+Scans after configured timeou. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_abc2cacd0fb431e6e857af746286ae258}{drop\+\_\+privileges}} (uid\+\_\+name, gid\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Drop root priviliges \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_aa7f906bd3ec015b86cdd2ed286918414}{build\+\_\+conntrack\+\_\+dict}} ()
+\item 
+def \mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_a7ae0fce181b25ee3c80779d3efb94c55}{main}} (argv)
+\begin{DoxyCompactList}\small\item\em Main \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_aa0694a1524c8cecf73b24555d8f9bce8}{DEF\+\_\+\+HOSTADDRESS}} = \char`\"{}WARNING\+: \textbackslash{}\char`\"{}hostaddress\textbackslash{}\char`\"{} is not set, thus making conntrack unusable if enabled!\char`\"{}
+\begin{DoxyCompactList}\small\item\em DEFAULT CONFIGURATION \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_a0aeea42440427a3f6d659278f52f63d6}{DEF\+\_\+\+CON\+\_\+\+WAIT}} = 10
+\item 
+int \mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_a8055963a4b567b9a30c0d9157effa481}{DEF\+\_\+\+SYN\+\_\+\+TIMEOUT}} = 60 + DEF\+\_\+\+CON\+\_\+\+WAIT
+\item 
+int \mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_aff79b660e9f9998027543ea6c9df5bb5}{DEF\+\_\+\+SYN\+\_\+\+WAIT\+\_\+\+PROXY}} = 30 + DEF\+\_\+\+SYN\+\_\+\+TIMEOUT
+\item 
+bool \mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_ac98b3149bcdba5017671008886b29a00}{DEF\+\_\+\+ENABLE\+\_\+\+CONNTRACK}} = False
+\item 
+int \mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_ae50cc2f5b81b096a5f09f6fd850f64e1}{DEF\+\_\+\+CT\+\_\+\+STATUS\+\_\+\+GRACE\+\_\+\+TIME}} = 5
+\item 
+bool \mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_ae684d75d5e92790185b4e4a5693c6fff}{DEF\+\_\+\+BEST\+\_\+\+GUESS}} = False
+\item 
+int \mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_ab5f3ba6c6d1111d6adaa6d894df50561}{DEF\+\_\+\+BEST\+\_\+\+GUESS\+\_\+\+TIMEOUT}} = DEF\+\_\+\+SYN\+\_\+\+TIMEOUT -\/ 10
+\item 
+bool \mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_a24895b324ab584c146b3f4fea73eb4d9}{DEF\+\_\+\+SYN\+\_\+\+EMPTY\+\_\+\+QUEUE}} = False
+\item 
+string \mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_a9050baf400459f5d17beed2d77934704}{DEF\+\_\+\+HEADER\+\_\+\+FIFO}} = \char`\"{}/tmp/header\+\_\+json.\+tpm\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_ad73f156b7fc2afad734a3c933f4b9032}{DEF\+\_\+\+CONNECTION\+\_\+\+FIFO}} = \char`\"{}/tmp/connect\+\_\+json.\+tpm\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_ab80c8e0ef0bce53ef5df5bd84bf5dc78}{DEF\+\_\+\+USER}} = \char`\"{}madcat\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_aeeb176e419f14793368ed15cb893f3dd}{DEF\+\_\+\+GROUP}} = \char`\"{}madcat\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_a89675b48ab5dce09c518f727cf7d3f08}{GLOBAL\+\_\+\+VERSION}} = \char`\"{}MADCAT -\/ Mass Attack Detecion Connection Acceptance Tool\textbackslash{}n\+TCP Connection and SYN JSON-\/data postprocessor v2.\+3.\+0\textbackslash{}n for TCP/IP Portmonitor $>$= v2.\+3.\+x\textbackslash{}n\+BSI 2018-\/2023\textbackslash{}n\char`\"{}
+\begin{DoxyCompactList}\small\item\em Version and Mascott strings \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_a43781bcf3c54b1ee70f7d3aeb3a852d8}{GLOBAL\+\_\+\+MASCOTT}} = \char`\"{} ▄▄▄ ▄▄▄▄▄▄\textbackslash{}n ▀▄▄ ▄▓▓█▓▓▓█▌ ██▓██▓▓██▄ ▄▀\textbackslash{}n ▀▄▄▄▓█▓██ █▓█▌ █▓ ▓████████▀\textbackslash{}n ▀███▓▓(o)██▓▌ ▐█▓█(o)█▓█████▀\textbackslash{}n ▀▀██▓█▓▓█ ████▓███▀▀\textbackslash{}n ▄ ▀▀▀▀ ▄\textbackslash{}n ▀▀█ ▐██▌\textbackslash{}n ██▄ \+\_\+\+\_\+\+\_\+\+\_\+-\/-\/-\/-\/-\/-\/▐██████▌-\/-\/-\/-\/-\/-\/\+\_\+\+\_\+\+\_\+ ▄▄██\textbackslash{}n \+\_\+\+\_\+█ █▄▄-\/-\/ \+\_\+\+\_\+\+\_\+-\/-\/-\/-\/-\/-\/▀▓▓▀-\/-\/-\/-\/-\/\+\_\+\+\_\+\+\_\+ -\/-\/▄▄█ █▀\+\_\+\+\_\+\textbackslash{}n \+\_\+\+\_\+-\/-\/ ▀█ ██▄▄▄▄ \+\_\+\+\_\+-\/-\/▄▓▓▄-\/-\/\+\_\+\+\_\+ ▄▄▄▄██ ██▀ -\/-\/\+\_\+\+\_\+\textbackslash{}n \+\_\+\+\_\+-\/-\/ \+\_\+\+\_\+-\/-\/▀█ ██ █▀▀█████▄▄▄▄▄▄███████ ██ █▀-\/-\/\+\_\+\+\_\+ -\/-\/\+\_\+\+\_\+\textbackslash{}n \+\_\+\+\_\+-\/-\/ \+\_\+\+\_\+-\/-\/ \+\_\+\+\_\+▀▀█ █ ██ ██▀▀██▀▀██ ██ █▀▀\+\_\+\+\_\+ -\/-\/\+\_\+\+\_\+ -\/-\/\+\_\+\+\_\+\textbackslash{}n \+\_\+\+\_\+-\/-\/ \+\_\+\+\_\+-\/-\/ ▀███ ██ ██ ██ ██ ████▀ -\/-\/\+\_\+\+\_\+ -\/-\/\+\_\+\+\_\+\textbackslash{}n bsi -\/-\/ \+\_\+\+\_\+-\/-\/ ▀▀▀▀▀██▄▄██▄▄██▀▀▀▀ -\/-\/\+\_\+\+\_\+ -\/-\/\textbackslash{}n \+\_\+\+\_\+ -\/-\/ -\/-\/\+\_\+\+\_\+\char`\"{}
+\item 
+bool \mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_adbabbab74946b81c093f6491cb4e7d26}{GLOBAL\+\_\+\+SHUTDOWN}} = False
+\begin{DoxyCompactList}\small\item\em Semaphore, etc. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_a771b1cb1f9bd77f3a1eeab2b4bf10d68}{GLOBAL\+\_\+\+CT\+\_\+\+LASTUPDATE}} = time.\+time()
+\item 
+int \mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_a09391b2320e9110970bd5c299d1564f0}{GLOBAL\+\_\+\+CT\+\_\+\+INTERVAL}} = 1
+\item 
+int \mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_a590d868a10ff2ecfec064ceeef916d6d}{GLOBAL\+\_\+\+NO\+\_\+\+SYN\+\_\+\+COUNT}} = 0
+\item 
+int \mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_a391c7bdc2fd1910c1788d521bb103144}{GLOBAL\+\_\+\+SYN\+\_\+\+SCAN\+\_\+\+COUNT}} = 0
+\item 
+int \mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_aedad5b28ec6a4778675da081bcdd21a3}{GLOBAL\+\_\+\+FLOW\+\_\+\+COUNT}} = 0
+\item 
+int \mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_aa36ee74b82c7bcc12547d145602323ff}{GLOBAL\+\_\+\+HDR\+\_\+\+COUNT}} = 0
+\item 
+int \mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_adcc984f9c249a3f6b67946a73dec8d5b}{GLOBAL\+\_\+\+HDR\+\_\+\+WARN\+\_\+\+COUNT}} = 0
+\item 
+int \mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_a7e2a02dacc6c9f248306c5776163aed9}{GLOBAL\+\_\+\+CON\+\_\+\+COUNT}} = 0
+\item 
+int \mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_a6b6067a7f960074add875bed8e44837c}{GLOBAL\+\_\+\+CON\+\_\+\+WARN\+\_\+\+COUNT}} = 0
+\item 
+dictionary \mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_a4e5aa1f9fb7dfb25ed84b65c92fecf46}{syn\+\_\+dict}} = \{\}
+\begin{DoxyCompactList}\small\item\em Global dictonarys and their locks \#\#\#\#\#\#\#\#\#\#\#\#\#. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_ae7fcdcdb32231ac911d0d0f0c8abd3ab}{syn\+\_\+dict\+\_\+lock}} = threading.\+Lock()
+\item 
+dictionary \mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_afeba2be6fa3fe6c5fd82319a22c5ef57}{con\+\_\+dict}} = \{\}
+\item 
+\mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_ab1b7726c2c5aa70ebe8ffb4b6fd313af}{con\+\_\+dict\+\_\+lock}} = threading.\+Lock()
+\item 
+dictionary \mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_a9dc890713f2aff5b86853e3564f3e0ba}{ct\+\_\+con\+\_\+dict}} = \{\}
+\item 
+\mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_a99b92cb0d0e19dedd161a434702b2956}{ct\+\_\+con\+\_\+dict\+\_\+lock}} = threading.\+Lock()
+\item 
+dictionary \mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_ab9c158991a0a6ef9340b17a21baa7312}{ct\+\_\+syn\+\_\+dict}} = \{\}
+\item 
+\mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_a7ec157404f0a0cf6ac6471a4f31ebf50}{ct\+\_\+syn\+\_\+dict\+\_\+lock}} = threading.\+Lock()
+\item 
+\mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_af1e3e48dc0adcc4f451acc00756b10b7}{con\+\_\+dict\+\_\+evt}} = threading.\+Event()
+\item 
+\mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_a91d9748ccdf9a4433b1f7167b546c9a5}{ct\+\_\+con\+\_\+dict\+\_\+evt}} = threading.\+Event()
+\item 
+\mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_a7833d551e0bc763d12b1bd7b3ad86bce}{ct\+\_\+syn\+\_\+dict\+\_\+evt}} = threading.\+Event()
+\item 
+\mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_a34056d1114c1474a6a0e60ebe76c93f7}{output\+\_\+accepted\+\_\+con\+\_\+th\+\_\+firstrun\+\_\+evt}} = threading.\+Event()
+\item 
+\mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_afafdb5ab84e847983188308aa42c67d1}{stderr\+\_\+lock}} = threading.\+Lock()
+\begin{DoxyCompactList}\small\item\em Locks for output \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_a1bc916bce6fde4807d9a011ae62d563a}{stdout\+\_\+lock}} = threading.\+Lock()
+\item 
+\mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_a303899a15268871d5d18c872065e19eb}{conntrack}} = list()
+\begin{DoxyCompactList}\small\item\em Conntrack lookup \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_a6bca55df75ad358e31efb50f2f083102}{syn\+\_\+dict\+\_\+th}} = threading.\+Thread(target=build\+\_\+syn\+\_\+dict, daemon=True)
+\begin{DoxyCompactList}\small\item\em Configure Threads \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# All threads are deamonized to make them exit with the parent process Threads for data acquisition. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_ac4e8d7cd33c15cf7e96b4e1af43991c1}{con\+\_\+dict\+\_\+th}} = threading.\+Thread(target=build\+\_\+con\+\_\+dict, daemon=True)
+\item 
+\mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_a46261774e6c7dbb37ecfcd0ea65453d8}{ct\+\_\+dict\+\_\+th}} = threading.\+Thread(target=build\+\_\+conntrack\+\_\+dict, daemon=True)
+\item 
+\mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_ac0acd5c9995bcbf2b1e5ab0edf8184b5}{output\+\_\+syn\+\_\+scans\+\_\+th}} = threading.\+Thread(target=output\+\_\+syn\+\_\+scans, daemon=True)
+\item 
+\mbox{\hyperlink{namespacetcp__ip__port__mon__postprocessor_a4c2b27551206acfe4eb56c4be61f795f}{output\+\_\+accepted\+\_\+con\+\_\+th}} = threading.\+Thread(target=output\+\_\+accepted\+\_\+con, daemon=True)
+\end{DoxyCompactItemize}

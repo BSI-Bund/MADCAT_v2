@@ -1,0 +1,11 @@
+<map id="sig_handler_icmp" name="sig_handler_icmp">
+<area shape="rect" id="node1" title="Signal Handler." alt="" coords="5,81,141,108"/>
+<area shape="rect" id="node2" href="$libdict__c_8c.html#a72174eec72aba6a82641de0a4859a4da" title="Emptys a dictionary and frees it." alt="" coords="345,5,423,32"/>
+<area shape="rect" id="node6" href="$libdict__c_8c.html#a29796a1f7689a238011fa110e7082af9" title="Helper function to manage a dict." alt="" coords="203,56,283,83"/>
+<area shape="rect" id="node8" href="$udp__ip__port__mon_8icmp__mon_8helper_8c.html#a55a10ee3c69ff3e13197e78280a44d4a" title="Saves and returns address of main buffer." alt="" coords="189,107,296,133"/>
+<area shape="rect" id="node9" href="$madcat_8helper_8c.html#a6beb2c039c319f4fb3541627bb6da8ee" title="Returns current time." alt="" coords="205,157,281,184"/>
+<area shape="rect" id="node3" href="$libdict__c_8c.html#aa3b187986f610dbfe0e7138ecaf5b834" title="Emptys a dictionary, but does not free it." alt="" coords="472,5,567,32"/>
+<area shape="rect" id="node4" href="$libdict__c_8c.html#abb8df193fba807b68ce0039440c126e3" title="Emptys an array and frees it." alt="" coords="615,5,704,32"/>
+<area shape="rect" id="node5" href="$libdict__c_8c.html#ae6cc9c6a53f9b18c1a1141abced7514d" title="Emptys an array, but does not free it." alt="" coords="752,5,857,32"/>
+<area shape="rect" id="node7" href="$libdict__c_8c.html#a6adcde67820b6ed0035482b4840af927" title="Initializes a new dictionary of type struct dict." alt="" coords="344,56,424,83"/>
+</map>

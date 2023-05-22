@@ -1,0 +1,91 @@
+\hypertarget{monitoring_8py}{}\doxysection{/home/\+MADCAT/\+BSI-\/\+Bund@Git\+Hub.\+com/github\+\_\+release/bin/monitoring/monitoring.py File Reference}
+\label{monitoring_8py}\index{/home/MADCAT/BSI-\/Bund"@GitHub.com/github\_release/bin/monitoring/monitoring.py@{/home/MADCAT/BSI-\/Bund"@GitHub.com/github\_release/bin/monitoring/monitoring.py}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacemonitoring}{monitoring}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacemonitoring_a07643dc23688ede88e3602fae536125f}{eprint}} ($\ast$args, $\ast$$\ast$kwargs)
+\begin{DoxyCompactList}\small\item\em Logging \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacemonitoring_a470a8fdd2f769990bdf31bf48fb1a0fa}{signal\+\_\+handler}} (signum, frame)
+\begin{DoxyCompactList}\small\item\em Signal Handler for gracefull shutdown \#\#\#\#\#\#\#\#\#. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacemonitoring_ad7cfd99cdf9bc7b6b461a54602b5d9fb}{check\+\_\+cpu}} ()
+\item 
+def \mbox{\hyperlink{namespacemonitoring_acaddd42fa2c4f0e0fb6547ebb257adcc}{check\+\_\+mem}} ()
+\item 
+def \mbox{\hyperlink{namespacemonitoring_aa8c7b284dac16b80bb158276308442d7}{check\+\_\+disk}} ()
+\item 
+def \mbox{\hyperlink{namespacemonitoring_aa7118ad24574824b9fd4c3c8fd20720b}{check\+\_\+updates}} ()
+\item 
+def \mbox{\hyperlink{namespacemonitoring_a55e51e168e4e46dd7673efe98d2d3dd6}{check\+\_\+lastlogin}} ()
+\item 
+def \mbox{\hyperlink{namespacemonitoring_a126470b6a192f99e9266f26e1590b166}{check\+\_\+lastlog}} ()
+\item 
+def \mbox{\hyperlink{namespacemonitoring_af381910fc7d85c3048e6f15cebd74e23}{check\+\_\+altered}} ()
+\item 
+def \mbox{\hyperlink{namespacemonitoring_a064f288be1c020acd097067c253fb550}{check\+\_\+mcversions}} ()
+\item 
+def \mbox{\hyperlink{namespacemonitoring_a1fc9915992ac34811637d69e98e6cb0e}{check\+\_\+processes}} ()
+\item 
+def \mbox{\hyperlink{namespacemonitoring_a8e92076f078622d6adec15242021bfab}{check\+\_\+netusage}} ()
+\item 
+def \mbox{\hyperlink{namespacemonitoring_a697a4da84b1539660ddcbccfb037296f}{check\+\_\+listners}} ()
+\item 
+def \mbox{\hyperlink{namespacemonitoring_a0946f07b13d5486d2c53dd32670c700d}{check\+\_\+auditd\+\_\+exe}} ()
+\item 
+def \mbox{\hyperlink{namespacemonitoring_afa0440155d10361d1cbbefd4668403f8}{check\+\_\+ext\+\_\+ip}} ()
+\item 
+def \mbox{\hyperlink{namespacemonitoring_a072f8d82f17d95c7d1af22674611fa8f}{main}} (argv)
+\begin{DoxyCompactList}\small\item\em Main \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacemonitoring_a93f2c7fc1909aee2701d171621d13b2b}{unicode\+\_\+reencode}} (str)
+\begin{DoxyCompactList}\small\item\em Helper functions \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacemonitoring_aa3bc0b3d9c17a186c02cc97b019152b9}{clean}} (cache, depcache)
+\begin{DoxyCompactList}\small\item\em APT Helper \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# Modified /usr/lib/update-\/notifier/apt-\/check \href{https://git.launchpad.net/update-notifier/tree/COPYING}{\texttt{ https\+://git.\+launchpad.\+net/update-\/notifier/tree/\+COPYING}}. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacemonitoring_a183e4d0b21da52329301018b675c2011}{save\+Dist\+Upgrade}} (cache, depcache)
+\item 
+def \mbox{\hyperlink{namespacemonitoring_ab107c37b85ab30df188d54eddec34c8e}{get\+\_\+update\+\_\+packages}} ()
+\item 
+def \mbox{\hyperlink{namespacemonitoring_a9d586077726854025d8770734b3f7867}{is\+Security\+Upgrade}} (pkg, depcache)
+\item 
+def \mbox{\hyperlink{namespacemonitoring_aed6aaf3fe4465ed174f15e55e873e374}{print\+\_\+result}} (pkgs)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{namespacemonitoring_a59b73bad4867095fab018877ddc6d669}{lastlogin\+\_\+time\+\_\+format}} = \char`\"{}\%a \%b \%d \%H\+:\%M\+:\%S \%z \%Y\char`\"{}
+\begin{DoxyCompactList}\small\item\em DEFAULT CONFIGURATION \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# This is a sample content of a monitoring\+\_\+config.\+py\+: \#\#\#\#\#\#\#\#\#\#. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespacemonitoring_a8f10892f38b6ba6f46e75f7467631342}{lang}} = \textquotesingle{}de\+\_\+\+DE\textquotesingle{}
+\item 
+string \mbox{\hyperlink{namespacemonitoring_a6feb83a2535f99c2d28dee751783f6f7}{enc}} = \textquotesingle{}UTF-\/8\textquotesingle{}
+\item 
+string \mbox{\hyperlink{namespacemonitoring_a89675b48ab5dce09c518f727cf7d3f08}{GLOBAL\+\_\+\+VERSION}} = \char`\"{}MADCAT -\/ Mass Attack Detecion Connection Acceptance Tools\textbackslash{}n\+Monitoring Module v2.\+3.\+0\textbackslash{}n for MADCAT v2.\+3.\+x\textbackslash{}n\+BSI 2020-\/2023\textbackslash{}n\char`\"{}
+\begin{DoxyCompactList}\small\item\em Version and Mascott strings \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespacemonitoring_a43781bcf3c54b1ee70f7d3aeb3a852d8}{GLOBAL\+\_\+\+MASCOTT}} = \char`\"{} ▄▄▄ ▄▄▄▄▄▄\textbackslash{}n ▀▄▄ ▄▓▓█▓▓▓█▌ ██▓██▓▓██▄ ▄▀\textbackslash{}n ▀▄▄▄▓█▓██ █▓█▌ █▓ ▓████████▀\textbackslash{}n ▀███▓▓(o)██▓▌ ▐█▓█(o)█▓█████▀\textbackslash{}n ▀▀██▓█▓▓█ ████▓███▀▀\textbackslash{}n ▄ ▀▀▀▀ ▄\textbackslash{}n ▀▀█ ▐██▌\textbackslash{}n ██▄ \+\_\+\+\_\+\+\_\+\+\_\+-\/-\/-\/-\/-\/-\/▐██████▌-\/-\/-\/-\/-\/-\/\+\_\+\+\_\+\+\_\+ ▄▄██\textbackslash{}n \+\_\+\+\_\+█ █▄▄-\/-\/ \+\_\+\+\_\+\+\_\+-\/-\/-\/-\/-\/-\/▀▓▓▀-\/-\/-\/-\/-\/\+\_\+\+\_\+\+\_\+ -\/-\/▄▄█ █▀\+\_\+\+\_\+\textbackslash{}n \+\_\+\+\_\+-\/-\/ ▀█ ██▄▄▄▄ \+\_\+\+\_\+-\/-\/▄▓▓▄-\/-\/\+\_\+\+\_\+ ▄▄▄▄██ ██▀ -\/-\/\+\_\+\+\_\+\textbackslash{}n \+\_\+\+\_\+-\/-\/ \+\_\+\+\_\+-\/-\/▀█ ██ █▀▀█████▄▄▄▄▄▄███████ ██ █▀-\/-\/\+\_\+\+\_\+ -\/-\/\+\_\+\+\_\+\textbackslash{}n \+\_\+\+\_\+-\/-\/ \+\_\+\+\_\+-\/-\/ \+\_\+\+\_\+▀▀█ █ ██ ██▀▀██▀▀██ ██ █▀▀\+\_\+\+\_\+ -\/-\/\+\_\+\+\_\+ -\/-\/\+\_\+\+\_\+\textbackslash{}n \+\_\+\+\_\+-\/-\/ \+\_\+\+\_\+-\/-\/ ▀███ ██ ██ ██ ██ ████▀ -\/-\/\+\_\+\+\_\+ -\/-\/\+\_\+\+\_\+\textbackslash{}n bsi -\/-\/ \+\_\+\+\_\+-\/-\/ ▀▀▀▀▀██▄▄██▄▄██▀▀▀▀ -\/-\/\+\_\+\+\_\+ -\/-\/\textbackslash{}n \+\_\+\+\_\+ -\/-\/ -\/-\/\+\_\+\+\_\+\char`\"{}
+\item 
+\mbox{\hyperlink{namespacemonitoring_afafdb5ab84e847983188308aa42c67d1}{stderr\+\_\+lock}} = threading.\+Lock()
+\begin{DoxyCompactList}\small\item\em Locks for output and globals \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacemonitoring_a1bc916bce6fde4807d9a011ae62d563a}{stdout\+\_\+lock}} = threading.\+Lock()
+\item 
+string \mbox{\hyperlink{namespacemonitoring_a81ce37b4c60e4ffacfb9325e1d433dee}{SYNAPTIC\+\_\+\+PINFILE}} = \char`\"{}/var/lib/synaptic/preferences\char`\"{}
+\item 
+\mbox{\hyperlink{namespacemonitoring_a3b1beaa4a7bcc3801f7294509375362d}{DISTRO}}
+\item 
+\mbox{\hyperlink{namespacemonitoring_a6cc4f2b80b84d4db5467cc09bc5f2185}{alerts}} = \mbox{\hyperlink{structdict}{dict}}()
+\begin{DoxyCompactList}\small\item\em Checks \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacemonitoring_a7048605d09bb21159ccaab63402dc4e5}{messages}} = \mbox{\hyperlink{structdict}{dict}}()
+\item 
+dictionary \mbox{\hyperlink{namespacemonitoring_adc7b2b82404a6340fee249bd0d270baa}{net\+\_\+tx\+\_\+prev}} = \{\}
+\item 
+dictionary \mbox{\hyperlink{namespacemonitoring_ac8e25d6b4d371834bae3efaec5ae6983}{net\+\_\+rx\+\_\+prev}} = \{\}
+\item 
+int \mbox{\hyperlink{namespacemonitoring_a1f22d6557371f223e0c77da2c791432a}{net\+\_\+time\+\_\+prev}} = 0
+\item 
+bool \mbox{\hyperlink{namespacemonitoring_a644685c644f742c6b6018e7992b1449c}{net\+\_\+firstrun}} = True
+\item 
+\mbox{\hyperlink{namespacemonitoring_aadca5f55d3253a458c50ce3ab9f431fa}{auditd\+\_\+exe\+\_\+persist}} = \mbox{\hyperlink{structdict}{dict}}()
+\item 
+dictionary \mbox{\hyperlink{namespacemonitoring_af231daa4b9d51810eeb6cb8a276ecc59}{ext\+\_\+ip\+\_\+persist}} = \{\char`\"{}ext\+\_\+ip\char`\"{}\+: \char`\"{}0.\+0.\+0.\+0\char`\"{}\}
+\end{DoxyCompactItemize}

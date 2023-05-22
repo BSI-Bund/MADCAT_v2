@@ -1,0 +1,15 @@
+<map id="sig_handler_udp" name="sig_handler_udp">
+<area shape="rect" id="node1" title="Signal Handler." alt="" coords="5,132,133,159"/>
+<area shape="rect" id="node2" href="$libdict__c_8c.html#a72174eec72aba6a82641de0a4859a4da" title="Emptys a dictionary and frees it." alt="" coords="351,5,430,32"/>
+<area shape="rect" id="node6" href="$libdict__c_8c.html#a29796a1f7689a238011fa110e7082af9" title="Helper function to manage a dict." alt="" coords="202,56,282,83"/>
+<area shape="rect" id="node8" href="$udp__ip__port__mon_8helper_8c.html#a1aab3160586b42813ee5d41cbf3ceed7" title="Frees an element of the proxy configuration list." alt="" coords="181,107,303,133"/>
+<area shape="rect" id="node9" href="$udp__ip__port__mon_8icmp__mon_8helper_8c.html#a55a10ee3c69ff3e13197e78280a44d4a" title="Saves and returns address of main buffer." alt="" coords="189,157,295,184"/>
+<area shape="rect" id="node10" href="$madcat_8helper_8c.html#a6beb2c039c319f4fb3541627bb6da8ee" title="Returns current time." alt="" coords="204,208,280,235"/>
+<area shape="rect" id="node11" href="$udp__ip__port__mon_8helper_8c.html#a87ee7e35679de5b566092daec7949099" title="Frees an element of the UDP connection tracking list." alt="" coords="193,259,291,285"/>
+<area shape="rect" id="node3" href="$libdict__c_8c.html#aa3b187986f610dbfe0e7138ecaf5b834" title="Emptys a dictionary, but does not free it." alt="" coords="479,5,573,32"/>
+<area shape="rect" id="node4" href="$libdict__c_8c.html#abb8df193fba807b68ce0039440c126e3" title="Emptys an array and frees it." alt="" coords="621,5,711,32"/>
+<area shape="rect" id="node5" href="$libdict__c_8c.html#ae6cc9c6a53f9b18c1a1141abced7514d" title="Emptys an array, but does not free it." alt="" coords="759,5,864,32"/>
+<area shape="rect" id="node7" href="$libdict__c_8c.html#a6adcde67820b6ed0035482b4840af927" title="Initializes a new dictionary of type struct dict." alt="" coords="351,56,431,83"/>
+<area shape="rect" id="node12" href="$udp__ip__port__mon_8helper_8c.html#aa2cc8759e27e500acc605fa11d3f3350" title="Deletes an element from the UDP connection tracking list." alt="" coords="359,259,423,285"/>
+<area shape="rect" id="node13" href="$udp__ip__port__mon_8helper_8c.html#a053fc1725952e733ef6d5706dbe8221d" title="Checks, if two (long) connection IDs are equal." alt="" coords="488,259,564,285"/>
+</map>

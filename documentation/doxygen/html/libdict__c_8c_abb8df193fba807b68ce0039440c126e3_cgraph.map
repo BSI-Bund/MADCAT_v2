@@ -1,0 +1,6 @@
+<map id="array_free" name="array_free">
+<area shape="rect" id="node1" title="Emptys an array and frees it." alt="" coords="5,5,95,32"/>
+<area shape="rect" id="node2" href="$libdict__c_8c.html#ae6cc9c6a53f9b18c1a1141abced7514d" title="Emptys an array, but does not free it." alt="" coords="143,5,248,32"/>
+<area shape="rect" id="node3" href="$libdict__c_8c.html#a72174eec72aba6a82641de0a4859a4da" title="Emptys a dictionary and frees it." alt="" coords="296,5,375,32"/>
+<area shape="rect" id="node4" href="$libdict__c_8c.html#aa3b187986f610dbfe0e7138ecaf5b834" title="Emptys a dictionary, but does not free it." alt="" coords="423,5,517,32"/>
+</map>

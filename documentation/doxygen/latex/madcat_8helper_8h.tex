@@ -1,0 +1,455 @@
+\hypertarget{madcat_8helper_8h}{}\doxysection{/home/\+MADCAT/\+BSI-\/\+Bund@Git\+Hub.\+com/github\+\_\+release/include/madcat.helper.\+h File Reference}
+\label{madcat_8helper_8h}\index{/home/MADCAT/BSI-\/Bund"@GitHub.com/github\_release/include/madcat.helper.h@{/home/MADCAT/BSI-\/Bund"@GitHub.com/github\_release/include/madcat.helper.h}}
+{\ttfamily \#include \char`\"{}madcat.\+common.\+h\char`\"{}}\newline
+Include dependency graph for madcat.\+helper.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{madcat_8helper_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{madcat_8helper_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+long double \mbox{\hyperlink{madcat_8helper_8h_a6beb2c039c319f4fb3541627bb6da8ee}{time\+\_\+str}} (char $\ast$unix\+\_\+buf, int unix\+\_\+size, char $\ast$readable\+\_\+buf, int readable\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Returns current time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{madcat_8helper_8h_a2254ab20f2f1fbecdc277eb6b42f66b9}{get\+\_\+user\+\_\+ids}} (struct \mbox{\hyperlink{structuser__t}{user\+\_\+t}} $\ast$\mbox{\hyperlink{madcat_8common_8h_ac3ea7c3ca3d1f0d1b83800d7b6ed641e}{user}})
+\begin{DoxyCompactList}\small\item\em Fetches user IDs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{madcat_8helper_8h_a625bf53bf66b39d6810f3303a2794cab}{print\+\_\+hex}} (FILE $\ast$output, const unsigned char $\ast$buffer, int buffsize)
+\begin{DoxyCompactList}\small\item\em Prints binary data as hex with offset. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{madcat_8helper_8h_a383f315188aceb39ffe699743ecd27b2}{print\+\_\+hex\+\_\+string}} (const unsigned char $\ast$buffer, unsigned int buffsize)
+\begin{DoxyCompactList}\small\item\em Prints binary data as hex string. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{madcat_8helper_8h_a5220a4cc2ea204eaeac310db28f05442}{hex\+\_\+dump}} (const void $\ast$addr, int len, const bool json)
+\begin{DoxyCompactList}\small\item\em Prints binary data as hexdump. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{madcat_8helper_8h_a0cdceab500be67fba82e4b468c4fb1d4}{bitdump\+\_\+ntoh}} (unsigned char $\ast$data, uint64\+\_\+t len, char delimter, int block\+\_\+len)
+\begin{DoxyCompactList}\small\item\em Prints data as bits in a string. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{madcat_8helper_8h_a9f456515e31ceb6e0c3e3c85ab7c9bf2}{bitstrton}} (char $\ast$bitstr)
+\begin{DoxyCompactList}\small\item\em Interprets a null terminated string containing bits as number. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{madcat_8helper_8h_aa17b72e65f9775648b989a1e157a9aaa}{pow64}} (uint64\+\_\+t base, uint64\+\_\+t exp)
+\begin{DoxyCompactList}\small\item\em Exponential function for uint64\+\_\+t data type. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{madcat_8helper_8h_ab130260acc82055534842b79a0bfd581}{inttoa}} (uint32\+\_\+t i\+\_\+addr)
+\begin{DoxyCompactList}\small\item\em Converts IP(v4)-\/Addresses from network byte order to string. \end{DoxyCompactList}\item 
+const char $\ast$ \mbox{\hyperlink{madcat_8helper_8h_a68b734befb5aa7bab83e32bf3e337633}{get\+\_\+config\+\_\+opt}} (lua\+\_\+\+State $\ast$L, char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Reset or initialize new JSON output. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{madcat_8helper_8h_a3318e55ff89f78c5543abd5ceafeb303}{itoprotostr}} (uint8\+\_\+t proto\+\_\+no, const char $\ast$suffix)
+\begin{DoxyCompactList}\small\item\em Returns a descriptive string, given a protocol number. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{madcat_8helper_8h_a0cdceab500be67fba82e4b468c4fb1d4}\label{madcat_8helper_8h_a0cdceab500be67fba82e4b468c4fb1d4}} 
+\index{madcat.helper.h@{madcat.helper.h}!bitdump\_ntoh@{bitdump\_ntoh}}
+\index{bitdump\_ntoh@{bitdump\_ntoh}!madcat.helper.h@{madcat.helper.h}}
+\doxysubsubsection{\texorpdfstring{bitdump\_ntoh()}{bitdump\_ntoh()}}
+{\footnotesize\ttfamily char$\ast$ bitdump\+\_\+ntoh (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{data,  }\item[{uint64\+\_\+t}]{len,  }\item[{char}]{delimter,  }\item[{int}]{block\+\_\+len }\end{DoxyParamCaption})}
+
+
+
+Prints data as bits in a string. 
+
+\begin{DoxyVerb}Prints data as bits as string with a delimiter in Blocks, e.g:
+"0101 0001 1100" or
+"0101:0001:1100"
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em data} & Buffer containing the data to be print as bits \\
+\hline
+{\em len} & Length of data in Buffer \\
+\hline
+{\em delimter} & Delimiter \\
+\hline
+{\em block\+\_\+len} & Length of a block \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the string containing the bit representation of data. 
+\end{DoxyReturn}
+
+
+Definition at line 224 of file madcat.\+helper.\+c.
+
+\mbox{\Hypertarget{madcat_8helper_8h_a9f456515e31ceb6e0c3e3c85ab7c9bf2}\label{madcat_8helper_8h_a9f456515e31ceb6e0c3e3c85ab7c9bf2}} 
+\index{madcat.helper.h@{madcat.helper.h}!bitstrton@{bitstrton}}
+\index{bitstrton@{bitstrton}!madcat.helper.h@{madcat.helper.h}}
+\doxysubsubsection{\texorpdfstring{bitstrton()}{bitstrton()}}
+{\footnotesize\ttfamily uint64\+\_\+t bitstrton (\begin{DoxyParamCaption}\item[{char $\ast$}]{bitstr }\end{DoxyParamCaption})}
+
+
+
+Interprets a null terminated string containing bits as number. 
+
+\begin{DoxyVerb}E.g. a pointer pointing to a string containing "0101"
+will return 5.
+Every character, which is not '0' or '1' is intepreted as delimiter.
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em bitstr} & String containing a presentation of bits \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the string containing the bit representation of data. 
+\end{DoxyReturn}
+
+
+Definition at line 274 of file madcat.\+helper.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{madcat_8helper_8h_a9f456515e31ceb6e0c3e3c85ab7c9bf2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{madcat_8helper_8h_a68b734befb5aa7bab83e32bf3e337633}\label{madcat_8helper_8h_a68b734befb5aa7bab83e32bf3e337633}} 
+\index{madcat.helper.h@{madcat.helper.h}!get\_config\_opt@{get\_config\_opt}}
+\index{get\_config\_opt@{get\_config\_opt}!madcat.helper.h@{madcat.helper.h}}
+\doxysubsubsection{\texorpdfstring{get\_config\_opt()}{get\_config\_opt()}}
+{\footnotesize\ttfamily const char$\ast$ get\+\_\+config\+\_\+opt (\begin{DoxyParamCaption}\item[{lua\+\_\+\+State $\ast$}]{L,  }\item[{char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+Reset or initialize new JSON output. 
+
+DEPRECATED
+
+\begin{DoxyVerb}Resets or initializes new JSON output.
+If reset is set to false, the format string format is concatenated
+to the static buffer of this function.
+The function does *not* add JSON spezifics (e.g. Brackets) or checks syntax.
+It just appends the format string.
+The static buffer is freed and reset, if reset is true, thus becoming format the
+first part of a new JSON-Output.
+Returns a pointer to the static buffer, conataing all previously concatenated strings.
+Be carefull, when calling free on this pointer. You *may* under the right circumstances without
+causing harm by using free(json_do(true, ""));, if the function is guranteed to be not called again.
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em reset} & Reset static buffer \\
+\hline
+{\em format} & Format string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the string in the static buffer.
+\end{DoxyReturn}
+\textbackslash{}/ char$\ast$ json\+\_\+do(bool reset, const char$\ast$ format, ...); //\+Reset or initialize new JSON if first argument is true and append formated string.
+
+Reads configuration Items from parsed LUA-\/\+File \begin{DoxyVerb}Reads configuration item name
+from parsed LUA-File (by luaL_dofile(...) )and
+saves returns its value as String
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em L} & Lua State structure from lua\+L\+\_\+dofile(...) \\
+\hline
+{\em name} & String containing the name of the configuration Item \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value of config item 
+\end{DoxyReturn}
+
+
+Definition at line 355 of file madcat.\+helper.\+c.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=245pt]{madcat_8helper_8h_a68b734befb5aa7bab83e32bf3e337633_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{madcat_8helper_8h_a2254ab20f2f1fbecdc277eb6b42f66b9}\label{madcat_8helper_8h_a2254ab20f2f1fbecdc277eb6b42f66b9}} 
+\index{madcat.helper.h@{madcat.helper.h}!get\_user\_ids@{get\_user\_ids}}
+\index{get\_user\_ids@{get\_user\_ids}!madcat.helper.h@{madcat.helper.h}}
+\doxysubsubsection{\texorpdfstring{get\_user\_ids()}{get\_user\_ids()}}
+{\footnotesize\ttfamily void get\+\_\+user\+\_\+ids (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structuser__t}{user\+\_\+t}} $\ast$}]{user }\end{DoxyParamCaption})}
+
+
+
+Fetches user IDs. 
+
+\begin{DoxyVerb}Fetches user IDs for username, saved in user and writes them to the same struct.
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em user} & pointer to struct \mbox{\hyperlink{structuser__t}{user\+\_\+t}}, containing user name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void, GID and PID of user are returned in struct \mbox{\hyperlink{structuser__t}{user\+\_\+t}} user, given as parameter 
+\end{DoxyReturn}
+
+
+Definition at line 77 of file madcat.\+helper.\+c.
+
+\mbox{\Hypertarget{madcat_8helper_8h_a5220a4cc2ea204eaeac310db28f05442}\label{madcat_8helper_8h_a5220a4cc2ea204eaeac310db28f05442}} 
+\index{madcat.helper.h@{madcat.helper.h}!hex\_dump@{hex\_dump}}
+\index{hex\_dump@{hex\_dump}!madcat.helper.h@{madcat.helper.h}}
+\doxysubsubsection{\texorpdfstring{hex\_dump()}{hex\_dump()}}
+{\footnotesize\ttfamily char$\ast$ hex\+\_\+dump (\begin{DoxyParamCaption}\item[{const void $\ast$}]{addr,  }\item[{int}]{len,  }\item[{const bool}]{json }\end{DoxyParamCaption})}
+
+
+
+Prints binary data as hexdump. 
+
+\begin{DoxyVerb}Prints binary data hexdump-style, with ASCII-Part.
+Intended for human readable (JSON) Data fields.
+The parameter json toggles escaping of line breaks.
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em addr} & Buffer containing the binary data to be printed \\
+\hline
+{\em len} & Size of the buffer \\
+\hline
+{\em json} & Toggles escaping of line breaks for use in JSON output \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the string, containing the dump. Must be freed afterwards. 
+\end{DoxyReturn}
+
+
+Definition at line 138 of file madcat.\+helper.\+c.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{madcat_8helper_8h_a5220a4cc2ea204eaeac310db28f05442_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{madcat_8helper_8h_ab130260acc82055534842b79a0bfd581}\label{madcat_8helper_8h_ab130260acc82055534842b79a0bfd581}} 
+\index{madcat.helper.h@{madcat.helper.h}!inttoa@{inttoa}}
+\index{inttoa@{inttoa}!madcat.helper.h@{madcat.helper.h}}
+\doxysubsubsection{\texorpdfstring{inttoa()}{inttoa()}}
+{\footnotesize\ttfamily char$\ast$ inttoa (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{i\+\_\+addr }\end{DoxyParamCaption})}
+
+
+
+Converts IP(v4)-\/Addresses from network byte order to string. 
+
+\begin{DoxyVerb}Converts IP(v4)-Addresses from network byte order to string.
+The function inet_ntoa e.g. converts 127.1.1.1 to 127.0.0.1. This is bad e.g. for testing.
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em addr} & Buffer containing the IP in network byte order. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the string containing the converted IP. 
+\end{DoxyReturn}
+
+
+Definition at line 309 of file madcat.\+helper.\+c.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{madcat_8helper_8h_ab130260acc82055534842b79a0bfd581_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{madcat_8helper_8h_a3318e55ff89f78c5543abd5ceafeb303}\label{madcat_8helper_8h_a3318e55ff89f78c5543abd5ceafeb303}} 
+\index{madcat.helper.h@{madcat.helper.h}!itoprotostr@{itoprotostr}}
+\index{itoprotostr@{itoprotostr}!madcat.helper.h@{madcat.helper.h}}
+\doxysubsubsection{\texorpdfstring{itoprotostr()}{itoprotostr()}}
+{\footnotesize\ttfamily char$\ast$ itoprotostr (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{proto\+\_\+no,  }\item[{const char $\ast$}]{suffix }\end{DoxyParamCaption})}
+
+
+
+Returns a descriptive string, given a protocol number. 
+
+See \href{https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml}{\texttt{ https\+://www.\+iana.\+org/assignments/protocol-\/numbers/protocol-\/numbers.\+xhtml}} The parameter proto\+\_\+no is inepreted as uint8, so for instance a value of 65536 will result in the same return value as a value of 0 would be. The suffix will be appended to descriptve String, e.\+g. \char`\"{}v6\char`\"{}, so the output for proto\+\_\+no beeing 6 would be \char`\"{}\+TCPv6\char`\"{} The char$\ast$ returned must be freed in calling function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em proto\+\_\+no} & protocol number \\
+\hline
+{\em suffix} & suffix to append to return value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string char$\ast$ 
+\end{DoxyReturn}
+
+
+Definition at line 364 of file madcat.\+helper.\+c.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=225pt]{madcat_8helper_8h_a3318e55ff89f78c5543abd5ceafeb303_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{madcat_8helper_8h_aa17b72e65f9775648b989a1e157a9aaa}\label{madcat_8helper_8h_aa17b72e65f9775648b989a1e157a9aaa}} 
+\index{madcat.helper.h@{madcat.helper.h}!pow64@{pow64}}
+\index{pow64@{pow64}!madcat.helper.h@{madcat.helper.h}}
+\doxysubsubsection{\texorpdfstring{pow64()}{pow64()}}
+{\footnotesize\ttfamily uint64\+\_\+t pow64 (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{base,  }\item[{uint64\+\_\+t}]{exp }\end{DoxyParamCaption})}
+
+
+
+Exponential function for uint64\+\_\+t data type. 
+
+\begin{DoxyVerb}Exponential function for uint64_t data type.
+Positive values only!
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em base} & Base \\
+\hline
+{\em exp} & Exponent \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+base$^\wedge$exp 
+\end{DoxyReturn}
+
+
+Definition at line 299 of file madcat.\+helper.\+c.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{madcat_8helper_8h_aa17b72e65f9775648b989a1e157a9aaa_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{madcat_8helper_8h_a625bf53bf66b39d6810f3303a2794cab}\label{madcat_8helper_8h_a625bf53bf66b39d6810f3303a2794cab}} 
+\index{madcat.helper.h@{madcat.helper.h}!print\_hex@{print\_hex}}
+\index{print\_hex@{print\_hex}!madcat.helper.h@{madcat.helper.h}}
+\doxysubsubsection{\texorpdfstring{print\_hex()}{print\_hex()}}
+{\footnotesize\ttfamily void print\+\_\+hex (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{output,  }\item[{const unsigned char $\ast$}]{buffer,  }\item[{int}]{buffsize }\end{DoxyParamCaption})}
+
+
+
+Prints binary data as hex with offset. 
+
+\begin{DoxyVerb}Prints binary data as hex with offset in hexdump-style w/o ASCII to output.
+Intended for debugging.
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em output} & File-\/\+Pointer to output, e.\+g. STDERR \\
+\hline
+{\em buffer} & Buffer containing the binary data to be printed \\
+\hline
+{\em buffersize} & Size of buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 106 of file madcat.\+helper.\+c.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{madcat_8helper_8h_a625bf53bf66b39d6810f3303a2794cab_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{madcat_8helper_8h_a383f315188aceb39ffe699743ecd27b2}\label{madcat_8helper_8h_a383f315188aceb39ffe699743ecd27b2}} 
+\index{madcat.helper.h@{madcat.helper.h}!print\_hex\_string@{print\_hex\_string}}
+\index{print\_hex\_string@{print\_hex\_string}!madcat.helper.h@{madcat.helper.h}}
+\doxysubsubsection{\texorpdfstring{print\_hex\_string()}{print\_hex\_string()}}
+{\footnotesize\ttfamily char$\ast$ print\+\_\+hex\+\_\+string (\begin{DoxyParamCaption}\item[{const unsigned char $\ast$}]{buffer,  }\item[{unsigned int}]{buffsize }\end{DoxyParamCaption})}
+
+
+
+Prints binary data as hex string. 
+
+\begin{DoxyVerb}Prints binary data as hex string w/o whitspaces or linebreaks to a String
+Intended for searchable binary JSON Data fields.
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Buffer containing the binary data to be printed \\
+\hline
+{\em buffersize} & Size of buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the string, containing the dump. Must be freed afterwards. 
+\end{DoxyReturn}
+
+
+Definition at line 123 of file madcat.\+helper.\+c.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{madcat_8helper_8h_a383f315188aceb39ffe699743ecd27b2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{madcat_8helper_8h_a6beb2c039c319f4fb3541627bb6da8ee}\label{madcat_8helper_8h_a6beb2c039c319f4fb3541627bb6da8ee}} 
+\index{madcat.helper.h@{madcat.helper.h}!time\_str@{time\_str}}
+\index{time\_str@{time\_str}!madcat.helper.h@{madcat.helper.h}}
+\doxysubsubsection{\texorpdfstring{time\_str()}{time\_str()}}
+{\footnotesize\ttfamily long double time\+\_\+str (\begin{DoxyParamCaption}\item[{char $\ast$}]{unix\+\_\+buf,  }\item[{int}]{unix\+\_\+size,  }\item[{char $\ast$}]{readable\+\_\+buf,  }\item[{int}]{readable\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Returns current time. 
+
+\begin{DoxyVerb}Returns current time in readable format and unix time format as String and Double.
+If unix_buf is set to NULL, only readable format is returned as String (and vice versa),
+then the return value is 0.
+Both can be returned at the same time, if both are not NULL.
+(Or nothing, if both are NULL, of course, but that would be pointless, maybe even silly)
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em unix\+\_\+buf} & String-\/\+Buffer, which is used to return Unix-\/\+Time as String \\
+\hline
+{\em unix\+\_\+size} & Size of unix\+\_\+buf \\
+\hline
+{\em readable\+\_\+buf} & String-\/\+Buffer, which is used to return Time in Readable Format
+\begin{DoxyItemize}
+\item 
+\end{DoxyItemize}\\
+\hline
+{\em readable\+\_\+size} & Size of readable\+\_\+buf \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Unix Time as double, 0 if unix\+\_\+buf is set to NULL 
+\end{DoxyReturn}
+
+
+Definition at line 53 of file madcat.\+helper.\+c.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{madcat_8helper_8h_a6beb2c039c319f4fb3541627bb6da8ee_icgraph}
+\end{center}
+\end{figure}

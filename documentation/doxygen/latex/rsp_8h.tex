@@ -1,0 +1,102 @@
+\hypertarget{rsp_8h}{}\doxysection{/home/\+MADCAT/\+BSI-\/\+Bund@Git\+Hub.\+com/github\+\_\+release/include/rsp/rsp.h File Reference}
+\label{rsp_8h}\index{/home/MADCAT/BSI-\/Bund"@GitHub.com/github\_release/include/rsp/rsp.h@{/home/MADCAT/BSI-\/Bund"@GitHub.com/github\_release/include/rsp/rsp.h}}
+{\ttfamily \#include \char`\"{}epollinterface.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}logging.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}server\+\_\+socket.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}netutils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}connection.\+h\char`\"{}}\newline
+Include dependency graph for rsp.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rsp_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rsp_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structproxy__data}{proxy\+\_\+data}}
+\item 
+struct \mbox{\hyperlink{structproxy__socket__t}{proxy\+\_\+socket\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{rsp_8h_a622a6959199d37f9bb4a4b0dc455e006}{rsp}} (struct \mbox{\hyperlink{structproxy__conf__tcp__node__t}{proxy\+\_\+conf\+\_\+tcp\+\_\+node\+\_\+t}} $\ast$pcn, char $\ast$server\+\_\+addr)
+\begin{DoxyCompactList}\small\item\em Starts an instance of RSP-\/\+Proxy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structproxy__socket__t}{proxy\+\_\+socket\+\_\+t}} \mbox{\hyperlink{rsp_8h_ad2d9dfea7cf0209bd52ff7fd3fd52746}{proxy\+\_\+sock}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{rsp_8h_a622a6959199d37f9bb4a4b0dc455e006}\label{rsp_8h_a622a6959199d37f9bb4a4b0dc455e006}} 
+\index{rsp.h@{rsp.h}!rsp@{rsp}}
+\index{rsp@{rsp}!rsp.h@{rsp.h}}
+\doxysubsubsection{\texorpdfstring{rsp()}{rsp()}}
+{\footnotesize\ttfamily int rsp (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structproxy__conf__tcp__node__t}{proxy\+\_\+conf\+\_\+tcp\+\_\+node\+\_\+t}} $\ast$}]{pcn,  }\item[{char $\ast$}]{server\+\_\+addr }\end{DoxyParamCaption})}
+
+
+
+Starts an instance of RSP-\/\+Proxy. 
+
+\begin{DoxyVerb}Starts an instance of RSP-Proxy. Takes a proxy configuration list element and the
+local proxy-server address ("hostaddr") as parameters.
+Does only return in case of an error.
+For detailed information about RSP-Proxy see the Documentation:
+http://www.gilesthomas.com/2013/08/writing-a-reverse-proxyloadbalancer-from-the-ground-up-in-c-part-0/
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em pcn} & proxy configuration list element, discribing the desired connection \\
+\hline
+{\em server\+\_\+addr} & local proxy-\/server address (\char`\"{}hostaddr\char`\"{}) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on succesfull exit. 
+\end{DoxyReturn}
+
+
+Definition at line 57 of file rsp.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rsp_8h_a622a6959199d37f9bb4a4b0dc455e006_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=189pt]{rsp_8h_a622a6959199d37f9bb4a4b0dc455e006_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{rsp_8h_ad2d9dfea7cf0209bd52ff7fd3fd52746}\label{rsp_8h_ad2d9dfea7cf0209bd52ff7fd3fd52746}} 
+\index{rsp.h@{rsp.h}!proxy\_sock@{proxy\_sock}}
+\index{proxy\_sock@{proxy\_sock}!rsp.h@{rsp.h}}
+\doxysubsubsection{\texorpdfstring{proxy\_sock}{proxy\_sock}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structproxy__socket__t}{proxy\+\_\+socket\+\_\+t}} proxy\+\_\+sock\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 1 of file rsp.\+c.
+

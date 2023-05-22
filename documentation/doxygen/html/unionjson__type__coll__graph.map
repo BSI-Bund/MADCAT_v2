@@ -1,0 +1,5 @@
+<map id="json_type" name="json_type">
+<area shape="rect" id="node1" title="Representation of JSON&#45;Types." alt="" coords="60,5,145,32"/>
+<area shape="rect" id="node2" href="$structarray.html" title="Element of an array as linked list." alt="" coords="5,96,61,123"/>
+<area shape="rect" id="node3" href="$structdict.html" title="Element of a dictonary as double linked list." alt="" coords="147,96,194,123"/>
+</map>

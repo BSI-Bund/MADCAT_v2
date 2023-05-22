@@ -1,8 +1,0 @@
-<map id="print_hex" name="print_hex">
-<area shape="rect" id="node1" title="Prints binary data as hex with offset." alt="" coords="261,56,344,83"/>
-<area shape="rect" id="node2" href="$tcp__ip__port__mon_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="133,5,188,32"/>
-<area shape="rect" id="node3" href="$icmp__mon_8worker_8c.html#a947b4258289b07d36e4299edf3307a9d" title="Handels incoming ICMP Datagramms." alt="" coords="108,56,213,83"/>
-<area shape="rect" id="node5" href="$udp__ip__port__mon_8worker_8c.html#aaae5749ec5d157f425c18ec62ee1c122" title="Handels incoming UDP Datagramms." alt="" coords="112,107,209,133"/>
-<area shape="rect" id="node4" href="$icmp__mon_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,56,60,83"/>
-<area shape="rect" id="node6" href="$udp__ip__port__mon_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,107,60,133"/>
-</map>

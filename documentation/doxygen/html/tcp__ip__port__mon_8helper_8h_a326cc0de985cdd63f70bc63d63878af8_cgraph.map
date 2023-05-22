@@ -1,0 +1,10 @@
+<map id="sig_handler_common" name="sig_handler_common">
+<area shape="rect" id="node1" title="Generic signal handler." alt="" coords="5,56,167,83"/>
+<area shape="rect" id="node2" href="$libdict__c_8c.html#a72174eec72aba6a82641de0a4859a4da" title="Emptys a dictionary and frees it." alt="" coords="381,5,459,32"/>
+<area shape="rect" id="node6" href="$libdict__c_8c.html#a29796a1f7689a238011fa110e7082af9" title="Helper function to manage a dict." alt="" coords="233,56,313,83"/>
+<area shape="rect" id="node8" href="$tcp__ip__port__mon_8helper_8c.html#a2b73f874293662fb6b8aac2dcc366deb" title="Frees an element of the proxy configuration list." alt="" coords="215,107,332,133"/>
+<area shape="rect" id="node3" href="$libdict__c_8c.html#aa3b187986f610dbfe0e7138ecaf5b834" title="Emptys a dictionary, but does not free it." alt="" coords="508,5,603,32"/>
+<area shape="rect" id="node4" href="$libdict__c_8c.html#abb8df193fba807b68ce0039440c126e3" title="Emptys an array and frees it." alt="" coords="651,5,740,32"/>
+<area shape="rect" id="node5" href="$libdict__c_8c.html#ae6cc9c6a53f9b18c1a1141abced7514d" title="Emptys an array, but does not free it." alt="" coords="788,5,893,32"/>
+<area shape="rect" id="node7" href="$libdict__c_8c.html#a6adcde67820b6ed0035482b4840af927" title="Initializes a new dictionary of type struct dict." alt="" coords="380,56,460,83"/>
+</map>

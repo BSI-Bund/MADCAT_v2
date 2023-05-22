@@ -1,0 +1,12 @@
+<map id="connection_on_out_event" name="connection_on_out_event">
+<area shape="rect" id="node1" title=" " alt="" coords="5,97,193,123"/>
+<area shape="rect" id="node2" href="$connection_8c.html#a00eafd99225c84005e4bdbe484c250f2" title=" " alt="" coords="241,5,399,47"/>
+<area shape="rect" id="node5" href="$connection_8c.html#ae4c062026ba033ec514d4cc5624e9217" title=" " alt="" coords="629,122,808,149"/>
+<area shape="rect" id="node6" href="$epollinterface_8c.html#a10e12a3faa82ce01d36edd2a581dfa56" title="RSP Proxy function." alt="" coords="857,71,1022,98"/>
+<area shape="rect" id="node10" href="$logging_8c.html#ab3c25307c3be2273e9c40a68b828b44c" title="RSP Proxy function." alt="" coords="461,173,567,199"/>
+<area shape="rect" id="node3" href="$connection_8c.html#a390765cd266bc17ecd68e2c42f1a9a0f" title="RSP Proxy function." alt="" coords="447,17,581,43"/>
+<area shape="rect" id="node4" href="$connection_8c.html#ae06332c55ff5985e0aa51a7f87533546" title=" " alt="" coords="633,17,805,43"/>
+<area shape="rect" id="node7" href="$epollinterface_8c.html#ab3c24e532ea83ff5ea6110341a61e0de" title="RSP Proxy function." alt="" coords="856,122,1023,149"/>
+<area shape="rect" id="node8" href="$logging_8c.html#ae9131a8f0d2837fda898b286699d8543" title="RSP Proxy function." alt="" coords="905,173,974,199"/>
+<area shape="rect" id="node9" href="$madcat_8helper_8c.html#a6beb2c039c319f4fb3541627bb6da8ee" title="Returns current time." alt="" coords="1071,173,1147,199"/>
+</map>

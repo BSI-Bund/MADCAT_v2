@@ -1,0 +1,126 @@
+\hypertarget{connection_8h}{}\doxysection{/home/\+MADCAT/\+BSI-\/\+Bund@Git\+Hub.\+com/github\+\_\+release/include/rsp/connection.h File Reference}
+\label{connection_8h}\index{/home/MADCAT/BSI-\/Bund"@GitHub.com/github\_release/include/rsp/connection.h@{/home/MADCAT/BSI-\/Bund"@GitHub.com/github\_release/include/rsp/connection.h}}
+{\ttfamily \#include \char`\"{}tcp\+\_\+ip\+\_\+port\+\_\+mon.\+h\char`\"{}}\newline
+Include dependency graph for connection.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{connection_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{connection_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structconnection__closure}{connection\+\_\+closure}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{connection_8h_aa771e2d1d4a01a5b8bdbd16ee887626c}{connection\+\_\+write}} (struct \mbox{\hyperlink{structepoll__event__handler}{epoll\+\_\+event\+\_\+handler}} $\ast$self, char $\ast$data, int len)
+\begin{DoxyCompactList}\small\item\em RSP Proxy function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{connection_8h_a390765cd266bc17ecd68e2c42f1a9a0f}{connection\+\_\+close}} (struct \mbox{\hyperlink{structepoll__event__handler}{epoll\+\_\+event\+\_\+handler}} $\ast$self)
+\begin{DoxyCompactList}\small\item\em RSP Proxy function. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structepoll__event__handler}{epoll\+\_\+event\+\_\+handler}} $\ast$ \mbox{\hyperlink{connection_8h_a1490600c9b1b6da129d11163492d16ee}{create\+\_\+connection}} (int connection\+\_\+fd)
+\begin{DoxyCompactList}\small\item\em RSP Proxy function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{connection_8h_a390765cd266bc17ecd68e2c42f1a9a0f}\label{connection_8h_a390765cd266bc17ecd68e2c42f1a9a0f}} 
+\index{connection.h@{connection.h}!connection\_close@{connection\_close}}
+\index{connection\_close@{connection\_close}!connection.h@{connection.h}}
+\doxysubsubsection{\texorpdfstring{connection\_close()}{connection\_close()}}
+{\footnotesize\ttfamily void connection\+\_\+close (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structepoll__event__handler}{epoll\+\_\+event\+\_\+handler}} $\ast$}]{self }\end{DoxyParamCaption})}
+
+
+
+RSP Proxy function. 
+
+Documentation\+: \href{http://www.gilesthomas.com/2013/08/writing-a-reverse-proxyloadbalancer-from-the-ground-up-in-c-part-0/}{\texttt{ http\+://www.\+gilesthomas.\+com/2013/08/writing-\/a-\/reverse-\/proxyloadbalancer-\/from-\/the-\/ground-\/up-\/in-\/c-\/part-\/0/}} 
+
+Definition at line 240 of file connection.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{connection_8h_a390765cd266bc17ecd68e2c42f1a9a0f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{connection_8h_a390765cd266bc17ecd68e2c42f1a9a0f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{connection_8h_aa771e2d1d4a01a5b8bdbd16ee887626c}\label{connection_8h_aa771e2d1d4a01a5b8bdbd16ee887626c}} 
+\index{connection.h@{connection.h}!connection\_write@{connection\_write}}
+\index{connection\_write@{connection\_write}!connection.h@{connection.h}}
+\doxysubsubsection{\texorpdfstring{connection\_write()}{connection\_write()}}
+{\footnotesize\ttfamily void connection\+\_\+write (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structepoll__event__handler}{epoll\+\_\+event\+\_\+handler}} $\ast$}]{self,  }\item[{char $\ast$}]{data,  }\item[{int}]{len }\end{DoxyParamCaption})}
+
+
+
+RSP Proxy function. 
+
+Documentation\+: \href{http://www.gilesthomas.com/2013/08/writing-a-reverse-proxyloadbalancer-from-the-ground-up-in-c-part-0/}{\texttt{ http\+://www.\+gilesthomas.\+com/2013/08/writing-\/a-\/reverse-\/proxyloadbalancer-\/from-\/the-\/ground-\/up-\/in-\/c-\/part-\/0/}} 
+
+Definition at line 203 of file connection.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{connection_8h_aa771e2d1d4a01a5b8bdbd16ee887626c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{connection_8h_aa771e2d1d4a01a5b8bdbd16ee887626c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{connection_8h_a1490600c9b1b6da129d11163492d16ee}\label{connection_8h_a1490600c9b1b6da129d11163492d16ee}} 
+\index{connection.h@{connection.h}!create\_connection@{create\_connection}}
+\index{create\_connection@{create\_connection}!connection.h@{connection.h}}
+\doxysubsubsection{\texorpdfstring{create\_connection()}{create\_connection()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structepoll__event__handler}{epoll\+\_\+event\+\_\+handler}}$\ast$ create\+\_\+connection (\begin{DoxyParamCaption}\item[{int}]{connection\+\_\+fd }\end{DoxyParamCaption})}
+
+
+
+RSP Proxy function. 
+
+Documentation\+: \href{http://www.gilesthomas.com/2013/08/writing-a-reverse-proxyloadbalancer-from-the-ground-up-in-c-part-0/}{\texttt{ http\+://www.\+gilesthomas.\+com/2013/08/writing-\/a-\/reverse-\/proxyloadbalancer-\/from-\/the-\/ground-\/up-\/in-\/c-\/part-\/0/}} 
+
+Definition at line 257 of file connection.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{connection_8h_a1490600c9b1b6da129d11163492d16ee_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{connection_8h_a1490600c9b1b6da129d11163492d16ee_icgraph}
+\end{center}
+\end{figure}
