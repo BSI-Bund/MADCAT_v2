@@ -129,6 +129,10 @@ apt-check Macro by Michiel Sikkes <michiel@eyesopened.nl>, Michael Vogt <mvo@deb
 Git: https://git.launchpad.net/update-notifier/tree/data/apt_check.py
 LICENSE: GPLv2
 
+libdict_c by ChaosFoxOverlord
+GitHub: https://github.com/ChaosFoxOverlord/dict_c
+LICENSE: GPLv3
+
  https://www.bsi.bund.de
 
  https://github.com/BSI-Bund/
