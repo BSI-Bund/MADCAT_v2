@@ -145,7 +145,7 @@ LICENSE: GPLv3
  
  # 6. Major changes in MADCAT 2.3.x
  
-* Support for OpenSSL 3
+* Support for OpenSSL 3 and GCC 11 added.
  
 * JSON output from modules written in C is now managed by libdict_c, ensuring always correct JSON.
 
@@ -161,3 +161,4 @@ LICENSE: GPLv3
 
 * The RAW module now outputs the Ether-Type and for IPv4 / IPv6 the IP addresses and now recognizes all IANA registered protocols.
 
+* Minor Bugfixes, e.g. incorrect handling of proxy_flow event types under certain conditions in UDP Module.
