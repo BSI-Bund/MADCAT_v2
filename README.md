@@ -115,7 +115,7 @@ Monitoring is configured by /etc/madcat/monitoring_config.py, which is directly 
 
 If you encounter e.g. libc-releated errors in your cross compiling evironment, see ./documentation/in_case_of_linking_problems.md
 
- # 5. Links, etc.
+ # 5. Links & Licenses
 
 MADCAT has been released under GPLv3, see LICENSE.md
 
@@ -142,4 +142,20 @@ LICENSE: GPLv3
  https://www.elastic.co/
 
  https://www.elastic.co/de/beats/filebeat
+ 
+ # 6. Major changes in MADCAT 2.3.x
+ 
+* JSON output from modules written in C is now managed by libdict_c, ensuring always correct JSON.
+
+* New enrichment in the enrichment processor to transfer connection metadata to and from e.g. a possibly existing backend with higher interaction honeypots.
+
+* New enrichment in the enrichment processor to split long payloads, as too large JSON objects may not be accepted by the backend (e.g. Elastic Stack).
+
+* Support for multiple (file) outputs by the enrichment processor.
+
+* Improved mapping of TCP SYNs in the TCP post processor to complete connections (flow), using conntrack.
+
+* Improved error handling of the TCP postprocessor: read errors no longer cause the FIFO to be closed, but only the position where the error occurred is output.
+
+* The RAW module now outputs the Ether-Type and for IPv4 / IPv6 the IP addresses and now recognizes all IANA registered protocols.
 
