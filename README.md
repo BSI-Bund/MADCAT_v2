@@ -145,6 +145,8 @@ LICENSE: GPLv3
  
  # 6. Major changes in MADCAT 2.3.x
  
+* Support for OpenSSL 3
+ 
 * JSON output from modules written in C is now managed by libdict_c, ensuring always correct JSON.
 
 * New enrichment in the enrichment processor to transfer connection metadata to and from e.g. a possibly existing backend with higher interaction honeypots.
