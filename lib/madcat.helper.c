@@ -53,25 +53,25 @@ struct user_t user; //globally defined, used to drop priviliges in arbitrarry fu
 long double time_str(char* unix_buf, int unix_size, char* readable_buf, int readable_size)
 {
     struct timeval tv;
-    char tmbuf[readable_size];
     char tmzone[6]; //e.g. "+0100\0" is max. 6 chars
 
     gettimeofday(&tv, NULL); //fetch struct timeval with actuall time and convert it to string...
 
-    if (readable_buf == NULL && unix_buf == NULL) return (long double) tv.tv_sec + (long double) tv.tv_usec * 1e-6; //Return unixtime, if no pointer given
-
-    strftime(tmbuf, readable_size, "%Y-%m-%dT%H:%M:%S", localtime(&tv.tv_sec)); //Target format: "2018-08-17T05:51:53.835934", therefore...
-    strftime(tmzone, 6, "%z", localtime(&tv.tv_sec)); //...get timezone...
-    //...and finally print time and ms to string, append timezone and ensure it is null terminated.
-    if (readable_buf != NULL) {
-        snprintf(readable_buf, readable_size, "%s.%06ld%s", tmbuf, tv.tv_usec, tmzone);
-        readable_buf[readable_size-1] = 0; //Human readable string
-    }
-    if (unix_buf != NULL) {
+    if (unix_buf != NULL && unix_size > 0) {
         snprintf(unix_buf, unix_size, "%lu.%lu", tv.tv_sec, tv.tv_usec);
         unix_buf[unix_size-1] = 0; //Unix time incl. usec
     }
-    return (long double) tv.tv_sec + (long double) tv.tv_usec * 1e-6; //Return unixtime as double value
+
+    if (readable_buf != NULL && readable_size > 0) {
+        char tmbuf[readable_size];
+        strftime(tmbuf, readable_size, "%Y-%m-%dT%H:%M:%S", localtime(&tv.tv_sec)); //Target format: "2018-08-17T05:51:53.835934", therefore...
+        strftime(tmzone, 6, "%z", localtime(&tv.tv_sec)); //...get timezone...
+        //...and finally print time and ms to string, append timezone and ensure it is null terminated.
+        snprintf(readable_buf, readable_size, "%s.%06ld%s", tmbuf, tv.tv_usec, tmzone);
+        readable_buf[readable_size-1] = 0; //Human readable string
+    }
+
+    return (long double) tv.tv_sec + (long double) tv.tv_usec * 1e-6; //Return unixtime as double value in any case, even if no pointer given
 }
 
 void get_user_ids(struct user_t* user) //adapted example code from manpage getpwnam(3)
