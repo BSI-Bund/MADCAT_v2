@@ -43,7 +43,7 @@ This file is part of MADCAT, the Mass Attack Detection Acceptance Tool.
 #include "tcp_ip_port_mon.worker.h"
 #include "rsp.h"
 
-#define VERSION "MADCAT - Mass Attack Detecion Connection Acceptance Tool\nTCP-IP Port Monitor v2.3.0\nBSI 2018-2023\n" //Version string
+#define VERSION "MADCAT - Mass Attack Detecion Connection Acceptance Tool\nTCP-IP Port Monitor v2.3.1\nBSI 2018-2023\n" //Version string
 
 #define CHUNK_SIZE 512 //Chunks for receiving
 //Minium of maximum path lengths of Linux common file systems
