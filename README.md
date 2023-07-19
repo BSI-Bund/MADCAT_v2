@@ -39,7 +39,7 @@ sudo apt-get install liblua5.1-0 liblua5.1-0-dev
 ```
 #### SSL: ####
 ```
-sudo apt-get install libssl1.1 libssl-dev
+sudo apt-get install libssl3 libssl-dev
 ```
 
 ### Python Postprocessors ###
