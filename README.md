@@ -113,7 +113,8 @@ Monitoring is configured by /etc/madcat/monitoring_config.py, which is directly 
 
  # 4. FAQ's
 
-If you encounter e.g. libc-releated errors in your cross compiling evironment, see ./documentation/in_case_of_linking_problems.md
+- If you encounter e.g. libc-releated errors in your cross compiling evironment, see ./documentation/in_case_of_linking_problems.md
+- An update is work in progress
 
  # 5. Links & Licenses
 
