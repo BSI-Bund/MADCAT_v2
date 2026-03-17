@@ -43,7 +43,7 @@ bool parse_ipopt(int opt_cpclno, const char* opt_name, \
                  unsigned char** opt_ptr_ptr, const unsigned char* beginofoptions_addr, const unsigned char* endofoptions_addr, struct dict** json)
 {
     int opt_len = *(*opt_ptr_ptr+1);
-    if((*opt_ptr_ptr + opt_len) > endofoptions_addr) return true; //Check length, signal tainted in case of failure
+    if((*opt_ptr_ptr + opt_len) > endofoptions_addr || opt_len < 2) return true; //Check length, signal tainted in case of failure
     if(json == NULL) {
         struct dict* dict_temp = json_dict(false);
         json = &dict_temp;

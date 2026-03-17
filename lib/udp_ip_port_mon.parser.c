@@ -46,7 +46,7 @@ bool parse_ipopt(int opt_cpclno, const char* opt_name, \
                  unsigned char** opt_ptr_ptr, const unsigned char* beginofoptions_addr, const unsigned char* endofoptions_addr)
 {
     int opt_len = *(*opt_ptr_ptr+1);
-    if((*opt_ptr_ptr + opt_len) > endofoptions_addr) return true; //Check length, signal tainted in case of failure
+    if((*opt_ptr_ptr + opt_len) > endofoptions_addr || opt_len < 2) return true; //Check length, signal tainted in case of failure
     //Option data to hex string
     char* hex_string = print_hex_string(*opt_ptr_ptr + 2, opt_len - 2);  //Extract option data as hex string. Has to be freed!
     dict_update(json_dict(false), JSON_STR, json_value, 3, "IP", "ip_options", opt_name); //JSON Output
