@@ -37,7 +37,7 @@ This file is part of MADCAT, the Mass Attack Detection Acceptance Tool.
 
 #include "madcat.common.h"
 
-#define VERSION "MADCAT - Mass Attack Detecion Connection Acceptance Tool\nICMP Monitor v2.3.0\nBSI 2018-2023\n"
+#define VERSION "MADCAT - Mass Attack Detecion Connection Acceptance Tool\nICMP Monitor v2.3.1\nBSI 2018-2023\n"
 
 #define ICMP_HEADER_LEN 8
 #define UDP_HEADER_LEN 8
