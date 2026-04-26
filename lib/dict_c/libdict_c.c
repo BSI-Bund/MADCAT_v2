@@ -15,7 +15,7 @@
  *  You should have received a copy of the GNU General Public License
  *  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
-// Gratefully adopted and modified for MADCAT by BSI 2020-2021
+// Gratefully adopted and modified for MADCAT by BSI 2019-2020
 
 #include "libdict_c.h"
 
@@ -529,8 +529,9 @@ void array_free(struct array* array){
     return;
 }
 
-struct dict* __dict_delrec(struct dict* dict, int path_len, char* next_key, va_list keys) {
-    if(dict == 0 || dict->key == 0) return NULL;
+unsigned int __dict_delrec(struct dict* dict, struct dict* first_dict, int path_len, char* next_key, va_list keys) {
+    int retval = DICT_DELREC_NOT_FOUND;   // == NULL
+    if(dict == 0 || dict->key == 0) return retval;
     
     //fprintf(stderr, "__dict_delrec: path_len %d next_key: %s\n", path_len, next_key);
 
@@ -570,16 +571,23 @@ struct dict* __dict_delrec(struct dict* dict, int path_len, char* next_key, va_l
         if(dict->next) {
             dict->next->prev = dict->prev;
         }
+        
+        if(dict == first_dict) { //if first element in dict has been deleted...
+            retval = DICT_DELREC_FIRST_DELETED; //...return value is 1
+        } else {
+            retval = DICT_DELREC_OTHER_THEN_FIRST_DELETED; //...else it is 2
+        }
+
         //fprintf(stderr, "next->prev: %s prev->next: %s\n", dict->next->prev->key, dict->prev->next->key);
         free(dict->key);
         free(dict);
-        return dict;
+        return retval;
     } else {
         if(dict->type == JSON_OBJ && found) {
             next_key = va_arg(keys, char *);
-            return __dict_delrec(dict->value.object, path_len - 1, next_key, keys);
+            return __dict_delrec(dict->value.object, first_dict, path_len - 1, next_key, keys);
         } else {
-            return __dict_delrec(dict->next, path_len, next_key, keys);
+            return __dict_delrec(dict->next, first_dict, path_len, next_key, keys);
         }
     }
 }
@@ -587,15 +595,15 @@ struct dict* __dict_delrec(struct dict* dict, int path_len, char* next_key, va_l
 bool dict_del(struct dict** dict_ptr, int path_len, ...) {
     if(dict_ptr == 0 || *dict_ptr == 0) return false;
     //fprintf(stderr, "************** dict_del %s\n", (*dict_ptr)->key ? (*dict_ptr)->key : "(nil)");
-    struct dict* dict_delrec = 0;
+    unsigned int dict_delrec = 0;
     struct dict* next_dict = (*dict_ptr)->next;
     va_list keys;
     va_start(keys, path_len);
     char* next_key = va_arg(keys, char *);
-    dict_delrec = __dict_delrec(*dict_ptr, path_len, next_key, keys);
+    dict_delrec = __dict_delrec(*dict_ptr, *dict_ptr, path_len, next_key, keys);
     va_end(keys);
-    
-    if(dict_delrec == *dict_ptr) { //if first element in dict has been deleted...
+
+    if(dict_delrec == DICT_DELREC_FIRST_DELETED) { //if first element in dict has been deleted...
         if(next_dict == NULL) { //...and it has been also the last element in dict...
             //fprintf(stderr, "Last element deleted!\n");
             *dict_ptr = dict_new();  //...create new dict with JSON_EMPTY-type. Contents of "old" dict were allready freed here by __dict_delrec(...)
@@ -608,7 +616,7 @@ bool dict_del(struct dict** dict_ptr, int path_len, ...) {
             *dict_ptr = next_dict;
         }
     }
-    
+ 
     return dict_delrec ? true : false;
 }
 

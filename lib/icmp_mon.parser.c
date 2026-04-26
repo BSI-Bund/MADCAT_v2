@@ -33,7 +33,7 @@ This file is part of MADCAT, the Mass Attack Detection Acceptance Tool.
  * ICMP Monitor.
  *
  *
- * BSI 2018-2023
+ * BSI 2018-2025
 */
 #include "icmp_mon.parser.h"
 #include "icmp_mon.helper.h"
@@ -43,9 +43,11 @@ bool parse_ipopt(int opt_cpclno, const char* opt_name, \
                  unsigned char** opt_ptr_ptr, const unsigned char* beginofoptions_addr, const unsigned char* endofoptions_addr, struct dict** json)
 {
     int opt_len = *(*opt_ptr_ptr+1);
+    struct dict* dict_temp;
+
     if((*opt_ptr_ptr + opt_len) > endofoptions_addr || opt_len < 2) return true; //Check length, signal tainted in case of failure
     if(json == NULL) {
-        struct dict* dict_temp = json_dict(false);
+        dict_temp = json_dict(false);
         json = &dict_temp;
     }
     //Option data to hex string
@@ -60,10 +62,11 @@ bool parse_ipopt(int opt_cpclno, const char* opt_name, \
 bool analyze_ip_header(const unsigned char* packet, int recv_len, struct dict** json) //indicates tainted IP-Header
 {
     struct iphdr *iphdr = (struct iphdr *)(packet);
+    struct dict* dict_temp;
 
     if(recv_len - (IP_OR_TCP_HEADER_MINLEN) <= 0 || iphdr->version != 4 ) return true; //Malformed Paket
     if(json == NULL) {
-        struct dict* dict_temp = json_dict(false);
+        dict_temp = json_dict(false);
         json = &dict_temp;
     }
     bool tainted = false; //Is somethin unparsable inside the packet / options?
@@ -234,9 +237,11 @@ int analyze_udp_header(const unsigned char* packet, int recv_len, struct dict** 
 
     struct udphdr *udphdr = (struct udphdr *) (packet + iphdr->ihl*4);
 
+    struct dict* dict_temp;
+
     
     if(json == NULL) {
-        struct dict* dict_temp = json_dict(false);
+        dict_temp = json_dict(false);
         json = &dict_temp;
     }
 
@@ -277,9 +282,11 @@ int analyze_udp_header(const unsigned char* packet, int recv_len, struct dict** 
 bool parse_tcpopt_w_length(int opt_kind, int opt_len, const char* opt_name, \
                            unsigned char** opt_ptr_ptr, const unsigned char* beginofoptions_addr, const unsigned char* endofoptions_addr, struct dict** json)
 {
+    struct dict* dict_temp;
+
     if( *(*opt_ptr_ptr+1) != opt_len || (*opt_ptr_ptr + opt_len) > endofoptions_addr) return true; //Check length, signal tainted in case of failure
     if(json == NULL) {
-        struct dict* dict_temp = json_dict(false);
+        dict_temp = json_dict(false);
         json = &dict_temp;
     }
 
@@ -294,6 +301,8 @@ bool parse_tcpopt_w_length(int opt_kind, int opt_len, const char* opt_name, \
 
 int analyze_tcp_header(const unsigned char* packet, int recv_len, struct dict** json) //returns number of data bytes in this particular packet, regarding recv_len.
 {
+    struct dict* dict_temp;
+
     struct iphdr *iphdr = (struct iphdr *) packet;
     if(recv_len - (iphdr->ihl*4 + IP_OR_TCP_HEADER_MINLEN) < 0) return -1; //Malformed Paket
 
@@ -303,7 +312,7 @@ int analyze_tcp_header(const unsigned char* packet, int recv_len, struct dict** 
     long int data_bytes = recv_len - (iphdr->ihl*4 + tcphdr->doff*4);
 
     if(json == NULL) {
-        struct dict* dict_temp = json_dict(false);
+        dict_temp = json_dict(false);
         json = &dict_temp;
     }
 

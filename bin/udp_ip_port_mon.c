@@ -48,7 +48,7 @@ struct udpcon_data_t *uc;
 
 //Threads
 
-void* cleanup_t()
+void* cleanup_t(void *arg)
 {
     pthread_setcancelstate(PTHREAD_CANCEL_ENABLE, NULL);
     pthread_setcanceltype(PTHREAD_CANCEL_ASYNCHRONOUS, NULL);

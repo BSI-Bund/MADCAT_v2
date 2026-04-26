@@ -27,6 +27,10 @@
 
 //Enable or disable dynamic path update capability
 #define DICT_DYN_PATH_UPDATES 1
+//defines for returnvalues
+#define DICT_DELREC_NOT_FOUND 0
+#define DICT_DELREC_FIRST_DELETED 1
+#define DICT_DELREC_OTHER_THEN_FIRST_DELETED 2
 
 /**
  * \brief Constants for type definition in JSON-Dictionaries and -Arrays
@@ -495,13 +499,14 @@ bool dict_del(struct dict** dict_ptr, int path_len, ...);
  *     Deletes an element in a struct dict, given a path to the element.
   *     
  * \param dict struct dict to delete element from
+ * \param first_dict first element of struct dict, which should equal dict when starting to recurse
  * \param path_len length of variadic list, specifiying the path to the element beeing deleted
  * \param next_key next key on path
  * \param keys list of keys as va_list, specifying the rest of the path to the element beeing deleted
- * \return Address of deleted element, if deletion was succesfull, NULL if not found
+ * \return If first_dict has been succesfully deleted DICT_DELREC_FIRST_DELETED (== 1), if another element has been successfully deleted DICT_DELREC_OTHER_THEN_FIRST_DELETED (== 2), DICT_DELREC_NOT_FOUND ( == 0) if not found
  *
  */
-struct dict* __dict_delrec(struct dict* dict, int path_len, char* next_key, va_list keys);
+unsigned int __dict_delrec(struct dict* dict, struct dict* first_dict, int path_len, char* next_key, va_list keys);
 
 /**
  * \brief Returns the length of an array
