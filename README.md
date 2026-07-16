@@ -130,7 +130,8 @@ Gratefully adopted and modified for MADCAT with special thanks to Giles Thomas.
 
 apt-check Macro by Michiel Sikkes <michiel@eyesopened.nl>, Michael Vogt <mvo@debian.org>, Scott James Remnant <scott@ubuntu.com>
 Git: https://git.launchpad.net/update-notifier/tree/data/apt_check.py
-LICENSE: GPLv2
+Package: https://launchpad.net/update-notifier
+LICENSE: Dual license GNU GPL v2 and GNU GPL v3. Originally licensed under GNU LGPL v2 or later.
 
 libdict_c by ChaosFoxOverlord
 GitHub: https://github.com/ChaosFoxOverlord/dict_c
