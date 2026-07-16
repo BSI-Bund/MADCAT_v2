@@ -137,6 +137,97 @@ libdict_c by ChaosFoxOverlord
 GitHub: https://github.com/ChaosFoxOverlord/dict_c
 LICENSE: GPLv3
 
+## Linked System Libraries and External Dependencies
+
+MADCAT uses or may link against the following third-party libraries.
+The respective licenses of these components remain applicable.
+
+---
+
+### OpenSSL
+
+**Project:** OpenSSL  
+**Website:** https://openssl.org  
+
+**License:** Apache License 2.0 (OpenSSL 3.x)
+
+**Usage:**
+Cryptographic functions and TLS/SSL communication support via OpenSSL libraries.
+
+**Notes:**
+OpenSSL is used as an external library and is not included as source code in MADCAT.
+The OpenSSL license remains applicable to the library itself.
+
+---
+
+### libpcap
+
+**Project:** libpcap  
+**Website:** https://www.tcpdump.org/  
+
+**License:** BSD 3-Clause License
+
+**Usage:**
+Network packet capture and packet processing functionality.
+
+**Notes:**
+MADCAT uses libpcap as an external dependency for network traffic acquisition.
+The original BSD license applies to the library.
+
+---
+
+### Lua
+
+**Project:** Lua  
+**Website:** https://www.lua.org/  
+
+**License:** MIT License
+
+**Usage:**
+Embedded scripting and configuration support.
+
+**Notes:**
+Lua is linked as an external library.
+The original MIT license and copyright notices remain applicable.
+
+---
+
+### zlib
+
+**Project:** zlib  
+**Website:** https://zlib.net/  
+
+**License:** zlib License
+
+**Usage:**
+Data compression and decompression functionality.
+
+**Notes:**
+zlib is used as an external dependency.
+The original zlib license applies.
+
+---
+
+### pthread / GNU C Library (glibc)
+
+**Project:** GNU C Library (glibc) / POSIX Threads  
+
+**License:** LGPL-2.1-or-later and other compatible licenses
+
+**Notes:**
+These libraries are part of the underlying Linux system environment and are normally provided by the operating system.
+MADCAT does not distribute modified versions of these components.
+
+---
+
+### libcrypto / libssl
+
+**Project:** OpenSSL cryptographic libraries  
+
+**License:** Apache License 2.0 (OpenSSL 3.x)
+
+### Links
+
  https://www.bsi.bund.de
 
  https://github.com/BSI-Bund/
