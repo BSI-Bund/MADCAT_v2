@@ -23,7 +23,7 @@ A major update is work in progress, containing a DPI Routing Proxy and a Docker 
 
  # 1. Requirements
 
-To compile and run MADCAT you need to have a Linux OS installed. It has been developed and tested on Ubuntu 22.04. Additionally you need to install the following packages:
+To compile and run MADCAT you need to have a Linux OS installed. It has been developed and tested on Ubuntu 24.04. Additionally you need to install the following packages:
 
 ### MADCAT Binaries ###
 
